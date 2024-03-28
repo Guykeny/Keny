@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xml:lang="fr-FR">
+<!-- entete -->
+
+<head>
+    <title>Une page XHTML</title>
+    <meta charset="utf-8">
+    <meta name="google" value="notranslate">
+    <meta http-equiv="Reply-to" content="jean-michel.richer@univ-angers.fr">
+    <meta http-equiv="Keywords" content="Enseignement, Recherche, Université, Angers">
+    <meta name="author" content="jean-michel Richer"> <!-- styles -->
+    <!-- chargement de la police Ubuntu -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+    <!-- definition du style de la page -->
+    <link rel="stylesheet" type="text/css" href="ensl1i_xhtml.css"> <!-- additions de styles spécifiques -->
+    <style type="text/css">
+        dl {
+            width: 500px;
+            margin-left: 50px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        .italique {
+            font-style: italic;
+        }
+    </style>
+    <script
+        type="text/javascript">        function report() { var myForm = document.forms["myForm"]; var elements = myForm.elements; var s = ''; for (i = 0; i < elements.length; ++i) { if ((elements[i].type == "fieldset") || (elements[i].type == "submit")) {                    // nothing to do                } else if ((elements[i].type == "radio") || (elements[i].type == "checkbox")) {                    s += elements[i].name + " = " + elements[i].value + "  " + elements[i].checked + "\n";                } else {                    s += elements[i].name + " = " + elements[i].value + "\n";                }            }            s = 'Data obtained using Javascript :\n----------------------------------\n' + s;            alert(s);            return true;        }        function fill_form() {            var values = new Array("1", "Richer", "Jean-Michel", "30", "Rue Donald Knuth",                "49240", "2", "", "", "", "0", "checked", "", "", "checked", "", "");            var myForm = document.forms["myForm"];            var elements = myForm.elements;            var value_index = 0;            for (i = 0; i < elements.length; ++i) {                if ((elements[i].type == "fieldset") || (elements[i].type == "submit")) {                    // nothing to do                } else if ((elements[i].type == "radio") || (elements[i].type == "checkbox")) {                    elements[i].checked = values[value_index] == "checked" ? true : false;                    ++value_index;                } else {                    elements[i].value = values[value_index++];                }                if (value_index >= values.length) break;            }            return false;        }    </script>
+</head><!-- contenu de la page -->
+
+<body>
+    <div id="page">
+        <h1>Exemple de page et styles</h1>
+        <h2>Paragraphes</h2>
+        <p>Voici un exemple de paragraphe simple.</p>
+        <p>Un autre paragraphe avec de style <em>italique</em>, en <b>gras</b> ou en <span class="red">rouge</span>.</p>
+        <p class="important">un paragraphe important !</p>
+        <p class="italique">Un exemple de code</p>
+        <pre class="javascript"><code>var sum = 0;for (int i=1; i&lt;=10; ++i) {	sum += i;}</code></pre>
+        <h2>Listes</h2>
+        <p class="italique">Voici une liste simple :</p>
+        <ul>
+            <li>un élément,</li>
+            <li>un deuxième élément</li>
+        </ul>
+        <p class="italique">Un exemple avec des carrés :</p>
+        <ul style="list-style-type: square;">
+            <li>un élément,</li>
+            <li>un deuxième élément</li>
+        </ul>
+        <p class="italique">Une liste numérotée :</p>
+        <ol>
+            <li>un élément</li>
+            <li>un deuxième élément</li>
+        </ol>
+        <p class="italique">Une liste de définitions :</p>
+        <dl>
+            <dt>processeur</dt>
+            <dd>un élément de l'ordinateur chargé d'exécuter les programmes stockés en mémoire centrale</dd>
+            <dt>disque dur</dt>
+            <dd>mémoire de masse capable de stocker de gros volumes de données de manière permanente</dd>
+        </dl>
+        <h2 id="TAB">Tableaux</h2>
+        <p>Table simple en HTML 4 :</p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>processeur</th>
+                    <th>fréquence</th>
+                    <th>prix €</th>
+                </tr>
+                <tr style="background: LemonChiffon;">
+                    <td>Intel Core i5 3570k</td>
+                    <td class="on_right">3.4 Ghz</td>
+                    <td class="on_right">202</td>
+                </tr>
+                <tr style="background: Khaki;">
+                    <td>AMD FX 8320</td>
+                    <td class="on_right">3.5 Ghz</td>
+                    <td class="on_right">158</td>
+                </tr>
+                <tr style="background: LemonChiffon;">
+                    <td>Intel Core i7 3820</td>
+                    <td class="on_right">3.6 Ghz</td>
+                    <td class="on_right">264</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Exemple en HTML 5</p>
+        <table>
+            <caption>Comparaison de processeurs</caption>
+            <thead>
+                <tr>
+                    <th>processeur</th>
+                    <th>fréquence</th>
+                    <th>prix €</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr style="background: LimeGreen;">
+                    <td class="on_right">Total : 3</td>
+                    <td class="on_right">&gt; 3.0 Ghz</td>
+                    <td class="on_right">624</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr style="background: LemonChiffon;">
+                    <td>Intel Core i5 3570k</td>
+                    <td class="on_right">3.4 Ghz</td>
+                    <td class="on_right">202</td>
+                </tr>
+                <tr style="background: Khaki;">
+                    <td>AMD FX 8320</td>
+                    <td class="on_right">3.5 Ghz</td>
+                    <td class="on_right">158</td>
+                </tr>
+                <tr style="background: LemonChiffon;">
+                    <td>Intel Core i7 3820</td>
+                    <td class="on_right">3.6 Ghz</td>
+                    <td class="on_right">264</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="FORM">Formulaires</h2>
+        <form name="myForm" method="post" action="ensl1i_xhtml_exe.php">
+            <fieldset>
+                <legend>Identité</legend> <label>Titre :</label> <select name="h_pers_titre">
+                    <option value="1" selected="selected">Mr</option>
+                    <option value="2">Mme</option>
+                </select> <br> <label>Nom :</label> <input type="text" name="h_pers_nom" value="" size="20"> <br>
+                <label>Prénom :</label> <input type="text" name="h_pers_prenom" value="" size="20"> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Adresse</legend> <label>N° :</label> <input type="text" name="h_adr_num" value="" size="5"> <br>
+                <label>Rue :</label> <input type="text" name="h_adr_rue" value="" size="25"> <br> <label>Code postal
+                    :</label> <input type="text" name="h_adr_cp" value="" size="5"> <br> <label>Ville :</label> <select
+                    name="h_adr_ville">
+                    <option value="0">&lt;choisir&gt;</option>
+                    <option value="1">Angers</option>
+                    <option value="2">Avrillé</option>
+                    <option value="3">Beaucouzé</option>
+                    <option value="4">Les Ponts de Cé</option>
+                    <option value="5">Montreuil-Juigné</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Situation familiale</legend> <label>Statut :</label> <input type="radio" name="h_sitf_statut"
+                    value="marie"> marié &nbsp; <input type="radio" name="h_sitf_statut" value="divorce"> divorcé &nbsp;
+                <input type="radio" name="h_sitf_statut" value="veuf"> veuf <br> <label>Nombre d'enfants :</label>
+                <select name="h_sitf_enfants">
+                    <option value="0">sans</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 et plus</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Habitation</legend> <label>Type :</label> <input type="radio" name="h_hab_type" value="1"
+                    checked="checked"> maison &nbsp; <input type="radio" name="h_hab_type" value="2"> appartement &nbsp;
+                <input type="radio" name="h_hab_type" value="3"> sans domicile <br> <label>Options</label> <input
+                    type="checkbox" name="h_hab_options[]" value="garage">garage &nbsp; <input type="checkbox"
+                    name="h_hab_options[]" value="veranda">véranda &nbsp; <input type="checkbox" name="h_hab_options[]"
+                    value="piscine">piscine &nbsp; <br>
+            </fieldset> <!--			<input type="submit" value="Envoyer" onclick="return report();" />			--> <button
+                type="submit" onclick="return report();">Envoyer</button> &nbsp;&nbsp; <input type="reset" value="RAZ">
+            &nbsp;&nbsp; <button onclick="return fill_form();">Remplir</button>
+        </form> <br>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+form {
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+
+#group-checkboxes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+fieldset:last-of-type>label {
+    padding: 0 5px 0 5px;
+}
+
+fieldset:last-of-type>input {
+    display: inline-block;
+    width: 100px;
+}
+
+fieldset:last-of-type>input:nth-of-type(2) {
+    width: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    border: 0px solid white;
+}
+
+
+/* Table periodique ********************************************** */
+
+#mendeleiev {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    border: 0px;
+}
+
+#mendeleiev>tr:first-of-type>th {
+    width: 3.5%;
+}
+
+#mendeleiev td {
+    text-align: center;
+}
+
+#mendeleiev td>span.numéro,
+#mendeleiev td>a {
+    font-size: large;
+}
+
+#mendeleiev td>a {
+    font-weight: bold;
+}
+
+#mendeleiev td>span.masse {
+    font-size: small;
+}
+
+#mendeleiev tr:nth-of-type(n+9)>th:first-child {
+    text-align: right;
+}
+
+#mendeleiev tr:nth-of-type(n+9)>th:first-child>a {
+    font-size: small;
+}
+
+
+/* Table periodique (HTML classique) ***************************** */
+
+#tabular {
+    margin: 50px auto;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+
+#tabular tr>th {
+    padding: 5px;
+    background-color: navy;
+    color: white;
+    font-variant: small-caps;
+}
+
+#tabular,
+#tabular tr,
+#tabular td,
+#tabular th {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}

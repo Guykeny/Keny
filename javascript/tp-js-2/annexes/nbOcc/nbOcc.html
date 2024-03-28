@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>nbOcc</title>
+	<script src="nbOcc.js"></script>
+	<style>
+		span {
+			background-color: lightpink;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>nbOcc</h1>
+
+	<script>
+		var s = "Les doigts boudinés de l’ogresse, les doigts acérés de l’ogresse, ses doigts qu’il fallait à tout prix satisfaire.";
+		var ss = "doigts";
+		document.writeln("<p><b>" + ss + "</b> dans <span>" + s + "</span> = " + nbOcc(s, ss) + "</p>");
+
+		s = "Le nombre faisait notre force et notre faiblesse; notre force, parce que nous étions une armée; notre faiblesse, car nous étions désunis.";
+		var ss = "notre";
+		document.writeln("<p><b>" + ss + "</b> dans <span>" + s + "</span> = " + nbOcc(s, ss) + "</p>");
+	</script>
+</body>
+
+</html>

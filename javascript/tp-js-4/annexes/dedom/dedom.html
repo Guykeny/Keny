@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pays de la Loire</title>
+    <script src="dedom.js" defer></script>
+</head>
+
+<body>
+    <!--  -->
+    <h1>Pays de la Loire</h1>
+    <!--  -->
+    <h2 id="sommaire">Sommaire</h2>
+    <ol>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#depts">Deux départements</a></li>
+        <li><a href="#demographie">Démographie</a></li>
+        <li><a href="#Elections">Élections</a></li>
+    </ol>
+    <!--  -->
+    <h2 id="intro">Introduction</h2>
+    <p>
+        Les <em>Pays de la Loire</em> sont une région française de l'Ouest de
+        la France regroupant 5 départements (<abbr title="Loire-Atlantique">44</abbr>,
+        <abbr title="Maine-et-Loire">49</abbr>, <abbr title="Mayenne">53</abbr>,
+        <abbr title="Sarthe">72</abbr>, <abbr title="Vendée">85</abbr>).<br />
+    </p>
+    <!--  -->
+    <h2 id="depts">Deux départements</h2>
+    <ol id="departements">
+        <li>Loire-Atlantique
+            <ul class="villes">
+                <li>Nantes
+                    <ul>
+                        <li>Préfecture de la région</li>
+                        <li>Sixième ville de France</li>
+                    </ul>
+                </li>
+                <li>Saint-Nazaire</li>
+            </ul>
+        </li>
+        <li>Maine-et-Loire
+            <ul class="villes">
+                <li><a href="http://www.angers.fr">Angers</a>
+                    <ul>
+                        <li>Chef-lieu du département</li>
+                        <li>Deuxième ville la plus peuplée de la région</li>
+                    </ul>
+                </li>
+                <li>Cholet</li>
+            </ul>
+        </li>
+    </ol>
+    <!--  -->
+    <h2 id="demographie">Démographie (en milliers d'habitants)</h2>
+    <table>
+        <tr>
+            <td rowspan="2">Année</td>
+            <td class="important" colspan="5">Départements</td>
+            <td rowspan="2">Total</td>
+        </tr>
+        <tr>
+            <td class="region">Loire-Atlantique</td>
+            <td class="region">Maine-et-Loire</td>
+            <td class="region">Mayenne</td>
+            <td class="region">Sarthe</td>
+            <td class="region">Vendée</td>
+        </tr>
+        <tr>
+            <td>2013</td>
+            <td>1 328</td>
+            <td>800</td>
+            <td>307</td>
+            <td>568</td>
+            <td>655</td>
+            <td>3 661</td>
+        </tr>
+        <tr>
+            <td>2014</td>
+            <td>1 343</td>
+            <td>804</td>
+            <td>308</td>
+            <td>570</td>
+            <td>662</td>
+            <td>3 689</td>
+        </tr>
+    </table>
+    <!--  -->
+    <h2 id="Elections">Elections</h2>
+    <form method="post"
+        action="https://leria-etud.univ-angers.fr/~david.lesaint/l1mi-dw/tp-html-css-1/pdl/php/pdl.php">
+        <fieldset>
+            <legend> Elections départementales</legend>
+            <p>Dans quel département votez-vous ?</p>
+            <p>
+                <input type="radio" name="vote" id="la" value="la" /> <label for="la"> Loire Atlantique </label> <input
+                    type="radio" name="vote" id="ml" checked="checked" value="ml" /> <label for="ml">
+                    Maine et Loire </label> <input type="radio" name="vote" id="ma" value="ma" />
+                <label for="ma"> Mayenne</label> <input type="radio" name="vote" id="sa" value="sa" /> <label for="sa">
+                    Sarthe </label> <input type="radio" name="vote" id="ve" value="ve" /> <label for="ve">
+                    Vendée</label>
+            </p>
+            <p>Quelle est la taille de votre ville ?</p>
+            <select name="ville">
+                <option value="tg">&gt; 100000 habitants</option>
+                <option value="g">entre 20000 et 100000 habitants</option>
+                <option value="m" selected="selected">entre 5000 et 20000
+                    habitants</option>
+                <option value="p">&lt; 5000 habitants</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Donnez-nous votre appréciation</legend>
+            <textarea name="app" id="app" rows="3" cols="70"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <input type="submit" value="Soumettre" /> <input type="reset" value="Effacer" />
+        </fieldset>
+    </form>
+</body>
+
+</html>

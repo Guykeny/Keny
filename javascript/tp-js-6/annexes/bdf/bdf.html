@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr-fr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Liste des sociétés adhérentes</title>
+    <script src="bdf.js" defer></script>
+    <style>
+      span {
+        display: block;
+        margin: auto;
+      }
+      table {
+        table-layout: fixed;
+        margin: auto;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border-collapse: collapse;
+        border: solid 1px blue;
+      }
+      .presidente {
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <fieldset>
+      <span>
+        <label>Choisir une société :</label>
+        <input list="societes" size="30" />
+      </span>
+      <datalist id="societes"></datalist>
+    </fieldset>
+    <table>
+      <tr>
+        <th>SOCIETE</th>
+        <th>CP</th>
+        <th>PRESIDENT(E)</th>
+      </tr>
+    </table>
+  </body>
+</html>
