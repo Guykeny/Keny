@@ -1,0 +1,52 @@
+/* Source :  w3docs.com */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 20px 0 #095484;
+    margin: auto;
+}
+
+table,
+td,
+th {
+    border: black 1px solid;
+    border-collapse: collapse;
+}
+
+tbody tr {
+    text-align: center;
+}
+
+td,
+th {
+    width: 100px;
+    height: 50px;
+    vertical-align: middle;
+    font-size: large;
+}
+
+img {
+    max-width: 50%;
+    max-height: 40%;
+}
