@@ -1,1 +1,16 @@
 .DS_Store
+<<<<<<< HEAD
+=======
+.TRE.abs.
+data.tar.gz
+fic
+fichier
+moi/
+t
+text.txt
+ubuntu/.DS_Store
+ubuntu/javascript/
+ubuntu/sh7.sh
+ubuntu/sh8.sh
+ubw/
+>>>>>>> f3853df (Ajout de plusieurs fichiers et dossiers à .gitignore)
