@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Section Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+        max-width: 80%;
+        max-height: 400px; 
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        object-fit: cover; 
+        }
+
+        /* Section À propos */
+        .about {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        /* Styles pour les compétences */
+      
+
+        .skills-category {
+            margin-bottom: 1.5rem;
+        }
+                .skills-section {
+            padding: 5rem 5%;
+            background-color: #f5f7fa; /* Même fond que la section projets */
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .skills-category h5 {
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skills-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .skill-badge {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Section Projets */
+        .projects {
+            padding: 5rem 5%;
+            background-color: #f5f7fa;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .project-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background-color: #e0e0e0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Section Contact */
+        .contact {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Mon<span>Portfolio</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bonjour, je suis <span>Guy Keny Ndayizeye</span></h1>
+                <p>Curieux, autonome et passionné par le développement logiciel, je combine mes compétences en programmation (C++, Java, Python, PHP, JavaScript) et en technologies web (HTML, CSS) avec une bonne maîtrise des bases de données (PostgreSQL, MySQL) et des outils de développement modernes (GitHub, Visual Studio Code, PyCharm, QT Creator).
+                    Mon parcours académique, enrichi d’expériences professionnelles variées et de projets concrets comme Mastermind ou Démineur, témoigne de ma capacité à apprendre rapidement, à travailler en équipe et à livrer des solutions efficaces.
+                    Entre rigueur, adaptabilité et passion, je suis prêt à relever de nouveaux défis dans le domaine du développement informatique, avec une attention particulière pour la qualité du code et l’expérience utilisateur</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Sans titre.jpeg" alt="Guy Keny Ndayizeye">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>À propos de moi</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="developpeur.png" alt="À propos">
+            </div>
+            <div class="about-text">
+                <h3>Développeur passionné </h3>
+                <p>Actuellement en dernière année de Licence Informatique à l’Université d’Angers, je suis un passionné de développement logiciel, rigoureux et toujours curieux d'apprendre. Mes expériences en entreprise et mes projets personnels m’ont permis de développer une solide maîtrise de plusieurs langages et outils informatiques.</p>
+                <p>Je programme en C++, Java, Python, PHP, JavaScript, et je conçois des interfaces web avec HTML, CSS. J’ai également de bonnes compétences en programmation orientée objet (POO), notamment en C++. Côté bases de données, je travaille avec PostgreSQL et MySQL.</p>
+                <p>Je suis à l’aise dans les environnements Linux/Bash, j’utilise régulièrement des outils de développement modernes comme Visual Studio Code, PyCharm, GitHub, et Qt Creator, et j’ai une première approche des pratiques DevOps.
+                </p>
+                <p>Trilingue (Français, Anglais, Kirundi), je suis aussi passionné par le sport (basketball, football) et les voyages, qui renforcent mon esprit d’équipe et ma capacité d’adaptation
+                </p>
+
+               
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills-section" id="skills">
+        <div class="section-title">
+            <h2>Compétences</h2>
+        </div>
+    
+        <!-- 💡 Ajoute ce conteneur ici -->
+        <div class="skills-container">
+            <div class="skills-content">
+                <!-- Langages -->
+                <div class="skills-category">
+                    <h5><i class="fas fa-code"></i> Langages</h5>
+                    <div class="skills-badges">
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                    </div>
+                </div>
+    
+                <!-- Bases de données -->
+                <div class="skills-category">
+                    <h5><i class="fas fa-database"></i> Bases de données</h5>
+                    <div class="skills-badges">
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MySQL</span>
+                    </div>
+                </div>
+    
+                
+                <div class="skills-category">
+                    <h5><i class="fas fa-tools"></i> Environnements & outils</h5>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Bash/Linux</span>
+                        <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">PyCharm</span>
+                        <span class="skill-badge">Qt Creator</span>
+                    </div>
+                </div>
+    
+                <!-- Paradigmes -->
+                <div class="skills-category">
+                    <h5><i class="fas fa-project-diagram"></i> Paradigmes</h5>
+                    <div class="skills-badges">
+                        <span class="skill-badge">Programmation orientée objet (POO)</span>
+                        <span class="skill-badge">DevOps</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- Section Expériences Professionnelles -->
+    <section class="projects" id="experience">
+        <div class="section-title">
+            <h2>Expériences professionnelles</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Expérience 1 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Livreur – Pizza Tempo, Angers</h3>
+                    <p><strong>Mars 2021 - Aujourd’hui</strong></p>
+                    <p>Livraison de pizzas en moto, gestion de la caisse et relation client.</p>
+                </div>
+            </div>
+
+            <!-- Expérience 2 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Préparateur de commandes – Action, Angers</h3>
+                    <p><strong>Juin 2023 - Août 2023</strong></p>
+                    <p>Préparation et emballage des commandes, chargement et filmage des palettes.</p>
+                </div>
+            </div>
+
+            <!-- Expérience 3 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Préparateur de commandes – Elivia, Angers</h3>
+                    <p><strong>Juillet 2022 - Août 2022</strong></p>
+                    <p>Préparation et conditionnement des produits pour l’expédition.</p>
+                </div>
+            </div>
+
+            <!-- Expérience 4 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Manager – Town Paving and Cleaning, Bujumbura</h3>
+                    <p><strong>Novembre 2018 - Août 2020</strong></p>
+                    <p>Gestion d’une équipe de 10 à 12 personnes, prospection de clients, édition de factures et suivi de chantiers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Projets -->
+    <section class="projects" id="projects">
+        <div class="section-title">
+            <h2>Mes projets</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="solveur.png"Projet 1">
+                </div>
+                <div class="project-info">
+                    <h3>Solveur emploi du temps</h3>
+                    <p>Interface de pilotage de solveur d'emploi du temps.</p>
+                    <div class="project-tags">
+                        <span class="tag">Base de données</span>
+                        <span class="tag">xml</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Html & Css</span>
+                    </div>
+                    <a href="https://github.com/Guykeny/Stage" class="btn">Voir le projet</a>
+                </div>
+            </div>
+            
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="mastermind.png" alt="Jeu Mastermind">
+                </div>
+                <div class="project-info">
+                    <h3>Mastermind</h3>
+                    <p>Jeu de logique codé en c++ avec un système de score.</p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Algorithmie</span>
+                    </div>
+                    <a href="https://github.com/Guykeny/Keny/tree/main/ubuntu/Project%20MasterMInd" class="btn">Voir le projet</a>
+                </div>
+            </div>
+            
+            <!-- Projet 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="minesweeper.png" alt="Projet 3">
+                </div>
+                <div class="project-info">
+                    <h3>Création d'une interface Graphique</h3>
+                    <p>Creation d'une interface Graphique pour le jeu demineur .</p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Qtcreator</span>
+                        <span class="tag">QtLinguist</span>
+                    </div>
+                    <a href="https://github.com/Guykeny/Stage/tree/main/projet_demineur" class="btn">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contactez-moi</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Travaillons ensemble</h3>
+                <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>guykeny.ndayizeye8@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 6 26 47 67 16</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Angers, France</span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/guy-keny-ndayizeye-739911202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Guykeny"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/gy_keny?s=11&t=YUdrwKvvXp_b1TlphBNHTg"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/keny_guy?igsh=MWUxdWFma21uYmpmcA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+            <p>Conçu et développé par Guy Keny Ndayizeye</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Animation au scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
