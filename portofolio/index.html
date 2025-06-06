@@ -82,15 +82,17 @@
         .hamburger {
             display: none;
             cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--dark-color);
         }
 
         .hero {
-            height: 100vh;
+            min-height: 100vh; /* Use min-height for better adaptability */
             display: flex;
             align-items: center;
             padding: 0 5%;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            margin-top: 60px;
+            margin-top: 60px; /* Adjust based on header height */
         }
 
         .hero-content {
@@ -104,7 +106,7 @@
         }
 
         .hero-text {
-            text-align: center;
+            text-align: left; /* Keep left aligned for larger screens */
         }
 
         .hero-text h1 {
@@ -133,6 +135,7 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            text-align: center; /* Ensure button text is centered */
         }
 
         .btn:hover {
@@ -160,8 +163,8 @@
         }
 
         .hero-image img {
-            max-width: 80%;
-            max-height: 400px; 
+            max-width: 100%; /* Ensure image scales down */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             object-fit: cover; 
@@ -175,7 +178,6 @@
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
-            
         }
 
         .section-title h2 {
@@ -204,8 +206,15 @@
             align-items: center;
         }
 
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
         .about-text {
-            text-align: center;
+            text-align: left; /* Keep left aligned for larger screens */
         }
 
         .about-text h3 {
@@ -384,6 +393,7 @@
         .social-links {
             display: flex;
             gap: 1rem;
+            justify-content: center; /* Center social links on mobile */
         }
 
         .social-links a {
@@ -439,40 +449,129 @@
             margin-bottom: 1rem;
         }
 
+        /* Responsive Styles */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 60px; /* Below the header */
+                left: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 1rem 0;
+                border-top: 1px solid #eee;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+                padding: 0.8rem 0;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
             }
 
             .hamburger {
                 display: block;
             }
 
+            .hero {
+                padding-top: 80px; /* More space for fixed header */
+                min-height: auto; /* Allow hero section to adjust height */
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                padding: 2rem 0;
+            }
+
+            .hero-text {
+                text-align: center; /* Center text on mobile */
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem; /* Smaller font size for mobile */
+            }
+
+            .hero-text p {
+                font-size: 1rem; /* Smaller font size for mobile */
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem; /* Space between stacked buttons */
+            }
+
+            .btn-outline {
+                margin-left: 0; /* Remove left margin when stacked */
+            }
+
+            .hero-image {
+                order: -1; /* Move image above text on mobile */
+                margin-bottom: 2rem;
             }
 
             .about-content,
             .contact-container {
                 grid-template-columns: 1fr;
                 text-align: center;
-                justify-items: center;
+                gap: 2rem; /* Reduce gap on mobile */
             }
 
-            .hero-image {
-                order: -1;
-                margin-bottom: 2rem;
+            .about-text {
+                text-align: center; /* Center text on mobile */
             }
 
+            .about-image {
+                order: -1; /* Move image above text in about section */
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr; /* Single column for projects on mobile */
+            }
+
+            .contact-info,
             .contact-form {
-                margin: 0 auto;
+                padding: 0 2%; /* Add some horizontal padding to contact sections */
             }
+
+            .social-links {
+                justify-content: center; /* Ensure social links are centered */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem; /* Even smaller font for very small screens */
+            }
+        }
+
+        /* Styles for header scroll effect */
+        header.scrolled {
+            background-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header.scrolled .logo,
+        header.scrolled .logo span,
+        header.scrolled .nav-links a,
+        header.scrolled .hamburger {
+            color: white; /* Change color for better contrast on scroll */
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav class="navbar">
             <div class="logo">Mon<span>Portfolio</span></div>
@@ -488,7 +587,6 @@
         </nav>
     </header>
 
-    <!-- Section Hero -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
@@ -507,7 +605,6 @@
         </div>
     </section>
 
-    <!-- Section À propos -->
     <section class="about" id="about">
         <div class="section-title">
             <h2>À propos de moi</h2>
@@ -520,25 +617,18 @@
                 <h3>Développeur passionné </h3>
                 <p>Actuellement en dernière année de Licence Informatique à l’Université d’Angers, je suis un passionné de développement logiciel, rigoureux et toujours curieux d'apprendre. Mes expériences en entreprise et mes projets personnels m’ont permis de développer une solide maîtrise de plusieurs langages et outils informatiques.</p>
                 <p>Je programme en C++, Java, Python, PHP, JavaScript, et je conçois des interfaces web avec HTML, CSS. J’ai également de bonnes compétences en programmation orientée objet (POO), notamment en C++. Côté bases de données, je travaille avec PostgreSQL et MySQL.</p>
-                <p>Je suis à l’aise dans les environnements Linux/Bash, j’utilise régulièrement des outils de développement modernes comme Visual Studio Code, PyCharm, GitHub, et Qt Creator, et j’ai une première approche des pratiques DevOps.
-                </p>
-                <p>Trilingue (Français, Anglais, Kirundi), je suis aussi passionné par le sport (basketball, football) et les voyages, qui renforcent mon esprit d’équipe et ma capacité d’adaptation
-                </p>
-
-               
-                </div>
+                <p>Je suis à l’aise dans les environnements Linux/Bash, j’utilise régulièrement des outils de développement modernes comme Visual Studio Code, PyCharm, GitHub, et Qt Creator, et j’ai une première approche des pratiques DevOps.</p>
+                <p>Trilingue (Français, Anglais, Kirundi), je suis aussi passionné par le sport (basketball, football) et les voyages, qui renforcent mon esprit d’équipe et ma capacité d’adaptation</p>
             </div>
         </div>
     </section>
+
     <section class="skills-section" id="skills">
         <div class="section-title">
             <h2>Compétences</h2>
         </div>
-    
-        <!-- 💡 Ajoute ce conteneur ici -->
         <div class="skills-container">
             <div class="skills-content">
-                <!-- Langages -->
                 <div class="skills-category">
                     <h5><i class="fas fa-code"></i> Langages</h5>
                     <div class="skills-badges">
@@ -551,8 +641,7 @@
                         <span class="skill-badge">CSS</span>
                     </div>
                 </div>
-    
-                <!-- Bases de données -->
+
                 <div class="skills-category">
                     <h5><i class="fas fa-database"></i> Bases de données</h5>
                     <div class="skills-badges">
@@ -560,7 +649,6 @@
                         <span class="skill-badge">MySQL</span>
                     </div>
                 </div>
-    
                 
                 <div class="skills-category">
                     <h5><i class="fas fa-tools"></i> Environnements & outils</h5>
@@ -572,8 +660,7 @@
                         <span class="skill-badge">Qt Creator</span>
                     </div>
                 </div>
-    
-                <!-- Paradigmes -->
+
                 <div class="skills-category">
                     <h5><i class="fas fa-project-diagram"></i> Paradigmes</h5>
                     <div class="skills-badges">
@@ -584,13 +671,12 @@
             </div>
         </div> 
     </section>
-    <!-- Section Expériences Professionnelles -->
+
     <section class="projects" id="experience">
         <div class="section-title">
             <h2>Expériences professionnelles</h2>
         </div>
         <div class="projects-grid">
-            <!-- Expérience 1 -->
             <div class="project-card">
                 <div class="project-info">
                     <h3>Livreur – Pizza Tempo, Angers</h3>
@@ -599,7 +685,6 @@
                 </div>
             </div>
 
-            <!-- Expérience 2 -->
             <div class="project-card">
                 <div class="project-info">
                     <h3>Préparateur de commandes – Action, Angers</h3>
@@ -608,7 +693,6 @@
                 </div>
             </div>
 
-            <!-- Expérience 3 -->
             <div class="project-card">
                 <div class="project-info">
                     <h3>Préparateur de commandes – Elivia, Angers</h3>
@@ -617,7 +701,6 @@
                 </div>
             </div>
 
-            <!-- Expérience 4 -->
             <div class="project-card">
                 <div class="project-info">
                     <h3>Manager – Town Paving and Cleaning, Bujumbura</h3>
@@ -629,16 +712,14 @@
     </section>
 
 
-    <!-- Section Projets -->
     <section class="projects" id="projects">
         <div class="section-title">
             <h2>Mes projets</h2>
         </div>
         <div class="projects-grid">
-            <!-- Projet 1 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="solveur.png"Projet 1">
+                    <img src="solveur.png" alt="Projet 1">
                 </div>
                 <div class="project-info">
                     <h3>Solveur emploi du temps</h3>
@@ -653,7 +734,6 @@
                 </div>
             </div>
             
-            <!-- Projet 2 -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="mastermind.png" alt="Jeu Mastermind">
@@ -669,7 +749,6 @@
                 </div>
             </div>
             
-            <!-- Projet 3 -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="minesweeper.png" alt="Projet 3">
@@ -688,7 +767,6 @@
         </div>
     </section>
 
-    <!-- Section Contact -->
     <section class="contact" id="contact">
         <div class="section-title">
             <h2>Contactez-moi</h2>
@@ -723,38 +801,34 @@
             
             <div class="contact-form">
                  <form action="https://formsubmit.co/guydany8@gmail.com" method="POST">
-                    <!-- Désactiver le CAPTCHA FormSubmit -->
                     <input type="hidden" name="_captcha" value="false">
-                
-                    <!-- PAS de redirection (_next supprimé) -->
-                
+                    
                     <div class="form-group">
                         <label for="name">Nom</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                
+                    
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                
+                    
                     <div class="form-group">
                         <label for="subject">Sujet</label>
                         <input type="text" id="subject" name="subject" required>
                     </div>
-                
+                    
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
-                
+                    
                     <button type="submit" class="btn">Envoyer le message</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
