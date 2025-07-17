@@ -1,0 +1,2019 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:224b:b0:92:fd56:6792 with SMTP id y11csp6824489gba;
+        Mon, 7 Jul 2025 03:38:46 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHqKzCI9+npaJthbhdcjQeou3Xw779c9ov2MzbXkFGhURJvwzVJZRb093rVDNlBsD9tQr+9
+X-Received: by 2002:a5d:5f48:0:b0:3a5:2b1d:7889 with SMTP id ffacd0b85a97d-3b49703dd8fmr8610192f8f.43.1751884726552;
+        Mon, 07 Jul 2025 03:38:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751884726; cv=none;
+        d=google.com; s=arc-20240605;
+        b=bjrr3GD+07fQ3esH2wkj+Dql+kjViPLzg+n6gvcKsE3gc2HVhDr/FwDS8VFuoDujOb
+         9Pcd/tiz4X2fK0r9q5c8o7AW+iPayaEnRXyG+mOL9pRGN5XRBlHyV4FZ9wxJdWvtVia6
+         vCew37ggDy1H4hbUYIEtW1r3q2NaLxk8FRuHSBU9v4BlUlZUEAVSi8Mox8/iX6InXFJh
+         IJiM3QJexzYdXmdojJ/eLPMtS0bqlO+vUsQXEXEHIGCmXbVpbLB+2iajBM7lS2AiHnoN
+         1cHRwaHisuoyOe9AtX0lO2b8FgMryWXMuLg4nGr+Wfb9rjoeNbhsrS2LlIa8GGYKJYZB
+         cCrg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:date:list-unsubscribe:from
+         :subject:to:feedback-id:list-unsubscribe-post:reply-to
+         :origin-messageid:message-id:dkim-signature;
+        bh=6Fw09/Oy+Hxqh2ZHMXoVedKTnQ8AlG5Oo0i4M6c/siY=;
+        fh=Z3c3D/4xeE50bGI+83vSAXEo7+MNzc/jktQqx4DY0QQ=;
+        b=B0jWrHDoskHu+pizL7lrmJx74elPytL0DuA6+lWlWseq81q+jfodnq1eOTQTVpUa+o
+         E2V1baDCdfiLpHcjmkSjiA38z9EoyJQ5XZIqfX6GjUd+VAw2BCmbv8zjwb6JESJzVqu4
+         ih4F5Bwu1onX+4Irmao4HyqoAIkldkmPaxIzXoapIjgZd7L8SE6LbfwneaZWit+Je56F
+         xRwAb4U921mHnOSpDLSjReNuEtLUTJbmjyzIFxHT6YXq5CiRAYMrMk84PTeapnEtp7bG
+         TnUsPtX7tjbIH9F/504bOqXiPr4cJtdBHhqAkiPmrhI6M1zwmCSsdfsJaiXkOUxYI7x8
+         CRzQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@news.b-z-b.com header.s=mail header.b="E0I/2Zav";
+       spf=pass (google.com: domain of bounces-271896862-1498281875@news.b-z-b.com designates 172.246.45.219 as permitted sender) smtp.mailfrom=bounces-271896862-1498281875@news.b-z-b.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=news.b-z-b.com
+Return-Path: <bounces-271896862-1498281875@news.b-z-b.com>
+Received: from news.b-z-b.com (news.b-z-b.com. [172.246.45.219])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3b474a24221si4992219f8f.629.2025.07.07.03.38.46
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 07 Jul 2025 03:38:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces-271896862-1498281875@news.b-z-b.com designates 172.246.45.219 as permitted sender) client-ip=172.246.45.219;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@news.b-z-b.com header.s=mail header.b="E0I/2Zav";
+       spf=pass (google.com: domain of bounces-271896862-1498281875@news.b-z-b.com designates 172.246.45.219 as permitted sender) smtp.mailfrom=bounces-271896862-1498281875@news.b-z-b.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=news.b-z-b.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=news.b-z-b.com;
+ q=dns/txt; s=mail; bh=6Fw09/Oy+Hxqh2ZHMXoVedKTnQ8AlG5Oo0i4M6c/siY=;
+ h=from:reply-to:subject:date:to:mime-version:content-type:content-transfer-encoding:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:x-sib-id:feedback-id;
+        b=E0I/2Zav43jLUuW642l6dMIuDv57ocSpXzowEAuKGUxxYwfYqpRXg2TqIXA+kZ8XVj21HcdPQi+i
+        yTimpBs066F/2Nl9Qy5DTx3kC03mvpG5O2CIHrylo3lyJo4EbvDMHhhVXglF+kipLwfKrOUTzw2Q
+        FAcG6cY8+0DQqxyHhf8=
+X-sib-id: 4OUBF88avp3OiR3vWhBAIj5zvudY6dohYU5ZEia6cSBlagHej80uFTwr5By9HWeRSJpa7KSYnUrM9tIK2F2fxF9xFDNxXpCZpOgyMW1yStNRI7eR1i-JItml9ytyF68Ir_9oOV7Y6Q4VcpsHpldcNwTtfigH5Y81NSaWnXDKHXeOPXD_CubyYaKf
+Message-Id: <bb86b08b-f192-45bc-b1df-946f5852a863@smtp-relay.sendinblue.com>
+Origin-messageId: <0197e472-a853-7733-aa70-46af389f60a2_v2@imagino.com>
+Reply-To: "\"BZB\"" <nepasrepondre@b-z-b.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: 172.246.45.219:7708387_-1:7708387:Sendinblue
+X-CSA-Complaints: csa-complaints@eco.de
+X-Mailin-EID: MjcxODk2ODYyfmd1eWtlbnkubmRheWl6ZXllOEBnbWFpbC5jb21%2BPDAxOTdlNDcyLWE4NTMtNzczMy1hYTcwLTQ2YWYzODlmNjBhMl92MkBpbWFnaW5vLmNvbT5%2BbmV3cy5iLXotYi5jb20%3D
+To: <guykeny.ndayizeye8@gmail.com>
+Subject: =?utf-8?q?Le_soleil_se_fait_d=C3=A9sirer,_ton_look_d=E2=80=99=C3=A9t?= =?utf-8?q?=C3=A9_aussi_=F0=9F=8C=A5=EF=B8=8F?=
+From: " BZB " <b-z-b@news.b-z-b.com>
+List-Unsubscribe: <https://r.news.b-z-b.com/tr/un/li/7I_B2ZE6uyLjbkAjVGzo9OLZX8yiEHCY-RKTmXfMh2jLHHqjdfz41MpHeqWnpEY_V7b5YXk2arHz_Dl3_xV1tr0ay34fpPpKA2SX0n6JpCKL5oAmNaAvagMoX41DhpFzwW2gt-wGtELAyml8QXIbcDMeIxnFJdJmVMBGZQPDOwEqeiV-S7WJfL_YgpQbUxXmYoq76C2_BAhdcFGmtCUEg1ehsS-4Df5jogB-Eo8D-xA>
+Date: Mon, 07 Jul 2025 10:33:31 +0000
+Mime-Version:1.0
+Content-Type:text/html; charset=utf-8
+Content-Transfer-Encoding:quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office" lang=3D"fr" xml:lang=3D"fr"><head>
+<!--[if mso]>
+<xml xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings></xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"/=
+>
+<link href=3D"https://fonts.googleapis.com/css?family=3DBarlow%7CBarlow:700=
+" rel=3D"stylesheet"/>
+<title>Heureusement, les soldes sont l=C3=A0 pour r=C3=A9chauffer tout =C3=
+=A7a.</title>
+<style type=3D"text/css">span.MsoHyperlink{mso-style-priority:1;color:inher=
+it}span.MsoHyperlinkFollowed{mso-style-priority:1;
+color:inherit}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;=
+padding:0;color:#000000;margin:0 auto}td{line-height:100%}
+img{outline:0;text-decoration:none}a img{border:none}u+* img+div{display:no=
+ne}table td{border-collapse:collapse;mso-line-height-rule:exactly}
+table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}table =
+*{box-sizing:content-box}table{box-sizing:border-box}
+a{color:inherit;text-decoration:none;mso-line-height-rule:exactly}.appleLin=
+ks,.appleLinksWhite{text-decoration:none !important}
+a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !im=
+portant;font-size:inherit !important;font-family:inherit !important;
+font-weight:inherit !important;line-height:inherit !important}table[class^=
+=3Dox] sup{font-size:.7em;vertical-align:baseline}
+sup{font-size:.8em;vertical-align:text-top;line-height:1;height:0;mso-text-=
+raise:24%}div>u+* table{zoom:100%}.ms-outlook-linkify{color:inherit !import=
+ant}
+:not(#outlook).barlow{font-family:Barlow,Arial,Helvetica,sans-serif !import=
+ant}:not(#outlook).barlow{font-family:Barlow,Arial,Helvetica,sans-serif !im=
+portant}
+@media screen and (min-width:451px) and (max-width:640px),screen and (min-d=
+evice-width:451px) and (max-device-width:640px){.t_w150px{width:150px !impo=
+rtant}
+.t_w53p{width:53% !important}.t_w85p{width:85% !important}.t_fz45px{font-si=
+ze:45px !important}.t_pt10px{padding-top:10px !important}
+.t_w95p{width:95% !important}.t_pl15px{padding-left:15px !important}.t_w30p=
+{width:30% !important}.t_h35px{height:35px !important}
+.t_lh35px{line-height:35px !important}.t_w50p{width:50% !important}.t_fz11p=
+x{font-size:11px !important}.t_w33d33p{width:33.33% !important}
+.t_w33d34p{width:33.34% !important}.t_w25p{width:25% !important}.t_w80p{wid=
+th:80% !important}.t_w90p{width:90% !important}
+.t_fz9px{font-size:9px !important}.t_lh11px{line-height:11px !important}.t_=
+w20p{width:20% !important}.t_w60p{width:60% !important}
+.t_w100p{width:100% !important}.t_v{display:block !important;font-size:inhe=
+rit !important;max-height:none !important;max-width:none !important;
+overflow:visible !important}.t_dnone{display:none !important}.t_barlow{font=
+-family:Barlow,Arial,Helvetica,sans-serif !important}
+.t_barlow{font-family:Barlow,Arial,Helvetica,sans-serif !important}
+}
+@media screen and (max-width:450px),screen and (max-device-width:450px){.m_=
+w150px{width:150px !important}.m_pb20px{padding-bottom:20px !important}
+.m_fz18px{font-size:18px !important}.m_fz40px{font-size:40px !important}.m_=
+pb0px{padding-bottom:0 !important}:not(#outlook).m_ffbarlowarialhelveticasa=
+nsminserif{font-family:Barlow,Arial,Helvetica,sans-serif !important}
+.m_fw700{font-weight:700 !important}.m_fz25px{font-size:25px !important}.m_=
+pt3px{padding-top:3px !important}.m_h10px{height:10px !important}
+.m_lh10px{line-height:10px !important}.m_h15px{height:15px !important}.m_fz=
+26px{font-size:26px !important}.m_pb3px{padding-bottom:3px !important}
+.m_lh28px{line-height:28px !important}.m_fz13px{font-size:13px !important}.=
+m_lh15px{line-height:15px !important}.m_pr6px{padding-right:6px !important}
+.m_w50p{width:50% !important}.m_pl6px{padding-left:6px !important}.m_h5px{h=
+eight:5px !important}.m_fz5px{font-size:5px !important}
+.m_lh5px{line-height:5px !important}.m_lts-n0px{letter-spacing:0 !important=
+}.m_pl3px{padding-left:3px !important}.m_w45p{width:45% !important}
+.m_pt5px{padding-top:5px !important}.m_pr10px{padding-right:10px !important=
+}.m_h35px{height:35px !important}.m_lh35px{line-height:35px !important}
+.m_fz14px{font-size:14px !important}.m_w80p{width:80% !important}.m_pt4px{p=
+adding-top:4px !important}.m_w95p{width:95% !important}
+.m_w33d33p{width:33.33% !important}.m_w33d34p{width:33.34% !important}.m_w3=
+0p{width:30% !important}.m_fz10px{font-size:10px !important}
+.m_lh12px{line-height:12px !important}.m_pb12px{padding-bottom:12px !import=
+ant}.m_w25p{width:25% !important}.m_w85p{width:85% !important}
+.m_pb10px{padding-bottom:10px !important}.m_w90p{width:90% !important}.m_ta=
+center{text-align:center !important}.m_fz9px{font-size:9px !important}
+.m_pt15px{padding-top:15px !important}.m_pb5px{padding-bottom:5px !importan=
+t}.m_bdr0pxsolidc2c2c2{border-right:0 solid #c2c2c2 !important}
+.m_flright{float:right !important}.m_w20p{width:20% !important}.m_pt10px{pa=
+dding-top:10px !important}.m_pb15px{padding-bottom:15px !important}
+.m_w100p{width:100% !important}.m_v{display:block !important;font-size:inhe=
+rit !important;max-height:none !important;max-width:none !important;
+overflow:visible !important}.m_dnone{display:none !important}.m_barlow{font=
+-family:Barlow,Arial,Helvetica,sans-serif !important}
+.m_barlow{font-family:Barlow,Arial,Helvetica,sans-serif !important}
+}
+@media screen and (min-width:640px),(orientation:landscape) and (min-width:=
+640px){.d_center{float:none !important;margin:auto !important}
+.d_left{float:left !important}.d_right{float:right !important}
+}#converted-body .d_center{float:none;margin:auto}#converted-body .d_left{f=
+loat:left}#converted-body .d_right{float:right}
+a:focus-visible{transition:box-shadow .3s ease;outline:0;box-shadow:0 0 0 2=
+px hsla(288,100%,50%,.8)}</style></head>
+<body style=3D"background-color:#ffffff"><img width=3D"1" height=3D"1" src=
+=3D"https://r.news.b-z-b.com/tr/op/wcnxIijjJF6C-gIknOYjxqYRI_tlLyAXlMEZ_xVm=
+cJkuChIp2GJtAtdFUJ2bNd5M-CoGmF9DkCq_qG97A-U6dwkgHUTVaOrJCHRfeGL0o6dijDWkC8i=
+Wlsv3bI7KI45qjklsf6eG8-LS8onxx83bC_y1fUSBeLCu9RnqZH7xT6Z_uJkYyEggtbyouuWpJ7=
+iwmwNwpXTaDpx9DgUld3ilc2M" style=3D"mso-hide:all"/><div style=3D"display: n=
+one;">Heureusement, les soldes sont l=C3=A0 pour r=C3=A9chauffer tout =C3=
+=A7a.</div>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"width:100%;margin-top:-1px" role=3D"none">
+<tbody><tr class=3D"t_dnone m_dnone" aria-hidden=3D"true">
+<td height=3D"1" style=3D"height:1px;max-height:1px;font-size:1px;line-heig=
+ht:1px">
+<span style=3D"display:block;width:640px;min-width:640px">=C2=A0</span>
+</td></tr><tr><td style=3D"background-color:#ffffff" role=3D"main">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_mauto t_w100p m_mauto=
+ m_w100p" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#6e6e6e;text-align:center;font-size:11px;padding-top:15px;padding=
+-bottom:10px;vertical-align:middle" class=3D"m_fz10px barlow"> Pour ne rien=
+ manquer, ajoute b-z-b@news.b-z-b.com =C3=A0 tes contacts. </td></tr></tbod=
+y></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w100p" role=3D=
+"none">
+<tbody><tr><td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#000000;text-align:left;font-size:12px;padding-top:10px;padding-b=
+ottom:10px;vertical-align:middle;line-height:14px" class=3D"m_tacenter barl=
+ow"> Heureusement, les soldes sont l=C3=A0 pour r=C3=A9chauffer tout =C3=A7=
+a. </td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"50%" class=3D"t_w50p m_dnone">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#808080;text-align:right;font-size:12px;padding-top:10px;padding-=
+bottom:10px;vertical-align:middle;line-height:14px" class=3D"barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/xmY_t5oRbvSxQh-13VGFRsIGf8ls2TB4V=
+Vg9-ysAlNhDVu7uISU_8-fLPVnL3cPstFLCD_sWLQHi_AOUna-2eDP1sG5_A-rqCYGA5G-WNbFk=
+Nzd9Pfj8MClZbWO5blOFwq0Kzp8_DpzKX0ws6SrXcLWIcWeHYSLkkvCpZ-cx2xKWYkYdmelg6U8=
+OXQ75aXwM9LX5T4pZzuUvjqvU6lHWz4pVFiO79k2F8XJHZYRQyGb-Hdu4ezSYBwzqvFvShJu-vw=
+P6Kak9_J70JVSkkiSNftfZui_ET5ZKXle1C_lnXs3MedYQgOl1KHsYNH-JizBRGN2E1WDjRlkbo=
+K96dj_ODENTxae2x1YsnCRML9KD0TBOgBT_MsaNvRbwvyPLUCl0oRqf_FSt_1d78kAognb3GlKW=
+zE0B-bnzZMwqX-5YGz9QWi-h6r08CBhbiijdf3Wv_5By-wrsFsWYjNJr7-YMWqlOrmHqMqDrwBs=
+l3kE6b8yKNC8z9-Doicj-GuH92DTdwx1q0TLAKpt08s-ypNDSAI1cTSoc_XjyhXooSByrD4mdvk=
+U9kKhg-Kag8353U9hRwdd-JT4j2OiMuSo">Visualiser en ligne</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"25%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w150px m_w150px" role=
+=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"m_p=
+b20px">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/M_XJsd1ilas5CGOGqtuFjEI7oCVw2Mi3B=
+R5QxXq3w5OFwPfIf4A4OjRW3N9-c4fwEsAeLIkyKwV9qpAgZ1DXf2iQTudAE-ATcJY5d8PFdEtT=
+B5uVjaGPG0ICnksDsm9pFGyCZ81Q7lNmwJp0uQ3y6yBtMAd9pgZHfIKKo4f3ZZwp-WTWEYA_qIg=
+w_a3T7F7dWdFwWPsthb3C036itWMkch74tGCGZUzYdtCLj77GXWFO1BjZn_JH3eWZcUNh8cikpO=
+JmJTLZ8AefQqektBRhDc44hsICerNRmVXKWvmfR_r2N_52IT90__Vr6l5b05Vvdj-HG9RaxEYcq=
+9GbxSmYr796aO-qhM63e0HD2zrM02pc94yTLmnem8sOy6CBMm84fDj0gtH4Xu-ilj04qE61IgAf=
+EsBkpokljeArKzUnyLC9b7_0QIkUOJswHDELVySwpfbKj0keSGCMuUSNhWsj" width=3D"100%=
+" style=3D"color:#000000;outline:0;border:none;margin:auto;display:block" t=
+arget=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/f069c6bf02cdc2616cf7ed834b2=
+048d09d77e23523d2da69ea552e85e3b1a19d.jpg?e=3D61Y6mzDaqIvF01rFZQUC70qwZxKbo=
+zZ-vbHYoFPgfIzJlfc9QsU0JAsfDLVUn44wAnGUGjtkdYz2_mK3ruMDFbdywdojPdrZDkH7mNOm=
+u2poiid59UE19QYkPwhaOjxFsM-RlAaNAGVBwvJNehKai7xBP8EsYvLlTB4HNOCca16mCL-aL5V=
+iLkbo_cWSFEwai33_Go1QDsStjZn1jECwQoSaMpUxRW13pSTNIY2qqnvRuEN2ZKvk0rAaooBemv=
+6vE9qBPsKBJnViWNyVj0-FzkjHQvAboeUI5nC0920oaHN0p4R8R0_-JRtpbU6mSCs75qzOt_igM=
+nhcEPor6B9I" alt=3D"logo BZB header" width=3D"160" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"49%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w53p m_dnone" role=3D=
+"none">
+<tbody><tr><td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#808080;text-align:center;text-transform:uppercase;font-size:16px=
+;padding-top:10px;padding-bottom:15px;vertical-align:middle;line-height:18p=
+x" class=3D"barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/3gt3K_VbSJGMQ7vbcMwkU8TL-Ueza7P3y=
+QYHB6pr2L8g40OsG5c8dV-5KnaQQtGkf7SfdxKuKhOOc7Nyqxu1GUzBMtCBGvwTh029yq9rDCoL=
+2mZDg5WiXL0SMd7lc_VDpoHLT-T4rdDptJysIcEiBiO1tznOZzi01aTJXWGQ3BGSGlq7EHhezdr=
+GeX-ZVHcjnbNMPTPnkceGuIbmXn6nBkMXyigGwJttz1_x1k5grMS8HfYKN44QBeH6gO4DLtAyQ2=
+5D21OrCLjwIYczBPYU3thNopD06AI7WmlBSRTS7WXM0B-KpDGqVjOjhz6-oJjhUdHZnl80EPdRZ=
+91iUvOq-Van3pZnRTEFCGkGFL596n91R1fI0-0YjrFJPnSJr-KyBw7VhhTpyWND2sGCOulKZXDs=
+08lrZR9P-Rn0vWJJyoruGSe760h4Wd_PgRYG1lpcTvhzN3UacnzrQ06s8s3qNc25rzpZ0zvt5ZY=
+WZNOlHtQ" style=3D"color:#808080;line-height:18px;display:block;text-decora=
+tion:none;outline:0" title=3D"Onglet Woman" target=3D"_blank"> WOMAN </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#808080;text-align:center;text-transform:uppercase;font-size:16px=
+;padding-top:10px;padding-bottom:15px;vertical-align:middle;line-height:18p=
+x" class=3D"barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/JvByK9HsgeyAg1zGngGFyh7eZk5QpmzR6=
+93laifdXvZau2l3774dC6rMgFrCERJUB9F2w2iFWMm0NoZl6tSdwvFA96k5SYOVpZod0athcSwt=
+e9k1NWM6Bmy35LJOIofeDkKwlacT2gW33uwr8AfEE08_HVORzuFBBkoEoQPyOMYto8XI4GdHqcf=
+pzspOSwSdgaGpjsP4KwT7RGzjpZpsA7gWijIW-_HkdWy6-miTdBjDbTflywrAwWmwKd5VDP678f=
+UxHLxcedzQ1pB_ejwzHouD8AnljnMeb_wRVz7vit5MQvKzJV8op7YE4h87V42RaV7pHFl3vkyJg=
+E4Pr1Tk514DWVVt3I_-1FBiJ4UxL_taUdt8-tf_JScImvwmRGOH9hmuX8OUSuB31hEkXGvSRwNj=
+P4PbPeVd0bHf1hkT16ehIJE9dnWQdSsPAI3Wis6BkB-R3dAqkRQ5-4BD_RDSdPGZqIwPA-afD0N=
+R9cJbs2Q" style=3D"color:#808080;line-height:18px;display:block;text-decora=
+tion:none;outline:0" title=3D"Onglet Man" target=3D"_blank"> MAN </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.34%" class=3D"t_w33d34p m_w33d34p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#808080;text-align:center;text-transform:uppercase;font-size:16px=
+;padding-top:10px;padding-bottom:15px;vertical-align:middle;line-height:18p=
+x" class=3D"barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/L8rbVVsEPqoOTnXK2xJro8eyA1APyeJWj=
+iHQR9m2_Kuq8Us5JZob039_BC1a1ZdvRo_mg9FsJkJuLCBzV1ibdWvNMHZ02p5GdDCYG6x6fsp8=
+VxZEMQFB0HX4lrSdhMlZDNtDcnBwYTpuDf2INmjLOJS47_t5EY-r5oz-3ME_bsXRGKg5p8UfuuP=
+L0slt4DrmtrugeWnO4TDfT__4tiMTkbVlNS0XfaicifC8DRyoRv-ap97gEsm5CaOnvbxWoOHF0k=
+BRufpgCBet6t1piaKpGawPmnU1S6nEMAkRG7qGc1wBo1nOG29yqE2dExB8wNJBoA9unvSpITlaA=
+ZRZ0nhY3Zgol6kT45ziEeTrv4bUkV2UaFeIKd7vPKgFICGPKxgZy-HRFSkftde4RYmdYERrM9ja=
+bEeHFU_fQSSsWncLUXrX5b3-92cHvbxgcRjljk4XgLu967HLvtHvGPMMaoulIBBkJTROXHpxsN7=
+2RKZS67E6ANFUzA" style=3D"color:#808080;line-height:18px;display:block;text=
+-decoration:none;outline:0" title=3D"Onglet New" target=3D"_blank"> NEW </a=
+>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+
+
+
+
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tbody><tr><td height=3D"20" style=3D"height:20px;font-size:8px" class=3D"m=
+_h10px m_fz10px m_lh10px"> =E2=80=8C </td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#D7282F" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#ffffff;text-align:center;text-transform:uppercase;font-size:25px=
+;padding-top:20px;padding-bottom:8px;vertical-align:middle" class=3D"m_ffba=
+rlowarialhelveticasansminserif m_fw700 m_fz18px m_pt10px m_pb5px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/gQlfd3_MuozphOckrUfd5x9nRclwkxzLZ=
+gjn8lAdZvJcE7WF_-9Tgyi1QyACE_6ZAPPwbmEMYcKxau76_3uISZuZbBmegDoKKzInntEvd2lt=
+M0XcNeEwDpUk3_3AqI_Yi-2E0NB8kHNW861qu8rW7yBQppqbrNe8rK4hU8X9Pg-ALQsKlGGHpxt=
+91oT_jMFjaYPuuyJIzt2qjrA_ysLwfDhrVrTrbPFDEDFRl3WmkKZn7KMowEl7El0zMNDPutuQ4d=
+yqhwj-Mm4PdY42DJCAz0J4xgNUBSQTNPA8Wvi18BG7BufcQZRb7TlWD0y5Sm-iymOkNARXRUrzs=
+X769yY2G3owjJ5r7OKBkrvw39fwduBjwupiIiowTXkvgpjJ9T6VCdvLN4j_TM83KitdiMyFvlqR=
+ylzdtNmG-nyXHn9So0KI7keW_T6ZzEfWES36HEuh9fPhtMGXUb6hgNeJuGlSfcqAWEi0Z_KNqXt=
+u84v_XVXh" style=3D"color:#ffffff;display:block;text-decoration:none;outlin=
+e:0" title=3D"Soldes" target=3D"_blank"> Nouvelle d=C3=A9marque </a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#ffffff;text-align:center;font-size:60px;letter-spacing:0;vertica=
+l-align:middle;font-style:italic" class=3D"m_ffbarlowarialhelveticasansmins=
+erif m_fw700 m_fz40px m_pb0px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/qdF03mPulnToHqSkiG0gcEyLaNU3nZMQq=
+_KCWX4g5xWa9qurSwC3nZxPVxcZwknwHQxKXiVjxDVQi6LyWa0gHANmexlmv6wuVDmYTfw2Bdpv=
+xMggWS5suemxHS7MzP84KdUEHUtc_XjxiafmDREyZ_20QJ4RJwEZP4L3GFA0Aywqjn9jmXhsJLk=
+F_OxvNPWwIrVnuSpB3RpvQH3YfP7bi2PEtrcqNn9lykxmeuHgIEy6R99UveQIaropXgzj5tJ-LJ=
+aLCLJ4k-JPc1mBk7D8fmSSvLFUY2yXmWuwVnrhncgSFsT5uE-8HHoRmp-MnZfroulOZ8_plkX9a=
+qEh0lwppj0EvLkrfdbQiL3XmEbP2DomfPe7M30jBOLcfBn3Q_7HwTwVVvc674NEgljYt3ZCkCcM=
+0rge8JphHmzJKuSve4nqWVLU3Tfz5oFB_IPTLnjq9ZB3rHmcv7_f_B4KjM2jKePEwKeA9vjGRmB=
+-Tu10vLES" style=3D"color:#ffffff;display:block;text-decoration:none;outlin=
+e:0" title=3D"Soldes" target=3D"_blank"> SOLDES </a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#ffffff;text-align:center;font-size:35px;padding-top:5px;padding-=
+bottom:8px;vertical-align:middle" class=3D"m_ffbarlowarialhelveticasansmins=
+erif m_fw700 m_fz25px m_pt3px m_pb5px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/Qwi8uzIhfbeouh6ix4io57YaHBaQfIXHV=
+DByEzQ2bzzst3V63ArQ9c4Jl8_ppn-WoGgCqPQ1Tj5XHrg9ymrz3v9cw5INGr3ddaKERB0jRd4_=
+HlxbPWKsVosP803OQD99jX9wSpFWQWcT2FKTL353S-sVqmSmW_CX17-PJQQJOYWuZIPXVK6JmZw=
+QWP83wacXrl54pDZx-PKqC-CqGY1jSwy0CjD5uQRXTZsN2J1L9PyCNIrhekkCy4Hg0aIz1LJya_=
+FrqNvF57nBTA3E30O4CGg5tV-IeQXWrAiLuISMP2uOT5qQWCiUVxF6b-hjX8XTlVkjoedX9dPZM=
+A7EO8Ure2YN7C1FgvMg8JIK772vxT5J2FcPGEJtMoc1qQ4hmJzxryhkhuDSzTbczJY7G40Z9V9h=
+qIGaQ_5bNvFfgJDG-oS6z1TTS0ObNqhnuXAFV3mBqhHVydmeN6khRTN-zHlfqjr1AelvFQOr-vE=
+sNRa6beh8" style=3D"color:#ffffff;display:block;text-decoration:none;outlin=
+e:0" title=3D"Soldes" target=3D"_blank"> jusqu&#39;=C3=A0 -60%* </a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w50p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"45%" align=
+=3D"right" class=3D"d_right t_w50p m_w80p" role=3D"none">
+<tbody><tr><td style=3D"padding-top:10px;padding-right:10px;padding-bottom:=
+20px;height:35px" class=3D"m_pb10px">
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://r.news.b-z-b.com/tr/cl/HxrUdY=
+XyR3eRAbu4VYoFBQ5todaUS_x8qRxxvk3Nmoj923QOHrpMoYfBAjzOErHt25spTsz-DlHZDpCWv=
+q_YrXh5csFgQbcYXL-PM_Fd7CN9edgX5oUs9StArJZSpf7tODdGsYlE-9CoetheEOfeTyGn6WXw=
+lQ3pUUlOi_oYfR1F7-JmWWLFErP6geizIOyC1POAh9M69RdT8fYieMFAFKkSo9oLmfiY327TJ99=
+jCYco7z1BQa8BOcUyHUkGLTLaUMDpKgrdQmNyLrPvaCAKgp6EnFsAZogaO-B2SpH0zGxMrLzAGD=
+ZC_9CQpouzgJ1FK_Mbk_nEn7rEYeCPdYH1CXe2x4DWYsHLfDn0lvRJtH1wwTlhK7vzBlb7sL3ZN=
+9Z1YIzJ2E4gY229JP8j394afr7zgyoK-A4ydzCeNKfIdsgiClxlzzhQxbbSxkbUAPpX-H5VK0zd=
+jrYtOEaZgW3s4n3FDwd_pIuvSzh-93XVHfWIPpPtxdGoZT8" style=3D"v-text-anchor:mid=
+dle;height:36px;width:132px" arcsize=3D"23%" strokecolor=3D"#ffffff" stroke=
+weight=3D"1px" fillcolor=3D"#d7282f" fill=3D"t">
+<w:anchorlock>
+<center style=3D"color:#ffffff;font-size:14px;font-family:Arial,Helvetica,s=
+ans-serif;font-weight:normal;height:36px;text-align:center">
+FEMME
+</center>
+</w:anchorlock></v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:8px;border-top-right-radius:8px;border-b=
+ottom-left-radius:8px;border-bottom-right-radius:8px;mso-hide:all;display:i=
+nline-block;-webkit-text-size-adjust:none;text-decoration:none;width:100%" =
+class=3D"t_w100p m_w100p" href=3D"https://r.news.b-z-b.com/tr/cl/Y9-NCrx5mC=
+ODuiyujAzJbJnej1oIq9Wvjx1xDlfXjzGfPA5sDb-Zv-bn3efYUIJ0pCWgKYZXMr1hUAeMkNeKh=
+HGStAJziM8XHQ0nL0_bCRSZCNKYFIgNUxMM1gF65gHAXyhaNuhn_jbh4py0GwCl1adZpMc20974=
+H9X1olbmAiSIcCzgxybK2gcMCx2AKg60k7mrVGXILOr9PmpNmQbRHz0iYJzl5josverW2ggHNt7=
+tmWdU2i6YsBOHtzCW07feMDw0AC0oEzEpjKyXvt9mrxelFf5bKQR-8OebCoVz8jQTx9ywgepmuz=
+nGDhhjWbb8cK7mZkO3ZZbrLeyKcYjISIXpbmfKrFkvjOc6FkStHsDB7aQTOByOBj7qjrxXcTdNm=
+MTl_MsQxT0Hj4Hte1eC1UqjIqVReQm-A_HzkVh7BvJdYVStihpbdaLh9d4T9ckjZGqVAyULou1G=
+GgfCjNZT9uR0YkpaQAe8Shl_gw6zKPXQ3Yljqbu1NPk" title=3D"Soldes femme" target=
+=3D"_blank">
+<span style=3D"background-color:#d7282f;border-top:1px solid #ffffff;border=
+-bottom:1px solid #ffffff;border-left:1px solid #ffffff;border-right:1px so=
+lid #ffffff;border-top-left-radius:8px;border-top-right-radius:8px;border-b=
+ottom-left-radius:8px;border-bottom-right-radius:8px;color:#ffffff;font-fam=
+ily:Arial,Helvetica,sans-serif;font-weight:400;font-size:14px;text-align:ce=
+nter;text-transform:uppercase;line-height:35px;mso-hide:all;display:block" =
+class=3D"m_fz13px barlow">
+femme</span>
+</a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w50p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"45%" align=
+=3D"left" class=3D"d_left t_w50p m_w80p" role=3D"none">
+<tbody><tr><td style=3D"padding-top:10px;padding-bottom:20px;padding-left:1=
+0px;height:35px" class=3D"m_pb10px">
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://r.news.b-z-b.com/tr/cl/I8PNol=
+axH0hS93XUcYTloLY7IpPHFIhxVTrTUylGqvnElg6i8fO0v7sFXc531-yTNuztiyY__fpi4m2gI=
+PYaY-0RnG3JO1jQrhonU8Cv6GfCUoYXND9BfqQuUkMKv9ndKAMn8c3-Ljs_FGI3PAmvk8dPRZe0=
+DF2H8ai1pgJNUPvvIt60mpcnG4ceqt_pWYScRaNbm9AGtRRMXv5Pn1RmWF0gIGK08uvCLy_7qNz=
+9knPjQQVyrise2I1gjoZfznK3I-EWsXBbsJUTQjKyE-3vlHIoSiw3ksEtviL_ZEnS0XLG4lF9aX=
+hL1FJsfJo4N1kfLt9hXzezKVMQFCCjlN5esaYSs4O9qQquHAE3Gtd1GalOxaFcJlVAYkAwAuCSw=
+0zS3bcxdDFsIwzsvCvFTki0Q6rLmmHfa41S6Lx6lq_vaQ8QBhdZitgkS9ZhbPeOnf8_OEO6_Zcn=
+gpBe8xWiBdrIAUM7qr1-xHazqfvCm8ISozm4Ab3XRafIjGA" style=3D"v-text-anchor:mid=
+dle;height:36px;width:132px" arcsize=3D"23%" strokecolor=3D"#ffffff" stroke=
+weight=3D"1px" fillcolor=3D"#d7282f" fill=3D"t">
+<w:anchorlock>
+<center style=3D"color:#ffffff;font-size:14px;font-family:Arial,Helvetica,s=
+ans-serif;font-weight:normal;height:36px;text-align:center">
+HOMME
+</center>
+</w:anchorlock></v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:8px;border-top-right-radius:8px;border-b=
+ottom-left-radius:8px;border-bottom-right-radius:8px;mso-hide:all;display:i=
+nline-block;-webkit-text-size-adjust:none;text-decoration:none;width:100%" =
+class=3D"t_w100p m_w100p" href=3D"https://r.news.b-z-b.com/tr/cl/_yY5MrbP36=
+2LsxY0ec-XXcnUXCsRtndHu5f5vJANtzfo3BzEmi46IUgA8qIBSUEis8mT88k7vsx5nk4_Nlr9f=
+h7kVBS78z0213anH485n_UI_F3h67iY-dnQQyD3MaURWihpwkbCH8sLu3aN85yukXddkqeY83Bg=
+PhboTj4gISOBzcD7Kp1ApO7aFwao7M1hphqqEZg9J9Zz6jhUYEwOws2vWazAtpoXw_A0Rf8TK1D=
+r51UkKrPJid7l9PaVkGn9gFbG70VTo8AJy4VNHULAcTqhOtOhdNdB6NzxwINBf1nrgL0Xhu29NU=
+WZUrSxKiLsQLcSXHlQSV9FBntyiXjFkrrrrXgz3ScfIMcc-dnBqtb36_03Rmr9g6M_SrybMgJbJ=
+3fibHenp3oovtdk5qPmvIJ6dBO9li2lW-_hKI_chk6gt0dRcuMm6NBahBWlzz4H1Crc7Gc6whMZ=
+e0C7DQOGfZoZwJc9C9Q5gQ4Y-J7xV8tNAwNpkwHlgBE" title=3D"Soldes homme" target=
+=3D"_blank">
+<span style=3D"background-color:#d7282f;border-top:1px solid #ffffff;border=
+-bottom:1px solid #ffffff;border-left:1px solid #ffffff;border-right:1px so=
+lid #ffffff;border-top-left-radius:8px;border-top-right-radius:8px;border-b=
+ottom-left-radius:8px;border-bottom-right-radius:8px;color:#ffffff;font-fam=
+ily:Arial,Helvetica,sans-serif;font-weight:400;font-size:14px;text-align:ce=
+nter;text-transform:uppercase;line-height:35px;mso-hide:all;display:block" =
+class=3D"m_fz13px barlow">
+homme</span>
+</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tbody><tr><td height=3D"20" style=3D"height:20px;font-size:8px" class=3D"m=
+_h10px m_fz10px m_lh10px"> =E2=80=8C </td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#ca8e5c" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tbody><tr><td height=3D"30" style=3D"height:30px;font-size:8px" class=3D"m=
+_h15px"> =E2=80=8C </td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w85p m_w90p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;vertical-align:middle;border-top-=
+left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10p=
+x;border-bottom-right-radius:10px;border-collapse:separate;overflow:hidden"=
+ class=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/m7LOaOCO56JTlsAVdv5g2iZLp-_JW5kPh=
+Ms5p_Yw9_fQXxmRm2eLnf1koqO22RMX59UCrM5ncMrVvUmnmL6AmACgd_cd32WgbwIJlf84lSrA=
+qaAwTNl8Q9Pj6ZcZMaOcPJAOjU27gzWWcJDV_NlJaEDBKUbDNx5KGR1AIlqicQdXx_mhdpMijBg=
+jC9_yYjCeidbqk8QCcnbz5hcXc_L-Y0fWsLRLN9neWg6x5iD68Fc-kN5LJAuFXaY-KCN_SFb1Og=
+BgBhdJuGZYSswHL4gGVFx8gCfom4N5q2kLBI6qJ-pH7wdnyf7eL90bUZDq9vngOxIi7xITNpiFC=
+DR0kTFqE7sGPcPZVF7x6q4cexAn2yjJIASKTPA5SMbpvdcw8kq_q5GBEVRJzbZOCnc56o_YzSmy=
+plYWEp1qqlb2BNhYHi_Ca-62KsFMTL5F74MtsmqfhcvYmSXz_ZDsOjfMzzY7QftSWh7HHy2HQG7=
+k44b55uWsKoP7p5XcnVw0S56ekp6uBQtaRmyLorsq_niCS1tyX69l3XtsKlI9W_OUIsr7OCtFzF=
+CTFLMnUBJ75GwhDw" width=3D"100%" style=3D"color:#000000;outline:0;border:no=
+ne;margin:auto;display:block" title=3D"Bermuda et short " target=3D"_blank"=
+>
+<img src=3D"https://r.news.b-z-b.com/im/7708387/eed3cf330238396a4c5b5b6b121=
+8bd5630fb1f7c9be9647d740a45e1aa01f412.jpg?e=3DHl4Yrhbe7IgAP1D2A6L7rhjvOTkwk=
+OagoDfCBN_s0PfCsIkx8vFiNwsXd35--UChXFOz4cUNyvv9oyFWYp7MNlJe-Py1MRCZ_keLAPYA=
+RgeigZrNASpV-9m9GOG_NWTEOt29X4Hb6WcDuhCd94LBFIaBo6xCP7-MrF4xC61teML9wT4MCho=
+uWJfpu_pydTN2p88xd3SpwHxdfTAAbtW0L1cNUpewunxVK5wYWqI3CVP_8mb_5QZ2r_9fJWVCtG=
+PKNZ58xDdzTfPhbV6iv7Z_7cCFtZkwHl9HpXwduPic3FydsDZkAm6AaYEmyLIymKwkteK8dhHhU=
+N_uljAZzjjL" alt=3D"Nouvelle collection" width=3D"576" style=3D"font-family=
+:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;b=
+order:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#ffffff;text-align:center;font-size:42px;padding-top:20px;padding=
+-bottom:5px;vertical-align:middle" class=3D"t_fz45px t_pt10px m_fz26px m_pt=
+10px m_pb3px m_lh28px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/lZRXJN6eYnbLLhGVUqsJEYo1itJ0Kxl5j=
+qZVCOwx6cVQFkNiHo5FRZoQVMx5tcwK5MopZNakDYrwFKILCoblUFm7_37TPls7UQ-crIbzQwWw=
+nAkNfQGnzGW8z4xSAVwGLFRtAYw2LRwf3DWRYbC9Be-LhQKIghLsgkwd1zF4CxHFE0WsqdF57_7=
+gnWLJ4FyebjBjVBgj9LYwNB-8kyt7zWo94b8npand3kAgEpT3HVcDo3OpdiqB2lPOAhAHukYsqH=
+RCM8OJjrgauS-hprgPVN0ukVUTC9ahorJG4xUE9o82A7BzMkNjxnrUJ1R75Jnd7bX0eF1iJqvch=
+kS0rZFzmyH-uykjm65fEQG5jGvQ9_p1WXssvhp6O3oMsJRMdYK_UrXfRPimdAzbIkgbao7ejUIH=
+JBv6r8sQTM_1FAkdFEWnImBt-lj0aCge1m978wuAz5qCElB_0gy8uRf0e2YldtB3lceqLVCmSIB=
+mQp-9S0PsRg8ZQzNBwFt3woE-uNBkd3118VdwgLFcBiAsTx1h_El8DvAFUC16JM9se2v3kNWIA4=
+Y3mXLYYyqN0osoUw" style=3D"color:#ffffff;display:block;text-decoration:none=
+;outline:0" class=3D"m_lh28px" title=3D"Bermuda et short " target=3D"_blank=
+"> Nos bermudas et nos shorts </a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w80p m_w85p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#ffffff;text-align:center;font-size:14px;padding-top:5px;padding-=
+right:0;padding-bottom:10px;padding-left:0;vertical-align:middle;line-heigh=
+t:19px" class=3D"m_fz13px m_lts-n0px m_pb5px m_lh15px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/0ATd4DiYr1DGnN-97PRstzjW4-MzqXYOl=
+4263AZH4PROyYrvhL5IhdlGYzH4InHfgP7oVoFoFLSrfrX1-PLcbvURPUwhEv9Pmgmb3rlFvUjE=
+hh6YuqOUQIWIJtuPqp0vBO-P9ns3NNYs6dMlTcI3Y7Tcushv5dwhJfV9fsZKeGahZGAHZYC1Lev=
+8qYJ-gIM99ptnPIeqzUNEkygd06jT75fgw3fJ2zjtMnYBDRlkS4PS6ob-ozP_K0xy6v62Y5VkI0=
+a5HJrxV5LZuwYulRCfLzYI9mwjd4itooHnVQ6hU66TioaQ4FSVzEpp0XfCtb0r8dQf9fzExqUuT=
+tpBmNvIywjLjf1SwxuDKiXZo1foy-Yp2cxShh-3wUtRJ0esblhcltQZx8vG2_PP9obQT64Ra7U4=
+9Ie0lKfh-ri-cO-nuW68r9nl0la2f0339qZJ3OnUU7OJygRDqWEyf2ArPDBpjTZW2-1LybPca-W=
+PaKabFMqpzkIVt2EKqIiuVm4rNrzBWXxIW41gmpBGgOFWwtS1CSeyma44XLBQPa53uUvl76PhQD=
+5yOXF07dYCTaSmww" style=3D"color:#ffffff;line-height:19px;display:block;tex=
+t-decoration:none;outline:0" class=3D"m_lh15px" title=3D"Bermuda et short "=
+ target=3D"_blank"> Au genou, au-dessus ou en-dessous, c=E2=80=99est l=E2=
+=80=99alli=C3=A9 incontournable pour affronter les fortes chaleurs tout en =
+restant confort. Pour les femmes, on le porte avec une veste fa=C3=A7on gar=
+=C3=A7on de caf=C3=A9 pour une allure plus chic.<br role=3D"none"/></a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w50p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"50%" align=
+=3D"right" class=3D"d_right t_w60p m_w85p" role=3D"none">
+<tbody><tr><td style=3D"padding-top:10px;padding-right:10px;padding-bottom:=
+20px;height:40px" class=3D"t_h35px m_pr6px m_pb15px m_h35px">
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://r.news.b-z-b.com/tr/cl/SwyLgx=
+XmyXU8bg9i6iFTd2wAhURmcIUIah79_JP3014GRC3DXMgomZ0bVTtSyU047xy2qGg609F_KANUC=
+NTVGzd7mFQY6Rh-9p5UtsWjH3o0LMx3ckeieEAezj_WxFh7OLDCGdncJugyMY7GjZrX14rfTuJC=
+Z3dpVyEEklPBhsfQrtkEBEcZ7NUE0B3BQ5bO_XXbjJ0tQfbyBIaHU2itWFeW43bK5adXUmIEuvK=
+dtOIfn02A88657oZb073-2mV3aAGDFXt3sj-CSAH8HyHxHJfgou-vtsEzPdh8coVaZWKHzx1ayz=
+l-F3DO1csL6Xpf_6WMawYZ3PQuQAcyKAiGZ4_qE2A7EdcxwrHq0umrW21PUiBzipQMPPrzSM7NP=
+1ItkmFaLX1yi8ZTioR-EkgyVu0XdtkOxv20IqKecLUOS7xIisYVsO7u8evOTfMVoL84Ta5qA1sA=
+Bb2Afvyw2juONeOxh9IHi5QWyCfkRxsRF6MU8oxe09WthiQ1g5YHtIRL" style=3D"v-text-a=
+nchor:middle;height:40px;width:150px" arcsize=3D"25%" stroke=3D"f" fillcolo=
+r=3D"#ffffff" fill=3D"t">
+<w:anchorlock>
+<center style=3D"color:#ca8e5c;font-size:14px;font-family:Arial,Helvetica,s=
+ans-serif;font-weight:normal;height:40px;text-align:center">
+FEMME
+</center>
+</w:anchorlock></v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:10px;border-top-right-radius:10px;border=
+-bottom-left-radius:10px;border-bottom-right-radius:10px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://r.news.b-z-b.com/tr/cl/JlaFtP=
+W7oBAZCvqTqekI5fpN3LsUL3I_jyOje_rGg5JmlyKPqhVXg994qY4bajISI01fzb09Qs5VrXfNQ=
+faZUr5_yQUUnCrjmSSdOj5Q8GeaNpcC0zxresmAVRKa0cYIxQ210qHdZOQF5iYt607aQwwjedBz=
+pT3-QkGzQ-hdD0VsXKEBjwjq61Uw5_ksmlcExHs3Dis7mvIKvhuF-ub3D1z_zpmcs3mQaL7aC8F=
+13EIIyagAhoKM7VeCOGVRUl9X6tSA5Pu19Vp5pcynEN9nkoGK7Cpbqsi5KmGvPJI2bWl1g9bME3=
+bwY7A46uEYpoWfsRqzFzjIfB7z1UWC5-Iz1CYbMEDwJFcEO_ufliiW4bAlcfLUWPJad_k1W9TIO=
+Jc9_nL_KhY_uW3eqNympMlen4bw383QjbbEdj_Ehgpi0WsREJ2Ht1YMfra8nqdXuDlCKkjQ-wG1=
+_zoB86qXNpjQaRIjt6ZuqYq_HdSFAXaH390udqyyUjNX99pI0KgS6cq9" title=3D"Short fe=
+mme" target=3D"_blank">
+<span style=3D"background-color:#ffffff;border-top-left-radius:10px;border-=
+top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-ra=
+dius:10px;color:#ca8e5c;font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;font-size:14px;text-align:center;text-transform:uppercase;line-height:4=
+0px;mso-hide:all;display:block" class=3D"t_lh35px m_lh35px barlow">
+FEMME</span>
+</a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w50p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"50%" align=
+=3D"left" class=3D"d_left t_w60p m_w85p" role=3D"none">
+<tbody><tr><td style=3D"padding-top:10px;padding-bottom:10px;padding-left:1=
+0px;height:40px" class=3D"t_h35px m_pb15px m_pl6px m_h35px">
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://r.news.b-z-b.com/tr/cl/YKtzPF=
+TtZOvy3TiBoSKpL8hqA6ozGcXcB-PRb5re-KQfHuM_zVSoFL9ErGhQ_ko9c4d7kq5CM5mnlqkbw=
+-SPuKVUcw00L1ZJdGoh9vWDq6LWw3AZyLThJ-AstFi8Q3GiLsq0I931y3rF8_MirExl3ejqGjgI=
+2XGX2uFJTOpHUjDeuJ2yRJAdwjmOpH9QmhjerBEGzz5SUah682e0NfZUAlHQtjdorl_18gun8lp=
+WfBcrhHMh3y7zhcSDyipoj_jivQRg-YnQxzqd6wVtAXm5S6D_vhHrVPa5MG1n1sbNjjwMowRBHU=
+ND5nvkbVlvSIqgzici1X3i5J60X3BjwLBkwWWsuVXe0uREgohnUFLehFYEOrsVe4gAEeKOmdyZW=
+tTY8WIeLY0YKt5AI3QD1Kk3KcstGqbGu1uMi9xP-p_QB3G8ojHABYsIGnpun3LVgKKJ5u66Rqv4=
+aMwunaEHuhnyPARg56PUOs65xO8SN5OD-rBrEcOAGHIOpy8KbLG9quCO" style=3D"v-text-a=
+nchor:middle;height:40px;width:150px" arcsize=3D"25%" stroke=3D"f" fillcolo=
+r=3D"#ffffff" fill=3D"t">
+<w:anchorlock>
+<center style=3D"color:#ca8e5c;font-size:14px;font-family:Arial,Helvetica,s=
+ans-serif;font-weight:normal;height:40px;text-align:center">
+HOMME
+</center>
+</w:anchorlock></v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:10px;border-top-right-radius:10px;border=
+-bottom-left-radius:10px;border-bottom-right-radius:10px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://r.news.b-z-b.com/tr/cl/mrlGKC=
+PL569QL4nakQ2RMT0kje-_YQxsTwFC6cddC15Pq-16l9kOl4wfb8X7bakFI4xiCe9aXQEHlyOcr=
+cFLatDpCTl2DaG2pu_aHbAt8XxxlTzGpRbLEJYuFpsU1sRZxm-_kAYJo7dTIBDwgKq4O2GTt1hx=
+CHrT6czUvpYdPp2PufFndDho3hFNh8Kpv4rqntQtmcs5mokTgDNA4jzw4kwqY9cusItRpuO6wMF=
+bc9Lvtji9a2jYx57VpbbaL1ERtulourK6YCkIQfwcfnrqvkXWeNdh3wFNZ1zmxUrjA5EiymGmtc=
+qHx91thJLnqJI6vSm1lrGYvydyDDqERgbAjnbuvEQojsLMLE0y5d6sLU23rzBPUwvbBRbih6QOh=
+uNUTGR2EFU1wO_QI1C3v58gi7WWifhKQvpMtkm-RjXSf4GaiKB2GVpDUshBX6IPu12RsHOFTjtv=
+vwS7xUPm8GU8HipGpEUEXCp0NtJ2Bf76Muu_-QYW_oUgMoKETReDdPdE" title=3D"Short ho=
+mme" target=3D"_blank">
+<span style=3D"background-color:#ffffff;border-top-left-radius:10px;border-=
+top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-ra=
+dius:10px;color:#ca8e5c;font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;font-size:14px;text-align:center;text-transform:uppercase;line-height:4=
+0px;mso-hide:all;display:block" class=3D"t_lh35px m_lh35px barlow">
+HOMME</span>
+</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#ffffff" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tbody><tr><td height=3D"20" style=3D"height:20px;font-size:8px"> =E2=80=8C=
+ </td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w85p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;vertical-align:middle;border-top-=
+left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10p=
+x;border-bottom-right-radius:10px;border-collapse:separate;overflow:hidden"=
+ class=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/iPtq6y_45TNizpTpPQhoC1YIUhJDW_kD_=
+-0lV2Iiw_J0J8Jq6OY7q2RK1zF5DzbORMiEcVEvLvSfLsqwJxOOaxrlbf9q8LAXUnY8qttTb_Xq=
+CFwMpdHd0xu_2IfNfX6sz5cibgirsF4n4NmEBNMV4sOFObje1vfdq8AWhKbQ_Cc1ekjcRU-1TKq=
+O6aiHs2Q7zVpYI94AkL_SRLsdD3Jg5ZOQwZVueHdG1InhxG-xwJNpFmXAnebbBIAOBdOcVV5hQ-=
+S-ki80IlFZVktkyizbNo3KlnYkVwn1VwL2FadumhY0xG8-_MpkwgfeElY-BAs-SJYVZYjRy0hSC=
+F3P3gtYRcw25ysTsMHsR1i-QC6SHfL45gSvH6u_lakOfvq_oO0P1jNdHhEdmObhaTaFckJjwxQC=
+Bh-VRoYTkunWqltGuBBSNx-Q1odBlA-GBeL9M9EONF2N1np2w65o8z9gX9ErWNKkYw0gQkF3CoJ=
+7IIn7gBl8a7JTB6lglRU4swQRF2hY" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short femme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/bcd5dc347058d52194dc7cbd4ce=
+e889c3a9278df941a830ac585fdc9fa3d0b92.jpg?e=3D7-QyE33zjMUOnl9FelqV-lr0Pnz-N=
+7r_UsG0pNXP_ut8ZKFS5qr_G6KplksF6ZtYZ2ubTGy75-tYU69jquXHhAR5pLb7vMoMeWXEc6mg=
+UqzZuMaUexlNwebydHJMtW5cG36Ygob-WHwPAYPHULed9TcnUcVwIDi4BVgXZ7Zv530jcwuGZEk=
+3oagk6K4eFzhDMKLh2cFFR-9DnA9MOg8nY_c32Faz3Mez0zm0TUxMwLLWcx_q1K6MMag2NonV6G=
+IkVD_Fjxj-fXn7aS_d8EMXz7NnQ97ZwllzFYUnRD_srmXmmotokPy7wMnoWB8Y-s-um81AdSIKk=
+7ApNmQSN5_l" alt=3D"Combi blanche" width=3D"512" style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:=
+none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w85p" role=3D=
+"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/pFUxKgwRRzn52ipusFlm_QxzhuOCOVyuJ=
+FSNVrpoiKFqP9zV2aqtH_xswBRk_VYcURZmZ97-EntMXKm3R972-XvFZ4QG8y1qrCKl0t_2vaWt=
+ZTB9hnsbVk717z6ECDCVVZNgB11brWqFPQxNNb3gNzZz2K5V2F-nImyGOcjlO6NFUXVDB5dTxHw=
+_1qq7I6S5n2g8tRFM2SdxOxI6Ocj6y57wVt1RfnhfbsQPv7mNrXob_kzTaMU67JUZbCi0YNO9UC=
+OmFQUXV71gj8JkHdAmz8W5JI315SKaovRFsrlJ51T5PWr_TpzJlwM3w3QBgAq9GA7GjlyUkwNx-=
+dNxnyoBaxsZmI59ZZ8GrnN0U7nKA1_57YanGDruuTp0zY0gqXNz2IikzFTHzbNZ1B_nRBPPD1VS=
+cE23HGi7i62KynnroloojCk5P_TG5FJfGZ45VnAxZDGM1KWv3uJ_LDmAniD-HmYLps3hteiZ80Q=
+O1-VltEYMZL4Uq5PGIrtyPxw0sVvn" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ femme" target=3D"_blank">
+<span style=3D"font-style:italic">Bermuda brut<br role=3D"none"/><span styl=
+e=3D"color:#ff0000;font-size:inherit">26,39=E2=82=AC</span><span style=3D"f=
+ont-size:inherit"> </span><span style=3D"text-decoration:line-through;font-=
+size:inherit">32,99 =E2=82=AC</span><span style=3D"font-size:inherit"> </sp=
+an><span style=3D"font-weight:700;color:#ff0000;font-size:inherit">-20%*</s=
+pan></span></a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tbody><tr><td height=3D"10" style=3D"height:10px;font-size:10px;line-heigh=
+t:10px" class=3D"m_h5px m_fz5px m_lh5px"> =E2=80=8C </td></tr></tbody></tab=
+le>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w95p" role=3D"=
+none">
+<tbody><tr><td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"padding-top:2px;padding-right:2px;padding-bottom:2p=
+x;padding-left:2px;text-align:center;vertical-align:middle;border-top-left-=
+radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;bor=
+der-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" clas=
+s=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/I4vzpcE6y1CK1n88JBpEmcdXx--jUZDpv=
+FEV28HsL7XFTM6DXxMH7TX_ys0a5FISDEj8wrO_5Lxojf7OAqWlSCEEHjZsjbnjsG3PoY_URe5y=
+SZWn67mupsJOdVAGy1NY1KPkuEgRbNBt2Vjl0jKDt1Ip2SU3v34aIsjjf6xGIoQ9pUQ3mZ9I6i6=
+jXJsLBwB7gMJHInGPh7O9ThQh9eMYXzPGOcgOD6rXmzk08ZWTAnWQL25Nlu1YaJ4btdqxOSZOaH=
+Fyl4ZK7PsQwcNMMEfh8FZhLaVC4PoGsEzTG9hPx0mFLq0YjbkF28EsQ0BWMZP320rUm4557su7G=
+gdYbjUqFNN88p5qgU3a1xdBvBcCBFqp5pySwFICG2jOMR6MxbwTFhT-nagsJBuoJpSGjWXFhgVM=
+FzeHGjbjbAqCl5kVOA89trwpHBPaG7i5UW7hMSoIGzTi94u0sbA6a8GitXlGhtFH0tKiXo9ivof=
+TtFkefqk35X7o60ou_bLCXZt9yju0" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short femme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/a7b366d22fe811eb8e471c992b7=
+c25e2ff8590586ba749fe44f4a3e5ea42935a.jpg?e=3DN4GFaNjWigCM5VjgOOm4kSb9N5OJN=
+SBVlow8duUFeEIgk8WFAfc7tzmUcgrVI6rg8vk-YpHvsLVWs_DHC6e7GPlobGYxceecN24cKdba=
+AOJRsHtUYtr1gjMEQ17mSDAk_CtU4Fx0zeAkFwGiWTdbN-k2AIHvhhh0191uGGoNuKhAMisKIpB=
+jnMGD5pLi25KKAimOuhXtZqrDiAxldSCf48ZV3BZUzMIHwTJ6MFeKU7jGeHI_KuGJG6bdVioLRb=
+kmgPFNqpO0RYMSadG_zGV8HArPwyLRaNNDNU8b9J08tpNrbM9q1GPpao9qGocoDF7bYktheflVn=
+eF6zmhj2k5T" alt=3D"combi blanche" width=3D"198" style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:=
+none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/9mPNMXrTrB3UEJQcYxB4QNKIrh7MpH4UB=
+201QqYSKI9iMOBOyxsgyUaA2FAGYu0MuQInzKSKt9kwrV3u_tt_uflRjGHDUIgA0GNeWg_IQ2-k=
+-xSFfTyuT5vVxetg1qGzKnGmGsoIU-Fx_xxUJ2-0Zk3Fbw91WrZJ3ZMdIiIBuoy_-1cYI4d9wto=
+UcGsAIpu69WQ-dPEBxL5or0nPwkFwGscHAucnQ7QMPwxeVt3EYFhtDzu_BwK9JdbC79HZbav8su=
+pXZZg2ER6P0PGl-IBaS_p94iAv2OhYxiAZwvs9zyR4f7f3DthRYuUD3M7rQ_JTd2ebvl043_DwR=
+_GA_zx0PfBfwGd1YrQZo2rWJzeUVZ_x7YMaJauvi0uR1WqmXbwrt3gDSm4u3rMX1mQ4_uWHSnEk=
+quLENCpAC9N77PYYrVRX7aZXQxnrGdsxDadjO43sOB1ZHS5xs_MklZ5TFDdsGe2SEuHIcS1ReG8=
+AdpoonRoaT8QYoWs9GcqFQafQ63Aj" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ femme" target=3D"_blank">
+<span style=3D"font-style:italic">Short broderie anglaise </span> - 32,99=
+=E2=82=AC </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"padding-top:2px;padding-right:2px;padding-bottom:2p=
+x;padding-left:2px;text-align:center;vertical-align:middle;border-top-left-=
+radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;bor=
+der-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" clas=
+s=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/FTPVkG8kuc8OuY6T54LEprAYiGi8Js2Xa=
+MeJadNBb4su3k7tuvamBO8dyJp1_OMu061Qymer0uOXU1czNsxbR0-qsDn2PLrjiGEBNWn1dEz2=
+xDmg5Y8A70BOfmn8JtDBfjbuvzhmfiM_W9Pi2qP83SKOfv1kqPKqfJlFV37TCmFDVuefTr876Uv=
+YcmmVCEI_osq2ZwxORq_FovTSEWjRE7rHV890xYVPw22OnRYpYaZzE0aSHK_scXaruKAUeP3T4j=
+OoafHHVY46rb4ZhlZvZd5uFXP1gXsxctRmMJBjTPdWPwqDCrudfy8zDe0zjBMU68SvtWj1HB9CB=
+pdqehHgT2bYbMu-0UvRdVYRZKLOv74Wd7g3vPm2clTAngpd-lTbwpPPghUfeohW_Zo0dxNHVciV=
+MndrbmNETjm3Av8olOM93h-U9g0xjOkwVnh_iSwStiglNCqLPou4nq2bk-WiqJQ8woOvnQbUvuk=
+zcuc5XIoJOv-pLrfdFqUozk3kLX8R" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short femme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/9555314ed3aae4e4220be378f95=
+8a938dfb1b204a36fb423155f27ff89727622.jpg?e=3DM59zk93UejN7ArUlqcEWlbWmDxZic=
+mNe75VOlo1xGRt64WsNS2c8V9n8BrdTcd8mgiy2vzhgoAqK4ZnTCnsN2SrzObUH86SOjwTrEhD8=
+XVqlSbRmgOEpaEN6XewUu795b4cp8oBD6g2iBFbzGjmZkhQnzZtHTZISGnkaCTGlEVwqVKq-QDX=
+yCAOlepQkIzUHWlG9pqiaauUwcNwXIiNu9Q3KodWL-noJbN6vG74YZD1m0tM-S2My0nqoTTxYpD=
+t1eci6haT_weJ4WvQ1bG3KvMEvUQXD8oXRD3JbFuHUYehH-mcEcv3tuhYdHs2o3LEcefDqss6AB=
+z0ynSkPa4Z9" alt=3D"robe =C3=A0 froufrou =C3=A0 motifs" width=3D"198" style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;=
+display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/BpIvbsu76BljRu2k_X3Elu4VnIVJ2a0y7=
+0htqTZ0qYp4Cfl4XqIeq4YQcKh5rQFOtC9WSuN8TUaptJKwHqyb8I_sOOTm8JH46ueJ105U6wUq=
+_aEAOUy4QkQ8cI1zh51Cqn2uWef-1VqtMLzI72SrKOFkhVKfZnBe9rSyvXmnXqUMz85feldvJUC=
+WAACMd3Pf9EmirR8dE4z2x2VZ7O7egjskmYCoETcOL9_ZLTcTwDOyzg4bCLSCH3XfwPo-yTPU1t=
+m7A7sN2-WZGbp6IWw52xuWxPm41HwPTc3X2WQYq7Jy9eQCeh2doxXuOUdoO5B15wC9Dd7uLTi4i=
+M0O6k00Yk5EYLj3nuJU2embTJ8fJ68Y15QRA5ZCJbWNxzr7bz7C3kC-S6Ih8PbP9XHqeqA9pc7X=
+7h3jV_4SnrhrgufleHZmKzFlOpNTJcO9vXw31Sck9v8Sj2fwzzC1SniWyB2XHGXC8WTuhnL-xkZ=
+yEaOCDZgbGiTliUWNQc4_N7M4u2fV" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ femme" target=3D"_blank">
+<span style=3D"font-style:italic">Short en jean brod=C3=A9 </span>- 32,99=
+=E2=82=AC </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.34%" class=3D"t_w33d34p m_w33d34p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"padding-top:2px;padding-right:2px;padding-bottom:2p=
+x;padding-left:2px;text-align:center;vertical-align:middle;border-top-left-=
+radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;bor=
+der-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" clas=
+s=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/gjapDJTf-62hf7UYLz4zgeVLUuVDS919j=
+7d0ydwQPsz5GYKNDo45UpNJbbuwu4TznbpGNGzyYPeCkT4MJUYGeRZZtsCd44AT_x4yTZVIZR8M=
+tApiKa399d5ycQB10kpYWAIiuVm-LLPxQZofrHXjPl2sEncVZ201kgNC7Jhz6fI2yinIKs7bH6T=
+UhEZQAnKba5jV7g9gbKWpHGU7xLbTMbOkV0Fa1anIiPuvoKMTEXET4nkdkUVYk5iho_2kDR0Lrx=
+FRhSsvZBEfiLYuD2RL0b1MfxXqWl9697A288g4qCwYHVb3wymq08Jg-VPQtxnPsQ9UZ8jydw1P-=
+3znlyzs9RQ6qqY1plGwKQUqXOklZPgFEcJuK7RXDqD2lipEMgGm3EMqCCTQtepXwpv1l7HS5VgS=
+oJkn2uFf1fn2La_6qbQmO-0J7gXWowbVZy6IzJPwpsrret88WbBPK_yfMyHE0-6BdnwWWOWvtOd=
+xR8mmj_tu-1QddVWSfsMVxnyecNvu" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short femme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/05a5bf6f67a5e4e0419f2f5c01c=
+a4e801c1c5157d8cb400b5325f3c0573f38d9.jpg?e=3DjCyO8-MT9fgP8uWqRkBHzY8tLbOPP=
+1norSs5rGcU26EWEHZtWztCqV9tZwT9EXyaubaczH6nvWbCHLfFIkWm-OVEgYeI6aj19lLTAm2T=
+ScTj6_GctbfZJkMOVKBsa_4tVhSPAv5iLyBZSogLVp5fbykEi1djXvSp0e2_4Hq23Z2c3pKpLYi=
+BFLom9KvWU8RlTYREFxlp0fJs4-7Sdx6hBpA6K3QqwoFY7K9lmo5vHK21R7EPJtIKrC1T0hBBzX=
+-uQMNJuMK0CsziGZeYEFYCOLKHa9U3SJPWKwj4MEhOLCNb5jJ0iCE2pDXjVHpFqPCKvnmhDaamC=
+0YCR24T5urU" alt=3D"sac blanc" width=3D"198" style=3D"font-family:Arial,Hel=
+vetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none=
+" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/cAHTslqMMuzCSgJnhgx3lpx33O5FZAbJd=
+vOvBZGDk9PzpohL8RXZe9Wc59JfIlDIJ2dQVAG5Sc6guZabSOHMmGPMBIu4xTgwOg6eJNPgrayo=
+WNCjM7lxLShZfcIsQos46JryifyUbjkpdObEH-Yl-ZOr5CRBJkrFvhsy8Ql6kd4AJ5IJp53WQcx=
+NbiFVeaCVhtmgTWJetxqgV6BW1qoZhT27xRjJSz3L1TYogcDDrPLsQ7IQNreSutGQFzfOe5iOK2=
+QbgnQLPrnX6re_zWuUOJRjWlLO4Ge6SKOAQmnPrlDTqOYuUdH8UY0eVB-XPakRjgAODAWZb3_p3=
+W6IFi1FOJnFgVBzw05kkiM5qEXJlq3b0JSHkmG1PviAJQi9LJ6fsL7dhdagvBqYUQ4LQB4MOd3t=
+AuWbOXBpDH6vw4P91lFnMCJ7FdbopeIL0Fta53KkzXYDsiez34tsuoDURUiMZWw62M8TzKtkSt5=
+fUzpkMwX2ZxgW83vUv-M1h4sTjO12" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ femme" target=3D"_blank">
+<span style=3D"font-style:italic">Bermuda en jean </span>- 32,99=E2=82=AC <=
+/a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"25%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w30p m_w45p" role=3D"=
+none">
+<tbody><tr><td style=3D"padding-top:10px;padding-bottom:20px;height:40px" c=
+lass=3D"t_h35px m_pt5px m_pr10px m_pb10px m_h35px">
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://r.news.b-z-b.com/tr/cl/dyT48N=
+vDHKNIXF4gMsfplDekQXRDEE-Rf5f6fuU01ApILLiobHfqAiuTlLHrgn3QwJq_MYh0j2tDiNQqG=
+cuoGglMYGd9nP55MgOahpV-AZVBjccQZGAji3y-isvfI5HByiBOd4uk2YIcdy9yjHe7sMuz3-rT=
+lSAO0npQYpGjH2nA7P9KEKnayeFMVC5Txa8O_YaG9TuKJAXizykV6oMBD0ZkiWWN0l4MsUlbUI5=
+dw97CzMN_VmdKcrV-3DaEZQPwap13BbZtmP1b0dLONR98nEo3Y_MDcsAM4JIV8EYyWI8VkD-0yL=
+665cTlFejJ5G-h9ZOczh3brfLvjZQ9bwNJY0dG2luW4GF7YYRyy3QrdXuBl50lW5Y1Kfn1wnjuM=
+quSIzO-R3cTctknnT3K1Fc-C_jajK6bfEFyiaUwXh-qAMvnMvD03H4yihbLWaK07hL2G4LmHKHO=
+IPJhlrlBqYPbwjGq7dhEHcCWCkKDzsW65jJAKvnQ1Fv5n_HMd9vZX2VE" style=3D"v-text-a=
+nchor:middle;height:40px;width:160px" arcsize=3D"25%" stroke=3D"f" fillcolo=
+r=3D"#000000" fill=3D"t">
+<w:anchorlock>
+<center style=3D"color:#ffffff;font-size:14px;font-family:Arial,Helvetica,s=
+ans-serif;font-weight:normal;height:40px;text-align:center">
+FEMME
+</center>
+</w:anchorlock></v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:10px;border-top-right-radius:10px;border=
+-bottom-left-radius:10px;border-bottom-right-radius:10px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://r.news.b-z-b.com/tr/cl/tFmxVY=
+a9fN2Lcq4j-8Ocmhzog79-yRVjxMwT-mX_4h0eNk7vg9a7haCIQCJiumqn1agzY8BkopMOiBg4e=
+twlQZbpe-fXSkMoYAMbvUG_Dt_KA55W4n2rIwWt1-CNaSWe_yzka_GRUidyafcDT46UHippLRE-=
+FIEUd6lz2g4okEVLMvyG78aZZFgiU6HZfxkURdgOIkK0R6PJfpUnOkaK1EFRKLvb_boGbf_R2xC=
+_WJ0TNSRPaZoeo7LPYoZ4g4lxD9oKrLSxoA_rVkMJREj4M1zkNxsQjdpBiidVjBpl9nrXl0PiBv=
+eaCi8_jhbQa4auNCgoz78JTtpXVPBMVtCh2kfPYwhxxEDxul-3nNM-EHGC0vNV80AipRzO4X2_l=
+YlPf_uea_2tiJ8wUfvahb89SEWHPsz9QxguNgmGItjj0izWiS5UWweiAap07oPRQuDPBH6dnp1P=
+M5t-uRPoyMV09UD3JHFN_8VaqpDlBZS5fA4hwASAkkhTzPUWm0ggTgiN" title=3D"Short fe=
+mme" target=3D"_blank">
+<span style=3D"background-color:#000000;border-top-left-radius:10px;border-=
+top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-ra=
+dius:10px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;font-size:14px;text-align:center;text-transform:uppercase;line-height:4=
+0px;mso-hide:all;display:block" class=3D"t_lh35px m_lh35px barlow">
+femme</span>
+</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#ffffff" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w85p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;vertical-align:middle;border-top-=
+left-radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10p=
+x;border-bottom-right-radius:10px;border-collapse:separate;overflow:hidden"=
+ class=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/bDVNkRgcwsG4NKko8SqiVxt4cniaVvDS7=
+PgHKkMocjnRMUB8ZfQ-XHX0Nvv5C50PJXlOrFdiCSl2l9RzwDv5GVJMg5ADetDWOpejzD8SgukA=
+FWZq_D9b6oJAkxr8DDBtMD07Xru25UjKt6KFcfRxIHg_qxjPsqHJuTkcWMikVr34BNxyqBr3Lq5=
+d-Ps_7x_cYUJyH2KRxamO0MVwj13i8Ed3bOl2a96wgwSiRq7Nd_dwPW_Cq8lwlIbzEZU5PTMRug=
+DtS4Mpne_ldIM0X1GUjyefdZhY65Nr08K73x7JMdjR9UI0b4mVtZ_ZETiEkBXMDFKJKJSzy-C_O=
+DUD8mmiAS27XOw2p5TsW_wV9mWBvmI5Wa2WT_AqPCm1oMcLwhUnfo3GbyOPz4ugbNNLs-z9HNJN=
+UiWEYPwhunOSnwHtix0mMdCnG1v2sSzKMNyNQfzo27KTSwCp-CZXPFcA3LWhGvPkMwTIMAUm_qn=
+W_N-B8jXkAuoTvz5qzHxH47rD16TM" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short homme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/6a7ab89bb6d6ebc646d8f4c5e0a=
+723b73e4f5ab34b09e80f2ef4986673b96266.jpg?e=3DjK2KsZFJXRRrGA-u8BTok-_5Dk966=
+YAQhxGo0chsKC6UU_h9AVm1Jb5Vw1pVzLmt8Z0-Hjq0C0ulA0_jFUg8Kv04rOr-8rEctBw8mdPD=
+pmhHGm_gHIyWw5B3IA0v2lr6sWYQDTqUxVj44IMrPBEIWczvXiNqWQZ2oXuC24T5x7ZILry7Cuv=
+v5jktwSuEvEXClTo2egieAreOxczjWMWPuVhTecy0P08QH4wV-h_ExkjPF09N8GLdyvvs-voOz9=
+2gCENWpKsg1drzVAvP6i7VXvBsyvdEj27FpUOoGBiHgkO_rgdltdmG7T2OpuwZoSXVfr91ThLcx=
+-UAEPFHcH9A" alt=3D"Combi blanche" width=3D"512" style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:=
+none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w85p" role=3D=
+"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/pFmpdjXup5Hv68QWLJ4GO2NQewxrl3wG1=
+pSThHrIWBFh9TCQmRQXvZN9orMvZzkiFUXrXMEpK-QSO2Lq9TcWcYul1lZUC5_LLxVgQwRLA1SN=
+Ocf5l9cVl7sTuMtQwqNUkGcy5NCiNjxpj2i2smlnKPGYuJlzb4YMickQDzxQ5-Z40Dh7CABSoHT=
+OODpNw9KlcBrLqd6KskGIQXVeoVRzN2AaTCMv6J5l2lotzCayWGoCb2RttyFKzGhZ9PBbhCnzk3=
+ybPQpV2qVlfOknFH67oNjIcWBsi4H1T1KKCH4UTYtYRuQ1Zi63p4uJbeoeQoQsRytWimWZ17MbU=
+ASJfSa6d-oRoDBnczc888CB0CAekqO9n3j1CqYqww5_o3-zTHCm6rN3OIr56Xi4_dg_9KnoHRnn=
+BFOoIqkVTCsYJTvWwTblOC4qwWC9o_mPHw6hYmCXmtxAL7ZM9AhQi4i5ng1vSnUVN1b4a5hosX8=
+Ypw3j4xBSCFNvJlrXpF1uuFaPfTob" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ homme" target=3D"_blank"> Bermuda chino - 29,99=E2=82=AC </a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tbody><tr><td height=3D"10" style=3D"height:10px;font-size:10px;line-heigh=
+t:10px" class=3D"m_h5px m_fz5px m_lh5px"> =E2=80=8C </td></tr></tbody></tab=
+le>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w95p" role=3D"=
+none">
+<tbody><tr><td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"padding-top:2px;padding-right:2px;padding-bottom:2p=
+x;padding-left:2px;text-align:center;vertical-align:middle;border-top-left-=
+radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;bor=
+der-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" clas=
+s=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/w40B0w_eKCdjLIjczU5KfKFu1gGXelXGl=
+81NCwtXkwcozJIMldFWuD7mr3iF0iaK5WJZwFvoJ7m2IO0QyutNVORdti0RkncY2XMzC3PEInCs=
+lGahnKkBsCIok7Cw5hZhcHZI5DpS8E2Fzy5BSfoCdXO03jjpkw6NJi3Ue0AeKtbvJkJAAppFtcc=
+OoiTwZBcFuOmyROZC-d8vh1d0y_9_TKSqTFARzmDHMtncz2a4XGjTsM1a-zAnMlglcc0z85puD8=
+ufbSoAfRuQf_dE_Z3WPVz2LhhhBjiBTNw3LTJwqzbo90VCNEkERZXLcWAu_22WRnwYvwuIGqVyp=
+jZ5FXCH9IH-joXTp4VI0FduyPAHIdl0fwGC6eI5LQmwPOASruYI1yoOAoQbY3T-eqvBnkowLPvo=
+XWraiQrBY3bhyUfnAh418Y9GrRCkaVQHCC5Mskpt5fST9sAlhBnWj3Vg4AC2Xb9lEgrflaNV3VZ=
+D6otUd7bfInwcJApUwIYfLeseGboQ" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short homme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/19cbba0c7f6e5af1892e9dd4a3c=
+50c7f953a0919bb7a86ee96d27837ae820476.jpg?e=3DdKJmSrVzjoBHWyJx3ZE0afSgc98QF=
+D7dCv_TWihh6iak5eCyuco5s7Cemb8Fv70S-aEqZrttb1rxk0vtcCVybd9maY2n3iFo9Vwutrti=
+sSoHEpF2XB5UIO9OUsbd_1TzDr-5pMNV1a_lEFjvEBaUDsu4r-C88qt8QFl_gv70TwWde9Pv1RM=
+kN_DfUHFNVzTOJtg7jpdo8vHphzlBi51c-F9enDELLaXaRBz41WAG8CGfSteVqWWDPzd2hE9Z8q=
+387eRaPuxC_O2hUTQtRSbENMS8RvKRUnY3tyCyiBOQRdSHUH7GV3GME29EAePlhx9Q_pYfOyfA-=
+7GzW9tB48Ea" alt=3D"veste costume =C3=A9cru" width=3D"198" style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:blo=
+ck;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/H4GDI57vBuvWMnIltXKyUWEniygcnaAbX=
+N7Y6ev8pdkFJZcsolvSUCe-j4X-_x8QLTc0xHuh9Cv8nZPgdb42fg_QQ73K_UsTw8GQVLcTsIOa=
+pkksi42T2O0ka25UjojGBWcLMnBxQhlnNOPyqoVuCqKCG-v2rHRughAkFsb1q0HvnEt9S18uFWP=
+tzcoKfc2pjcGq7VAh_ZotjI5wNk9j6xmYnkx5vmX5UEXTEnrngFIRiBGpZQff538Hzkb2simdIT=
+LafUH4vbTgKwlPF4WIdK7oroljCbl01gXiFQLFrn2XFmraYpsjm7WfB_6oS3ahPfT5nCI7EGNbX=
+zeNneqqisPpKPOG418Z-1ldLbDTTGvXCcMkNsjNSGLMrfXsRUK6Jji1zNJcxTkms5s8FbOD6BLl=
+OAcif9orKmUqwGRKObIbrmHndqYvIuGq_zCnD_zZKm1relzbXmb22FhNx-NNu61ywsRy33u8NNF=
+6XqkEL5DeHt9yLV4yhB-oRa2Q8-DP" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ homme" target=3D"_blank">
+<span style=3D"font-style:italic">Bermuda jean  long </span>- 39,99=E2=82=
+=AC </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"padding-top:2px;padding-right:2px;padding-bottom:2p=
+x;padding-left:2px;text-align:center;vertical-align:middle;border-top-left-=
+radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;bor=
+der-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" clas=
+s=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/LdvgiGI2j4XZcj1rEfunPCw7ZvPJ_v37v=
+Yi5pNj8DfnN_3oSHfLzSfD39HHw16LaArIkYAzRhK3LStT9XELDaxj-jiqGVA3rC3ky2VWetXcZ=
+79H1qUzzP278UiRMmAvJcDzgtlXxfgQhnoD6sLnBvMRw_VGEaCua_n0kup0yYtvTHcrMLozE2gf=
+wZPr9-_z1i1mYqnGCXLWLDorqSx2YNFZCswzTbIBY-y6BE04R3wyT7u98sB_RY3Ii3uyN7pUHC2=
+L0t-8i2aBwQuYIQzsd5uhZ0dTSZHpx8mUrxI0a_BpcGSj5ryrRptC_c1ATxsi7X7dwvnRx3TNCo=
+rcCdlD46Zt18UdoDjwZJ_KEircurlbpsCihn3l8Itb-kCChxqMUGfOR03hzeGOBN1ILKVUoq7XA=
+DqGAu4n3wvplrHZ15UqaRCRXFdJ-1Pvhi5fDby1bbCsX0mFsXB520a40OQ6QbJ6s_HWnqE1dLzd=
+fk4ognghI0SBs8rdPplu-9JM2vYLV" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short homme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/3ccc9f5dfc3b3c1565d4d868367=
+51adf3a94032664f430e7e836c7e9d1b0a998.jpg?e=3DuYkTYOZnnuKHI1txC5M-9QiJO2WDa=
+H341V5UhHjEGxucVtZLhccnEm3ZTUVFukJfZEu5sVRazu3hdVbMn1CbwFjcqm8KeL2ASZvGVrqS=
+kYlNoszBPh_jeL-ofsTyYnxB10v519MFhRPMZZB4KRPB1c9j0YzPzBNwLMKVyDPbxAVEylhMG1r=
+rPpu9aL_dmmTtzwGed0649CLt91-TUDyQPXzSiPc9Mpm6Bzq2A0TcRY5UWwSixbIFNjVpFDuEc4=
+bFhrEjuHBIDrzZmkvIQs10EH_uino_fFpqI5j484RfxJ4baZsrDMzX2ziNZIUWYXRaEi3zxDdvL=
+lLl3bLeeCbA" alt=3D"t-shirt sans manches crochet" width=3D"198" style=3D"fo=
+nt-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;displa=
+y:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/JsBfGJVZ59JV7gagPpjfUMUk4RkO4clKK=
+OFdt-GS2DXp5VH_dWV2RBEuuhQCx7APgomCo10zFJSW3ZoMEmdisfDab9KVXU2jYLR-d2ghQvD_=
+eQh8VOoJjuhaPYLa80kfQLYYebZ-YN7Q69YYFcLdWkJjATHAyTCt1eXpJ_0mP4ClXNX3SqadogO=
+hC343Qp9IcjvkSJCYW8qmoCp0dsj02RKEN0eS1cSUrF2APVAK8hALViwfDaIfc-q-_P2CWDgNlX=
+3bteIBLyYT3-u4dsOSP4HF-Dmduz4ZykqJz9oW1vO31XexaLm9u68wBbIgan4MkPey5TMtVWLg5=
+_-KxkpokpEyfnUocxNmaR47MwMRR_wNgU5MHa49zvak5BP3qIz2rut5YLTsgW_owaDCIZO3QNaX=
+nxvlcPG32CUQdFxZamKIpmEXr5KRgkZpN9L7ibkExdPrvVZYYBO7bDSCMK6yNoLZ4FWsrf4fSR7=
+o7rJXQSmjEr8DPMA4wzRJU4GDONkJ" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ homme" target=3D"_blank">
+<span style=3D"font-style:italic">Bermuda jean gris  </span>- 35,99=E2=82=
+=AC </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.34%" class=3D"t_w33d34p m_w33d34p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"padding-top:2px;padding-right:2px;padding-bottom:2p=
+x;padding-left:2px;text-align:center;vertical-align:middle;border-top-left-=
+radius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;bor=
+der-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" clas=
+s=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/pqwr3dsJWOBDdHuy4VEpT6WK0nt21iY48=
+4B75Yz9q329ZnBqRbqRKt8LU-hAVWS91otY_dA2J51aJeVKUWCc6KbS5wb-8arzSNVpRscqXZWp=
+oG5fY8gYUCqX5wMesUjAaP8oqfqBWgmintuXdsIbKk2tuGHnjBXOWI8QHdDf6IKz9NaD18ZEPI5=
+wnYWhw3rYedmtULc5SaGf9PCKdMu_b39DvSmX0Bf5MPL2H380YnXbYOpEf2V2zVDNT7NIT8f1gF=
+jHS81gc_AhTedrhxrDr2NQE9WXTP-MvJGK7AtdVjT8MZsW3xlSPi1Y26cDLQlgHIWyUN1D3oLil=
+-fmHRMWljtyJxPaLPxAZkYUcXfqBB_QHvWxnK0SbX0Brmyr5MD0crS-u2JLbZZAfJJpqyb_e1nA=
+IUzzHz0mh2cvzrRZ7ByJM-A7q_53IQUHNWOYqm54OHyGG11FDI6nDEGjtdyjBMex2t_an1GFly6=
+boW0VHnb5ggwVALyfCN2P1G2vNYBL" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Short homme" target=3D"=
+_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/36ff279720d6f3c993eef13b1f3=
+8b5978f8e7a732e569c7bbbd07346d6385665.jpg?e=3DQ4YrM2UtaDbaaOmk76FtCCvzvhx3H=
+1PIwzuXaPbWtBjxS-xPwzDYhNRUXvtI1mAuvvUYq4LAmGfMBgowW8veql3BhuE6QeBNznCxYecW=
+M5vAj7IBNSihiNIU98ATLySuHDdVOfmdSRMBgiTRAwVcT0qVpScTFUtHI-T2cQz-gTs7GvRools=
+mzbbqfIPQxSzuIxoQS3NnlMqJZArM55a8UzHPylDJzVHnIzS6b10xqwlXYgTwvZPQTmuQWlQF84=
+L88NbOfyeVeFZwL-oLm0s-SmoCeNn5pVewgLFOuoz62pT1ouc9c3vLAG_ZQZyIWyglqiCK7uJUV=
+btoOH4kVkQAEg" alt=3D"pantalon costume =C3=A9cru" width=3D"198" style=3D"fo=
+nt-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;displa=
+y:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#23161d;text-align:left;font-size:11px;padding-top:3px;padding-bo=
+ttom:8px;padding-left:5px;vertical-align:middle;line-height:15px" class=3D"=
+t_pl15px m_fz10px m_lts-n0px m_pt5px m_pb5px m_pl3px m_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/U8HOCFSxQeGe_TOHBLE5t-zAeI1TrOAAb=
+QMSvY3f8swG07_EtwPdME6B38dTKSgehwyLl75aV15ooEZYm9jTzr9J6sGE3PguQLZb6tijxus2=
+xMoz61iNqpCgJWPIejSJ-cTUaNSPx51nV-kULIxdlNpSvS9w_JZwhdmRtFhZ8MBbxu8x2wrpDrT=
+PN-O1VPl0itnrvafmJozpwFvC9yQNIBKg2WAkXYbWgWmKTOJVi6mkOdWuH8mYrtAX4Euf4RD-xr=
+lHAiK9T5H3hv7eyRmRqtDSwfjWYY9CUySgm5ksnYZ5qD74_94Rx1PzxL-gErJOaLWCbBoF-VT4d=
+KDWgWVhkWntOeomWyrnvsiILbCzhMEKSHuTXhChlHwKPcJm990XY1nyFwe5g08jWc2akF0u9Fvt=
+F4iCEZhtkWrjQrFeJutPUA_xzAVu4-IUD0ohUQYTWfXSLhLIN1nHbhY6eTBXl611S7DOflLb2YA=
+t9UqkOqTt3kX7WLYrVMoW9DeohCWx" style=3D"color:#23161d;line-height:15px;disp=
+lay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Short=
+ homme" target=3D"_blank">
+<span style=3D"font-style:italic">Bermuda en jean</span> - 35,99=E2=82=AC <=
+/a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"25%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w30p m_w45p" role=3D"=
+none">
+<tbody><tr><td style=3D"padding-top:10px;padding-bottom:20px;height:40px" c=
+lass=3D"t_h35px m_pt5px m_pr10px m_pb10px m_h35px">
+<!--[if mso]>
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schem=
+as-microsoft-com:office:word" href=3D"https://r.news.b-z-b.com/tr/cl/hVI2q2=
+7cAe6JolXwMXyObz3CTxv-Z0RCCLDSEA4PVq885-YK9F7c-L5hN7VoNBOSXQhSzImcyqruDYiCe=
+fSqXy0mqhZfXqiOOG7rIrszJOueyueg02M_tsOyWbue3AVbD_oPGpXM5YbiwNFAN9WxABPJ1Q9c=
+7YUtqCmr0tcI6BrV8UhKPAvHnCS613BRF9E1pUBKhoLa-B8oELdXwVGk5Yj-6F6HBAxfJQFVBhn=
+DN63ovFubWH6mtIKqyXh5pqm0M8wotTq52Huy0w_s5oSuMxa7-NnvpJoq4_PirJZVCwwo7T5fWv=
+7wthZSIozsWX5StlVt3QJe0-9KETmXKRxyvohP42seZfJ5li5Wo5d5Wzs_761fdWlCC-SnN_5KD=
+Pd7HDV928xb2KNbZVD_-27K_DSl3O3TgwwFUSBQa8zH5oMbQ8geUO6dLsacSvWOMOhQNk_ih0ew=
+NYZg75WOEtfQ58JH1Wwa4tQD3kiR-wGBT6or_WVoea6-fQDq1qMAOSQZ" style=3D"v-text-a=
+nchor:middle;height:40px;width:160px" arcsize=3D"25%" stroke=3D"f" fillcolo=
+r=3D"#000000" fill=3D"t">
+<w:anchorlock>
+<center style=3D"color:#ffffff;font-size:14px;font-family:Arial,Helvetica,s=
+ans-serif;font-weight:normal;height:40px;text-align:center">
+HOMME
+</center>
+</w:anchorlock></v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:10px;border-top-right-radius:10px;border=
+-bottom-left-radius:10px;border-bottom-right-radius:10px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://r.news.b-z-b.com/tr/cl/NPZyrI=
+g09WtRO5hbsBViKlnNrGJjdxxXegTZdEL8UXktFWOccrK5C7lq-G-ce9DlBTOwCH_PqG8LIP9t2=
+mqlkgFLEHpmY7MEz-SMLq-CbciwFPql-6Nd0DerG907M4rEnHMEB2AfhHnNCxhDD3-S6YLi45PI=
+1S4FGGvyZ3vh4vqE5L7CG0P8Dr3PCswjlZuOcevov4NCZfv4sVKDw53XTs4682Qrf-OF_-_qiGO=
+EDGHrsYzNSTbbw9hD7hXgPOO3F6qNmBDtnpRnuLVcSsX7kIOpVVZEkcIrmpo-e4UYyAuoVNU7TL=
+Vlmpul-h0mpzxbL39pL-iJj_b4ivWbfQ3UgASCCT7y7hVXJ878zIXc1wWXPY2vM_c7QGKgAcXeS=
+Zk8VdJRhVP3pigTK-COkyZ2HnlG9DVz3gZhZ4uJTmN8fq7aPoovTw1StTHYKQEtOxXRsPwkzRJs=
+9CbAIzCRjzAEtAi07mFCaYwjLoEinkO-wVoszBpPDvKAOrxIUnFdFwAq" title=3D"Short ho=
+mme" target=3D"_blank">
+<span style=3D"background-color:#000000;border-top-left-radius:10px;border-=
+top-right-radius:10px;border-bottom-left-radius:10px;border-bottom-right-ra=
+dius:10px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;font-size:14px;text-align:center;text-transform:uppercase;line-height:4=
+0px;mso-hide:all;display:block" class=3D"t_lh35px m_lh35px barlow">
+homme</span>
+</a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td>
+<div style=3D"border-top:1px solid #b8b8b8;mso-border-alt:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:15px;padding-bottom:10px;vertical-align:middle;line-height:22p=
+x;mso-border-top-alt:1px solid #b8b8b8" class=3D"m_fz14px m_pt10px barlow">=
+ viens shopper notre collection </td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w90p" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w100p m_flrig=
+ht">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w80p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;border-top-left-radius:50px;borde=
+r-top-right-radius:50px;border-bottom-left-radius:50px;border-bottom-right-=
+radius:50px;border-collapse:separate;overflow:hidden" class=3D"t_bdclsepara=
+te t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/n-AGu7bhhpfnoQPVAA1CqGYqmaugtdFQZ=
+grpo7VSBXgD_5fT5oD-KNJlxShBmFMnOLKLjk85faVRb1nF-RIXVPT8oo9vcUdNNKgk4SKdvoDP=
+4UEHq1kJ3Sl2JECZ6J3W1OndrOFt0oNrbcPOqDiK9le_YQvc6Z5FL8LoQA95KjHENZUHlMwv0lx=
+S-MR4mluf3SzzBFtXH_KTsPY68T4SMS0d-1Ymj918bFYRCwX3P1qx98XymbbAi0oBIGiMm33Pnh=
+zzxhZ3rj02vmD2WSjoY1ktb3q4vcnvN3d2BOht-jHvP_9cAf_bRMtHUzNiZpRRNQ6ZsAUvOcrh9=
+uxqByl1EKIo4dbmMNIrt7qyAK91T8gR9R2dTAIXEIWmNkmxnLs9xAfD5UHohsLZYJntXOiBQQ6s=
+NmSF-WKez1UhqgeHCNgjThrfzYcjnSqg94f-33QS_zit0riML39wJs53cnoKD7yX3IWwELD_X9q=
+QDJJP2p6maw" width=3D"100%" style=3D"color:#000000;outline:0;border:none;ma=
+rgin:auto;display:block" title=3D"Nouveaut=C3=A9s femme" target=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/6fab5d3bf3554bb6ed7a26f2da6=
+c335d13db7c0e1a01c88a13f739c1636a3547.jpg?e=3Dr7ehI7K_Et2As6YApuRbj3Sh7RxD8=
+XytPSUkDnyuYTyDzuoUBenW-OEA22q-TGguJbkPWlkfUk9Gr0ww37DFgCvrQz8n5vc5yNSSb6lz=
+ivVwE35qaLato9pNgiX-zGLH57Jc4NA4yMVm1zC5QhS5C94XpWxWxSAMDl-KD3dzi0aXcDl0irp=
+ld0I2y1Eev3t-v6emrr6DckdbpYCgmAhG8Cn1LEon7d6It_3bzI6QXv-fnPD1xIqS_y8xjDlUTb=
+HHP7WfabAi2OaaGyHw8MilgJsZt8aV_Fgv8NZ2PIkCQ8yFo7TFVUOs03PvocG7qLozf67OMFx_k=
+ibUb0We69HJmA" alt=3D"Nouveaut=C3=A9s femme" width=3D"85" style=3D"font-fam=
+ily:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:bloc=
+k;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:16p=
+x" class=3D"t_fz11px m_pt4px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/MfqtgkdmKy13CushV-cadSz4Sc9Epdomw=
+zplRZeTkV3ahsN-dfnesBmoAglAHIOUEmnE8QWdKb5D6jSLfrxWm_rmURf55YD2GcdhNY7RTl64=
+ow52GeIlEK1NERCtJFH97Ykf3Q4iE6csROFCf0R2vVJa0AAudX8sse_tCvBLTj7ww2oJiHSL46H=
+5nZazeTyzKZb1cuMJVUnngtl02XLVRBFC3PurXtfuws6LyvVY0y9ijdUXSTjuA3Z9SW2u6fKgJz=
+r7BsD6pdXBqZZLeEk_k5wljW1IdV76cKufZdcbR95kP9NZ1nmkA2HSebRMEqV-3h9Fr5rBCmS9g=
+p5yV30RDBYmYVQYucB4LWT1XItdYsK1Hp7KXWyVcmXEx8fww0M2OIf8X7MjMGxvm58zoF9WYbBw=
+PYR28YBs2rfxjbQMmaNZb_ZbeOzMOzj3ZLsKcKW7FlwPeL4IkGv28bKMSoDv14bzziGOCJa8MKg=
+zpdmNA0AM9Q" style=3D"color:#000000;line-height:16px;display:block;text-dec=
+oration:none;outline:0" title=3D"Nouveaut=C3=A9s femme" target=3D"_blank"> =
+nouveaut=C3=A9s<br role=3D"none"/>femme </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w80p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;border-top-left-radius:50px;borde=
+r-top-right-radius:50px;border-bottom-left-radius:50px;border-bottom-right-=
+radius:50px;border-collapse:separate;overflow:hidden" class=3D"t_bdclsepara=
+te t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/a61mRo8yPgnYGJEQRsUhgatyDiojQeSzr=
+tLJuJUdSu3JtcnGDIbH-tqXviZRH6ZOk7wtvnIKfqMvC_F-qhGc0GD5b77I4gbSmr6i3GvPCwCc=
+14qnDscLKZn6pBOQFtM92JeZeyhj2Nk8zTK5ta221iSCyIvsQTuaR0QKIkdGUvTN8hRVNhtLPOC=
+3mPKAw46QN1fF-x2P9Ro6EaecFlzjJReW2lsNBRoNX4QE1OwvfbuEVJSXYJZtOzNqZGT-jSlO2t=
+V-Kh2tskCnloqyzkOQ3EzlHaOJjcugEjrLc2vHk0RGpPsOWNGrDmMYmtvOmVg9LQhnhlGPOKLoi=
+pTOF-UVIraq-ggzTGxwtINC3b3HNtt3bWEJ4Sy8GZv9bMns5q6G-jZ0TSGzwco1BE0yScSButaf=
+a-7GanjmORFbYSNKS2s3NrfKeeIJMFS0OGuz4n9PozfvjE00SaQZLlGQRmHzJaQg_d3eXPoz14Y=
+Yk-2DwYAaRg" width=3D"100%" style=3D"color:#000000;outline:0;border:none;ma=
+rgin:auto;display:block" title=3D"Nouveaut=C3=A9s homme" target=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/60b78858f80ad9b1e4e62887688=
+a3deda3a96cd36d1224ad43f644c2f34ad332.jpg?e=3DCUdbZFJLX5ij2jSsTjJnjV-kYkeym=
+PFUMukyXGvvACpWkRpF7WF_7bkd_jisSZXNjztmF9V36eyzeK9zqsmrzrYWmxVpGlMo4BZ4Hdb_=
+gEJBTJGzDAbKvucYTUR2oMuY5LrT8tnyATQp7OEZptSMnvHFyR8YBXsa-8pMufFyBcX4VuzsKee=
+y5eGfHhoy8JxwCeLH0dIANHe3042o-vn31saiqSj9F67C-JUNuLRM7ct7PbRuCVttoWR4LUrrzH=
+E_MkgbdP8sIV9BzSWtPGDdOzecrWcCqfO9eJ3gkss2USqrymp3jyhKHIwB_evCuK-NNBwSXyaT0=
+HxpMEUeimBP3g" alt=3D"Nouveaut=C3=A9s homme" width=3D"85" style=3D"font-fam=
+ily:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:bloc=
+k;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:16p=
+x" class=3D"t_fz11px m_pt4px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/h9UGG6qWEoH5DWfLdTTFghjo7sJb5JTo_=
+H6pHW3NU7xD4UuOr1v4S0YQ_sqilUlsOzsNXmpmQz0vWyd5vSfmxLbBveFMEbNzAbIwpzIK4pZV=
+K0tPcQv-Jcp2exWkgqS_ElXM72lApt18tcRVh4iIZIitjIO7m-oJ1nfB2cyZCCdtuZcxNYFoft1=
+wl8hO5dZ5reHdowV3Tva9tZWbgBvg-FG7Jh4tJyeYmpy-1wnyAohg1ohu-vQoW9WdgJQWg7SDDN=
+s2jAtUxqkP9vXYf2LD5WgcpbGNI4Kf9YxOklW7c6QzJnnrun-LnJXmZ4x5fGOaN6xk24SoY56dm=
+BHuErfZi9Cd8e8oR_mZf9SpIB0lQMj6zFSRu_iVpmCLvwh7MM6KDsw-wdBdu0wGRVFmjNrQwoKx=
+JE3WWDHSgIX-y7uWUGTYbuAmTI9Z0Ufi9reFyboHAQeWqojW8tTQdkM75eWlYDB8CnapQZYSgoy=
+J_q9xDF9Zrg" style=3D"color:#000000;line-height:16px;display:block;text-dec=
+oration:none;outline:0" title=3D"Nouveaut=C3=A9s homme" target=3D"_blank"> =
+nouveaut=C3=A9s homme </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.34%" class=3D"t_w33d34p m_w33d34p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w80p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;border-top-left-radius:50px;borde=
+r-top-right-radius:50px;border-bottom-left-radius:50px;border-bottom-right-=
+radius:50px;border-collapse:separate;overflow:hidden" class=3D"t_bdclsepara=
+te t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/PLwSoNm8wUt9sKJvutNmwUSOkAQglhkdk=
+oblqciTi5dMOF53qkEv8Ylxju2EhzPnvxY53phPyHp4q9pE1s8jUSMvYVblX-gg7_GRzhIgCiF1=
+dp9XrrbIoaOikFChs1y2_wDVWnlOg6DDMADQ3JBWCXT3zE3TYdOcD6G8bhyvp1fhKEOGvHxD4Ig=
+HMZDyOT7oR9qQayMIgC6s_rETUHSB_iOOgm_5la0bPAcVIvpHauZ_rKA7yQYyr0z8W9CpSlKN43=
+sXM8rlZOSYV6-D3afronrrZGlBJvPCxSa8G1R1YJ2qTp9o_XJ161HroLbkOGHxhFIPPqlpbLW1P=
+xz8aAh0lORB_NPE5S8jXsUhFulrhDwPcyH1IyXPfhWAW3RMUaMGFDkrfUkQWab4_Yx7oi5VtIfR=
+8IYf1IIQ0hPmC0XAlsrKjBobnvJPQRh1tblyA3TCHwhRKSj0qTuG-n5qumYx2wiT0f9Rh1oneYb=
+nMvXu-1GxZKZWHiABGXC3ZEI" width=3D"100%" style=3D"color:#000000;outline:0;b=
+order:none;margin:auto;display:block" title=3D"T-shirts femme" target=3D"_b=
+lank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/308ad8b3f8a4204c188ad9a6983=
+8eaa9f9bfe16f7ea10d3b5d4f38dc365d08e6.jpg?e=3DGZX-10i_-npPwTgdK_V8rKPt_u1xi=
+Qd2L3PtqapaFmfS-kPukWWhRBg_qtlH3S-GezuEXO9TN6NjWC2bo8z1HxE83TwlOdekhok7_FuK=
+N2M1apQpU46Ms-XQI1ur_eXJlgmR_KtcDUDfKthNKwl0qk32_v_VCQ2Lae5RUu55FZdOJycvW1I=
+IZlbmFmqcAPPrXyuDXsHAqG73O-w1oB0e3UTwK6sc0pFZJ1BkJ1QVa2t8g8SD7N4UwPRktD3egf=
+rwGSl-IRJDc3vA6pmCBIsewgqBoURVEJ7aL0UVpn_6jNo5t_2jao8Ci0mZlcADodOrU_aqTbmFL=
+5spEYYj8v_qMQ" alt=3D"T-shirts femme" width=3D"85" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;padding-bottom:20px;vertical-align:middle;line-height:16p=
+x" class=3D"t_fz11px m_pt4px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/lyiMeQcCWRXI5NJA61G3d-m5Dr6KFWSUB=
+c76YejplKiLzM9lkiG5Tqe6_FZHE2NErDTLYLuNWno2q1GyvDJZ73sgVTP4feNcO0ucVkzRIw0L=
+Il5L5Yw7q7foZPKgAGq-wlt-T1ANwKYbsTf3vade7BpHz5bsywsW3GMknKsKFPS_SWQ--pHjWiY=
+PvgR89NHyouqSlTqv1b49vofv7urkKEWCW1U4J0WU68cDLz2gLMb74iu8cEmJbhd1eMFbR9IqBX=
+AhMMDES5LHILISRS54TnNWJ8fOqCLauevgodDElWYL0LsMbCV_5Z47KRT0UWYIx5xupo_ueDcO_=
+29NJIxCGquwB6Q7solARYpbIZNvKdd4e-cEI_7MQYfH2ZaLqdPJoqynqDN9rgBGzLwxBrWxoVXO=
+DWVSHBh0asZVstnCk0ULUbHg_xNAlidKzrHrVPvi7jutRnQ5Qe-JFybk9b9Dq829v8FuK07CSHV=
+FL_jYF0FmcahoSBhL84EBD18" style=3D"color:#000000;line-height:16px;display:b=
+lock;text-decoration:none;outline:0" title=3D"Tshirts femme" target=3D"_bla=
+nk">
+<span style=3D"font-size:inherit">T-SHIRTS</span><br role=3D"none"/><span s=
+tyle=3D"font-size:inherit">FEMME</span></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w80p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;border-top-left-radius:50px;borde=
+r-top-right-radius:50px;border-bottom-left-radius:50px;border-bottom-right-=
+radius:50px;border-collapse:separate;overflow:hidden" class=3D"t_bdclsepara=
+te t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/y9kLhjD-kFdlpuQhPSUHXERFbuoEEkmw8=
+ndDprIyOMpoI8rG7FmZLNOMwmm-Kwubz4phA0Kr6f2Qw_BTJ68wIJV34aNQri908CFc681Z0FwM=
+4PGc7BNeW1owFywP9Ear8ep2vge0tr64l-sMx5O06o3hwWze_fiEBoxYO48bR_f9t8zhGvOxWGH=
+AVUYnJcVmhcZxCoJtH812nN3dP8aAmlSgbcflxeEl37Uf_F_D6jeuVGBEv5W81q_MROkRuOS_PX=
+WJo41niPXMAhYDevkj8aYK-9JRhhIq-TfR8r8D8IFphUjiVTdJlQ8-gBXL-Vyxk0pAHbtHbu4Xw=
+PWzLpukpwyKbuKq1r0VTDo0zH-HqHobGGINFnNOnDFesTHi766iNtAq6uWdCrgsdMAxNlshok-I=
+UuOxVfl_n5uyyka5yZ_oqdPFeax19UcxXOLDctJ0rnd1haIdhVgLECk5Z37OiuDCCF96Paz1H-n=
+eQm3RgCkoYKabj2CDrvRY10c" width=3D"100%" style=3D"color:#000000;outline:0;b=
+order:none;margin:auto;display:block" title=3D"T-shirts homme" target=3D"_b=
+lank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/e7c5b1a6026dc3c312453b1adcf=
+503e317ea075bebab8a3ee93aaec2deb2e3b9.jpg?e=3DGRK2aiNOpcK5y0U2SR1hENK-AAJFJ=
+haVNJ9R9JG6e0wLr1hLq_H2GSyhqsX16Tyt7zZzgyDNGDV2cbTwM4_XvK9yKE7Z2BBOdyB4G6P5=
+l5b31ENif_sSv_XNQQVdm1bPIdv7DJNKk8xNBK5lYpf1w408NIfI3venmMrSZkR5_hiTuVhfkUk=
+EoCX7we3CnttDDdiZ1MpUq9IBQAX-U3BC-DDVeN7H9pOqLEYVzJcz6ikX-7793vEInm6R7fVCRW=
+stVTpn0kehl0gvdpP2A6r1FHSPEKdPiV_hMZpTMtXYbWeJCf7IH0vG_SStBVdEyb7kTSE0dQXiA=
+cqsib_VVmqO8A" alt=3D"Tshirts homme" width=3D"85" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border=
+:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:16p=
+x" class=3D"t_fz11px m_pt4px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/fkS44hxcpibCIn9Lm1xPe3z3aEJimqV63=
+WYS_-GsMp-hizxl22DJd0CuEdrlQlazK0_lYWhxAzMzsqGiC5t8fQ7VmH9UqIxVvui-dmGrW-HG=
+7d2oPlXiiBJ1LISIAMo8NsthNVouwZpGAZBZXf5nzUiya5ft8yCvWoDZ79CE-xiM0tneWi0W37h=
+WnHeoKV_QUtpEl47Z9lx-a4pU6JFAMJebh1TVtSntD60s8uUNI5IAQYK6ujluQuh5IWbbteWuVP=
+L3Ju68sOsadwXaxxDXTK4UuNxFEdTg23jbpDDITsFbL2VLzVXDXSP_w9sSPAQHErrGD5FIx36dq=
+yPOAvBmtq9BctNvyGRBhL1n3KIWi4iaFJzekWnWxxRkfvv5fVyr9_r0G0J--etLIO2TsVP0zTfL=
+xK7y6sIW9v1kEdMEIMrGlYr3RF9VU4e8QL49fbkqNgcfjoFX1khbfL6bm-dGieu01IecveP14t6=
+WbZ_L0MuBcLVIxuXaEuyAcH8" style=3D"color:#000000;line-height:16px;display:b=
+lock;text-decoration:none;outline:0" title=3D"Tshirts homme" target=3D"_bla=
+nk"> T-Shirts<br role=3D"none"/>HOMME </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w80p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;border-top-left-radius:50px;borde=
+r-top-right-radius:50px;border-bottom-left-radius:50px;border-bottom-right-=
+radius:50px;border-collapse:separate;overflow:hidden" class=3D"t_bdclsepara=
+te t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/eBmzHt7Z214AsdHqRs_yRp4S6StMtgpl1=
+9-_Y329NuIscs81sY-ytJv5g_7dL_KWQpMUXgt64yY87KsBjToh9h6hxiGO9smNSAfcw1xmC1gH=
+S49Ke4e0-AXMQBiuIOZlWih4jC51QJK2nnoOBvZSpdoISLd2nctpU6q0gbP4sLH7ZfGA2Bv79vf=
+BZoKQDEOnaRpmoBqoe3HNZJmx1YazEj64tKZKXNUKT830bLL5PIVA4p2E3n5v5kQLlCyNaFx1Hp=
+Ja57e4f7xU7MhE3-3uHPv1OFWxGbpLGZQFoowjVX6go6bqhUqcrofM_560RuJ5hiMRx8_u4uecv=
+RRbMZU4H1Mv1PluBI-wbco4gi59Ue-9jYuFvGPx1szxKYDtLJ3wEV3LDfcvyJY_nOxyJo6HKMXk=
+2VZHa2nBM0o2VmtWeavqblpASc3C9fbfLSZ-IxInvuBKWEm4EMCZj5BauOw77PLq6F-ZvtfnSs7=
+u4wpx4d89r18HEaGhJfXQsUnxHNkw" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Shorts femme" target=3D=
+"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/6aa84ceb67c21d0d42bee2ca097=
+23f84b93d39d1ce019b0c324af7bc80d1717e.jpg?e=3D5Z_1wKe6TuRDBwKQ8us96asZiDoT-=
+uO1re0qcYSz9qJebz_V9oYR-JBM9CEDY0s7zhDN6hBECofL8nbu-WKfeR0kC6rz2LW9KTg7CiFF=
+X6T_RMJO9BRh3APQmjMO7ah8x623waaeKQBqg8hl-nLQeTV-S01zwW9jk8zeLQ6iTvCcHJAprO9=
+Xi_ofPbQfEUdSekkvGb7KEKt3Y5twwGNfqakf8Glu9pzojOjRCCL7yQn-CQnngAJmidiKD2Rn_W=
+9mM_4uUlRX3RFmNpTXAyAaxB1h40k6-hyU013Qcp98k_-7cEqG0eNQ7kXtQkPN6HmdvCEXY95Er=
+gwbV3FQ4S5OTA" alt=3D"Shorts femme" width=3D"85" style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:=
+none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:16p=
+x" class=3D"t_fz11px m_pt4px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/ngeA89wNmjW7aFTMd1IyMz-Lr377YbwAN=
+T7tnwWDnSQpK3N0rPGLSjuR29QRrBdF8oFElpbHGC82fepJ6HStFZawjpsu6JZQlIy9_356fBum=
+bfFhBqnZXswmKC7nuMn6Vtekozshm3Hqsh9VGVlrERxaP7GhpBHL3ncZZWgjdiTPrrPfppf4gWA=
+jDgIMNUwqks99dF-bdd-AzPTTlQEiafjwPk-ZBq5K83xuVOrOAcWjzhlqt6tW8Sf5zB9jJtMmgz=
+uTmbv8sFOmIR0ma5V4qICu4EEWLmbId8r7Y9cR99qqc1yKUrZviCaJh0_xoI_fuTSxn56QZM4_5=
+5MQl94YUK5CvjFSycn2Ve5dQrWWlNc45p41A58odT_8-cH-DTWDZbfT1VQvNHRi27Dla2kZ7QuQ=
+xJV1NUeMIZx_IIJGAfu2gKsGnoWyrwIu8EQP-zcSb9AneCN4bJ5_-UJgC0HnA0EEQOtYtJfCiO7=
+0WnM3Yt1Qd7nfxkwMWMjOvOv53Ktx" style=3D"color:#000000;line-height:16px;disp=
+lay:block;text-decoration:none;outline:0" title=3D"Shorts femme" target=3D"=
+_blank">
+<span style=3D"font-size:inherit">SHORTs</span><br role=3D"none"/><span sty=
+le=3D"font-size:inherit">FEMME</span></a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.34%" class=3D"t_w33d34p m_w33d34p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w80p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tbody><tr><td style=3D"text-align:center;border-top-left-radius:50px;borde=
+r-top-right-radius:50px;border-bottom-left-radius:50px;border-bottom-right-=
+radius:50px;border-collapse:separate;overflow:hidden" class=3D"t_bdclsepara=
+te t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/MimFX3K4E54bSx7wda30PTpNPEPUE8van=
+8j_JDUK2Eq0QtU8t7d2Bye0wZODewAeNDFDvY0DDQuNmV08oFo9bJzRjnF0AWf_-1butcy0VoNC=
+vnwNjafWHiXrADXONNC5HYgv0PPjDGI6ZlH5Vfd_VWig4atKQWr_qyTb8r0ekTAl4nux4vLNmEp=
+YY9pcpZi72lOeOG5xNVr1TP0lxvbMcYANrDjwbTvk8tgwq440p2XTDTskVS751GLfLTzxCWuTvc=
+YnKqDqrEfHDWx6bhN800vlalbONYln7nt05Q-JOnQMBtH2CBfaUOt5RQqS0mnuOHQw_ngL90A-r=
+nN05AggsKMR8JI8O0Jyr0aKeNHKUJVs1RZkU1T0Et_7EKOcMJwyt5hFHzDyBVCKxUgJUjH1COYD=
+SW7NtWQJuugwLytsOlQHEd0K3w2QnINhn7yeuqOcMLTodBkc0Va37fv9Ew_sRsNs1aCFhU1L-9i=
+w_7GfBW2r0nkGMtoSntIJ5Kuc3DGc" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Bermudas homme" target=
+=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/4605e3d4c3f27036d1d3be58f51=
+4c0d58ef1b1d1ecaeaf275332c3a6d658709e.jpg?e=3DM6uX-PequYL8ngxS9bFJ3h_m24ZTm=
+zvSrldnfxrcHKnsQJlyCxdEMipk9whgTgQNFcxPMLpc0gxUcE_gIlcBp61EKOUCnv9ZHvN8Wu_0=
+nJzpUkTk4rvshvf3MN6AvoYIb4wI8NJcMM2DgOy9CXOXHbHybzsWyVizTR1Z_MNxETru8-Etel1=
+xCmUlteaqFcLc1b0jdaZ-RrttXQqm2WXluqoJdVXeuzR62eSaY_5amEEi-wqkvIxks61zNgWthr=
+CqVFJ3FKjyHNFH4acVHV4lXjIMsiBzpgzt72ym0Dpr2RINNLIQplLTImZ_l8-JCH5ULC425kvbO=
+8zFVT1yNBwg6g" alt=3D"Bermuda homme" width=3D"85" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border=
+:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:16p=
+x" class=3D"t_fz11px m_pt4px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/Vn2K3Kq0--NicvwJ134RBFdWQVkC_dXVm=
+WKn_973vYo08f7Qdt1T7wo3LqKtx8i28oNaaueNPwp7d7XGIAD3JBDjjrVpTGD-Rt6Rxb2GCtU-=
+zgLKDYgxL3zDXtXOg5QfVNsUqVFaaO74f8KNh5gLmAqeWMNvQCNBnE_y3HUXxoTyGMIu9EGT7jh=
+5_r0AMIfiPT149xO6_strZGwOq0vQnfDgiiQP9GhFAn57g-RcErfsADl_jssiBTqqHDJ1q1iTvy=
+ovw80I1zQmj0RYOtoqWaOelKeK-yYOAb7ZGStRCcJBKB3Lz5nNEVeYtlMFvdxp7WhClopFx6G_-=
+mCtQONRsQOZRPAcf-rf1CLmhfmfwkCf4KLiSJSLG5rJN-CGd6rvwDpSKTSlgGVahGC4E4Ao1i2v=
+5L7g86Z4cJXmJSR2fGFzmPsSpevKw2BbcgtqFdSW26qvicNMVXGDxujkPe4hHCeYw1BQMg6XBQg=
+UbkhOgvTYuDQhbu28lJANMco2SPs4" style=3D"color:#000000;line-height:16px;disp=
+lay:block;text-decoration:none;outline:0" title=3D"Bermudas homme" target=
+=3D"_blank">
+<span style=3D"font-size:inherit">bermudas</span><br role=3D"none"/><span s=
+tyle=3D"font-size:inherit">HOMME</span></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tbody><tr><td>
+<div style=3D"border-top:1px solid #b8b8b8;border-bottom:1px solid #b8b8b8;=
+mso-border-alt:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #b8b8b8;mso-bord=
+er-bottom-alt:1px solid #b8b8b8" role=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"20%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w20p m_w30p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-top:20px;text-align:center;vertical-align:m=
+iddle">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/t618AF63Z5yZ-Glh34Pe08Umx_mgYqXDt=
+43xmWhSsQ4piEFrObedNpaVhPDEPT3AsWjg5hEcTOdbmbR-y7qw0xjIIF2OOjoKbeGqE0VGVD_W=
+fElNVQQgFVF03YPq427epsd0wLP99ZYr31R6LoU7GunXQPPkgKkHjlhXb3aO6IlbRqjquk-xiki=
+c-pqSTWMgQhIgsL28jBnOK97-980OM4fp2dlkQAis7JDqPs6cXsw1x7HdV0y_X5C2JxO0xBJi3F=
+D_9wmE9iMZtB6yJrJpitMDqeYcjBIlYf4IGik1DnYSWWsP71ArKGEcj5CXRgvfkNSvtAh-VL8_5=
+wp0T08sLWQvFdaOeTi7xDVeOXezdL1zhLLMxsqcB0houGoZwL5D7hVUxzksU5QZb1AbOqDZVrO4=
+YJCGd8ThOZLJNVv-VlyC6uZlR8Kw4wdQGcaP0Yu3mYWBjoybIz0VT9pwvYZKCt5-evBgwLz9L3k=
+IHSg_c7novtqWarE" width=3D"100%" style=3D"color:#000000;outline:0;border:no=
+ne;margin:auto;display:block" title=3D"Identification" target=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/62453a1fc4ec6fbcaee272ad08e=
+e7c4953740f65b3651c9ed76ad5c8b5541ae2.jpg?e=3DK5YsErD2EXdyMZ64UVKbYTMQZeE_f=
+piElqg69gYttFS_vsYCDwdHYnCAw3x39uXLr4uz80vBKq8qY6zH3_ETldzJKgqj3r2VN376LIgY=
+tP7gS4b8OmpByq8__MI0UQbLJte6m1wQueeGnPFOfUi0ZHfMaHaHTLy7CLgt5QT_IILNP0zya3q=
+DYNLMrfvjv5bbcInT1E-X38U8i1gINfwNLCI4aZcnc68pyIIfejvjgFtOVj9ckD_9VTI1NTdAnK=
+TwNTyHiA6iAezSVhLwTXw6VyhZ0DEAg-_Wis-pSvgvddN2PogPAxj5IpD7kCM-eeEff4Rvke5Pg=
+IsbTRoAIyeCIQ" alt=3D"Mon compte" width=3D"42" style=3D"font-family:Arial,H=
+elvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:no=
+ne" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;vertical-align:middle;line-height:14px" class=3D"m_fz10px=
+ barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/-twoRACHcC2bCDPFqW3Jf96xrmUnK3aXI=
+k9asZCHFXSStXbFkh9p3j2l4GvQJuu_a5nGVKKeyyYhg4FL_dr5sNj4Le_7Tr2RhPVy8CVsYkwv=
+1r-KEqvhj7xjkRotB-6LwpehLOQDUHAfbQzPL9uy36fEnMfWSl8M7znpgiWBXh56JA4u4nUocuB=
+ODB7Zp0bo0L8JgTbjEQb4P4arV19z4BkE7sXYgX2vYjVoGzyh7tdi6xZ7yiAnJtwPVXIki2xucz=
+EjvAowmS6qS2DYzLeTPK6Ob7M0kan16obRmKGT1QN4vxNSr8MOXt_lgoEpbSaI2i0OmlO5qWMMf=
+OYU2eA4K-oWLIrfnXwEP7Qvv-QgnmS9rXjvGAGnApzbv1uqs8zjXhQyc-qyFBCP8xGGae7UViph=
+b5e_Ha1dWYp0a7XmACb5xBhHSycBocMA-Ehug07zpynO3zPhFG1wLG4hufxXD7E_f5DcKgSSAz3=
+ImhB10ENqqiKdv_0" style=3D"color:#000000;line-height:14px;display:block;tex=
+t-decoration:none;outline:0" title=3D"Identification" target=3D"_blank">
+<span style=3D"font-weight:700;font-size:inherit">ton num=C3=A9ro de fid&#3=
+9;move</span><br role=3D"none"/></a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:none;font-size:12px;padd=
+ing-bottom:15px;vertical-align:middle;line-height:14px" class=3D"m_fz10px b=
+arlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/bKu0m6FkQxcQO86O8XE-xgprwRYxXYHrr=
+h0sOV3RV58vvDnEF0CFSPvMXj8ZNxL5S420UvCdxsChNesGaub-Eo3ZbrDfZ6Q6a2RUZEWqmX4Z=
+IbSOcX64iC6v88OgHESTU8hgQ7dVVKSm7lZymMJpb6wlAtOjWCsjN-SIuBNtRT0k0UIM6MXsVge=
+hhkFEMzV9V3YHgJ-40x8Jm5fk8SR_6SGiPD0eTi5gj8FpjwFzepyjG3R_PFYk8KBPok739fRsSM=
+VTGQkF9T8EIdiZ9_ezUJExxkJXWUb7Ieb3EJxCfEldP9dPbTO1Rl9iXVvyjGs1v-0ZafPwcPEuQ=
+BNKC50oaCEosM3QB8UvjZWu81BBY9kP-_wpxHz8rE6JOY31bvssugEdDarmoNGwHO-CF7wl2vpC=
+NLXLatSqcx-_XlLN29RuK7kaCATQ62IP7mI_DD0Hijh5WGxzfECXIsu8Asv4dNBTjddo2T79BSO=
+aQErLDsC1qHtpGkA" style=3D"color:#000000;line-height:14px;display:block;tex=
+t-decoration:none;outline:0" title=3D"Identification" target=3D"_blank">
+73206110030920</a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.33%" class=3D"t_w33d33p m_w33d33p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"20%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w20p m_w30p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-top:20px;text-align:center;vertical-align:m=
+iddle">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/o5KeiPHte86iUBkElFddiHBBSlmnfM-oB=
+Ld-U4ptNP-nS5grAtI3BGL_pKo8yWP2XFoIwHERhgleHbyocC1xlMM7q_yqM8E5gTMlUPF6-mVm=
+qdxWedbY6y7yfbvwhD19oz4D1d8oIO7oDgFMS-hQkIDwSlfKt-dw7tjVZDPSPaKlYPDCCkvmr8S=
+UGe1kx2C0J5c2As54AKtaROxPVWDt5-5qP2NMCGUN_9x36gozNw-KriAQWPECl3yV_KQGKTLdFM=
+e65qlavcdffpYUnib_2Xx_zVay3VIJ9S9YA9AoFiJDBwrGA-9xmzmZKJNFtkUwAr9muERPLGK7j=
+S0r36_nOBfjmlyWG8gECK3SKHP0G9Plpt6XD00ClIgg6kFfzt2hkuqfmbfgazLBDawesXOQFipm=
+65zkoLV2FJGlfFzUw7dNgE1edtvcdvhGykRwFk5tHjhbaQQXNyKu5dLpR4R2MBCVHx7WaffG-bS=
+CR7zDygHk5yNdxVHQ8AOiotUT0AA" width=3D"100%" style=3D"color:#000000;outline=
+:0;border:none;margin:auto;display:block" title=3D"Paiement s=C3=A9curis=C3=
+=A9" target=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/d3e0304316e09783b08b5ec4dc7=
+e1090a9123b535a667162c11d30fce87a6314.jpg?e=3D7dT0VhlAELoHRjF2OVhIPyITFhmEE=
+VlPmzb-2X4MvIBXry0RVChXNK1SQH7s21QO_IBZDTJqNwsX3tOcGqGZvoFtwOFMoqT-TI64SsUY=
+8_QUpRSREq8EuN29t4sllTyezpqMxZgcPHP9yseG1KQ49AHw9495x5WwGoXJc7YYSlu28W6fjvC=
+NBplqBxy_U4ylfxKQhIvOHrYy1fr7NhrmoDC9mHpGNHATAb91ghQjEJW-EPEdsSe9UYOHzPwfbS=
+m5MQO3BOKLpA4dW0JzV_Dyy3GNQM6j475M0aoyShGCcRGX071KM-pyuBbeDCqrSRdrTdsrxczsg=
+MDkBfaXcxbfUg" alt=3D"Paypal" width=3D"42" style=3D"font-family:Arial,Helve=
+tica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" =
+class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;vertical-align:middle;line-height:14px" class=3D"m_fz10px=
+ barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/o_2ssP9cnF0o6K2OOVk-tdPNWNBe6kR4U=
+vrOppIjy3aUJHuASZwzOqsnNYq78VKwtxqP4E-zLPbYzxDuXhtA5WpH6SpAyytGK0SNsV1OIhma=
+NbpR3kRtvluf2HzJJ4yICZCAaIBAO9WAq1EogCGtxRzE2_wBSQbY2eYvDTO5kxBXp6bChwuQmJh=
+bK-yN1SZd3l_pCqmeo-2wV7qhrntyZawO7HNZV3oYzjy41u9Ui24J5pyCkcPm3zmTT7jGlveqGS=
+m3s9rdW7or_a7BOg6YVv2XAsN6F43WJA6k6NkbQLMBRVqfmcXUbEapkeib7a8cmcR9ihuvyJOJu=
+uF07YXTQUPffn648bQ46NxeqC2PwuyTMobomEg6krPCg79OJNourZfmmyVc_fLt4AzbP8N4OSnb=
+jze0aVAIZWseLNb8eL_M5uwbnF1j0ULuLA_vxQGtjG7mULU52pi_tUHzYIWYhBNmzRflgFCnFem=
+zdxv3TCmN4fFCdPTVxy7NJLhvsJc" style=3D"color:#000000;line-height:14px;displ=
+ay:block;text-decoration:none;outline:0" title=3D"Paiement s=C3=A9curis=C3=
+=A9" target=3D"_blank">
+<span style=3D"font-weight:700;font-size:inherit">paiement 4x sans Frais d=
+=C3=A8s 30=E2=82=AC avec paypal</span><br role=3D"none"/></a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:none;font-size:12px;padd=
+ing-bottom:20px;vertical-align:middle;line-height:14px" class=3D"m_fz10px m=
+_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/rSSXe_LrnvaPtSVryohQUs5Bg613ycklg=
+UZkeJH06K9UtNm9tq-cXG0LUZqvI3vXaPBb2ts3l4yYMdpHryUxBIhELqpFpxT-Ji9wugIrvnqw=
+olsJwMmBCvSOBwUMn5idZvnjvVbeM1WAdxxcUs20H7E9p-HsN1GzXte_a2XNBoJgQBLQj7_0SoD=
+vad12Hq_yGg4s4Tv5PyksQGAqlV_-k_vFsSUlbcSppz_AbZkzfseJjo3F5OZYa6M7-q8Cn7j7Li=
+IE-DCFrEtM-Ah37T47O0LxiM8RRm9TQCm34xSKXsewrAfrfVmzj1mHfZ2WlWJQGunt4qzwjnlHC=
+u4WCqII_REPw_rrimVcw3p3qniSgv_ep-1Jf4J1hizEn-J0LUUS63_W-s9FUhiThiwvMmPZehQm=
+gD6tjKvKkhClX_t7BwaSefHRKB41P63BhDIPVek0nlT0s3jnHG0DfRqjbXoR4ADv036ROts3M1Y=
+WjTWzAiumQqvG1gIzlK1W8Ei9WYE" style=3D"color:#000000;line-height:14px;displ=
+ay:block;text-decoration:none;outline:0" class=3D"m_lh12px" title=3D"Paieme=
+nt s=C3=A9curis=C3=A9" target=3D"_blank"> =C3=A9changes et retours gratuits=
+ </a>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"33.34%" class=3D"t_w33d34p m_w33d34p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"20%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w20p m_w30p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-top:20px;text-align:center;vertical-align:m=
+iddle">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/DwV9h-pGiR6avP_drEAsikIuQ4Yjk6b4_=
+QKnONFtzlr4RtlF0Ge63QFqbxGviznxVXd7q5LiNTwzlXOzjXNKp69A4SuEFbAXMrKevtr_aYmd=
+AHgs4rOpVkUcxi935s4ObLGk0gg27Tl8wkg9hwsfFwML1eoJwRP8xI1Ah_LaEx73AGK5ji5_kk2=
+MPt4qkydyV2MEcq27wc-zwjgue_hIi5FS3N7leseXhw83n82UzglAMHUvAUWTY_xBL0zKzODpnG=
+3GVD78KCJ3zzPsjJykPYkeOYFwgH1DD3jv2bsj2qGZGnw6O0JPDP7HqdaGZW_H8QXj-QT4hxHNw=
+3Pg1nYm3QizOKIbnOqoS6kGDBmvM9gkGF6RW_G1xXmTZn_3Qpd_BqPgfIZ7vYXsvD5RXd4gTiCD=
+3x5ufi76N7WDy_mGn7v2jtAu6Yh0BFiIIDATcBjKFOk8u8I4oFoqtbDC1-hFHhpttU09VtLsIgd=
+8Lcy5vWaUF3CG" width=3D"100%" style=3D"color:#000000;outline:0;border:none;=
+margin:auto;display:block" title=3D"Recherche magasins" target=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/1b4799914fded96c1a1e2621f39=
+be0f9a0392793f2a87d9b7cc31915fa8fe4b9.jpg?e=3Di_sIjdDqsGaTgsDdhEJ_4sVSx4dEY=
+HWBtxYMfkdDriF3joU6EchJpZVLr6spjzaUWgB9x77DLz6-lauvdHQZH1rH5d1NMFwAI0AxccuV=
+RlxmB8s-3_IJ03e7UGR4Myd_UOY2rs7jRujcowcU_98x8qVyaaZEqFGa0-ngg5fRa9xe11w-pPc=
+ibLyvJt1o2UO1gTZcBnSG4rrfxZxDy5x4I-_HE1YgC-PY0sDjmvd7J3J5lv4Y9Sx2758oGYBMhr=
+XGnu_rk11_Xs_IzOM13cbvsKTrOm4vPhS80Xz_yjqzAZqNviI3vWOpiSf1ojbZKRBCBXI3MAP1b=
+FCNWdFZj4_X4Q" alt=3D"Livraison offerte" width=3D"42" style=3D"font-family:=
+Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;bo=
+rder:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+700;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:10px;vertical-align:middle;line-height:14px" class=3D"m_fz10px=
+ barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/dbqboqOnjSIP9NewF_pbxP-EfuFLGJFzV=
+-oLcVazPsfnn9FuRD5pI3-TnO4inEFl8vBTLwBOg5lE1HDx75f1l4kX5pz-yOAZz4Kyv2N2Hef6=
+AWk7FuEVK9uN5b6rQ6F1SHbpuH72ijdRZjmb5bh2dNqL6vZuBMwI0H1jhQ0OzmgySubEurujqUW=
+1qdWn7K1jrhC0Oo_ptFEaiKMKtBnne9z2O07BhULnov12vvZ2kcUhw8wZezngtwK9JDCg1O7fnV=
+jAZvmbaiHu3VDYA_0T1t-w6M5O--w3ZxOv1hNKlpx0S0X0YwQXAbqqNN1-C8LiTOzHz3xqfNV4l=
+vGh8lBk8DeZsPQMhbk-yyqcWkiznKNWvXtxYlFdWBUpPInK9wh6gwmik7HWXH-xlTSBOxW8Mrum=
+37qC5mHMMM61AeFgmAk-U66WI6CYBGN7JgqkW2M5aAqetw3pWvHIPQSBh6gfcnDayOiBMe67vhp=
+JtsVhQMVVa4E0" style=3D"color:#000000;line-height:14px;display:block;text-d=
+ecoration:none;outline:0" title=3D"Recherche magasins" target=3D"_blank">
+<span style=3D"font-weight:700;font-size:inherit">livraison offerte</span><=
+br role=3D"none"/></a>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D"=
+none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:none;font-size:12px;padd=
+ing-bottom:15px;vertical-align:middle;line-height:14px" class=3D"m_fz10px m=
+_lh12px barlow">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/sA1ZieaCyRVGV2ZrVk__dGTeaZjsN1ke6=
+ogNe7tnYlxpfkgVo_ErOoWmXfIP310sM_GqIgiGUxA7mLpCtg543LqYztVUDApLw1WnAPYcmn6u=
+Zn8qG2kHnX3WTNh3918F6xmeroPqLl_iYgz6q0dvjWsnUWoN5fofXCGuh87p64aQ5lDz7AVqpcv=
+FY-cTzHY7x-6dT91JVgvNGe5k7NYU_J7mLWivFJslyHv2n-GlzeUMZ6imeYDPq-ISMSTt0SXQip=
+aK38_0S2aBhYcR-oxcYo2JqQDrh2wvT4E7SiZSdkgC4sRmHD8zzJpcZVZrdAMB1wwpQp4MzGQeo=
+Asutxkrh6t9o5UjzQkQjCzsNmMpMD_KB77ZwJaAoxhmLwPIhzlFVXpoArlbGVD1AGXtuHXK-lBa=
+uU62l8L7LhSSpNSnvzzuhNBDHRy_TNfyTnBPCKRfRKFp_DUWyEGvwGm8N4BmhcIdS-818XJ2S3i=
+oILfRxO9ROuyI" style=3D"color:#000000;line-height:14px;display:block;text-d=
+ecoration:none;outline:0" class=3D"m_lh12px" title=3D"Recherche magasins" t=
+arget=3D"_blank">
+<span style=3D"font-size:inherit">dans tous nos magasins</span></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:center;text-transform:uppercase;font-size:12px=
+;padding-top:20px;padding-bottom:10px;vertical-align:middle;line-height:14p=
+x" class=3D"m_pt15px m_pb12px barlow">
+<span style=3D"font-weight:700">retrouve nous sur nos r=C3=A9seaux</span>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"45%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w60p m_w100p" role=3D=
+"none">
+<tbody><tr><td valign=3D"top" width=3D"25%" class=3D"t_w25p m_w25p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w85p" role=
+=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-right:20px;padding-bottom:20px;padding-left=
+:20px;text-align:center;vertical-align:middle" class=3D"m_pb10px">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/aktfbxlSctfZwP8Ha8pA-xROJT8x-Wgch=
+3u_K9AnFhOkwhHjwyJrIbnQG-7VP-ywPCy9sBN5j4ckPc5r7_PqnieDkX9m7U58xdJtfkUyB4y8=
+wtm_vHQDQtqzTvRpCFs2F2y41rgTzX57dGXATUnpq0c64kOHrkcHk5pJm05l4Hi9Qlz_mlh7hKX=
+mJ7DvN5dXoUif4v63OVKJ3QNEIDF8xo_ZlAySoknGCTGrp2iWn4vfoVsIQeSCf844K7Jo71lZcH=
+XZ2veiW98VUD9autqr1EeQ" width=3D"100%" style=3D"color:#000000;outline:0;bor=
+der:none;margin:auto;display:block" title=3D"Facebook BZB" target=3D"_blank=
+">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/93bd8ff5658f46a81cc4e8ca3cb=
+df6ccd03eb750f139a4fa532954522820d2e2.jpg?e=3DDrajSFGRca7bTOTSX9Z8qvvRJVvAl=
+XEDogg7VDtjE3ZFQ7-pvTISErj9R7do_6UcRKH2NM-8zFcDWfyjTq-aBpxmNg6G9M5E_j0ZLVMG=
+Xya1yg0JDjvOjT8xrUjcX5zP2-vga87cAVxu2oGLNUIq3pFKXwDVz6uEFHQwOXcCGS95Wqx6m3X=
+YnodEz-gmIwSZs6048Nap0gtkKosKOvyG9xN6eu7am_gu7o8uCSimxvqaSY9Yx2wE9Z-fxV_bPr=
+o8seE6n_ppy82t3Dwyh82t1j1PP1iV9Fjt8b1nb9iuQTnqj3kNUQOiy9rRPbYL8kitxzPU7nkOA=
+b4H8ojIJqRIyQ" alt=3D"Logo Facebook" width=3D"32" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border=
+:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"25%" class=3D"t_w25p m_w25p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w85p" role=
+=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-right:20px;padding-left:20px;text-align:cen=
+ter;vertical-align:middle" class=3D"m_pb10px">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/kgAcp2Nr-qrtryAcpQK7VkZMI7SG4idRJ=
+31MQV2FmfSWnDsykQLF1-y4vKb59aNNPqmTeAjGXxh7L0cVZruzyIodvLR8Pe81l4TC5Vyf7jq4=
+wK8qhMYbcyuATZXVUh_TczTt2f_8yQPuc5VVlzEaFfcWmfmhgwYBr0VTHbMPHRVZu70KvKRxcv3=
+02jZNv1M1hv_sJSvQDhib_KyFkEGYR8TNIIzwTm_06ojOUvN46qtfy2beBrM_vXugFy0q3Gi6lg=
+bdmtXLN6fv41O1t5PbJ_eAPu7fu7c" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Instagram BZB" target=
+=3D"_blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/f1329738b723b0bb8971a984ad5=
+ded1750da50a04f9852718c99edf3e17c4ae0.jpg?e=3D8wUYSVsT3XVzHFgV09FqLSuL5iFCH=
+7Ct2ea3zGzX3iK5pKPRjkGc1-QmKt0ZvghJgaJRTsLSLCCwO117al-9qrOz-x-5tBKp0ts4xnPo=
+Tsqok1uz0MBcBzvRp-Ygf2n-AZKJRPb4Qd4pQFQanX3DKAOpfIVChEOVi8b3ClWu-C8sbBRUu4D=
+HDz2FKdS2Di3DpXa5vE2WGCYjDw24oUHAWYE5Ta3bf4FLNGN1oFMP4y8qtujX24NpyQDkmIgRE3=
+eWU-8Qh2PLHpabAD8-UpOGfS0Zg5Gp6dXLDy1AfjWBrUrZ1UNOtS5AQoqjplogsSOlqiszCtihp=
+QGoqIXJ99q9Aw" alt=3D"Logo Insta" width=3D"32" style=3D"font-family:Arial,H=
+elvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:no=
+ne" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"25%" class=3D"t_w25p m_w25p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w85p" role=
+=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-right:20px;padding-left:20px;text-align:cen=
+ter;vertical-align:middle" class=3D"m_pb10px">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/WgY1G0O1B9enxnX8GkETi_Txg8A_8SDll=
+GOuEgCaxyGbzqqXtd8urgHfkmtjMFUGGUljWMX37hybgIVXjt2Du_OeXfKnI_7_4TgviWapY-4K=
+49AUVz1Z3ubuq1IQReSvy60Cx0SyGNPzbXdg5kXSv-4Y70o6Y9iSJfMfO3ffkh8Rf3mQ-nKr5t4=
+zUQbGjL8IwtA0HNvP9QKLFKKtwRLDmUCysfGZHprb461iHxRC4FLieaG03HFee24i6GgMoEwVFv=
+fpz0_FYuBc-Ppc-nwIKyMm6wlBSs0" width=3D"100%" style=3D"color:#000000;outlin=
+e:0;border:none;margin:auto;display:block" title=3D"Tiktok BZB" target=3D"_=
+blank">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/9973f842f2f2351369da5586f6e=
+9a829806ac64c1ab91ed90b459ccc5a9aca74.jpg?e=3DDv8SNFY9srIdn2qqNcHsx3pBXvaNM=
+ncbNJ6lVCBtBv25L0qhjQx_yI8GlYLjhQiKsbUyM4TuZO9DS3aJaMZDvVeufB9twvYpS-29oURz=
+oWfNNLLsbuPt93DPxTI7uanpM2zVPrUdHLIOBW9VuvnIyACSxani47kK7Fh3wkxiiOdJHo8izch=
+-w4xVbRuKkNZZOO7RATimD2i-DnZtkTJosxOYntLzvmb_etKf9h2awhUT07RZZhh8-vi5NpoxAc=
+PlzTcmSEdeKz4caaHRXXTYvPPcXYT-LpWzmoVbXgwCgTfCvpP2qaraFb3wPz3uqUm7ym3d5NLdC=
+BEX58W4sCBH3Q" alt=3D"Logo Tiktok" width=3D"32" style=3D"font-family:Arial,=
+Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:n=
+one" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"25%" class=3D"t_w25p m_w25p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w85p" role=
+=3D"none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-right:20px;padding-left:20px;text-align:cen=
+ter;vertical-align:middle" class=3D"m_pb10px">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/5drP3aNoD8u9fkjRuP_R_tUD7597Ld_gq=
+ZKBNer0aEARFDrg5IIsc9AmsXM8kdYFVAEI_yEfQWgjYfRFrOUV0-1TEFaZ5njl0XnUOALF88sR=
+PtY3UhMyPt7Y_J64UI7NhNPEn-EZk7SvjkPZSUOlgIldSdCxcAZ7x2cU0y4gigDW7632fhX5OX9=
+mcnxkYv07InvLM9Z5kw9KLo18dNcR-Y2ngnsxo3QF2hcZxlsJ0LmgRav-dj_8G4WgZIyCjmkaIi=
+jRwwYhBPw6psS63IzAcX5Eqw" width=3D"100%" style=3D"color:#000000;outline:0;b=
+order:none;margin:auto;display:block" title=3D"Youtube BZB" target=3D"_blan=
+k">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/eb0e1c6b77dde4aa99131b21faa=
+8dcdc203f7e7f244df523ff542af0dde4e164.jpg?e=3Dywdo2z-1-Bwb7DaOCN7YIsEtUTxOE=
+I5HVp9yQXxZegi_o64pOUarAfOdm1Tx76T5WIS-fItIbYdVv9Dp4SmudZ6KnO_99gj_sjPSz2Ge=
+lEWQLbnht25Ec43J7bzCGGIhFW2AI41F7n9zEkRa8uSQBTd4AoYLtu3bi_lVbNsWPny5hbVrfI9=
+mg3Wo5DVHGbE7DBP5N9PuInzODYgT4KOminaeWAToewOyj3-8QWjuDe3015pmWYvuHYwhuypHyr=
+ZcGwm1DWSZDmujLzHpoYfq6u5HQjc5sROAY2d90XYCWRVPkqMIT19IZ_fTdNo6RiEI3OJ1iXN3R=
+mSaj7bFZflSYw" alt=3D"Logo Youtube" width=3D"32" style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:=
+none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=
+=3D"none">
+<tbody><tr><td valign=3D"top" width=3D"75%" class=3D"t_w80p m_w100p m_flrig=
+ht">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w90p" role=3D=
+"none">
+<tbody><tr><td>
+<div style=3D"border-right:1px solid #c2c2c2;mso-border-alt:none" class=3D"=
+m_bdr0pxsolidc2c2c2">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:=
+400;color:#000000;text-align:left;font-size:10px;padding-right:20px;padding=
+-bottom:10px;vertical-align:middle;line-height:12px;mso-border-right-alt:1p=
+x solid #c2c2c2" class=3D"t_fz9px t_lh11px m_tacenter m_fz9px m_pt15px m_pb=
+5px barlow"> *Soldes valables du 25/06/25 au 22/07/25 inclus, dans les maga=
+sins BZB, sur B-Z-B.com et l=E2=80=99application BZB, sur une s=C3=A9lectio=
+n de produits signal=C3=A9e par un sticker. Remises valables dans la collec=
+tion Femme et Homme. Non cumulable avec d&#39;autres promotions en cours et=
+ avantages fid=C3=A9lit=C3=A9. Remise d=C3=A9duite en caisse ou au panier. =
+En cas de retour, le remboursement sera r=C3=A9alis=C3=A9 sur la valeur net=
+te pay=C3=A9e visible dans le montant TTC de votre facture, =C3=A0 la ligne=
+ article.<br role=3D"none"/><br role=3D"none"/>Vous pouvez nous contacter e=
+n nous =C3=A9crivant =C3=A0 cette adresse : BZB Service Clients, 152, avenu=
+e Alfred Motte - 59100 Roubaix ou via notre <a href=3D"https://r.news.b-z-b=
+.com/tr/cl/6HIb2lbZpJOZXtIPSq6JwoWZnPGFRQQUfcieuzdNBCBCug69bmAljjjUri4Sy2Dm=
+OSGUL5nQDvBKtgbzWB-LYGmH-Ryd_J_ZVxhVgaUaYCZx93SuTaXpKr7nQYb-jgVMAEj-RLFxBmu=
+eolndfdC3igoNwScnLPPtGE1VjnIjjX_2nxfxquq3rL3CVEK4V4b-cvJmZ1NqhDDRZGdhltl6xK=
+9duEXf1EykYk2recMzyiA-8ysy44i7CS50LPwO0VdnVDXwQBMmMl9TlbOEn6o2yLLl51mObh3Po=
+cfoKEscc25W7ZLo1SAJKRzC9C2HZZqNto81wbtQQpq30-QjNL8HOAI8vdaPus5Gs3OS17YqOgDS=
+T9__7N4ApfsNymwrHhL4u6X25vgi5ivka7CW4BTbauRlGrgcjdX5WrvoKK4IEvqwGP_VJOACOZR=
+tae4jVKZjamMW5Zoczpb1iI6lGAxPrKhALxP-6fwjnDDH_W7XRiA" style=3D"color:#00000=
+0;text-decoration:underline">formulaire de contact.</a><br role=3D"none"/><=
+br role=3D"none"/>Vous recevez cet email car vous avez accept=C3=A9 d&#39;=
+=C3=AAtre inscrit sur nos listes de diffusion. Pour en savoir plus sur le t=
+raitement de vos donn=C3=A9es personnelles, consultez notre politique de co=
+nfidentialit=C3=A9 en <a href=3D"https://r.news.b-z-b.com/tr/cl/6_0CaSv6bvi=
+CwYv_hYzbsIPayoJqDoCKUGYclWmFkwgJ74UtIXKe4UUB5rLbWUCliU3a4L5WuMQtPMeApftFwB=
+YzeC_bdBW3BHehVSRcO3w7c1j_Ph2yv0wCfDVP71bhPhKvC8KBjQUM-uK27wF9ddBEvBvI0r65W=
+fpx7ObP3zJ0zzuxsJgEjatQA32Dv7nnurhsJS9qnfwomroYGkJglL5YKAB93sR3zAPymK6HQg-c=
+NVuesYc4QqkYgmVA1UDjOUyC5CC9sK8lxf_uBhnodg3Lwm67NfX-_aP2pN5kFkHna1JVwxNU9xT=
+IaHB0-oeCDg75iPLjAVBTYUXtlvfm7ISLZNLNWxVNNr2OcKeYiBSzHNf8ujj8dt1BRFobxR3FVQ=
+OY6RE0QPftF61b1GsN4S5IIrvniqUonfG9gdVOILaGXFkNvu5LKBl2Q9g41aEgneBipYW8yjL9C=
+MZYXJ5wWtLnGJ-ILIiW-qSxWHQUq_ruNM8UHh_1XsO08MCswxPs" style=3D"color:#000000=
+;text-decoration:underline">cliquant ici.</a><br role=3D"none"/>Si tu souha=
+ites te d=C3=A9sabonner, <a href=3D"https://r.news.b-z-b.com/tr/cl/aV-wOqRL=
+aM2Zzy14LcVQbzomo91mQ66-OwDWtNqlvT5YN1hDVzNuE4-CFdEF_AQXBMFlQuw7RBicXW3DeHD=
+NdVaLnfANIbE--tPCN_QmwLp5WKqzSSMLFhoT8LwXW45LjgSijeZGaN332yEoCVW1MDYAr87zKT=
+V2WeWVyYizGnAj3iO6EvSfpeuKGuVKuBzNLuFpn0ZoEZ6M9IFbahcRYdbhv5o5bAc-9rbaVC3im=
+8mbRmFGnARn68MR-kcWiz-bXqUHCTfvp-Rrm_Z6Ta_-uzqw8E7H6o3C9XTofHaAEXQN1qGsd52Q=
+eBybDS2czJEJG8nXVVgTZc1hGrUufktHq6UeGInszkTZTvS16cRKcIhURrWRoRVFVgIKYMQ1C4v=
+EYgfF-XnIZePfgjbYJyNXrLMDUvdIo4WslU7FofZ-BvRSNRHPI57zWfeLfOC4GPGIkg0lXyf5yc=
+9rIttc77NdLu6vDTQq-6f2eLThPm7U77CXFW5wbxZhS6HAmfzhrRhbbLXRoBS7-NxhQ3KRc6Bo9=
+8k5ty9E_8LYM4xjZH18i-W-VlXhvtV0jRfkAkI_xYP01A" style=3D"color:#000000;text-=
+decoration:underline">indique le ici.</a>
+</td></tr></tbody></table></div>
+</td></tr></tbody></table></td>
+<td valign=3D"top" width=3D"25%" class=3D"t_w20p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w60p m_w20p" role=3D"=
+none">
+<tbody><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tbody><tr><td style=3D"padding-top:45px;padding-bottom:60px;text-align:cen=
+ter;vertical-align:middle" class=3D"m_pt10px m_pb15px">
+<a href=3D"https://r.news.b-z-b.com/tr/cl/IdDWnlP0uwXbcMR3cy3pa8KN68t7jDgy5=
+y2JhQdKa-DptShTSnOWAu-xs0bYKLn3J-0MsgAt8-OGI6Cm6UWXZxBZmP4QtAqTphj3e2TDDtlb=
+nvJB3mel3yxXXCVQcuKRbu5qsJ1nHkCjfhux3id58KtOXrRGzpOL8TmBiNU8uUOfbYFWatnXTO0=
+rOu3TkI992ZqTIOgH3ffDQpPHSh-m-WcCn-qUW9RYRiTtdJ7BPy9Y7RRr8jMq_KG0wJEULCzgaF=
+GRon0J2iRE3SgxxJtPEtzrEgFSiJJuo62AnfnQB-tQnUh4tNBkspGP_81dypQimDHNP7JprMLCL=
+PdgFNbEvJD1T0OAJJVQMHPZdLHaLHEn5ke-s7SNDLbVjYHtUf4RGs1qGn5mkeqsx0c0wNV2c84i=
+HHGVA5aOdPQYy8eT_h89P7abYn76sNuTPBKSrQ5wPuJBEB3fdbKWwXaSWKaOQ_q91MbbL8oWtAt=
+60a_ID9dMmin9" width=3D"100%" style=3D"color:#000000;outline:0;border:none;=
+margin:auto;display:block" title=3D"Mentions l=C3=A9gales">
+<img src=3D"https://r.news.b-z-b.com/im/7708387/9fee01611c9f0c775722419e692=
+75469de60ecb6870b225a38a41c94db7c027c.jpg?e=3DOfxzBbPqRN-JGIuPv_2bmR3ByOH-h=
+DM4ScC0rTWFjZq46tdscLkSVrguKBD6AyiG0RSnaUjBe9SrTAjeOe2Agmqjzk1BpJmhfIPe5blY=
+HiT1dlv0Ugu7S7ZhqGABqwHxElOULz4arPlCN8xLa7RZ3PWBa6Bm-UZ_Ca4BYt64qB7MMXwCpNy=
+ShFOgiBtRZm1oUFQsvh9dVGAb2MdkMOek36Z1j58rUd_2oZJrsaGB6m7MngAiS5xK6jjGHpMb4l=
+ObVGDgXIVcS3ZLR3lujuCuGoKbvH9ojwnTRdv9Jv1a0WNrvYIXzyHq_MFkGewAjBo2F7YoCtlY0=
+ahqMYcF891O-w" alt=3D"Logo BZB" width=3D"64" style=3D"font-family:Arial,Hel=
+vetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none=
+" class=3D"t_w100p m_w100p"/></a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+</body></html>

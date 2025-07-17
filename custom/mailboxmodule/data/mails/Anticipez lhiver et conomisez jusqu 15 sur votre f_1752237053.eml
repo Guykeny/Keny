@@ -1,0 +1,2819 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:680e:b0:92:fd56:6792 with SMTP id em14csp262974gbb;
+        Fri, 11 Jul 2025 02:49:41 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF/FYg/ti+1Inos8jLJVyp5q5NFQ4c8H5B9kV41s/OogDgvpjLtFapBWhPf5xJBihHRePGz
+X-Received: by 2002:a5d:588e:0:b0:3a4:eec5:441c with SMTP id ffacd0b85a97d-3b5f2e26bbfmr1694275f8f.47.1752227380897;
+        Fri, 11 Jul 2025 02:49:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1752227380; cv=none;
+        d=google.com; s=arc-20240605;
+        b=cs2jSzN2eu+0l57dvKlQFtv2jz3HuidCx8f0tqvH904Ve5D0KzDegmoqu2RbgeEnLv
+         H2pQSns5tBNMg2l5OOyr1FfoDLLqx8IelVd2XN5UdMgzwib2dIx8y3dcxasdND6iH4K3
+         L459PvRUplkUAqRKw8hgn9kpSEbl1XecdkcIbh2qIgMhXjyvPgISUrG0CknVkyY1+4uk
+         x0zM3mvE4Vge6Zv3hXtEwWw7vZnWCc5dFEJlu1wmOwQdqY5hifLaEDtS3LlYtv+F1U06
+         9UlouoH/sX1TrimlJqG9mBuxntonv8h5LTWrrMIHPw54+A6P12pOtgVC19J5fe5E+zyZ
+         u7vQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :subject:reply-to:from:to:date:mime-version:dkim-signature;
+        bh=40TZfhbSTmoKTV5KvQLWb/iU38Ruixc3G7plpAUmkG8=;
+        fh=/Ol0OegD1aF9J6vnCKCk5vxGx7iP6OzlnFyv868g/yo=;
+        b=e32lIO8JhBi18D1IA1cF1jn0UTRNqIZMj+RlICI8+OkpjOBobLTSCm17idb3oHP3at
+         yNvDh3GaICLlw9Kf83OoQUwsic2jDjErEiCyxMvc1ScYJxjH3rQdhbrP7tLYSe2VmHdc
+         SUvv5cBvDbykmhzZoTIdb2WNNNNpusOKl8mDBZjceXe/6aQduH0nTOeHWptndFuXn5Cm
+         gAbUINy1EQQMaeEuK3xcG5OnmHlIYUlcMYW1oN3Krjq2jpu9i3NPfEfcfoH2tL1FLoV6
+         EtqvN1rgkm1zAMA0+5+heK0leFPHJJmACjFEEN1XBNazBK7NLebCN//B30SupGkYpZHo
+         S53A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@relation-client-edf.fr header.s=edfsa-20240104 header.b=EwDwUaG4;
+       spf=pass (google.com: domain of votre-conseiller@relation-client-edf.fr designates 140.86.230.217 as permitted sender) smtp.mailfrom=votre-conseiller@relation-client-edf.fr;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=relation-client-edf.fr
+Return-Path: <votre-conseiller@relation-client-edf.fr>
+Received: from omp.relation-client-edf.fr (omp.relation-client-edf.fr. [140.86.230.217])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3b5e8e286e9si2471613f8f.406.2025.07.11.02.49.40
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 11 Jul 2025 02:49:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of votre-conseiller@relation-client-edf.fr designates 140.86.230.217 as permitted sender) client-ip=140.86.230.217;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@relation-client-edf.fr header.s=edfsa-20240104 header.b=EwDwUaG4;
+       spf=pass (google.com: domain of votre-conseiller@relation-client-edf.fr designates 140.86.230.217 as permitted sender) smtp.mailfrom=votre-conseiller@relation-client-edf.fr;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=relation-client-edf.fr
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=edfsa-20240104;
+ d=relation-client-edf.fr;
+ h=MIME-Version:Content-Type:Date:To:From:Reply-To:Subject:Feedback-ID:
+ List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ i=votre-conseiller@relation-client-edf.fr;
+ bh=40TZfhbSTmoKTV5KvQLWb/iU38Ruixc3G7plpAUmkG8=;
+ b=EwDwUaG4+kehTLFUnm8S8rD06tlZdgLby0HeObU6kKzvGEscOj2t2MoJVcxZa0tjTYNCBTrcgFEg
+   GZpRqODqihmu3dCEG3B/r+PZUlSB82BQZgwbUTANv/KC42AmNyv6DqZRXjz1CBL7gPdWvfKDXMLN
+   FiQor1h2do/A/YBlOF7vdTI3pQCOu4t3jw+JmRa+nnZNibRBkP07beSstBiaOHBWUjdqYKZROUtp
+   SQ/9t9N7xC36386xB2tzChe+4UKJKtTSl4auZONVj2wLZK9WD0o1hB8YZrbO1Agnjay3s4hQtt+p
+   VoJ7m8IFKZu+IoRNeu55dpXm7ajFNHcu4KX8Cw==
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----msg_border_kt8X9SHqFJ"
+Date: Fri, 11 Jul 2025 09:49:21 +0000
+To: guykeny.ndayizeye8@gmail.com
+From: =?UTF-8?B?RURG?= <votre-conseiller@relation-client-edf.fr>
+Reply-To: =?UTF-8?B?RURG?= <ne_pas_repondre@relation-client-edf.fr>
+Subject: =?UTF-8?B?QW50aWNpcGV6IGzigJloaXZlciBldCDDqWNvbm9taXNleiBqdXM=?=
+	=?UTF-8?B?cXXigJnDoCAxNSUgc3VyIHZvdHJlIGZhY3R1cmU=?=
+Feedback-ID: 81924:702848:oraclersys
+List-Unsubscribe: <mailto:unsubscribe-AQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFf@imh.rsys111.origin.responsys.ocs.oraclecloud.com?subject=List-Unsubscribe>, <https://relation-client-edf.fr/pub/optout/UnsubscribeOneStepConfirmAction?YES=true&_ri_=X0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFf&_ei_=EQT-RU-y-oYTVRWPTdUCyvcLoyHLHYhT0ClMAv4gODHmBuUam8PiVmqB7IXCDfoc2k9fSj68i9J24fClyb60QhF0eonvA1Ok-Q7WwZtVbko6zLPLsJHRuVUO4y_Tk2RHq3BMt4wwPjsFuW3hne3sW6XrH685Qk-UIWO9V7GiCBT6DEqE9yhOkS-CouZQiPgDSzh_0mxTVLMhRNNKApujirfFOzdqHmphovW5wCzdAjcpuzaDPjowR2-vfcmydyDfmv6eKbDrMWjbLKA6A7a1DEH5XpZNkJK3GwKNbZDwivTfRtWTwTvEphrIwk1ovf471ou0ISMzA9x4gjRJwJ1eXo4t1XMgZsmaqFNYs3vUgxPYyJ2QOr56hV60izaQL36-d5mg-0cxvxxXyf7n.>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-sgxh1: nmPsLgPQgKHPpFLPLCxnuHptQJhu
+X-rext: 6.rsys111.EVIUC7YuIq3otCCnEVT-o8WpYhOZZnNRmKSJLRzP6mRvcBjP4S_CdwirE8IKGYSlzM
+X-cid: edfsa.677428
+X-ei: EWShwBlPUbUlLbe-XWPbIm75KpeZrfwGT4WCqLlUldPETSwJ
+X-cp: EIW448BmNfUwn0Yf83Kz3OqlLrAFERP4BK3GTpSYgTsaA7w0DJ4Ce9XUVtn7Nv85D1TcTXf87wK2BYiqFtH_tC45c7peLQ7fesQWkU0ma_cku-n4ScmLR8CPfw1pT4ofxM1l9Qq3jSX5fSSS54JpRC0uBMHhf9UeJWwS09gQuYtI0B6RTbWPElTLjAyJdqK8C3NbVm2_IyZhx8FnIYr-Z4ALdoC7MGBi9XLTBtbLotNt77swsFM4vKJm9dn0BJoL8L1O9oWNwX6zYQe2cY-3yaUm-q3WAYdW7DHb-UZtz4HubRiFNhjfVjHIsHL_F1L4wrL3FKD6atcPrChQ66eu
+Message-ID: <0.1.4.28E.1DBF249137720E6.0@omp.relation-client-edf.fr>
+
+This is a multi-part message in MIME format.
+
+------msg_border_kt8X9SHqFJ
+Date: Fri, 11 Jul 2025 09:49:21 +0000
+Content-Type: multipart/alternative; boundary="----alt_border_9oe3pcAp6L_1"
+
+
+
+------alt_border_9oe3pcAp6L_1
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+------alt_border_9oe3pcAp6L_1
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<=21DOCTYPE html>
+<html xmlns=3D=22http://www=2Ew3=2Eorg/1999/xhtml=22 xmlns:v=3D=22urn:schem=
+as-microsoft-com:vml=22
+  xmlns:o=3D=22urn:schemas-microsoft-com:office:office=22>
+
+<head>
+  <title>EDF</title>
+  <=21--=5Bif =21mso=5D><=21-- -->
+  <meta http-equiv=3D=22X-UA-Compatible=22 content=3D=22IE=3Dedge=22>
+  <=21--<=21=5Bendif=5D-->
+  <meta http-equiv=3D=22Content-Type=22 content=3D=22text/html; charset=3DU=
+TF-8=22>
+  <meta name=3D=22viewport=22 content=3D=22width=3Ddevice-width, initial-sc=
+ale=3D1=22>
+  <link rel=3D=22preconnect=22 href=3D=22https://fonts=2Egoogleapis=2Ecom=
+=22>
+  <link rel=3D=22preconnect=22 href=3D=22https://fonts=2Egstatic=2Ecom=22 c=
+rossorigin>
+  <link href=3D=22https://fonts=2Egoogleapis=2Ecom/css2?family=3DWork+Sans:=
+ital,wght=400,100=2E=2E900;1,100=2E=2E900&display=3Dswap=22
+    rel=3D=22stylesheet=22>
+  <style type=3D=22text/css=22>
+    =23outlook a =7B
+      padding: 0
+    =7D
+
+    body =7B
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%
+    =7D
+
+    table,
+    td =7B
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt
+    =7D
+
+    img =7B
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic
+    =7D
+
+    p =7B
+      display: block;
+      margin: 13px 0
+    =7D
+
+    a=5Bx-apple-data-detectors=5D =7B
+      color: inherit =21important;
+      text-decoration: none =21important;
+      font-size: inherit =21important;
+      font-family: inherit =21important;
+      font-weight: inherit =21important;
+      line-height: inherit =21important;
+    =7D
+
+
+    u+=23body =2Elink a =7B
+      color: inherit =21important;
+      text-decoration: none =21important;
+      font-size: inherit =21important;
+      font-family: inherit =21important;
+      font-weight: inherit =21important;
+      line-height: inherit =21important;
+    =7D
+
+    =23MessageViewBody =2Elink a =7B
+      color: inherit =21important;
+      text-decoration: none =21important;
+      font-size: inherit =21important;
+      font-family: inherit =21important;
+      font-weight: inherit =21important;
+      line-height: inherit =21important;
+    =7D
+
+    =2Eborder-bottom,
+    =2Eborder-none =7B
+      border-left: 3px solid =23f54500 =21important;
+    =7D
+  </style>
+  <=21--=5Bif mso=5D> <xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:Pix=
+elsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> <=21=5Be=
+ndif=5D-->
+  <=21--=5Bif lte mso 11=5D><style type=3D=22text/css=22>=2Eoutlook-group-f=
+ix=7Bwidth:100% =21important=7D</style><=21=5Bendif=5D-->
+  <style type=3D=22text/css=22>
+    =40media only screen and (min-width:640px) =7B
+      =2Emj-column-per-100 =7B
+        width: 100% =21important;
+        max-width: 100%
+      =7D
+
+
+      =2Emj-column-px-540 =7B
+        width: 540px =21important;
+        max-width: 540px
+      =7D
+
+      =2Emj-column-px-549 =7B
+        width: 549px =21important;
+        max-width: 549px
+      =7D
+
+      =2Emj-column-px-571 =7B
+        width: 490px =21important;
+        max-width: 490px
+      =7D
+
+      =2Emj-column-px-585 =7B
+        width: 585px =21important;
+        max-width: 585px
+      =7D
+
+      =2Emj-column-px-189 =7B
+        width: 189px =21important;
+        max-width: 189px
+      =7D
+
+      =2Emj-column-px-200 =7B
+        width: 200px =21important;
+        max-width: 200px
+      =7D
+
+      =2Emj-column-px-100 =7B
+        width: 100px =21important;
+        max-width: 100px
+      =7D
+
+
+      =2Emj-column-px-82 =7B
+        width: 82px =21important;
+        max-width: 82px
+      =7D
+
+      =2Emj-column-px-160 =7B
+        width: 160px =21important;
+        max-width: 160px
+      =7D
+
+      =2Emj-column-px-260 =7B
+        width: 260px =21important;
+        max-width: 260px
+      =7D
+
+      =2Emj-column-px-152 =7B
+        width: 152px =21important;
+        max-width: 152px =21important
+      =7D
+
+      =2Emj-column-px-136 =7B
+        width: 136px =21important;
+        max-width: 136px
+      =7D
+
+      =2Emj-column-px-176 =7B
+        width: 200px =21important;
+        max-width: 200px =21important;
+      =7D
+
+      =2Emj-column-px-21 =7B
+        width: 21px =21important;
+        max-width: 21px
+      =7D
+
+
+      =2Emj-column-px-288 =7B
+        width: 288px =21important;
+        max-width: 288px
+      =7D
+
+      =2Emj-column-px-320 =7B
+        width: 100% =21important;
+        max-width: 320px =21important;
+      =7D
+
+      =2Emj-column-px-349 =7B
+        width: 349px =21important;
+        max-width: 349px
+      =7D
+
+      =2Emj-column-px-20 =7B
+        width: 20px =21important;
+        max-width: 20px
+      =7D
+
+      =2Emj-column-px-360 =7B
+        width: 400px =21important;
+        max-width: 400px
+      =7D
+
+      =2Emj-column-px-228 =7B
+        width: 228px =21important;
+        max-width: 228px
+      =7D
+
+      =2Emj-column-px-244 =7B
+        width: 244px =21important;
+        max-width: 244px
+      =7D
+
+      =2Emj-column-px-272 =7B
+        width: 272px =21important;
+        max-width: 272px
+      =7D
+
+      =2Emj-column-px-207 =7B
+        width: 208px =21important;
+        max-width: 208px
+      =7D
+
+      =2Emj-column-px-243 =7B
+        width: 243px =21important;
+        max-width: 243px
+      =7D
+
+      =2Emj-column-px-397 =7B
+        width: 358px =21important;
+        max-width: 358px
+      =7D
+
+      =2EdesktopOff =7B
+        display: none =21important;
+        width: 0 =21important;
+        visibility: hidden =21important;
+        overflow: hidden =21important;
+        mso-hide: all =21important
+      =7D
+
+      =2EtextLeft =7B
+        text-align: left =21important;
+      =7D
+
+      =2EfloatLeft =7B
+        float: left =21important;
+      =7D
+
+      =2Ebr =7B
+        display: block =21important;
+      =7D
+
+      =2Eh114px =7B
+        height: 155px =21important;
+      =7D
+
+      =2Eh100px =7B
+        height: 100px =21important;
+      =7D
+
+      =2EpaddingTopBottom5px =7B
+        padding: 5px 0 =21important;
+
+      =7D
+
+      =2EpaddingTopLeftBottom20px =7B
+        padding: 20px 10px 20px 40px =21important;
+      =7D
+
+    =7D
+  </style>
+
+  <style type=3D=22text/css=22>
+    =40media only screen and (max-width:639px) =7B
+      table=2Efull-width-mobile =7B
+        width: 100% =21important
+      =7D
+
+      td=2Efull-width-mobile =7B
+        width: auto =21important
+      =7D
+
+      =2EtextPadding =7B
+        padding: 20px 20px =21important;
+      =7D
+
+      =2Ed-none-mobile =7B
+        display: none =21important;
+      =7D
+
+      =2Ebox-padding-mobile =7B
+        padding: 0 20px =21important;
+      =7D
+
+      =2Etext-padding-mobile =7B
+        padding: 8px 3px 0 3px =21important;
+      =7D
+
+      =2Ecalendar-table =7B
+        padding-bottom: 10px =21important;
+      =7D
+
+      =2Eborder-0 =7B
+        border: 0px =21important;
+      =7D
+
+      =2Epadding-0 =7B
+        padding: 0px =21important;
+      =7D
+
+      =2Ed-flex =7B
+        display: flex =21important;
+      =7D
+
+      =2Ed-table =7B
+        display: table =21important;
+        margin: auto =21important;
+      =7D
+
+      =2Efloat-unset =7B
+        float: unset =21important;
+      =7D
+
+      =2Epadding-text =7B
+        padding: 0px 20px 0 20px =21important;
+        text-align: center =21important;
+      =7D
+
+      =2Etext-align-center =7B
+        text-align: center =21important;
+      =7D
+
+      =2Ehide-mobile =7B
+        display: none =21important;
+      =7D
+
+      =2Edisplay-mobile =7B
+        display: block =21important;
+      =7D
+
+      =2Eapp-box-radius =7B
+        border-bottom-left-radius: 0 =21important;
+        border-bottom-right-radius: 30px =21important;
+        background-color: =23E9F1F9 =21important;
+        padding: 0 10px 0 10px =21important;
+        text-align: center =21important;
+      =7D
+
+      =2Eapp-box =7B
+        max-width: 640px =21important;
+        background: =23fff =21important;
+        background-color: =23fff =21important;
+      =7D
+
+      =2Eheader-text =7B
+        display: table-cell =21important;
+        width: 212px =21important;
+        background-color: =23001A70 =21important;
+        background: =23001A70 =21important;
+      =7D
+
+      =2Etable-align-center =7B
+        margin: 0 auto =21important;
+        float: unset =21important;
+        text-align: center =21important;
+      =7D
+
+      =2Emobile-640 =7B
+        max-width: 630px =21important;
+        padding-left: 20px =21important;
+      =7D
+
+      =2Emobile-640-2 =7B
+        padding-right: 20px =21important;
+        padding-left: 20px =21important;
+      =7D
+
+      =2Emobile-640-3 =7B
+        max-width: 200px =21important;
+        padding-right: 0px =21important;
+        float: unset =21important;
+        text-align: center =21important;
+        display: block =21important;
+        margin: auto =21important;
+      =7D
+
+      =2Esection-padding =7B
+        padding-left: 20px =21important;
+        padding-right: 20px =21important;
+      =7D
+
+      =2Esection-text-padding =7B
+        padding: 15px 12px 0 16px =21important;
+      =7D
+
+      =2Epadding-b15 =7B
+        padding: 25px 0 0px 0 =21important;
+      =7D
+
+      =2Epadding-text-2 =7B
+        padding-left: 14px =21important;
+      =7D
+
+      =2Epadding-text-3 =7B
+        padding-left: 30px =21important;
+      =7D
+    =7D
+  </style>
+  <style type=3D=22text/css=22>
+    =2Emobileon =7B
+      display: none =21important;
+      width: 0 =21important;
+      visibility: hidden =21important;
+      overflow: hidden =21important;
+      mso-hide: all =21important
+    =7D
+
+    =40media screen and (max-width: 639px) =7B
+      =2Emobileoff =7B
+        display: none =21important;
+        width: 0 =21important;
+        visibility: hidden =21important;
+        font-size: 0px =21important;
+        line-height: 0px =21important;
+      =7D
+
+      =2EdesktopOff img =7B
+        width: 100% =21important;
+      =7D
+
+      =2Emobileon =7B
+        display: block =21important;
+        width: 100% =21important;
+        visibility: visible =21important;
+        overflow: visible =21important
+      =7D
+
+      =2Eheader-desktop =7B
+        width: 0 =21important;
+        max-width: 0 =21important;
+      =7D
+
+      =2Eheader-mobile =7B
+        width: 100% =21important;
+        max-width: 640px =21important;
+      =7D
+
+      =2Eblue-box-padding =7B
+        padding-top: 26px =21important;
+      =7D
+
+      =2Eborder-bottom =7B
+        border-left: 0px none transparent =21important;
+        border-bottom: 3px solid =23f54500 =21important;
+      =7D
+
+      =2Eborder-none =7B
+        border-left: 0px solid =23f54500 =21important;
+      =7D
+
+      =2Eborder-bottom-height =7B
+        height: 18px =21important;
+      =7D
+
+      =2Estack-column-center =7B
+        display: block =21important;
+        width: 100% =21important;
+        max-width: 100% =21important;
+        direction: ltr =21important;
+        padding: 6px 0 6px 0 =21important;
+      =7D
+
+      =2Ecolumn-width =7B
+        width: 315px =21important;
+      =7D
+
+      =2Etable-100 =7B
+        width: 100% =21important;
+      =7D
+
+      =2Ecta-width =7B
+        width: 100% =21important;
+      =7D
+
+      =2Ecta-width-2 =7B
+        width: 300px =21important;
+      =7D
+    =7D
+
+
+    =2Earial =7B
+      font-family: Arial, Helvetica, Sans-serif =21important;
+    =7D
+  </style>
+
+
+  <style type=3D=22text/css=22>
+    =5Bdata-ogsb=5D =2Elight_logo =7B
+      display: none =21important;
+    =7D
+
+    =5Bdata-ogsb=5D =2Edark_logo =7B
+      display: block =21important;
+    =7D
+
+
+    u+=2Ebody =2Egmail_light_gradient =7B
+      background-image: linear-gradient(=23fff, =23fff) =21important;
+    =7D
+
+
+    u+=2Ebody =2Ewhite_bg =7B
+      background: =23fff url('https://cdn2=2Er1a=2Eeu/edf/2022_logo_backgro=
+und/white_bg=2Ejpg') repeat center center / cover =21important;
+
+    =7D
+
+    img=2Eg-img+div =7B
+      display: none =21important;
+    =7D
+
+    =40font-face =7B
+      font-family: 'EDF2020W01-Light';
+      src: url('https://r-eni1r7u=2Eoraclersys=2Ecom/assets/responsysimages=
+/edfsa001/contentlibrary/commun/policeedf2020/edf2020W01-Light=2Ewoff2') fo=
+rmat('woff2');
+    =7D
+  </style>
+
+  <=21--=5Bif gte mso 9=5D><style>
+	=2EtextLeft=7Btext-align:left =21important;=7D
+	sup=7Bline-height: 0 =21important; font-size: 70% =21important; vertical-a=
+lign: top =21important;mso-text-raise:40% =21important;=7D
+	</style><=21=5Bendif=5D-->
+
+</head>
+
+<body class=3D=22body=22 id=3D=22body=22 style=3D=22background-color:=23fff=
+;=22><table cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22border: =
+0px; padding: 0px; margin: 0px; position: absolute; display: none; float: l=
+eft=22>
+<tr>
+<td height=3D=221=22 style=3D=22font-size: 1px; line-height: 1px; padding: =
+0px;=22>
+<img src=3D=22https://relation-client-edf=2Efr/pub/as?_ri_=3DX0Gzc2X%3DAQjk=
+PkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51t=
+FfVXHkMX%3Dw&_ei_=3DEQT-RU-y-oYTVRWPTdUCyvcLoyHLHYhT0ClMAv4gODHmBuUam8PiVmq=
+B7IXCDfoc2k9fSj68i9J24fClyb60QhF0eonvA1Ok-Q7WwZtVbko6zLPLsJHRuVUO4y_Tk2RHq3=
+BMt4wwPjsFuW3hne3sW6XrH685Qk-UIWO9V7GiCBT6DEqE9yhOkS-CouZQiPgDSzh_0mxTVLMhR=
+NNKApujirfFOzdqHmphovW5wCzdAjcpuzaDPjowR2-vfcmydyDfmv6eKbDrMWjbLKA6A7a1DEH5=
+XpZNkJK3GwKNbZDwivTfRtWTwTvEphrIwk1ovf471ou0ISMzA9x4gjRJwJ1eXo4t1XMgZsmaqFN=
+Ys3vUgxPYyJ2QOr56hV60izaQL36-d5mg-0cxvxxXyf7n=2E=22></img>
+</td>
+</tr>
+</table>
+
+  <div style=3D=22background-color:=23efefef;=22>
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;=22 width=3D=22640=22 ><tr><td style=3D=22line-height:0px;font-size:=
+0px;mso-line-height-rule:exactly;=22> <=21=5Bendif=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23E9F1F9;ba=
+ckground-color:=23E9F1F9;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22
+        style=3D=22width:100%;background:=23E9F1F9;background-color:=23E9F1=
+F9;=22>
+        <tr>
+          <td style=3D=22direction:ltr;font-size:0px;padding:5px 20px 0px 2=
+0px;text-align:center;=22>
+            <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bord=
+er=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=
+=22=22 style=3D=22vertical-align:top;width:600px;=22 > <=21=5Bendif=5D-->
+            <div class=3D=22mj-column-per-100 outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;direction:ltr;displa=
+y:inline-block;vertical-align:top;width:100%;=22>
+
+              <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=
+=220=22 cellspacing=3D=220=22 role=3D=22presentation=22
+                style=3D=22width:100%;background:=23E9F1F9;background-color=
+:=23E9F1F9;=22>
+
+                <tr>
+                  <td align=3D=22left=22 style=3D=22font-size:0px;padding:0=
+px 0px 0px 0px;word-break:break-word;=22>
+                    <div
+                      style=3D=22font-family: Arial, Helvetica, Sans-serif;=
+font-size:12px;line-height:14px;text-align:center;color:=2300155A;font-weig=
+ht: bold;=22>
+                      <br>
+                      <span
+                        style=3D=22font-family: Arial, Helvetica, Sans-seri=
+f;font-size:12px;line-height:14px;text-align:center;color:=2300155A;font-we=
+ight: 400;=22>3
+                        mois offerts* sur la location du thermostat connect=
+=C3=A9 Sowee by EDF jusqu=E2=80=99au 31 juillet
+                        <br>Si vous ne visualisez pas ce message, </span>
+                      <a class=3D=22arial=22 href=3D=22https://relation-cli=
+ent-edf=2Efr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5=
+owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUBCC&amp;_ei_=3DEQWTk=
+q9ZFFiiQ4nsNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6F=
+bCa-H_2FUnJwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4j=
+FRTkmzINgVCxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpq=
+fhvqFD_V-Th34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnK=
+oTnFj61BUPPiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4Fz=
+XrpWNYx4U4voWUOZ-v17rVwYE72hMVg=2E&amp;_di_=3Db9d64i0vpuc389slj21g8md2m0qma=
+pgima4cogi562vsc4j8k8lg=22 name=3D=22PageMiroir=22
+                        target=3D=22_blank=22 xt=3D=22SPCLICKTOVIEW=22
+                        style=3D=22font-family: Arial, Helvetica, Sans-seri=
+f;font-size:12px;line-height:14px;text-align:center;color:=232d96fa;font-we=
+ight: 600;text-decoration: underline;=22>
+                        <span
+                          style=3D=22font-family: Arial, Helvetica, Sans-se=
+rif;font-size:12px;line-height:14px;text-align:center;color:=232d96fa;font-=
+weight: 600;text-decoration: underline;=22>suivez
+                          ce lien</span></a>=2E
+                      <br><br>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+            <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23ffffff;ba=
+ckground-color:=23ffffff;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22
+        style=3D=22width:100%;background:=23ffffff;background-color:=23ffff=
+ff;=22>
+        <tr>
+          <td style=3D=22direction:ltr;font-size:0px;padding:0px 0px;text-a=
+lign:center;=22>
+            <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bord=
+er=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=
+=22=22 style=3D=22vertical-align:top;width:640px;=22 > <=21=5Bendif=5D-->
+            <div class=3D=22mj-column-per-100 outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;direction:ltr;displa=
+y:inline-block;vertical-align:top;width:100%;=22>
+              <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=
+=220=22 cellspacing=3D=220=22 role=3D=22presentation=22 style=3D=22width:10=
+0%;=22>
+                <tr class=3D=22mobileoff=22>
+                  <td align=3D=22center=22 style=3D=22background-color: =23=
+fff; margin: 0 auto;=22>
+                    <a href=3D=22https://relation-client-edf=2Efr/pub/cc?_r=
+i_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ=
+7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCRC&amp;_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1D=
+PmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM=
+2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz711=
+5c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qH=
+lHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgya=
+gwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rV=
+wYE72hMVg=2E&amp;_di_=3Dj0ue029hkcfjc4qv56g3r9vl5n4qhagmod5e90h6c8oik012vle=
+g=22 target=3D=22_blank=22>
+                      <img src=3D=22https://relation-client-edf=2Efr/assets=
+/responsysimages/edfsa/contentlibrary/conq_ponc_services/promo_sowee_062025=
+/img/header3=2Epng=22 width=3D=22640=22 height=3D=22=22 alt=3D=22logo  EDF=
+=22 title=3D=22EDF=22 border=3D=220=22
+                        style=3D=22width: 640px; max-width: 640px; height: =
+auto; font-family:'Work Sans', Arial, Helvetica, Sans-serif; font-size: 15p=
+x; line-height: 15px; margin: auto; display: block;=22>
+                    </a>
+                  </td>
+                </tr>
+                <tr class=3D=22desktopOff=22 style=3D=22mso-hide:all=22>
+                  <td align=3D=22center=22 style=3D=22background-color: =23=
+fff; margin: 0 auto; mso-hide:all;=22>
+                    <img src=3D=22https://relation-client-edf=2Efr/assets/r=
+esponsysimages/edfsa/contentlibrary/conq_ponc_services/promo_sowee_062025/i=
+mg/header-mobile4=2Epng=22 width=3D=220=22 height=3D=22=22 alt=3D=22logo ED=
+F=22 title=3D=22EDF=22 border=3D=220=22
+                      style=3D=22mso-hide:all; height: auto; font-family:'W=
+ork Sans', Arial, Helvetica, Sans-serif; font-size: 15px; line-height: 15px=
+; margin: auto; display: block;=22>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22
+        style=3D=22width:100%;background:=23fff;background-color:=23fff;=22>
+        <tr>
+          <td style=3D=22font-size:0px;padding:3px 0px 15px 0px;text-align:=
+left;background:=23fff;background-color:=23fff;=22>
+            <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bord=
+er=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backgro=
+und:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22ve=
+rtical-align:top;width:100%;background:=23fff;background-color:=23fff;=22 >=
+ <=21=5Bendif=5D-->
+            <div class=3D=22outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;display:inline-block=
+;vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=
+=22>
+
+              <table cellpadding=3D=220=22 cellspacing=3D=220=22 border=3D=
+=220=22 align=3D=22left=22 role=3D=22presentation=22
+                style=3D=22background:=23fff;background-color:=23fff;=22>
+                <tr>
+                  <td bgcolor=3D=22=23fff=22 style=3D=22padding:30px 0 15px=
+ 0;=22>
+                    <table width=3D=22640=22 border=3D=220=22 align=3D=22ce=
+nter=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                      style=3D=22width: 100%; max-width: 640px;=22>
+                      <tr>
+                        <td data-content-region-name=3D=22Region1=22 align=
+=3D=22left=22
+                          style=3D=22font-family:Arial, Helvetica, sans-ser=
+if; font-size:16px; color:=2300155A; padding-left: 30px;padding-right: 30px=
+;=22
+                          class=3D=22text-align-center=22>Bonjour Monsieur&=
+nbsp;NDAYIZEYE,
+</td>
+                      </tr>
+                      <tr>
+                        <td align=3D=22left=22
+                          style=3D=22font-family:Arial, Helvetica, sans-ser=
+if; font-size:16px; color:=2300155A; padding-left: 30px;padding-right: 30px=
+;=22
+                          class=3D=22text-align-center=22>
+                          <br>
+                          C=E2=80=99est l=E2=80=99=C3=A9t=C3=A9, le moment =
+id=C3=A9al pour vous =C3=A9quiper et pr=C3=A9parer un hiver douillet=2E<br>
+                          Avec le <span
+                            style=3D=22font-family:Arial, Helvetica, sans-s=
+erif; font-size:16px; color:=2300155A; font-weight: bold;=22>thermostat
+                            connect=C3=A9 Sowee by EDF, pilotez votre chauf=
+fage =C3=A0 distance</span>
+                          et faites jusqu=E2=80=99=C3=A0 <span
+                            style=3D=22font-family:Arial, Helvetica, sans-s=
+erif; font-size:16px; color:=2300155A; font-weight: bold;=22>15%
+                            d=E2=80=99=C3=A9conomies sur votre facture d=E2=
+=80=99=C3=A9lectricit=C3=A9</span><sup
+                            style=3D=22font-family:'Roboto', Arial, Helveti=
+ca, sans-serif; font-size:10px; line-height: 10px;color:=2300155A;=22>(1)</=
+sup>=2E
+                          La&nbsp;bonne temp=C3=A9rature au bon moment&nbsp=
+;: confort garanti&nbsp;=21
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+            <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22w=
+idth:500px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=225=
+00=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rul=
+e:exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+      <div style=3D=22margin:0px auto;max-width:500px;background:=23fff;bac=
+kground-color:=23fff;=22>
+        <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 =
+cellspacing=3D=220=22 role=3D=22presentation=22
+          style=3D=22width:100%;background:=23fff;background-color:=23fff;=
+=22>
+          <tr>
+            <td style=3D=22font-size:0px;padding:3px 0px 20px 0px;text-alig=
+n:left;background:=23fff;background-color:=23fff;=22>
+              <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bo=
+rder=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backg=
+round:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22=
+vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=22=
+ > <=21=5Bendif=5D-->
+              <div class=3D=22outlook-group-fix=22
+                style=3D=22font-size:0px;text-align:left;display:inline-blo=
+ck;vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=
+=22>
+
+                <table cellpadding=3D=220=22 cellspacing=3D=220=22 border=
+=3D=220=22 align=3D=22left=22 role=3D=22presentation=22
+                  style=3D=22background:=23fff;background-color:=23fff;=22>
+                  <tr>
+                    <td width=3D=22100%=22 style=3D=22padding: 0px 0px 10px=
+ 0px; background-color: =23ffffff;=22>
+                      <table role=3D=22presentation=22 border=3D=220=22 cel=
+lpadding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+                        <tr>
+                          <=21-- Column : BEGIN -->
+                          <th valign=3D=22middle=22 width=3D=2230%=22 bgcol=
+or=3D=22=23fe5715=22
+                            style=3D=22background-color:=23fe5715; backgrou=
+nd-image:url('img/bg-orange=2Epng'); background-repeat:repeat; vertical-ali=
+gn:middle;=22>
+                            <table role=3D=22presentation=22 width=3D=22100=
+%=22 cellpadding=3D=220=22 cellspacing=3D=220=22 border=3D=220=22>
+                              <tr>
+                                <td dir=3D=22ltr=22 valign=3D=22middle=22 s=
+tyle=3D=22padding:0;text-align:left;=22>
+                                  <img src=3D=22https://relation-client-edf=
+=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/promo_=
+sowee_062025/img/image2=2Epng=22 width=3D=22150=22 alt=3D=22station Sowee=
+=22 title=3D=22station Sowee=22
+                                    style=3D=22display:block;width:150px;he=
+ight:auto;border:0;outline:none;text-decoration:none;=22>
+                                </td>
+                              </tr>
+                            </table>
+                          </th>
+                          <=21-- Column : END -->
+                          <=21-- Column : BEGIN -->
+                          <th align=3D=22left=22 valign=3D=22top=22 width=
+=3D=2270%=22
+                            style=3D=22vertical-align: middle;background-co=
+lor: =23eaf1fa;=22>
+                            <table align=3D=22left=22 role=3D=22presentatio=
+n=22 border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                              width=3D=22100%=22 style=3D=22background-colo=
+r: =23eaf1fa;=22>
+                              <tr>
+                                <td align=3D=22left=22 valign=3D=22middle=
+=22 style=3D=22padding: 0 0px;background-color: =23eaf1fa;=22>
+                                  <table align=3D=22left=22 width=3D=22100%=
+=22 border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                                    class=3D=22table-box-width-2=22 style=
+=3D=22background-color: =23eaf1fa;=22>
+                                    <tr>
+                                      <td align=3D=22left=22 valign=3D=22mi=
+ddle=22
+                                        style=3D=22font-family:Arial, Helve=
+tica, sans-serif; font-size:16px; color:=23001773; text-align:left;backgrou=
+nd-color: =23eaf1fa;=22>
+                                        <table align=3D=22left=22 border=3D=
+=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                                          style=3D=22background-color: =23e=
+af1fa;=22>
+                                          <tr>
+                                            <td align=3D=22left=22
+                                              style=3D=22font-family:Arial,=
+ Helvetica, sans-serif;font-size:16px; color:=23001773; padding-left: 10px;=
+ padding-right: 5px; padding-top: 10px; text-align: left; font-weight: norm=
+al;=22>
+                                              Jusqu=E2=80=99au 31 juillet, =
+profitez de <span
+                                                style=3D=22font-family:Aria=
+l, Helvetica, sans-serif; font-size:16px; color:=2300155A; font-weight: bol=
+d;=22>3
+                                                mois de
+                                                location offerts*</span> su=
+r votre thermostat
+                                              connect=C3=A9 Sowee by EDF <s=
+pan
+                                                style=3D=22font-family:Aria=
+l, Helvetica, sans-serif; font-size:16px; color:=2300155A; font-weight: bol=
+d;=22>avec
+                                                le code&nbsp;:</span>
+                                            </td>
+                                          </tr>
+                                          <tr align=3D=22left=22>
+                                            <td align=3D=22left=22
+                                              style=3D=22padding-left: 10px=
+; padding-top: 15px;background-color: =23eaf1fa;=22>
+                                              <table align=3D=22left=22 wid=
+th=3D=22150=22 border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                                                style=3D=22background-color=
+: =23eaf1fa;=22>
+                                                <tr align=3D=22left=22 styl=
+e=3D=22background:=23eaf1fa;background-color:=23eaf1fa;=22>
+                                                  <td align=3D=22left=22
+                                                    style=3D=22background-c=
+olor:=23001773;vertical-align:middle;=22
+                                                    valign=3D=22middle;=22>
+                                                    <table border=3D=220=22=
+ cellpadding=3D=220=22 cellspacing=3D=220=22
+                                                      role=3D=22presentatio=
+n=22 width=3D=22100%=22>
+                                                      <tr>
+                                                        <td style=3D=22text=
+-align:center;mso-padding-alt:11px 12px;=22><a
+                                                            href=3D=22https=
+://relation-client-edf=2Efr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbU=
+hl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCTC&a=
+mp;_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg=
+_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ=
+5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_Lx=
+fA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM=
+4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7=
+zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72hMVg=2E&amp;_di_=3Dpm4f86pddolval=
+2u38b6abu336q7v1m30o92tcv7867s46j97klg=22
+                                                            name=3D=22cta_C=
+ode_Promo=22
+                                                            style=3D=22disp=
+lay: inline-block;color:=23ffffff;font-family:Arial,Helvetica,Sans-serif;fo=
+nt-size:17px;line-height:18px; padding:11px 12px;mso-padding-alt:0;margin:0=
+;text-decoration:none;text-transform:none;font-weight: bold;=22
+                                                            target=3D=22_bl=
+ank=22 xt=3D=22SPCLICK=22>PROMO_ETE</a></td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td align=3D=22left=22
+                                              style=3D=22font-family:Arial,=
+ Helvetica, sans-serif;font-size:9px; color:=23001773; padding-left: 10px; =
+padding-right: 5px; padding-top: 10px; padding-bottom: 10px; text-align: le=
+ft; font-weight: normal;=22>
+                                              Vous pouvez utiliser ce code =
+lors de votre souscription en ligne ou par
+                                              t=C3=A9l=C3=A9phone=2E
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </th>
+                          <=21-- Column : END -->
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+              <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-=
+->
+            </td>
+          </tr>
+        </table>
+      </div>
+      <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22w=
+idth:500px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=225=
+00=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rul=
+e:exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+      <div style=3D=22margin:0px auto;max-width:500px;background:=23fff;bac=
+kground-color:=23fff;=22>
+        <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 =
+cellspacing=3D=220=22 role=3D=22presentation=22
+          style=3D=22width:100%;background:=23fff;background-color:=23fff;=
+=22>
+          <tr>
+            <td style=3D=22font-size:0px;padding:3px 0px 5px 0px;text-align=
+:center;background:=23fff;background-color:=23fff;=22>
+              <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bo=
+rder=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backg=
+round:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22=
+vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=22=
+ > <=21=5Bendif=5D-->
+              <div class=3D=22outlook-group-fix=22
+                style=3D=22font-size:0px;text-align:center;display:inline-b=
+lock;vertical-align:top;width:100%;background:=23fff;background-color:=23ff=
+f;=22>
+
+                <table cellpadding=3D=220=22 cellspacing=3D=220=22 border=
+=3D=220=22 align=3D=22center=22 role=3D=22presentation=22
+                  style=3D=22background:=23fff;background-color:=23fff;=22>
+                  <tr>
+                    <td bgcolor=3D=22=23fff=22 style=3D=22padding:5px 0 0px=
+ 0;background:=23fff;background-color:=23fff;=22>
+                      <table width=3D=22640=22 border=3D=220=22 align=3D=22=
+center=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                        style=3D=22width: 100%; max-width: 640px;background=
+:=23fff;background-color:=23fff;=22>
+                        <tr>
+                          <td align=3D=22center=22
+                            style=3D=22font-family:Arial, Helvetica, sans-s=
+erif; font-size:16px; color:=2300155A; padding-left: 30px;padding-right: 30=
+px; text-align: center; font-weight: bold;background:=23fff;background-colo=
+r:=23fff;=22>
+                            Pour b=C3=A9n=C3=A9ficier de l=E2=80=99offre, c=
+ontactez-nous&nbsp;:
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+              <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-=
+->
+            </td>
+          </tr>
+        </table>
+      </div>
+      <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22w=
+idth:500px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=225=
+00=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rul=
+e:exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+      <div style=3D=22margin:0px auto;max-width:500px;background:=23fff;bac=
+kground-color:=23fff;=22>
+        <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 =
+cellspacing=3D=220=22 role=3D=22presentation=22
+          style=3D=22width:100%;background:=23fff;background-color:=23fff;=
+=22>
+          <tr>
+            <td style=3D=22font-size:0px;padding:3px 0px 20px 0px;text-alig=
+n:center;background:=23fff;background-color:=23fff;=22>
+              <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bo=
+rder=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backg=
+round:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22=
+vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=22=
+ > <=21=5Bendif=5D-->
+              <div class=3D=22outlook-group-fix=22
+                style=3D=22font-size:0px;text-align:center;display:inline-b=
+lock;vertical-align:top;width:100%;background:=23fff;background-color:=23ff=
+f;=22>
+
+                <table cellpadding=3D=220=22 cellspacing=3D=220=22 border=
+=3D=220=22 align=3D=22center=22 role=3D=22presentation=22
+                  style=3D=22background:=23fff;background-color:=23fff;=22>
+                  <tr>
+                    <td width=3D=22100%=22 style=3D=22padding: 0px 0px 10px=
+ 0px; background-color: =23ffffff;=22>
+                      <table role=3D=22presentation=22 border=3D=220=22 cel=
+lpadding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+                        <tr>
+                          <=21-- Column : BEGIN -->
+                          <th valign=3D=22middle=22 width=3D=2250%=22 style=
+=3D=22vertical-align: middle; padding: 15px 15px 15px 0;=22
+                            class=3D=22stack-column-center=22>
+                            <table width=3D=22240=22 height=3D=2248=22 bord=
+er=3D=220=22 align=3D=22center=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22
+                              class=3D=22cta-width-2=22 style=3D=22border-c=
+ollapse:separate =21important;=22>
+                              <tr style=3D=22background:=23fff;background-c=
+olor:=23fff;=22>
+                                <td
+                                  style=3D=22background-color:=23fff;vertic=
+al-align:middle;border: 2px solid =23f55c00; border-radius:15px;=22
+                                  valign=3D=22middle=22>
+                                  <table border=3D=220=22 cellpadding=3D=22=
+0=22 cellspacing=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22>
+                                    <tbody>
+                                      <tr>
+                                        <td style=3D=22text-align:center;ms=
+o-padding-alt:8px 0px 4px 0px;=22><a
+                                            href=3D=22tel:+33969386511=22 n=
+ame=3D=22cta_Tel=22
+                                            style=3D=22display: inline-bloc=
+k;color:=23f55c00;padding:8px 0px 4px 0px;mso-padding-alt:0;margin:0;text-d=
+ecoration:none;text-transform:none;font-weight: bold;=22
+                                            target=3D=22_blank=22 xt=3D=22S=
+PCLICK=22>
+                                            <span
+                                              style=3D=22font-family:Arial,=
+Helvetica,Sans-serif;font-size:30px;line-height:18px;color:=23f55c00;mso-st=
+yle-textfill-fill-color:=23f55c00;mso-style-textfill-fill-alpha:100%;=22>09
+                                              69 38 65 11</span><br>
+                                            <span
+                                              style=3D=22font-family:Arial,=
+ Helvetica, sans-serif;font-size:8px; color:=23f55c00;font-weight: normal;=
+=22>du
+                                              lundi au samedi de 8h =C3=A0 =
+20h (service gratuit + prix appel)</span></a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </th>
+                          <=21-- Column : END -->
+                          <=21-- Column : BEGIN -->
+                          <th valign=3D=22middle=22 width=3D=2250%=22 style=
+=3D=22vertical-align: middle; padding: 15px 15px 15px 0;=22
+                            class=3D=22stack-column-center=22>
+                            <table width=3D=22240=22 height=3D=2248=22 bord=
+er=3D=220=22 align=3D=22center=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22
+                              class=3D=22cta-width-2=22 style=3D=22border-c=
+ollapse:separate =21important;=22>
+                              <tr style=3D=22background:=23fff;background-c=
+olor:=23fff;=22>
+                                <td
+                                  style=3D=22background-color:=23f55c00;ver=
+tical-align:middle;border: 2px solid =23f55c00; border-radius:15px;=22
+                                  valign=3D=22middle=22>
+                                  <table border=3D=220=22 cellpadding=3D=22=
+0=22 cellspacing=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22>
+                                    <tbody>
+                                      <tr>
+                                        <td style=3D=22text-align:center;ms=
+o-padding-alt:4px 5px 4px 5px;=22><a
+                                            href=3D=22https://relation-clie=
+nt-edf=2Efr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5o=
+wzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCWC&amp;_ei_=3DEQWTkq=
+9ZFFiiQ4nsNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6Fb=
+Ca-H_2FUnJwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jF=
+RTkmzINgVCxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqf=
+hvqFD_V-Th34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKo=
+TnFj61BUPPiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzX=
+rpWNYx4U4voWUOZ-v17rVwYE72hMVg=2E&amp;_di_=3D9h252snoochhaou6hrpumptikotiod=
+6o7hp0rb132bfln2j5sck0=22
+                                            name=3D=22cta_WCB=22
+                                            style=3D=22display: inline-bloc=
+k;color:=23fff;padding:4px 5px 4px 5px;mso-padding-alt:0;margin:0;text-deco=
+ration:none;text-transform:none;font-weight: bold;=22
+                                            target=3D=22_blank=22 xt=3D=22S=
+PCLICK=22>
+                                            <span
+                                              style=3D=22font-family:Arial,=
+Helvetica,Sans-serif;font-size:20px;line-height:20px; letter-spacing: 1px;=
+=22>=C3=8ATRE
+                                              RAPPEL=C3=89</span><br></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </th>
+                          <=21-- Column : END -->
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+              <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-=
+->
+            </td>
+          </tr>
+        </table>
+      </div>
+      <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22
+        style=3D=22width:100%;background:=23fff;background-color:=23fff;=22>
+        <tr>
+          <td style=3D=22font-size:0px;padding:3px 0px 5px 0px;text-align:l=
+eft;background:=23fff;background-color:=23fff;=22>
+            <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bord=
+er=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backgro=
+und:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22ve=
+rtical-align:top;width:100%;background:=23fff;background-color:=23fff;=22 >=
+ <=21=5Bendif=5D-->
+            <div class=3D=22outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;display:inline-block=
+;vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=
+=22>
+
+              <table cellpadding=3D=220=22 cellspacing=3D=220=22 border=3D=
+=220=22 align=3D=22left=22 role=3D=22presentation=22
+                style=3D=22background:=23fff;background-color:=23fff;=22>
+                <tr>
+                  <td bgcolor=3D=22=23fff=22 style=3D=22padding:10px 0 0px =
+0;=22>
+                    <table width=3D=22640=22 border=3D=220=22 align=3D=22le=
+ft=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                      style=3D=22width: 100%; max-width: 640px;=22>
+                      <tr>
+                        <td align=3D=22left=22
+                          style=3D=22font-family:edf2020W01-Light, Arial, H=
+elvetica, sans-serif; font-size:20px; font-weight: 300; color:=2300155A; pa=
+dding-left: 30px;padding-right: 30px;=22
+                          class=3D=22text-align-center=22>
+                          Les + du thermostat connect=C3=A9 Sowee by EDF
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+            <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22
+        style=3D=22width:100%;background:=23fff;background-color:=23fff;=22>
+        <tr>
+          <td style=3D=22font-size:0px;padding:3px 0px 5px 0px;text-align:l=
+eft;background:=23fff;background-color:=23fff;=22>
+            <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bord=
+er=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backgro=
+und:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22ve=
+rtical-align:top;width:100%;background:=23fff;background-color:=23fff;=22 >=
+ <=21=5Bendif=5D-->
+            <div class=3D=22outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;display:inline-block=
+;vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=
+=22>
+
+              <table cellpadding=3D=220=22 cellspacing=3D=220=22 border=3D=
+=220=22 align=3D=22left=22 role=3D=22presentation=22
+                style=3D=22background:=23fff;background-color:=23fff;=22>
+                <tr>
+                  <td dir=3D=22rtl=22 width=3D=22100%=22
+                    style=3D=22padding: 20px 30px 10px 30px; background-col=
+or: =23ffffff; direction: rtl;=22>
+                    <table role=3D=22presentation=22 border=3D=220=22 cellp=
+adding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+                      <tr>
+                        <=21-- Column : BEGIN -->
+                        <th valign=3D=22top=22 width=3D=2260%=22 style=3D=
+=22vertical-align: top;=22 class=3D=22stack-column-center=22>
+                          <table role=3D=22presentation=22 border=3D=220=22=
+ cellpadding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+                            <tr>
+                              <td dir=3D=22ltr=22 valign=3D=22top=22
+                                style=3D=22font-family: sans-serif; font-si=
+ze: 15px; line-height: 20px; color: =23555555; padding: 0px 0px 10px 0px; t=
+ext-align: left; direction: ltr;=22
+                                class=3D=22center-on-narrow=22>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22 valign=3D=22m=
+iddle=22 width=3D=2210=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:16px; color:=23303030; text-align:left;padding-ri=
+ght: 10px;=22>
+                                      <font face=3D=22Arial, Helvetica, san=
+s-serif=22 color=3D=22=23303030=22 size=3D=221=22
+                                        style=3D=22font-size:16px; text-ali=
+gn:left;=22>
+                                        <img src=3D=22https://relation-clie=
+nt-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/=
+promo_sowee_062025/img/icon1=2Epng=22 width=3D=2227=22 height=3D=22=22 bord=
+er=3D=220=22 title=3D=22icone=22
+                                          style=3D=22width: 100%; width: 27=
+px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 15=
+px; color: =23555555; margin: auto; display: block; border: none; outline: =
+none; text-decoration: none;=22>
+                                      </font>
+                                    </td>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 19px;=22>
+                                      Pilotage et programmation de votre
+                                      chauffage avec l=E2=80=99appli EDF & =
+Moi=2E
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 18px;=22>&nbsp;
+                                     =20
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22 valign=3D=22m=
+iddle=22 width=3D=2210=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:16px; color:=23303030; text-align:left;padding-ri=
+ght: 10px;=22>
+                                      <font face=3D=22Arial, Helvetica, san=
+s-serif=22 color=3D=22=23303030=22 size=3D=221=22
+                                        style=3D=22font-size:16px; text-ali=
+gn:left;=22>
+                                        <img src=3D=22https://relation-clie=
+nt-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/=
+promo_sowee_062025/img/icon2=2Epng=22 width=3D=2227=22 height=3D=22=22 bord=
+er=3D=220=22 title=3D=22icone=22
+                                          style=3D=22width: 100%; width: 27=
+px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 15=
+px; color: =23555555; margin: auto; display: block; border: none; outline: =
+none; text-decoration: none;=22>
+                                      </font>
+                                    </td>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 19px;=22>
+                                      D=C3=A9tection d=E2=80=99absence, pre=
+uves d=E2=80=99=C3=A9conomies,
+                                      ma=C3=AEtrise du budget chauffage=E2=
+=80=A6
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 18px;=22>&nbsp;
+                                     =20
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22 valign=3D=22m=
+iddle=22 width=3D=2210=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:16px; color:=23303030; text-align:left;padding-ri=
+ght: 10px;=22>
+                                      <font face=3D=22Arial, Helvetica, san=
+s-serif=22 color=3D=22=23303030=22 size=3D=221=22
+                                        style=3D=22font-size:16px; text-ali=
+gn:left;=22>
+                                        <img src=3D=22https://relation-clie=
+nt-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/=
+promo_sowee_062025/img/icon3=2Epng=22 width=3D=2227=22 height=3D=22=22 bord=
+er=3D=220=22 title=3D=22icone=22
+                                          style=3D=22width: 100%; width: 27=
+px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 15=
+px; color: =23555555; margin: auto; display: block; border: none; outline: =
+none; text-decoration: none;=22>
+                                      </font>
+                                    </td>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 19px;=22>
+                                      Compatible avec la plupart des radiat=
+eurs=2E
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 18px;=22>&nbsp;
+                                     =20
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22 valign=3D=22m=
+iddle=22 width=3D=2210=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:16px; color:=23303030; text-align:left;padding-ri=
+ght: 10px;=22>
+                                      <font face=3D=22Arial, Helvetica, san=
+s-serif=22 color=3D=22=23303030=22 size=3D=221=22
+                                        style=3D=22font-size:16px; text-ali=
+gn:left;=22>
+                                        <img src=3D=22https://relation-clie=
+nt-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/=
+promo_sowee_062025/img/icon4=2Epng=22 width=3D=2227=22 height=3D=22=22 bord=
+er=3D=220=22 title=3D=22icone=22
+                                          style=3D=22width: 100%; width: 27=
+px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 15=
+px; color: =23555555; margin: auto; display: block; border: none; outline: =
+none; text-decoration: none;=22>
+                                      </font>
+                                    </td>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 19px;=22>
+                                      Installation gratuite par un professi=
+onnel et
+                                      sans travaux=2E
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 18px;=22>&nbsp;
+                                     =20
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22 valign=3D=22m=
+iddle=22 width=3D=2210=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:16px; color:=23303030; text-align:left;padding-ri=
+ght: 10px;=22>
+                                      <font face=3D=22Arial, Helvetica, san=
+s-serif=22 color=3D=22=23303030=22 size=3D=221=22
+                                        style=3D=22font-size:16px; text-ali=
+gn:left;=22>
+                                        <img src=3D=22https://relation-clie=
+nt-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/=
+promo_sowee_062025/img/icon5=2Epng=22 width=3D=2227=22 height=3D=22=22 bord=
+er=3D=220=22 title=3D=22icone=22
+                                          style=3D=22width: 100%; width: 27=
+px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 15=
+px; color: =23555555; margin: auto; display: block; border: none; outline: =
+none; text-decoration: none;=22>
+                                      </font>
+                                    </td>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 19px;=22>
+                                      =C3=80 partir de 6,90=E2=82=AC/mois=
+=2E<br>
+                                      Sans engagement de dur=C3=A9e=2E
+                                    </td>
+                                  </tr>
+                                </table>
+                                <table width=3D=22100%=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22table-box-width=22>
+                                  <tr>
+                                    <td align=3D=22justify=22
+                                      style=3D=22font-family:Arial, Helveti=
+ca, sans-serif; font-size:14px; color:=2300155A; text-align:left;padding-ri=
+ght: 10px; font-weight: normal;line-height: 18px;=22>&nbsp;
+                                     =20
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                        <=21-- Column : END -->
+                        <=21-- Column : BEGIN -->
+                        <th valign=3D=22top=22 width=3D=2240%=22 style=3D=
+=22vertical-align: top;=22 class=3D=22stack-column-center=22>
+                          <table role=3D=22presentation=22 border=3D=220=22=
+ cellpadding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+                            <tr class=3D=22mobileoff=22>
+                              <td align=3D=22center=22 style=3D=22backgroun=
+d-color: =23fff; margin: 0 auto; padding-bottom: 20px;=22>
+                                <a href=3D=22https://relation-client-edf=2E=
+fr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0u=
+d1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCAC&amp;_ei_=3DEQWTkq9ZFFiiQ4n=
+sNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUn=
+Jwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgV=
+CxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-T=
+h34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUP=
+PiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4=
+voWUOZ-v17rVwYE72hMVg=2E&amp;_di_=3Dktt1v0u08k0apn4a7jmvqrpnomis8rgab86m8pc=
+sc0rht9ur09s0=22
+                                  target=3D=22_blank=22>
+                                  <img src=3D=22https://relation-client-edf=
+=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/promo_=
+sowee_062025/img/img2=2Epng=22 width=3D=22200=22 height=3D=22=22
+                                    alt=3D=22pilotage de la station sur sma=
+rtphone=22
+                                    title=3D=22pilotage de la station sur s=
+martphone=22 border=3D=220=22
+                                    style=3D=22width: 200px; max-width: 200=
+px; height: auto; font-family:'Work Sans', Arial, Helvetica, Sans-serif; fo=
+nt-size: 15px; line-height: 15px; margin: auto; display: block;=22>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <table width=3D=22200=22 height=3D=2248=22 =
+border=3D=220=22 align=3D=22center=22 cellpadding=3D=220=22 cellspacing=3D=
+=220=22
+                                  class=3D=22cta-width=22>
+                                  <tr style=3D=22background:=23fff;backgrou=
+nd-color:=23fff;=22>
+                                    <td style=3D=22background-color:=23f55c=
+00;vertical-align:middle;border-radius: 15px;=22
+                                      valign=3D=22middle=22>
+                                      <table border=3D=220=22 cellpadding=
+=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22
+                                        width=3D=22100%=22>
+                                        <tbody>
+                                          <tr>
+                                            <td style=3D=22text-align:cente=
+r;mso-padding-alt:11px 5px 11px 5px;=22><a
+                                                href=3D=22https://relation-=
+client-edf=2Efr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC=
+4i5owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCAC&amp;_ei_=3DEQ=
+WTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7=
+r6FbCa-H_2FUnJwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4S=
+c4jFRTkmzINgVCxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gb=
+dpqfhvqFD_V-Th34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhW=
+QnKoTnFj61BUPPiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP=
+4FzXrpWNYx4U4voWUOZ-v17rVwYE72hMVg=2E&amp;_di_=3Dktt1v0u08k0apn4a7jmvqrpnom=
+is8rgab86m8pcsc0rht9ur09s0=22
+                                                name=3D=22cta_LP=22
+                                                style=3D=22display: inline-=
+block;color:=23fff;padding:11px 5px 11px 5px;mso-padding-alt:0;margin:0;tex=
+t-decoration:none;text-transform:none;font-weight: bold;=22
+                                                target=3D=22_blank=22 xt=3D=
+=22SPCLICK=22>
+                                                <span
+                                                  style=3D=22font-family:Ar=
+ial,Helvetica,Sans-serif;font-size:20px;line-height:20px;letter-spacing: 1p=
+x;=22>EN
+                                                  SAVOIR PLUS</span></a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr class=3D=22desktopOff=22 style=3D=22mso-hid=
+e:all=22>
+                              <td align=3D=22center=22
+                                style=3D=22background-color: =23fff; margin=
+: 0 auto; mso-hide:all; padding-top: 20px;=22>
+                                <a href=3D=22https://relation-client-edf=2E=
+fr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0u=
+d1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCAC&amp;_ei_=3DEQWTkq9ZFFiiQ4n=
+sNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUn=
+Jwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgV=
+CxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-T=
+h34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUP=
+PiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4=
+voWUOZ-v17rVwYE72hMVg=2E&amp;_di_=3Dktt1v0u08k0apn4a7jmvqrpnomis8rgab86m8pc=
+sc0rht9ur09s0=22
+                                  target=3D=22_blank=22>
+                                  <img src=3D=22https://relation-client-edf=
+=2Efr/assets/responsysimages/edfsa/contentlibrary/conq_ponc_services/promo_=
+sowee_062025/img/img2-mobile=2Epng=22 width=3D=220=22 height=3D=22=22
+                                    alt=3D=22pilotage de la station sur sma=
+rtphone=22
+                                    title=3D=22pilotage de la station sur s=
+martphone=22 border=3D=220=22
+                                    style=3D=22mso-hide:all; height: auto; =
+font-family:'Work Sans', Arial, Helvetica, Sans-serif; font-size: 15px; lin=
+e-height: 15px; margin: auto; display: block;=22>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                        <=21-- Column : END -->
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+            <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22margin:0px auto;max-width:640px;background:=23fff;backg=
+round-color:=23fff;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22
+        style=3D=22width:100%;background:=23fff;background-color:=23fff;=22>
+        <tr>
+          <td style=3D=22font-size:0px;padding:3px 0px 0px 0px;text-align:l=
+eft;background:=23fff;background-color:=23fff;=22>
+            <=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bord=
+er=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22backgro=
+und:=23fff;background-color:=23fff;=22><tr><td class=3D=22=22 style=3D=22ve=
+rtical-align:top;width:100%;background:=23fff;background-color:=23fff;=22 >=
+ <=21=5Bendif=5D-->
+            <div class=3D=22outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;display:inline-block=
+;vertical-align:top;width:100%;background:=23fff;background-color:=23fff;=
+=22>
+
+              <table width=3D=22100%=22 align=3D=22left=22 border=3D=220=22=
+ cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22
+                style=3D=22background:=23fff;background-color:=23fff;=22>
+                <tr>
+                  <td align=3D=22left=22
+                    style=3D=22font-size:0px;padding:5px 0px 0 0;text-align=
+:left;background:=23fff;background-color:=23fff;=22>
+
+                    <table cellpadding=3D=220=22 cellspacing=3D=220=22 bord=
+er=3D=220=22 align=3D=22left=22 role=3D=22presentation=22
+                      style=3D=22background:=23fff;background-color:=23fff;=
+=22>
+                      <tr>
+                        <td bgcolor=3D=22=23fff=22 style=3D=22padding:5px 0=
+ 15px 0;=22>
+                          <table width=3D=22640=22 border=3D=220=22 align=
+=3D=22center=22 cellpadding=3D=220=22 cellspacing=3D=220=22
+                            style=3D=22width: 100%; max-width: 640px;=22>
+                            <tr>
+                              <td align=3D=22left=22
+                                style=3D=22font-family:Arial, Helvetica, sa=
+ns-serif; font-size:16px; color:=2300155A; padding-left: 30px;padding-right=
+: 30px;=22
+                                class=3D=22text-align-center=22>
+                                =C3=80 tr=C3=A8s bient=C3=B4t,<br>
+                                Votre conseiller EDF
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style=3D=22font-family: Arial, Helvetica, Sans-se=
+rif;color:=2300155A;text-align:left;font-size:8px;padding-top:13px;
+                              padding-bottom:0px;padding-left:30px;padding-=
+right:30px;line-height:11px;background:=23fff;background-color:=23fff;=22>
+                          * Offre valable du 01/05/2025 au 31/07/2025 inclu=
+s pour tout nouveau contrat de location de
+                          thermostat connect=C3=A9 Sowee by EDF=2E Les 3 mo=
+is offerts sont appliqu=C3=A9s
+                          sur le kit de base pour 2 radiateurs =C3=A9lectri=
+ques, installation comprise, =C3=A0 6,90=E2=82=AC/mois avec
+                          l=E2=80=99option effacement ou =C3=A0 9,90=E2=82=
+=AC/mois sans l=E2=80=99option effacement=2E Sous conditions d=E2=80=99=C3=
+=A9ligibilit=C3=A9=2E Sans
+                          engagement de dur=C3=A9e=2E
+                          <br><br>
+                          (1) Economie moyenne sur la facture d=E2=80=99=C3=
+=A9lectricit=C3=A9 par rapport =C3=A0 une consigne fixe du chauffage
+                          de 19=C2=B0C avec 8 jours de vacances en f=C3=A9v=
+rier (consigne =C3=A0 16=C2=B0C) pour un
+                          client ayant souscrit =C3=A0 l=E2=80=99offre Zen =
+Week-End et r=C3=A9sidant dans un logement de 100m2 situ=C3=A9 en
+                          France m=C3=A9tropolitaine (Sud), disposant de 8 =
+radiateurs, pour une
+                          occupation faible du logement, dont les occupants=
+ suivent les consignes de chauffage d=E2=80=99un
+                          service de pilotage notamment avec un effacement =
+cyclique automatique
+                          de la consigne de chauffage lors des 30 journ=C3=
+=A9es d=E2=80=99effacement explicite=2E Etude R&D EDF
+                          (juillet 2024)=2E
+                        =20
+                          <br>&nbsp;<br>&nbsp;<br>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+    <=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 =
+cellpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width=
+:640px;background:=23ffffff;background-color:=23ffffff;=22 width=3D=22640=
+=22 ><tr><td style=3D=22line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;background:=23ffffff;background-color:=23ffffff;=22> <=21=5Bendif=
+=5D-->
+    <div style=3D=22background:=23ffffff;background-color:=23ffffff;margin:=
+0px auto;max-width:640px;=22>
+      <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 ce=
+llspacing=3D=220=22 role=3D=22presentation=22 style=3D=22width:100%;=22
+        style=3D=22background:=23ffffff;background-color:=23ffffff;width:10=
+0%;=22>
+        <tr>
+          <td style=3D=22direction:ltr;font-size:0px;padding:0px 0;text-ali=
+gn:center;=22>
+            <=21--=5Bif mso =7C IE=5D> <table role=3D=22presentation=22 bor=
+der=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22> <tr> <td class=
+=3D=22=22 style=3D=22vertical-align:top;width:640px;=22 > <=21=5Bendif=5D-->
+            <div class=3D=22mj-column-per-100 outlook-group-fix=22
+              style=3D=22font-size:0px;text-align:left;direction:ltr;displa=
+y:inline-block;vertical-align:top;width:100%;=22>
+              <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=
+=220=22 role=3D=22presentation=22 width=3D=22100%=22>
+                <tr>
+                  <td style=3D=22vertical-align:top;padding:0px;font-size:1=
+2px;=22>
+                    <table border=3D=220=22 cellpadding=3D=220=22 cellspaci=
+ng=3D=220=22 role=3D=22presentation=22 width=3D=22100%=22>
+                      <tr>
+                        <td align=3D=22center=22 style=3D=22font-size:5px;=
+=22>
+
+<=21DOCTYPE html>
+<html xmlns=3D=22http://www=2Ew3=2Eorg/1999/xhtml=22 xmlns:v=3D=22urn:schem=
+as-microsoft-com:vml=22 xmlns:o=3D=22urn:schemas-microsoft-com:office:offic=
+e=22>
+
+<head>
+	<title></title>
+	<=21--=5Bif =21mso=5D><=21-- -->
+	<meta http-equiv=3D=22X-UA-Compatible=22 content=3D=22IE=3Dedge=22>
+	<=21--<=21=5Bendif=5D-->
+	<meta http-equiv=3D=22Content-Type=22 content=3D=22text/html; charset=3DUT=
+F-8=22>
+	<meta name=3D=22viewport=22 content=3D=22width=3Ddevice-width, initial-sca=
+le=3D1=22>
+
+
+	<style type=3D=22text/css=22>
+		=40media only screen and (min-width:640px) =7B
+
+
+			=2Emj-column-px-560 =7B
+				width: 560px =21important;
+				max-width: 560px
+			=7D
+
+			=2Emj-column-px-73 =7B
+				width: 73px =21important;
+				max-width: 73px
+			=7D
+
+			=2Emj-column-px-277 =7B
+				width: 277px =21important;
+				max-width: 277px
+			=7D
+
+
+			=2Emj-column-px-250 =7B
+				width: 250px =21important;
+				max-width: 250px
+			=7D
+
+			=2Emj-column-px-150 =7B
+				width: 150px =21important;
+				max-width: 150px
+			=7D
+
+
+
+			=2Emj-column-px-30 =7B
+				width: 30px =21important;
+				max-width: 30px
+			=7D
+
+			=2Emj-column-px-270 =7B
+				width: 270px =21important;
+				max-width: 270px
+			=7D
+
+			=2Emj-column-px-46 =7B
+				width: 46px =21important;
+				max-width: 46px
+			=7D
+
+			=2EtextLeft =7B
+				text-align: left =21important;
+			=7D
+
+
+
+			=2EdesktopOff =7B
+				display: none =21important;
+				width: 0 =21important;
+				visibility: hidden =21important;
+				overflow: hidden =21important;
+				mso-hide: all =21important
+			=7D
+
+			=2Ebr =7B
+				display: block =21important;
+			=7D
+
+		=7D
+
+
+		=40media screen and (max-width: 640px) =7B
+			=2Emobileoff =7B
+				display: none =21important;
+				width: 0 =21important;
+				visibility: hidden =21important
+			=7D
+
+		=7D
+
+		=2Earial =7B
+			font-family: Arial, Helvetica, Sans-serif;
+		=7D
+
+		u+=2Ebody =2Egmail_blend_screen =7B
+			background: =23000 =21important;
+			mix-blend-mode: screen =21important;
+		=7D
+
+		u+=2Ebody =2Egmail_blend_difference =7B
+			background: =23000 =21important;
+			mix-blend-mode: difference =21important;
+		=7D
+
+		u+=2Ebody =2Egmail_blue_gradient =7B
+			background-image: linear-gradient(=23001a70, =23001a70) =21important;
+		=7D
+
+		u+=2Ebody =2Egmail_light_gradient =7B
+			background-image: linear-gradient(=23fff, =23fff) =21important;
+		=7D
+
+	</style>
+
+	<=21--=5Bif gte mso 9=5D><style>
+	=2EtextLeft=7Btext-align:left =21important;=7D
+	</style><=21=5Bendif=5D-->
+
+
+
+</head>
+
+<body class=3D=22body=22 id=3D=22body=22 style=3D=22background-color:=23efe=
+fef;=22>
+
+
+	<=21--=5Bif mso =7C IE=5D><table align=3D=22center=22 border=3D=220=22 cel=
+lpadding=3D=220=22 cellspacing=3D=220=22 class=3D=22=22 style=3D=22width:64=
+0px;=22 width=3D=22640=22 ><tr><td style=3D=22line-height:0px;font-size:0px=
+;mso-line-height-rule:exactly;=22> <=21=5Bendif=5D-->
+	<div style=3D=22margin:0px auto;max-width:640px;background:=23ffffff;backg=
+round-color:=23ffffff;=22>
+		<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 cellsp=
+acing=3D=220=22 role=3D=22presentation=22 style=3D=22width:100%;background:=
+=23ffffff;background-color:=23ffffff;=22>
+			<tr>
+				<td style=3D=22direction:ltr;font-size:0px;padding:0px 0px 0px 0px;text=
+-align:center;=22>
+					<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 border=3D=
+=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=22=22 =
+style=3D=22vertical-align:top;width:640px;=22 > <=21=5Bendif=5D-->
+					<div class=3D=22mj-column-per-100 outlook-group-fix=22 style=3D=22font=
+-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align=
+:top;width:100%;=22>
+
+						<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 cellp=
+adding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+							<tr>
+								<td class=3D=22gmail_blue_gradient=22 style=3D=22direction:ltr;font=
+-size:0px;padding:26px 20px 0px 20px;text-align:center;background-color:=23=
+001a70;=22>
+									<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 border=
+=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=22=
+=22 style=3D=22vertical-align:top;width:560px;=22 > <=21=5Bendif=5D-->
+									<div class=3D=22mj-column-px-560 outlook-group-fix=22 style=3D=22f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:top;width:100%;=22>
+										<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 c=
+ellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+											<tr>
+												<td style=3D=22direction:ltr;font-size:0px;padding:0px 0px;text=
+-align:center;=22>
+													<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bor=
+der=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=
+=22=22 style=3D=22vertical-align:middle;width:73px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-73 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;=22>
+														<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+															<tr>
+																<td style=3D=22vertical-align:top;width:100%;=22 valign=3D=
+=22top=22>
+																	<=21--=5Bif =21mso=5D><=21-->
+																	<table class=3D=22desktopOff=22 align=3D=22center=22 borde=
+r=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentat=
+ion=22 style=3D=22width:auto;margin:0 auto;=22>
+																		<tr>
+																			<td style=3D=22width:73px;=22>
+																				<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_r=
+i_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ=
+7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCCC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMC=
+EqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3=
+tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71=
+C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCg=
+HZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwST=
+oQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE7=
+2hMVg=2E&_di_=3Deporutk805kont58hilb8dqcq4qk49r5ogpnf7tnusv4auh8n190=22 tar=
+get=3D=22_blank=22 name=3D=22application=22>
+																					<img alt=3D=22EDF=22 height=3D=22auto=22 src=3D=22http=
+s://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/co=
+mmun/footer/images/app_edfetmoi=2Epng=22 style=3D=22border:0;display:block;=
+outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=22=
+ width=3D=22100%=22 />
+																				</a>
+																			</td>
+																		</tr>
+																	</table>
+																	<=21--<=21=5Bendif=5D-->
+																</td>
+																<td class=3D=22mobileoff=22 style=3D=22vertical-align:top;=
+=22 valign=3D=22top=22>
+																	<table class=3D=22mj-column-px-73=22 align=3D=22center=22 =
+border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22pres=
+entation=22>
+																		<tr>
+																			<td>
+																				<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_r=
+i_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ=
+7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUDRC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMC=
+EqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3=
+tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71=
+C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCg=
+HZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwST=
+oQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE7=
+2hMVg=2E&_di_=3Dvap03e21qvolb311r5b862dvau69d8vrb6sdmolapnukb19e7cf0=22 tar=
+get=3D=22_blank=22 name=3D=22application=22>
+																					<img alt=3D=22EDF=22 height=3D=22auto=22 src=3D=22http=
+s://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/co=
+mmun/footer/images/app_edfetmoi=2Epng=22 style=3D=22border:0;display:block;=
+outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=22=
+ width=3D=2273=22 />
+																				</a>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22v=
+ertical-align:middle;width:30px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-30 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;=22>
+														<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+															<tr>
+																<td style=3D=22height:20px;=22 height=3D=2220=22></td>
+															</tr>
+														</table>
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22v=
+ertical-align:middle;width:277px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-277 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;=22>
+														<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=
+=220=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+															<tr>
+																<td align=3D=22left=22 style=3D=22font-size:0px;padding:0px=
+ 0 0 0;word-break:break-word;=22>
+																	<div class=3D=22textLeft=22 align=3D=22center=22 style=3D=
+=22font-family:Arial,Helvetica,Sans-serif;font-size:19px;line-height:22px;c=
+olor:=23ffffff;=22>
+																		<div class=3D=22gmail_blend_screen=22>
+																			<div class=3D=22arial gmail_blend_difference=22 style=3D=
+=22color:=23ffffff;=22>
+																				<span class=3D=22arial=22 style=3D=22color:=23ffffff;fo=
+nt-weight:bold;=22>Suivi conso, factures, <span class=3D=22br=22></span>
+																					<=21--=5Bif mso =7C IE=5D><br /><=21=5Bendif=5D-->
+																					alertes et bien plus sur
+																				</span> <span class=3D=22br=22></span>
+																				<=21--=5Bif mso =7C IE=5D><br /><=21=5Bendif=5D-->
+																				<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_r=
+i_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ=
+7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCCC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMC=
+EqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3=
+tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71=
+C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCg=
+HZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwST=
+oQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE7=
+2hMVg=2E&_di_=3Deporutk805kont58hilb8dqcq4qk49r5ogpnf7tnusv4auh8n190=22 tar=
+get=3D=22_blank=22 style=3D=22font-family:Arial,Helvetica,Sans-serif;text-d=
+ecoration:none;color:=23ffffff;=22 name=3D=22application=22>l&rsquo;appli <=
+span style=3D=22display:inline-block=22>EDF &amp; MOI&nbsp;=21</span></a>
+
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</table>
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22v=
+ertical-align:middle;width:30px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-30 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;=22>
+														<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+															<tr>
+																<td style=3D=22height:20px;=22 height=3D=2220=22></td>
+															</tr>
+														</table>
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22v=
+ertical-align:middle;width:150px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-150 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;=22>
+														<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+															<tr>
+																<td style=3D=22vertical-align:top;width:100%;=22 valign=3D=
+=22top=22>
+																	<=21--=5Bif =21mso=5D><=21-->
+																	<table class=3D=22desktopOff=22 align=3D=22center=22 borde=
+r=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentat=
+ion=22 style=3D=22width:auto;margin:0 auto;=22>
+																		<tr>
+																			<td style=3D=22width:150px;=22>
+																				<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_r=
+i_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ=
+7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUCCC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMC=
+EqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3=
+tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71=
+C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCg=
+HZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwST=
+oQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE7=
+2hMVg=2E&_di_=3Deporutk805kont58hilb8dqcq4qk49r5ogpnf7tnusv4auh8n190=22 tar=
+get=3D=22_blank=22 name=3D=22application=22>
+																					<img alt=3D=22T&eacute;l&eacute;charger=22 height=3D=
+=22auto=22 src=3D=22https://relation-client-edf=2Efr/assets/responsysimages=
+/edfsa/contentlibrary/commun/footer/images/cta_footer_x2_vdef=2Epng=22 styl=
+e=3D=22border:0;display:block;outline:none;text-decoration:none;height:auto=
+;width:100%;font-size:13px;=22 width=3D=22100%=22 />
+																				</a>
+																			</td>
+																		</tr>
+																	</table>
+																	<=21--<=21=5Bendif=5D-->
+																</td>
+																<td class=3D=22mobileoff=22 style=3D=22vertical-align:top;=
+=22 valign=3D=22top=22>
+
+																	<table class=3D=22mj-column-px-150=22 align=3D=22center=22=
+ border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22pre=
+sentation=22>
+																		<tr>
+																			<td>
+																				<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_r=
+i_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ=
+7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUDRC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMC=
+EqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3=
+tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71=
+C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCg=
+HZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwST=
+oQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE7=
+2hMVg=2E&_di_=3Dvap03e21qvolb311r5b862dvau69d8vrb6sdmolapnukb19e7cf0=22 tar=
+get=3D=22_blank=22 name=3D=22application=22>
+																					<img alt=3D=22Je d&eacute;couvre=22 height=3D=22auto=
+=22 src=3D=22https://relation-client-edf=2Efr/assets/responsysimages/edfsa/=
+contentlibrary/commun/footer/images/cta_footer2_x2_vdef=2Epng=22 style=3D=
+=22border:0;display:block;outline:none;text-decoration:none;height:auto;wid=
+th:100%;font-size:13px;=22 width=3D=22150=22 />
+																				</a>
+																			</td>
+																		</tr>
+																	</table>
+
+																</td>
+															</tr>
+														</table>
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+												</td>
+											</tr>
+										</table>
+
+
+										<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 c=
+ellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+											<tr>
+												<td style=3D=22padding:26px 0 0 0;=22>
+													<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=
+=22 cellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+														<tr>
+															<td class=3D=22gmail_light_gradient=22 style=3D=22height:1px=
+;line-height:1px;font-size:0px;mso-line-height-rule:exactly;background-colo=
+r:=23ffffff;=22 height=3D=221=22>&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td style=3D=22direction:ltr;font-size:0px;padding:0px 0px;text=
+-align:center;=22>
+													<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 bor=
+der=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=
+=22=22 style=3D=22vertical-align:middle;width:200px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-200 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;max-width:200px;=22>
+														<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=
+=220=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+															<tr>
+																<td align=3D=22left=22 style=3D=22font-size:0px;padding:26p=
+x 0 0 0;word-break:break-word;=22>
+																	<div style=3D=22font-family:Arial,Helvetica,Sans-serif;fon=
+t-size:19px;line-height:22px;text-align:center;color:=23ffffff;font-weight:=
+bold;=22>
+																		<div class=3D=22gmail_blend_screen=22>
+																			<div class=3D=22arial gmail_blend_difference=22 style=3D=
+=22color:=23ffffff;=22>
+																				Retrouvez-nous sur&nbsp;:
+																			</div>
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</table>
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22v=
+ertical-align:middle;width:360px;=22 > <=21=5Bendif=5D-->
+													<div class=3D=22mj-column-px-360 outlook-group-fix=22 style=3D=
+=22font-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:middle;width:100%;max-width:360px;=22>
+
+													</div>
+													<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+												</td>
+											</tr>
+										</table>
+									</div>
+									<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+								</td>
+							</tr>
+							<tr>
+								<td class=3D=22gmail_blue_gradient=22 style=3D=22direction:ltr;font=
+-size:0px;padding:20px 20px 6px 20px;text-align:center;background-color:=23=
+001a70;=22>
+									<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 border=
+=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=22=
+=22 style=3D=22vertical-align:middle;width:250px;=22 > <=21=5Bendif=5D-->
+									<div class=3D=22mj-column-px-250 outlook-group-fix=22 style=3D=22f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:middle;width:100%;max-width:250px;=22>
+										<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 c=
+ellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+											<tr>
+												<td style=3D=22padding:0 0 0 0;=22>
+													<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=
+=220=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+														<tr>
+															<td style=3D=22vertical-align:top;=22>
+																<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=
+=220=22 cellspacing=3D=220=22 role=3D=22presentation=22 style=3D=22width:54=
+px;=22>
+																	<tr>
+																		<td style=3D=22width:54px;=22>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUDTC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3Dbb78hh523s3u6oadbvhgqbi153ts6qo62foeh5335fo6kf7f243g=22 targ=
+et=3D=22_blank=22 name=3D=22espace_client=22>
+																				<img alt=3D=22Votre espace client=22 height=3D=22auto=
+=22 src=3D=22https://relation-client-edf=2Efr/assets/responsysimages/edfsa/=
+contentlibrary/commun/footer/images/picto_user_108px=2Epng=22 style=3D=22bo=
+rder:0;display:block;outline:none;text-decoration:none;height:auto;width:10=
+0%;font-size:13px;=22 width=3D=2254=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td style=3D=22vertical-align:middle;width:100%;=22>
+																<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=
+=3D=220=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+																	<tr>
+																		<td align=3D=22left=22 style=3D=22font-size:0px;padding:0=
+ 0 0 0px;word-break:break-word;=22>
+																			<div style=3D=22font-family:Arial,Helvetica,Sans-serif;f=
+ont-size:15px;line-height:18px;text-align:left;color:=23ffffff;=22>
+																				<div class=3D=22gmail_blend_screen=22>
+																					<div class=3D=22arial gmail_blend_difference=22>
+																						<a href=3D=22https://relation-client-edf=2Efr/pub/cc?=
+_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0=
+NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUDWC&_ei_=3DEM6hiIRZ6IbTRQzpp7EgfWD_amf6c=
+t1u04MishP_0lwux4niwFyfvwXUynRgBWL-z7dNd0uPw5040D8ntiJ0wGlqTWG7aGyOP3AZNFyk=
+B3keuvEWa0SVdyk4VB2cdozDeadn_XBjKwngNEtt6mvqN4eSDWz1cYslJmwaRJy88LWphCgmSuj=
+1LckG20nGvQi4mjL0BU-J_A8rTKYJnmfyN1wZIIBOn8mUnkMXBBji9THDIyrPwibHt46jMLnNW0=
+H4ejisZhR53ItvRNLpT8GISjKD18N8MgG-AHzcvbM-GBOWCC1t7yqiVefgTiHy-0tqxxFUxED3f=
+42NONlzC7Y0mNxU733Q-7Vb8kDqPccYuo1-WZWV51gplMlpLJs4e8b4qxW89w96RlLRGJ0dEkT9=
+X7Dsgwl-cxIjcaA5zpm4kC-OJUXIFB23OG2vjBHbZmIU0kGcCEbAkEs9Fm4QvzDwZB2h79efe58=
+ROnbAixc=2E&_di_=3D790qhb8ho1hptigaaj6lpklhiuj6rj2erl79tngsfh6ni9jo2e90=22 =
+target=3D=22_blank=22 style=3D=22font-family:Arial,Helvetica,Sans-serif;tex=
+t-decoration:underline;color:=23ffffff;=22 name=3D=22espace_client=22>Votre=
+ espace client</a>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td style=3D=22padding:14px 0 20px 0;=22>
+													<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=
+=220=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+														<tr>
+															<td style=3D=22vertical-align:top;=22>
+																<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=
+=220=22 cellspacing=3D=220=22 role=3D=22presentation=22 style=3D=22width:54=
+px;=22>
+																	<tr>
+																		<td style=3D=22width:54px;=22>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUDAC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3Dgsm6qc0qbb2rtog3etuh1i5bkcptfmq7ptlrunsi407hem2nf880=22 targ=
+et=3D=22_blank=22 name=3D=22particulier=2Eedf=2Efr=22>
+																				<img alt=3D=22Votre espace client=22 height=3D=22auto=
+=22 src=3D=22https://relation-client-edf=2Efr/assets/responsysimages/edfsa/=
+contentlibrary/commun/footer/images/picto_site_108px=2Epng=22 style=3D=22bo=
+rder:0;display:block;outline:none;text-decoration:none;height:auto;width:10=
+0%;font-size:13px;=22 width=3D=2254=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td style=3D=22vertical-align:middle;width:100%;=22>
+																<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=
+=3D=220=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+																	<tr>
+																		<td align=3D=22left=22 style=3D=22font-size:0px;padding:0=
+ 0 0 0px;word-break:break-word;=22>
+																			<div style=3D=22font-family:Arial,Helvetica,Sans-serif;f=
+ont-size:15px;line-height:18px;text-align:left;color:=23ffffff;=22>
+																				<div class=3D=22gmail_blend_screen=22>
+																					<div class=3D=22arial gmail_blend_difference=22>
+																						<a href=3D=22https://relation-client-edf=2Efr/pub/cc?=
+_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0=
+NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAUDCC&_ei_=3DEM6hiIRZ6IbTRQzpp7EgfWD_amf6c=
+t1u04MishP_0lwux4niwFyfvwXUynRgBWL-z7dNd0uPw5040D8ntiJ0wGlqTWG7aGyOP3AZNFyk=
+B3keuvEWa0SVdyk4VB2cdozDeadn_XBjKwngNEtt6mvqN4eSDWz1cYslJmwaRJy88LWphCgmSuj=
+1LckG20nGvQi4mjL0BU-J_A8rTKYJnmfyN1wZIIBOn8mUnkMXBBji9THDIyrPwibHt46jMLnNW0=
+H4ejisZhR53ItvRNLpT8GISjKD18N8MgG-AHzcvbM-GBOWCC1t7yqiVefgTiHy-0tqxxFUxED3f=
+42NONlzC7Y0mNxU733Q-7Vb8kDqPccYuo1-WZWV51gplMlpLJs4e8b4qxW89w96RlLRGJ0dEkT9=
+X7Dsgwl-cxIjcaA5zpm4kC-OJUXIFB23OG2vjBHbZmIU0kGcCEbAkEs9Fm4QvzDwZB2h79efe58=
+ROnbAixc=2E&_di_=3Ddt10qctctf005fgskoih1v8lccsg4d2sqo6918fbrbiab9v6tcp0=22 =
+target=3D=22_blank=22 style=3D=22font-family:Arial,Helvetica,Sans-serif;tex=
+t-decoration:underline;color:=23ffffff;=22 name=3D=22particulier=2Eedf=2Efr=
+=22>Notre site particulier=2Eedf=2Efr</a>
+																					</div>
+																				</div>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22verti=
+cal-align:middle;width:30px;=22 > <=21=5Bendif=5D-->
+									<div class=3D=22mj-column-px-30 outlook-group-fix=22 style=3D=22fo=
+nt-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-ali=
+gn:middle;width:100%;=22></div>
+									<=21--=5Bif mso =7C IE=5D></td><td class=3D=22=22 style=3D=22verti=
+cal-align:middle;width:270px;=22 > <=21=5Bendif=5D-->
+									<div class=3D=22mj-column-px-270 outlook-group-fix=22 style=3D=22f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:middle;width:100%;=22>
+
+										<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 c=
+ellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22 style=
+=3D=22width:100%;max-width:310px;=22>
+											<tr>
+												<td style=3D=22padding:0px 0px 20px 0px;=22>
+													<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=22=
+0=22 cellspacing=3D=220=22 role=3D=22presentation=22 style=3D=22width:auto;=
+margin:0 auto;=22>
+														<tr>
+															<td style=3D=22padding:0 4px;=22>
+																<table class=3D=22mj-column-px-46=22 role=3D=22presentation=
+=22 width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 border=
+=3D=220=22 align=3D=22center=22>
+																	<tr>
+																		<td>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWRRC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3D1aqagfd5odom1l1mmifrobq5n5h95igvm6emuotr1lo5bbiij5g0=22 targ=
+et=3D=22_blank=22 name=3D=22twitter=22>
+																				<img alt=3D=22twitter=22 height=3D=22auto=22 src=3D=22h=
+ttps://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlibrary=
+/commun/footer/images/twitter_x=2Epng=22 style=3D=22border:0;display:block;=
+outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=22=
+ width=3D=2246=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td style=3D=22padding:0 4px;=22>
+																<table class=3D=22mj-column-px-46=22 role=3D=22presentation=
+=22 width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 border=
+=3D=220=22 align=3D=22center=22>
+																	<tr>
+																		<td>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWRTC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3Ddj3vdma1pppfvhq22fur0vms5t04nbdar47e45oquqhn40c8tra0=22 targ=
+et=3D=22_blank=22 name=3D=22facebook=22>
+																				<img alt=3D=22facebook=22 height=3D=22auto=22 src=3D=22=
+https://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlibrar=
+y/commun/footer/images/facebook=2Epng=22 style=3D=22border:0;display:block;=
+outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=22=
+ width=3D=2246=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td style=3D=22padding:0 4px;=22>
+																<table class=3D=22mj-column-px-46=22 role=3D=22presentation=
+=22 width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 border=
+=3D=220=22 align=3D=22center=22>
+																	<tr>
+																		<td>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWRWC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3Djavpub0uupsrn1j9i9b9ojslitdv650kbvvktgik876362kuulgg=22 targ=
+et=3D=22_blank=22 name=3D=22instagram=22>
+																				<img alt=3D=22instagram=22 height=3D=22auto=22 src=3D=
+=22https://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlib=
+rary/commun/footer/images/instagram=2Epng=22 style=3D=22border:0;display:bl=
+ock;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px=
+;=22 width=3D=2246=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td style=3D=22padding:0 4px;=22>
+																<table class=3D=22mj-column-px-46=22 role=3D=22presentation=
+=22 width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 border=
+=3D=220=22 align=3D=22center=22>
+																	<tr>
+																		<td>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWRAC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3D2b7kngs4jbjl40jb8odja4d59498335stanmi5hvvbsk359jgjb0=22 targ=
+et=3D=22_blank=22 name=3D=22tiktok=22>
+																				<img alt=3D=22tiktok=22 height=3D=22auto=22 src=3D=22ht=
+tps://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/=
+commun/footer/images/tiktok=2Epng=22 style=3D=22border:0;display:block;outl=
+ine:none;text-decoration:none;height:auto;width:100%;font-size:13px;=22 wid=
+th=3D=2246=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td style=3D=22padding:0 4px;=22>
+																<table class=3D=22mj-column-px-46=22 role=3D=22presentation=
+=22 width=3D=22100%=22 cellspacing=3D=220=22 cellpadding=3D=220=22 border=
+=3D=220=22 align=3D=22center=22>
+																	<tr>
+																		<td>
+																			<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri=
+_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7=
+ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWRCC&_ei_=3DEQWTkq9ZFFiiQ4nsNTFtX8TJQ1DPmMCE=
+qpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_2FUnJwz-S7X9BUHM2io3t=
+JvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmzINgVCxgP-J6fz7115c71C=
+91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD_V-Th34NKMcur1qHlHCgH=
+ZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj61BUPPiF3BevXvgyagwSTo=
+QyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNYx4U4voWUOZ-v17rVwYE72=
+hMVg=2E&_di_=3D1njt96kuusg2gfsnnrih4k8knah7bet7t82hvg3n2v2bsm7hmctg=22 targ=
+et=3D=22_blank=22 name=3D=22youtube=22>
+																				<img alt=3D=22youtube=22 height=3D=22auto=22 src=3D=22h=
+ttps://relation-client-edf=2Efr/assets/responsysimages/edfsa/contentlibrary=
+/commun/footer/images/youtube=2Epng=22 style=3D=22border:0;display:block;ou=
+tline:none;text-decoration:none;height:auto;width:100%;font-size:13px;=22 w=
+idth=3D=2246=22 />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+
+												</td>
+											</tr>
+										</table>
+									</div>
+									<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+												</td>
+											</tr>
+										</table>
+
+									</div>
+									<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+								</td>
+							</tr>
+							<tr>
+								<td class=3D=22gmail_blue_gradient=22 style=3D=22direction:ltr;font=
+-size:0px;padding:0px 20px 0px 20px;text-align:center;background-color:=230=
+01a70;=22>
+									<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 border=
+=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=22=
+=22 style=3D=22vertical-align:top;width:560px;=22 > <=21=5Bendif=5D-->
+									<div class=3D=22mj-column-px-560 outlook-group-fix=22 style=3D=22f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:top;width:100%;max-width:560px;=22>
+										<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 c=
+ellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+											<tr>
+												<td class=3D=22gmail_light_gradient=22 style=3D=22height:1px;li=
+ne-height:1px;font-size:0px;mso-line-height-rule:exactly;background-color:=
+=23ffffff;=22 height=3D=221=22>&nbsp;</td>
+											</tr>
+										</table>
+									</div>
+									<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+								</td>
+							</tr>
+							<tr>
+								<td class=3D=22gmail_blue_gradient=22 style=3D=22direction:ltr;font=
+-size:0px;padding:26px 20px 20px 20px;text-align:center;background-color:=
+=23001a70;=22>
+									<=21--=5Bif mso =7C IE=5D><table role=3D=22presentation=22 border=
+=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22><tr><td class=3D=22=
+=22 style=3D=22vertical-align:top;width:560px;=22 > <=21=5Bendif=5D-->
+									<div class=3D=22mj-column-px-560 outlook-group-fix=22 style=3D=22f=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:top;width:100%;max-width:560px;=22>
+										<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 role=3D=22presentation=22 style=3D=22=22 width=3D=22100%=22>
+											<tr>
+												<td align=3D=22left=22 style=3D=22font-size:0px;padding:0;word-=
+break:break-word;=22>
+													<div style=3D=22font-family:Arial,Helvetica,Sans-serif;font-si=
+ze:13px;line-height:16px;text-align:center;color:=23ffffff;font-weight:bold=
+;=22>
+														<div class=3D=22gmail_blend_screen=22>
+															<div class=3D=22arial gmail_blend_difference=22 style=3D=22c=
+olor:=23ffffff;=22>
+																L&rsquo;&eacute;nergie est notre avenir, &eacute;conomisons=
+&=238209;la&nbsp;=21
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td align=3D=22left=22 style=3D=22font-size:0px;padding:20px 0 =
+0 0;word-break:break-word;=22>
+													<div style=3D=22font-family:Arial,Helvetica,Sans-serif;font-si=
+ze:10px;line-height:14px;text-align:left;color:=23ffffff;=22>
+														<div class=3D=22gmail_blend_screen=22>
+															<div class=3D=22arial gmail_blend_difference=22 style=3D=22c=
+olor:=23ffffff;=22>Origine 2023 de l&rsquo;&eacute;lectricit&eacute; vendue=
+ par EDF : 78,70% nucl&eacute;aire, 13,27% renouvelables (dont 8,04% hydrau=
+lique), 0,20% charbon, 7,38% gaz, 0,42% p&eacute;trole, 0,03% autres fossil=
+es=2E Origine 2023 de l'&eacute;lectricit&eacute; vendue par EDF et indicat=
+eurs d&rsquo;impact environnemental sur <a href=3D=22https://relation-clien=
+t-edf=2Efr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5ow=
+zdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWSRC&_ei_=3DEQWTkq9ZFFi=
+iQ4nsNTFtX8TJQ1DPmMCEqpBl3pgVd_3uUzESWW8lsMZzteBLjawgg_b0z3fHSkWS7r6FbCa-H_=
+2FUnJwz-S7X9BUHM2io3tJvMtVZygaqv_C-VloTTNvTINuM69XLXQJ5MI7yyzAmE4Sc4jFRTkmz=
+INgVCxgP-J6fz7115c71C91jnarvwc7b-GZQrP-rswyiA-p_4lY_LxfA6YO9Npi3gbdpqfhvqFD=
+_V-Th34NKMcur1qHlHCgHZY7nbNbWkqXPgnAPGONrQCunlO0wOi7EM4QmbZM3jxNhWQnKoTnFj6=
+1BUPPiF3BevXvgyagwSToQyNlV5hxB-RdjxWOWfxGgAifa53EGtVL7zMou29H2CPTP4FzXrpWNY=
+x4U4voWUOZ-v17rVwYE72hMVg=2E&_di_=3Dqkgrm02kdjl26dir52nt94hhpk7vtgen48rotp8=
+nfmhf3h6ceuh0=22 name=3D=22httpswwwedffroriginedelelectriciteparedf=22 styl=
+e=3D=22font-family:Arial,Helvetica,Sans-serif;color:=23ffffff;text-decorati=
+on:underline;=22 target=3D=22_blank=22>www=2Eedf=2Efr</a>=2E
+<br />
+<br />
+EDF SA au capital social de 2&nbsp;084&nbsp;365&nbsp;041 euros, n&deg;&nbsp=
+;552&nbsp;081&nbsp;317&nbsp;RCS Paris, si&egrave;ge social 22-30 avenue de =
+Wagram 75382 Paris Cedex&nbsp;08=2E
+<br />
+<br />
+Conform&eacute;ment &agrave; la r&egrave;glementation en mati&egrave;re de =
+donn&eacute;es personnelles, vous disposez du droit de vous opposer &agrave=
+; recevoir des sollicitations commerciales de la part d'EDF=2E Vous dispose=
+z &eacute;galement d'un droit d'acc&egrave;s, de rectification, d'oppositio=
+n, d'effacement, de limitation et de portabilit&eacute; de vos donn&eacute;=
+es &agrave; l'adresse &eacute;lectronique&nbsp;: <a href=3D=22mailto:mesdon=
+nees=40edf=2Efr=22 name=3D=22mesdonneesedffr=22 style=3D=22font-family:Aria=
+l,Helvetica,Sans-serif;color:=23ffffff;text-decoration:underline;=22 target=
+=3D=22_blank=22>mesdonnees=40edf=2Efr</a> en vous authentifiant ou en justi=
+fiant de votre identit&eacute;=2E Si toutefois vous rencontrez des difficul=
+t&eacute;s, vous pouvez vous adresser au d&eacute;l&eacute;gu&eacute; &agra=
+ve; la protection des donn&eacute;es personnelles d&rsquo;EDF par courrier =
+&eacute;lectronique &agrave; l&rsquo;adresse : <a href=3D=22mailto:informat=
+ique-et-libertes=40edf=2Efr=22 target=3D=22_blank=22 style=3D=22font-family=
+:Arial,Helvetica,Sans-serif;color:=23ffffff;text-decoration:underline;=22 n=
+ame=3D=22informatique-et-libertes=40edf=2Efr=22>informatique-et-libertes=40=
+edf=2Efr</a>=2E Vous avez &eacute;galement le droit d&rsquo;exercer un reco=
+urs aupr&egrave;s de la CNIL=2E
+<br />
+<br />
+Pour une information plus d&eacute;taill&eacute;e sur le traitement de vos =
+donn&eacute;es et vos droits, nous vous invitons &agrave; consulter notre =
+=22charte de protection des donn&eacute;es personnelles=22 <a href=3D=22htt=
+ps://relation-client-edf=2Efr/pub/cc?_ri_=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbz=
+bUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7ryW1X8KOpjGCbdE51tFfVXtpKX%3DSAWSTC=
+&_ei_=3DEM6hiIRZ6IbTRQzpp7EgfWD_amf6ct1u04MishP_0lwux4niwFyfvwXUynRgBWL-z7d=
+Nd0uPw5040D8ntiJ0wGlqTWG7aGyOP3AZNFykB3keuvEWa0SVdyk4VB2cdozDeadn_XBjKwngNE=
+tt6mvqN4eSDWz1cYslJmwaRJy88LWphCgmSuj1LckG20nGvQi4mjL0BU-J_A8rTKYJnmfyN1wZI=
+IBOn8mUnkMXBBji9THDIyrPwibHt46jMLnNW0H4ejisZhR53ItvRNLpT8GISjKD18N8MgG-AHzc=
+vbM-GBOWCC1t7yqiVefgTiHy-0tqxxFUxED3f42NONlzC7Y0mNxU733Q-7Vb8kDqPccYuo1-WZW=
+V51gplMlpLJs4e8b4qxW89w96RlLRGJ0dEkT9X7Dsgwl-cxIjcaA5zpm4kC-OJUXIFB23OG2vjB=
+HbZmIU0kGcCEbAkEs9Fm4QvzDwZB2h79efe58ROnbAixc=2E&_di_=3Drvm90msnevh021di49o=
+q5kj74dehll7a73gmauib24sr5dhvm080=22 name=3D=22chartesdonneespersonnelles=
+=22 style=3D=22font-family:Arial,Helvetica,Sans-serif;color:=23ffffff;text-=
+decoration:underline;=22 target=3D=22_blank=22>disponible ici</a>=2E</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
+										<table width=3D=22100%=22 align=3D=22center=22 border=3D=220=22 c=
+ellpadding=3D=220=22 cellspacing=3D=220=22 role=3D=22presentation=22>
+											<tr>
+												<td style=3D=22padding:20px 0 0 0;=22>
+													<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=22=
+0=22 cellspacing=3D=220=22 role=3D=22presentation=22 style=3D=22width:auto;=
+margin:0 auto;=22>
+														<tr>
+															<td style=3D=22width:20px;vertical-align:top;=22 valign=3D=
+=22top=22>
+																<img alt=3D=22Desabonnement=22 src=3D=22https://relation-cl=
+ient-edf=2Efr/assets/responsysimages/edfsa/contentlibrary/commun/footer/ima=
+ges/arrow_desabo_footer=2Epng=22 style=3D=22border:0;display:block;outline:=
+none;text-decoration:none;height:auto;width:20px;font-size:13px;=22 width=
+=3D=2220=22>
+															</td>
+															<td style=3D=22vertical-align:top;=22 valign=3D=22top=22>
+																<div style=3D=22font-family:Arial, Helvetica, Sans-serif;fo=
+nt-size:10px;line-height:14px;text-align:center;color:=23ffffff;=22>
+																	<a href=3D=22https://relation-client-edf=2Efr/pub/cc?_ri_=
+=3DX0Gzc2X%3DAQjkPkSSSQGzeb38B5mbzbUhl88gGze2qhC4i5owzdzdgv0ud1ce0FyAu0NJ7r=
+yW1X8KOpjGCbdE51tFfVXtpKX%3DSAWSWC&_ei_=3DEW80n_wXkhHOXyRWoaokf9DzAobJ4349G=
+p9Tahfzdq8rUl-zHwETlnSe1XKOiUgrO9CIqweA4VkOeug880byKk2gR3WzkUkQ83tmlE4atsCo=
+i_ksNN18CwXYhcysyabhHzhgXKMr7TLroKXQZOFnK8jKtLlLQbYhMfNtHmOVxZsgj3i3ncTbN2d=
+XHrnRg4XD5hGimogbjNe_D9uX5HTXtthjt8468rY25RX39Y8cGTYOEpNIsyT1hBmPNrI1bRec-L=
+xZzBYEPP-ZRoftvVf8ZEoKhXOPKfDT19k2u-6hoBSORWDfcAQ_P4SSwbxGqirXRmraJUqoQkJLB=
+W4Ql2GYCG0P3PIlzMpXdCNg5VRVOFMHas65jRFa1qnJxfOWaSTve0sWIGGTlOLDUNe06Xnq39aw=
+drPE7wcEjAVrutO2XgWcQOg6kwoRNke6KaNDkrUUNQvuqnbPt2evOcnzIMbUzwOtFT4DoSMzAJs=
+rBPcDXUHIbeVpFcaZQEUf-UZ31RX8RXWP9g-5UUXRdKHjg-mwk1xgb0D29PuJed3RdLEt62Iwh2=
+67r7iozDt8teUvKKa060c4_1-OTzJNw4ykgXqBugesJVMAcTcjV1tNcQPBMMPUZNCwjP9JMAAlK=
+WGlHE13gxXHtZQYR54e0u_Lcf48ZPgpZIEg9XKYyYp1mk7FM-fD3vxogCN0zMJHWeQPm3zcafsR=
+ugyt_w39QUW5eTeg0xkeE-OtBpKWr_ukrMv7FRUjoU3nNSlnO3BP2zgagxyly9SI_pk-y9kKvQm=
+aU0xpQQf7pBsFXSIDkzYkVjkVGyYaD9tDlPBTYNj3dRaGBw=2E&_di_=3Dqls15b81lntal8acr=
+qg18j4fv01pfo9ptijdb0hqp8jmttg16fgg=22 name=3D=22Desabonnement=22 target=3D=
+=22_blank=22 xt=3D=22SPCLICK=22 title=3D=22Pour choisir quels emails recevo=
+ir, ou vous d&eacute;sabonner, c'est par ici=22 style=3D=22font-size:12px;f=
+ont-family:Arial,Helvetica,Sans-serif;color:=23ffffff;line-height:15px;text=
+-decoration:underline;font-weight:bold;=22>
+																				Pour choisir quels emails recevoir, ou vous d&eacute;sa=
+bonner, c'est&nbsp;par&nbsp;ici
+																			</a>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+								</td>
+							</tr>
+						</table>
+
+					</div>
+					<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+				</td>
+			</tr>
+		</table>
+	</div>
+	<=21--=5Bif mso =7C IE=5D></td></tr></table> <=21=5Bendif=5D-->
+
+
+</body>
+
+</html>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <=21--=5Bif mso =7C IE=5D> </td> </tr> </table> <=21=5Bendif=5D=
+-->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <=21--=5Bif mso =7C IE=5D> </td> </tr> </table> <=21=5Bendif=5D-->
+
+  </div>
+</body>
+
+</html>
+
+------alt_border_9oe3pcAp6L_1--
+
+------msg_border_kt8X9SHqFJ--
+

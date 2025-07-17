@@ -1,0 +1,269 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:224b:b0:92:fd56:6792 with SMTP id y11csp7165151gba;
+        Mon, 7 Jul 2025 13:06:05 -0700 (PDT)
+X-Received: by 2002:a05:600c:8b18:b0:43c:fceb:91a with SMTP id 5b1f17b1804b1-454cd4d8f33mr1224575e9.11.1751918765502;
+        Mon, 07 Jul 2025 13:06:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751918765; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NDqWKo/PlQ7gi3iwv7p/+uznsrEWJkVhv/+gLmyd+rcRk+hVOwBTCHupWINIPjnSQc
+         rtn6viK4bh0lOAYkVSNbVU0jdzANKqDgXXulk0I98OpYQQXgBV0GZ3xym2Un1/Ueui+G
+         7z+yE0MaBfnPuvMrqmvPgHJF5PbTN7NzUIhL1k9OgTiryOe+UAjA7NlnwgP982xNZfnA
+         KZo5LCBlIz2DTwXLve13JMLSNLP0CWQLRWeF/zfQexkIua/F8JJD6QUZiesFh6Qq+/yo
+         4peg0DmgOvJhB02aViaSvjEaYOk4ilUlzKoU0Pjx7CuP+idujmvoea7fDep55Ysd0Mk+
+         Ht1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:dkim-signature;
+        bh=C5IZDDPEUmCn3i1OXcnzIjj8Cz/w8BwQ4pseMLfICeU=;
+        fh=itzSYdk8MEFhw6xQJKZL3TF3LxobkaUL5knfby+c6pA=;
+        b=GehTM3sbqb151e9yz8bZ+H6rRqL5xSSgAoH34xM+sfQN+Bqz8lRoqsIz9zQXgD8Uvd
+         f6NY6u3ZBWAlyRn3x04lIjDx255E9Ykx/8URgSE0B5xQAgycC25if5n4a3Ro4sX1Bww4
+         Ylqcv59ke+KhEI0jfjuQdu66np8zoigS8QucIzbDs8Nm0saZ7YEB9Y3RuDow4nziW7u3
+         RDeFiJsWc1d0gITkln/lyJCGvgZWxEIS5ckvk7ncTo07z9E4zB8J9ti1+za6c7Q9fm9K
+         q3xCMBxHXw5v2ZzVw5UnTEe2Q7omFSwugKooYgmZeil9QtP5aSrgPNeq5/HPpg1McJvJ
+         ekbQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=C0Bho9Zn;
+       spf=pass (google.com: domain of guydany8@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=guydany8@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <guydany8@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-454b159aacdsor28716015e9.0.2025.07.07.13.06.05
+        for <guykeny.ndayizeye8@gmail.com>
+        (Google Transport Security);
+        Mon, 07 Jul 2025 13:06:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of guydany8@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=C0Bho9Zn;
+       spf=pass (google.com: domain of guydany8@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=guydany8@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1751918765; x=1752523565; dara=google.com;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=C5IZDDPEUmCn3i1OXcnzIjj8Cz/w8BwQ4pseMLfICeU=;
+        b=C0Bho9ZnUJybWV0b0kZd+hgSA+gj0uW0DSK/ec52GTS/jcfrIvWQ60T6ziTxBoBJ3o
+         WaUadxuUG57BW9NuiUzUPX4azMUwFwZUO13hI8gHWBUMIzcs8Gpl7agTIwK95XsZoeQX
+         lcusSP/tfs+uFmFhdGmOzompvmYRbMcQESbN7pXQvhXgyr2i4T2IZ42/jvzOMIYqpFiw
+         DalQIqEU0jcHg17sT1xP2O7Q2wCLujpc5+Bmwl9AYuOvO+8T5NbWBludAmrNbmfGu/Ml
+         WIdYpmVIcJy3RqnGM4cMewpSxqbEuKlRQEf2vctckleBzY2zkCdDkPC5PElVKAHoXKyf
+         vOig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1751918765; x=1752523565;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=C5IZDDPEUmCn3i1OXcnzIjj8Cz/w8BwQ4pseMLfICeU=;
+        b=l/j9AA/VDYvfswr5iQHxm28UC2wXJ9mtYrIvm9Rcoop4lYm9m2XLGtQRDHYsrUwgkX
+         RvQ4PS8Bii1XMvgzpIPyfnmj/Rub4C8xzMVBrzbJp6O72GrHnqDxT8DzHPc7vEcZW4T6
+         VLNRIE3mUL/iCNdjXyLY8bQku81FJ+6lmXAEzn5fgVSfzc+f2sL6c+o6K2tg5HAUjKJu
+         XXYc1oHxUkK7z2DX9jX7ykSH2DFkvClsoWwECCD74EykXRRDeazEx0lZ4Qsiqb+SMncW
+         u67FRm5aCHqdmEexb4GvyCgG54AF52y51owXe6xV+uMp2yNlr0jiCJIijEH/2yGPskcf
+         OIcw==
+X-Gm-Message-State: AOJu0Yw+WrJVjqwgYcqWr4tA4KkYrfiNQ6tE4NT22G4AIp/v//uhkWDO
+	6DYCHfThEmcqkID1QD8pR4oDAh3mSGFDrRgRdsrohGntEa9kNofL/10YOsvjyA==
+X-Gm-Gg: ASbGncsKjbHQAyKKspJ/KQiJ0ILyRJl2paEj1Ui5YVo2OVxu/Z/9vZtSGV6KIwsAlPC
+	97Job8C92Xt2tKvkVar1qVRvP2+nWmz9BqY7G/91KVVa/LUDnJN7ER+KHgHbtBeFl/sJE8e4YSo
+	3JYd4sHrxrwxjQj6uRg5LlP11YXCofyprmtqE5hH8YZVuRaokardcSRnhk5FPqgPc5b+Zq2fd1m
+	CnAtEng86vNEDw9T+DygtV++olNL9wsFhaXIVa1crNT+vgmNMA+5BCuoxyiFka8NMngq6eJT5Se
+	dPprY+LNF0ZH4qJQLJ3Rz0KODODnVhMQtTn9WPO6F8txVEC+J0cnJUqJMEbOMXbRaT1r5viPbxY
+	7DQ7snFaWqQ==
+X-Google-Smtp-Source: AGHT+IHO5o8AreA6EGv3J4cJdYN4WKvJBagc/VRboMILtFYMQLUgasQbL+j8alwkklSXPcg18L2hfw==
+X-Received: by 2002:a5d:5e8b:0:b0:3a4:fc52:f5d4 with SMTP id ffacd0b85a97d-3b5ddefa655mr80726f8f.47.1751918764546;
+        Mon, 07 Jul 2025 13:06:04 -0700 (PDT)
+Return-Path: <guydany8@gmail.com>
+Received: from smtpclient.apple ([2a01:e0a:829:8a00:b152:4795:31f9:81b7])
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-3b47285c4f9sm11031300f8f.88.2025.07.07.13.06.03
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 07 Jul 2025 13:06:04 -0700 (PDT)
+Content-Type: multipart/alternative; boundary=Apple-Mail-53A1917C-34C7-4022-914A-116FEE548673
+Content-Transfer-Encoding: 7bit
+From: dany guy <guydany8@gmail.com>
+Mime-Version: 1.0 (1.0)
+Subject: Re: 
+Date: Mon, 7 Jul 2025 22:05:53 +0200
+Message-Id: <5A29EA17-770F-43B2-BD54-23B9866B2571@gmail.com>
+References: <CAMP3jJbMhvLZpcL4+FFEsDzQmJuUxkRa3GrjmKwefi0J+0d8mA@mail.gmail.com>
+In-Reply-To: <CAMP3jJbMhvLZpcL4+FFEsDzQmJuUxkRa3GrjmKwefi0J+0d8mA@mail.gmail.com>
+To: Guy Keny Ndayizeye <guykeny.ndayizeye8@gmail.com>
+X-Mailer: iPhone Mail (20H360)
+
+
+--Apple-Mail-53A1917C-34C7-4022-914A-116FEE548673
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hhhj
+
+Envoy=C3=A9 de mon iPhone
+
+> Le 7 juil. 2025 =C3=A0 17:26, Guy Keny Ndayizeye <guykeny.ndayizeye8@gmail=
+.com> a =C3=A9crit :
+>=20
+> =EF=BB=BF
+> // save2dolibarr.js
+>=20
+> if (window.rcmail) {
+>     rcmail.addEventListener('init', function() {
+>         rcmail.register_command('plugin.save2dolibarr', function() {
+>             var uid =3D rcmail.env.uid;
+>             var mbox =3D rcmail.env.mailbox;
+>=20
+>             // Pour les cas o=C3=B9 le message est s=C3=A9lectionn=C3=A9 d=
+ans la liste et non ouvert
+>             if (!uid && rcmail.message_list && rcmail.message_list.get_sel=
+ection().length) {
+>                 uid =3D rcmail.message_list.get_selection()[0];
+>             }
+>             if (!mbox && rcmail.env.mail_mbox) {
+>                 mbox =3D rcmail.env.mail_mbox;
+>             }
+>=20
+>             // --- DEBUT DU CODE DE DEBOGAGE POUR AFFICHER L'UID ET MBOX -=
+--
+>             if (uid && mbox) {
+>                 // Affiche une alerte JavaScript (pop-up)
+>                 // C'est simple mais intrusif, bien pour un test rapide.
+>                 alert("DEBUG - UID: " + uid + ", Mbox: " + mbox);
+>=20
+>                 // OU (alternative, si vous pr=C3=A9f=C3=A9rez une notific=
+ation Roundcube non bloquante)
+>                 // rcmail.show_message("DEBUG - UID: " + uid + ", Mbox: " +=
+ mbox, 'notice');
+>=20
+>                 // Envoie la commande au backend PHP de Roundcube avec les=
+ param=C3=A8tres n=C3=A9cessaires
+>                 rcmail.http_post('plugin.save2dolibarr', {'_uid': uid, '_m=
+box': mbox});
+>             } else {
+>                 // Ceci est le message d'erreur original si rien n'est s=C3=
+=A9lectionn=C3=A9
+>                 rcmail.show_message(rcmail.gettext('nomessagefound'), 'err=
+or');
+>             }
+>             // --- FIN DU CODE DE DEBOGAGE ---
+>=20
+>         }, true);
+>     });
+> }
+> <image.png>
+>=20
+> <mailboxmodule.zip>
+> <save2dolibarr.php>
+
+--Apple-Mail-53A1917C-34C7-4022-914A-116FEE548673
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto">Hhhj<br><br><div dir=3D"ltr">Envoy=C3=A9 de=
+ mon iPhone</div><div dir=3D"ltr"><br><blockquote type=3D"cite">Le 7 juil. 2=
+025 =C3=A0 17:26, Guy Keny Ndayizeye &lt;guykeny.ndayizeye8@gmail.com&gt; a =C3=
+=A9crit&nbsp;:<br><br></blockquote></div><blockquote type=3D"cite"><div dir=3D=
+"ltr">=EF=BB=BF<div dir=3D"ltr"><div style=3D"color:rgb(204,204,204);backgro=
+und-color:rgb(31,31,31);font-family:Consolas,&quot;Courier New&quot;,monospa=
+ce;font-size:14px;line-height:19px;white-space:pre"><div><span style=3D"colo=
+r:rgb(106,153,85)">// save2dolibarr.js</span></div><br><div><span style=3D"c=
+olor:rgb(197,134,192)">if</span> (<span style=3D"color:rgb(156,220,254)">win=
+dow</span>.<span style=3D"color:rgb(156,220,254)">rcmail</span>) {</div><div=
+>&nbsp; &nbsp; <span style=3D"color:rgb(156,220,254)">rcmail</span>.<span st=
+yle=3D"color:rgb(220,220,170)">addEventListener</span>(<span style=3D"color:=
+rgb(206,145,120)">'init'</span>, <span style=3D"color:rgb(86,156,214)">funct=
+ion</span>() {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rg=
+b(156,220,254)">rcmail</span>.<span style=3D"color:rgb(220,220,170)">registe=
+r_command</span>(<span style=3D"color:rgb(206,145,120)">'plugin.save2dolibar=
+r'</span>, <span style=3D"color:rgb(86,156,214)">function</span>() {</div><d=
+iv>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(86,156=
+,214)">var</span> <span style=3D"color:rgb(156,220,254)">uid</span> <span st=
+yle=3D"color:rgb(212,212,212)">=3D</span> <span style=3D"color:rgb(156,220,2=
+54)">rcmail</span>.<span style=3D"color:rgb(156,220,254)">env</span>.<span s=
+tyle=3D"color:rgb(156,220,254)">uid</span>;</div><div>&nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(86,156,214)">var</span> <span s=
+tyle=3D"color:rgb(156,220,254)">mbox</span> <span style=3D"color:rgb(212,212=
+,212)">=3D</span> <span style=3D"color:rgb(156,220,254)">rcmail</span>.<span=
+ style=3D"color:rgb(156,220,254)">env</span>.<span style=3D"color:rgb(156,22=
+0,254)">mailbox</span>;</div><br><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; <span style=3D"color:rgb(106,153,85)">// Pour les cas o=C3=B9 le message=
+ est s=C3=A9lectionn=C3=A9 dans la liste et non ouvert</span></div><div>&nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(197,134,192)"=
+>if</span> (<span style=3D"color:rgb(212,212,212)">!</span><span style=3D"co=
+lor:rgb(156,220,254)">uid</span> <span style=3D"color:rgb(212,212,212)">&amp=
+;&amp;</span> <span style=3D"color:rgb(156,220,254)">rcmail</span>.<span sty=
+le=3D"color:rgb(156,220,254)">message_list</span> <span style=3D"color:rgb(2=
+12,212,212)">&amp;&amp;</span> <span style=3D"color:rgb(156,220,254)">rcmail=
+</span>.<span style=3D"color:rgb(156,220,254)">message_list</span>.<span sty=
+le=3D"color:rgb(220,220,170)">get_selection</span>().<span style=3D"color:rg=
+b(156,220,254)">length</span>) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(156,220,254)">uid</span> <sp=
+an style=3D"color:rgb(212,212,212)">=3D</span> <span style=3D"color:rgb(156,=
+220,254)">rcmail</span>.<span style=3D"color:rgb(156,220,254)">message_list<=
+/span>.<span style=3D"color:rgb(220,220,170)">get_selection</span>()[<span s=
+tyle=3D"color:rgb(181,206,168)">0</span>];</div><div>&nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <sp=
+an style=3D"color:rgb(197,134,192)">if</span> (<span style=3D"color:rgb(212,=
+212,212)">!</span><span style=3D"color:rgb(156,220,254)">mbox</span> <span s=
+tyle=3D"color:rgb(212,212,212)">&amp;&amp;</span> <span style=3D"color:rgb(1=
+56,220,254)">rcmail</span>.<span style=3D"color:rgb(156,220,254)">env</span>=
+.<span style=3D"color:rgb(156,220,254)">mail_mbox</span>) {</div><div>&nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(1=
+56,220,254)">mbox</span> <span style=3D"color:rgb(212,212,212)">=3D</span> <=
+span style=3D"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb=
+(156,220,254)">env</span>.<span style=3D"color:rgb(156,220,254)">mail_mbox</=
+span>;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><br><div>&=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(106,153,85=
+)">// --- DEBUT DU CODE DE DEBOGAGE POUR AFFICHER L'UID ET MBOX ---</span></=
+div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(=
+197,134,192)">if</span> (<span style=3D"color:rgb(156,220,254)">uid</span> <=
+span style=3D"color:rgb(212,212,212)">&amp;&amp;</span> <span style=3D"color=
+:rgb(156,220,254)">mbox</span>) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(106,153,85)">// Affiche une=
+ alerte JavaScript (pop-up)</span></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(106,153,85)">// C'est simp=
+le mais intrusif, bien pour un test rapide.</span></div><div>&nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(220,220,17=
+0)">alert</span>(<span style=3D"color:rgb(206,145,120)">"DEBUG - UID: "</spa=
+n> <span style=3D"color:rgb(212,212,212)">+</span> <span style=3D"color:rgb(=
+156,220,254)">uid</span> <span style=3D"color:rgb(212,212,212)">+</span> <sp=
+an style=3D"color:rgb(206,145,120)">", Mbox: "</span> <span style=3D"color:r=
+gb(212,212,212)">+</span> <span style=3D"color:rgb(156,220,254)">mbox</span>=
+);</div><br><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <sp=
+an style=3D"color:rgb(106,153,85)">// OU (alternative, si vous pr=C3=A9f=C3=A9=
+rez une notification Roundcube non bloquante)</span></div><div>&nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(106,153,=
+85)">// rcmail.show_message("DEBUG - UID: " + uid + ", Mbox: " + mbox, 'noti=
+ce');</span></div><br><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; <span style=3D"color:rgb(106,153,85)">// Envoie la commande au backend=
+ PHP de Roundcube avec les param=C3=A8tres n=C3=A9cessaires</span></div><div=
+>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"colo=
+r:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb(220,220,170)">htt=
+p_post</span>(<span style=3D"color:rgb(206,145,120)">'plugin.save2dolibarr'<=
+/span>, {<span style=3D"color:rgb(206,145,120)">'_uid'</span><span style=3D"=
+color:rgb(156,220,254)">:</span> <span style=3D"color:rgb(156,220,254)">uid<=
+/span>, <span style=3D"color:rgb(206,145,120)">'_mbox'</span><span style=3D"=
+color:rgb(156,220,254)">:</span> <span style=3D"color:rgb(156,220,254)">mbox=
+</span>});</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } <span style=
+=3D"color:rgb(197,134,192)">else</span> {</div><div>&nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(106,153,85)">// Cec=
+i est le message d'erreur original si rien n'est s=C3=A9lectionn=C3=A9</span=
+></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span st=
+yle=3D"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb(220,22=
+0,170)">show_message</span>(<span style=3D"color:rgb(156,220,254)">rcmail</s=
+pan>.<span style=3D"color:rgb(220,220,170)">gettext</span>(<span style=3D"co=
+lor:rgb(206,145,120)">'nomessagefound'</span>), <span style=3D"color:rgb(206=
+,145,120)">'error'</span>);</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"col=
+or:rgb(106,153,85)">// --- FIN DU CODE DE DEBOGAGE ---</span></div><br><div>=
+&nbsp; &nbsp; &nbsp; &nbsp; }, <span style=3D"color:rgb(86,156,214)">true</s=
+pan>);</div><div>&nbsp; &nbsp; });</div><div>}</div><div>&lt;image.png&gt;</=
+div><br></div></div>
+<div>&lt;mailboxmodule.zip&gt;</div><div>&lt;save2dolibarr.php&gt;</div></di=
+v></blockquote></body></html>=
+
+--Apple-Mail-53A1917C-34C7-4022-914A-116FEE548673--

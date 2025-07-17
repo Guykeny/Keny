@@ -1,0 +1,1528 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:680e:b0:92:fd56:6792 with SMTP id em14csp259930gbb;
+        Fri, 11 Jul 2025 02:42:55 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGRgRiwrKlZtpzwWuSjxKSSExoMVoYXO7JpmoOR0KQIhQ8L9m2Mtgm72ebiv/8sTGW9XV8g
+X-Received: by 2002:a05:6000:4719:b0:3a0:7d27:f076 with SMTP id ffacd0b85a97d-3b5f351e6bemr1473078f8f.2.1752226975217;
+        Fri, 11 Jul 2025 02:42:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1752226975; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TdlvrwUzgKnJ75oW2DE65OBQbiP8UiDwsaC4lWE+RDYMPTaTvaGrve9Gi1gmYkAx6n
+         LaUcfc6R9m6G6bf0VQcjrlBPVQ7RUqSf+VlULR4yHJohpeJi3n6FKBRSumFo13+qxQsk
+         pFFkniz5P/vGvxUoeqR4nl7708OuM05Px/84q2ENU2J7TCqht9+fQhya5e/vpe3iqfpJ
+         dM+NJZSE/JQx55dfyg7djIicOcgNJ5I14xPoWD2sSSRjxJeUWqPtB7+cAkiG8RqsC0Qh
+         fCZnTFcwS/AbWQkeHRPN4q7KZOiF/ZSTKHE6/8e8QVhysWmOLn6BLgQuFQQP8o99MlJ2
+         Gf7A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:precedence:list-unsubscribe:message-id
+         :mime-version:reply-to:to:date:subject:from:dkim-signature;
+        bh=87t4Ito9gz00geijyC+BYc+IAsQ3hnGD7hMRCQbg5og=;
+        fh=Z3c3D/4xeE50bGI+83vSAXEo7+MNzc/jktQqx4DY0QQ=;
+        b=Y1Gzd/1WiUHMUMK17e/PIbTRRPQM+HMSLgGZyf3u5zBrkTEcTOJs3WfNjiY5MrOow2
+         XPGxahesuFTw/DGhROKtnPQXd/4gboEYCBqX0bnY3QXczfjFhZV5Dw7VPnl5aB7whFis
+         OMp98sJbZxsroiwrm+nWBuuPlva9yYtatVBT/eD9m5IQVC6OqxP3J3vFlKGU3G8WM/gl
+         DLs/YcoTDAQPbqyJshfYNZT5b6kTbJk+0Z8wls/HHGmQ3lJwM3V8shJV3gJifzszUWK3
+         SwnbHGBN6Q53jIiariUW5FwRkywUpj/C/04i5spR2ss96o5MuHydA+gOkn8LFVHkFlZh
+         yapg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.boulanger.com header.s=boulanger header.b=Dhj2wxY5;
+       spf=pass (google.com: domain of boulanger@email.boulanger.com designates 172.82.236.155 as permitted sender) smtp.mailfrom=boulanger@email.boulanger.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.boulanger.com
+Return-Path: <boulanger@email.boulanger.com>
+Received: from r155.email.boulanger.com (r155.email.boulanger.com. [172.82.236.155])
+        by mx.google.com with ESMTPS id 5b1f17b1804b1-454dd475718si26182985e9.38.2025.07.11.02.42.55
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 11 Jul 2025 02:42:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of boulanger@email.boulanger.com designates 172.82.236.155 as permitted sender) client-ip=172.82.236.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.boulanger.com header.s=boulanger header.b=Dhj2wxY5;
+       spf=pass (google.com: domain of boulanger@email.boulanger.com designates 172.82.236.155 as permitted sender) smtp.mailfrom=boulanger@email.boulanger.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.boulanger.com
+Return-Path: <boulanger@email.boulanger.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=email.boulanger.com;
+	s=boulanger; t=1752226973;
+	bh=87t4Ito9gz00geijyC+BYc+IAsQ3hnGD7hMRCQbg5og=;
+	h=From:Subject:Date:To:MIME-Version:Message-ID:List-Unsubscribe:
+	 Content-Type;
+	b=Dhj2wxY5tM4GDeJz3Or5mLez0ke6PDNZ/96OOCY3XKJD69AUUGg4QaqNH3ceLoctA
+	 eIYztygT4Y22umcfgsJMDwlFecTsAtUPmC3bHPudLqsj7y+tzFAVG46OfMstchLhEM
+	 UXuovhMwl25VKVH7KinDs+WtYOewhTTHsqt0055MTFLv6BqZGhNcnZatIEkmW6q5Jg
+	 IRrnpwsRYgSqSEHRoj1n4od2gVWspZIjrPFZBAo4NWCVhH7gJ/J5FfFd8+05r+mwSE
+	 9ML4UYh1U1LBaO+vAMVXnWc3T6KdC1H+vNfLc21D1TFXj/YEJSge6E2z8hr6VjT+Um
+	 2c9VqJDeOzM4Q==
+X-MSFBL: /yC7Tc755X4pEBxeCFikOXZAgIRoVm/AzvM2cz5dMS4=|eyJnIjoicHJvZC5jb21
+	tZXJjZV81Y2I4NjU2My01MDllLTRkMzktODcwZS1kYWM1YThiMWIwZDgiLCJiIjo
+	iYm91bGFuZ2VyXzE3Mi44Mi4yMzYuMTU1X3Byb2QuY29tbWVyY2VfNWNiODY1NjM
+	tNTA5ZS00ZDM5LTg3MGUtZGFjNWE4YjFiMGQ4IiwiciI6Imd1eWtlbnkubmRheWl
+	6ZXllOEBnbWFpbC5jb20iLCJyY3B0X21ldGEiOnsgIm0iOiAiLTE0Njc4MjE2MDc
+	iLCAiZCI6ICI3MTM4NjE0OCIsICJpbiI6ICJib3VsYW5nX21pZF9wcm9kMSIsICJ
+	yIjogImd1eWtlbnkubmRheWl6ZXllOEBnbWFpbC5jb20iIH19
+Received: from [10.1.1.122] ([10.1.1.122:35163] helo=r155.email.boulanger.com) by irl1-prod1-mta-i-0f71dceb4438a8d82 (envelope-from <boulanger@email.boulanger.com>) (ecelerity 4.4.1.20033 r(msys-ecelerity:tags/4.4.1.0^0)) with ESMTP id 23/AE-21104-D9CD0786; Fri, 11 Jul 2025 09:42:53 +0000
+From: "Boulanger" <boulanger@email.boulanger.com>
+Subject: =?UTF-8?b?TGVzIGJvbnMgcGxhbnMgZGUgbGEgQnJhZGVyaWUgc29udCBsw6Ag8J+knQ==?=
+Date: Fri, 11 Jul 2025 10:42:51 +0100
+To: <guykeny.ndayizeye8@gmail.com>
+Reply-To: =?windows-1252?Q?Ne_pas_r=E9pondre_=E0_cet_email?= <ne_pas_repondre@email.boulanger.com>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 6.7.0
+Message-ID: <NM6A882D1D904414424boulang_mid_prod1@email.boulanger.com>
+List-Unsubscribe: <mailto:boulanger@email.boulanger.com?subject=unsubscribe%3CNM6A882D1D904414424boulang_mid_prod1@email.boulanger.com%3E>
+Precedence: Bulk
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" lang=3D"fr"=
+ xml:lang=3D"fr">
+<head>
+<!--[if mso]>
+<xml xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings></xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/>
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"/=
+>
+<title> Les bons plans de la Braderie sont l&agrave; &#x1F91D;</title>
+<style type=3D"text/css">span.MsoHyperlink{mso-style-priority:1;color:inher=
+it}span.MsoHyperlinkFollowed{mso-style-priority:1;
+color:inherit}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;=
+padding:0;color:#000000;margin:0 auto}td{line-height:100%}
+img{outline:0;text-decoration:none}a img{border:none}u+* img+div{display:no=
+ne}table td{border-collapse:collapse;mso-line-height-rule:exactly}
+table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}table =
+*{box-sizing:content-box}table{box-sizing:border-box}
+a{color:inherit;text-decoration:none;mso-line-height-rule:exactly}.appleLin=
+ks,.appleLinksWhite{text-decoration:none !important}
+a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !im=
+portant;font-size:inherit !important;font-family:inherit !important;
+font-weight:inherit !important;line-height:inherit !important}table[class^=
+=3Dox] sup{font-size:.7em;vertical-align:baseline}
+sup{font-size:.8em;vertical-align:text-top;line-height:1;height:0;mso-text-=
+raise:24%}div>u+* table{zoom:100%}.ms-outlook-linkify{color:inherit !import=
+ant}
+@font-face{font-family:OpenSans;font-weight:400;src:url('https://t.email.bo=
+ulanger.com/res/img/C8F3E378D64E4F951A601D2E5F74FBA2.woff2') format('woff')
+}:not(#outlook).opensans{font-family:OpenSans,Arial,Helvetica,sans-serif !i=
+mportant}@font-face{font-family:OpenSansBold;
+font-weight:700;src:url('https://t.email.boulanger.com/res/img/44EACF4FE48D=
+1399EDCBEFB315C438B5.woff2') format('woff')
+}:not(#outlook).opensansbold{font-family:OpenSansBold,Arial,Helvetica,sans-=
+serif !important}
+@media screen and (min-width:451px) and (max-width:640px),screen and (min-d=
+evice-width:451px) and (max-device-width:640px){.t_w40p{width:40% !importan=
+t}
+=2Et_w50p{width:50% !important}.t_w56p{width:56% !important}.t_w23d5p{width=
+:23.5% !important}.t_w49p{width:49% !important}.t_w63p{width:63% !important=
+}
+=2Et_pt0px{padding-top:0 !important}.t_pt9px{padding-top:9px !important}.t_=
+w2p{width:2% !important}.t_w32p{width:32% !important}
+=2Et_w79p{width:79% !important}.t_w69p{width:69% !important}.t_w90p{width:9=
+0% !important}.t_pt20px{padding-top:20px !important}
+=2Et_fz15px{font-size:15px !important}.t_w95p{width:95% !important}.t_w100p=
+{width:100% !important}.t_v{display:block !important;
+font-size:inherit !important;max-height:none !important;max-width:none !imp=
+ortant;overflow:visible !important}.t_dnone{display:none !important}
+=2Et_opensans{font-family:OpenSans,Arial,Helvetica,sans-serif !important}.t=
+_opensansbold{font-family:OpenSansBold,Arial,Helvetica,sans-serif !importan=
+t}
+}
+@media screen and (max-width:450px),screen and (max-device-width:450px){.m_=
+w50p{width:50% !important}.m_bdtlrs10px{border-top-left-radius:10px !import=
+ant}
+=2Em_bdtrrs10px{border-top-right-radius:10px !important}.m_bdblrs10px{borde=
+r-bottom-left-radius:10px !important}.m_bdbrrs10px{border-bottom-right-radi=
+us:10px !important}
+=2Em_pt4px{padding-top:4px !important}.m_pb5px{padding-bottom:5px !importan=
+t}.m_h10px{height:10px !important}.m_fz10px{font-size:10px !important}
+=2Em_lh10px{line-height:10px !important}.m_pb9px{padding-bottom:9px !import=
+ant}.m_w72p{width:72% !important}.m_w2p{width:2% !important}
+=2Em_w49p{width:49% !important}.m_w90p{width:90% !important}.m_w81p{width:8=
+1% !important}.m_w75p{width:75% !important}.m_pt0px{padding-top:0 !importan=
+t}
+=2Em_flright{float:right !important}.m_flleft{float:left !important}.m_w48p=
+{width:48% !important}.m_pt25px{padding-top:25px !important}
+=2Em_pl10px{padding-left:10px !important}.m_w43p{width:43% !important}.m_w6=
+0p{width:60% !important}.m_pt10px{padding-top:10px !important}
+=2Em_pb11px{padding-bottom:11px !important}.m_fz15px{font-size:15px !import=
+ant}.m_w100p{width:100% !important}.m_w95p{width:95% !important}
+=2Em_v{display:block !important;font-size:inherit !important;max-height:non=
+e !important;max-width:none !important;overflow:visible !important}
+=2Em_dnone{display:none !important}.m_opensans{font-family:OpenSans,Arial,H=
+elvetica,sans-serif !important}.m_opensansbold{font-family:OpenSansBold,Ari=
+al,Helvetica,sans-serif !important}
+}
+@media screen and (min-width:640px),(orientation:landscape) and (min-width:=
+640px){.d_center{float:none !important;margin:auto !important}
+=2Ed_left{float:left !important}.d_right{float:right !important}
+}#converted-body .d_center{float:none;margin:auto}#converted-body .d_left{f=
+loat:left}#converted-body .d_right{float:right}
+a:focus-visible{transition:box-shadow .3s ease;outline:0;box-shadow:0 0 0 2=
+px hsla(288,100%,50%,.8)}</style></head>
+<body style=3D"background-color:#ffffff">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"width:100%;margin-top:-1px" role=3D"none">
+<tr class=3D"t_dnone m_dnone" aria-hidden=3D"true">
+<td height=3D"1" style=3D"height:1px;max-height:1px;font-size:1px;line-heig=
+ht:1px">
+<span style=3D"display:block;width:640px;min-width:640px">&nbsp;</span>
+</td></tr><tr><td style=3D"background-color:#ffffff" role=3D"main">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"background-color:#f5f5f5">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:11px;vertical-align:middle">
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:10px;background-color:#f6f6f6;padding-top:10px;verti=
+cal-align:middle">
+<br role=3D"none"/>La braderie d&#x2019;&#xE9;t&#xE9;, &#xE7;a commence che=
+z Boulanger ! <p style=3D"font-family:Arial,sans-serif;font-size:inherit;co=
+lor:#000000"> <a style=3D"TEXT-DECORATION: none; COLOR: rgb(0,0,0)" href=3D=
+"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,315938ec&e=3DcD=
+E9Q2lOc1ZxclZycUVFS2tYU0huNXYxdzRsVzJkMWVXJTJGWA&s=3DFPQOT8MNqwv9DvD-oylyYQ=
+04du5BcBf7oeBdqcHMJt4" target=3D"_blank" _type=3D"mirrorPage" _label=3D"Pag=
+e miroir"><U>Visualiser ce message</U></A>. </p>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"30%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w40p m_w50p" role=3D"=
+none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:5px;padding-bottom:10px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+8ed&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DTSrSf-wY3tj=
+nZUvIJL9Q2X05XO5s3mGjj5oWMf9vOuc" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"logo" target=3D"_bla=
+nk"><img src=3D"https://t.email.boulanger.com/res/img/382E206EBC2A5F8474086=
+E3494F3B3D4.png" alt=3D"" width=3D"192" style=3D"font-family:Arial,Helvetic=
+a,sans-serif;font-size:13px;line-height:13px;display:block;border:none" cla=
+ss=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"10" style=3D"height:10px;font-size:10px;line-height:10px"=
+> &zwnj; </td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"background-color:#9161c0">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td>
+<div style=3D"overflow:hidden" class=3D"m_bdtlrs10px m_bdtrrs10px m_bdblrs1=
+0px m_bdbrrs10px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#F" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px"> &zwnj; </td></tr=
+></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w95p" role=3D"none">
+<tr><td valign=3D"top" width=3D"49%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w95p" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:24px;text-align:center;vertical-align:middle" =
+class=3D"m_pt4px">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+90c&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DrIp4rf3dBUh=
+Z6oJsDhYA2VNf72wRViwnCDgHi7a0BAE" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"tetiere" target=3D"_=
+blank"><img src=3D"https://t.email.boulanger.com/res/img/2965525964718B9384=
+42E637747647D6.png" alt=3D"" width=3D"313" style=3D"font-family:Arial,Helve=
+tica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" =
+class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"51%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w95p" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle" class=3D"m_pb5px"=
+>
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+90d&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DoK8nnB7OdWd=
+VeA3ZcTyy4dr2PW4sxWsLYg2sXgnmz4Y" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"tetiere" target=3D"_=
+blank"><img src=3D"https://t.email.boulanger.com/res/img/65215575F7EBFAD1A8=
+55D4DF048EF8D1.png" alt=3D"" width=3D"326" style=3D"font-family:Arial,Helve=
+tica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" =
+class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"92%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w90p" role=3D"=
+none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#FFFFFF;text-=
+align:center;font-size:16px;padding-top:10px;padding-bottom:10px;vertical-a=
+lign:middle" class=3D"m_fz15px">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+90e&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3D20Q_1TKex0n=
+uY7oCohhMv_Z4AFN-vtT6mOQ9kJoEGR0" style=3D"color:#FFFFFF;display:block;text=
+-decoration:none;outline:0" title=3D"T=E9tiaire" target=3D"_blank">Guy Keny=
+,
+<br role=3D"none"/> <br role=3D"none"/>Pr&#xE9;parez l&#x2019;&#xE9;t&#xE9;=
+ en beaut&#xE9; avec la<span style=3D"font-weight:700"> braderie Boulanger<=
+/span>. &#x2600;&#xFE0F;<br role=3D"none"/><br role=3D"none"/>Que vous part=
+iez en vacances ou restiez &#xE0; la maison, profitez d&#x2019;<span style=
+=3D"font-weight:700">offres exceptionnelles</span> sur les indispensables :=
+ TV, barbecue, casque, frigo&#x2026; Les bons plans sont l&#xE0;, &#xE0; vo=
+us d&#x2019;en profiter ! </a>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"30%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w56p m_w60p" role=3D"=
+none">
+<tr><td style=3D"height:40px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D" https://www.boulanger.com/evenement/braderie=3Fat_medium=3Demail&a=
+t_campaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMI=
+D=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:41px;width:190px"
+arcsize=3D"50%" 
+strokecolor=3D"#ffffff" strokeweight=3D"1px"
+fillcolor=3D"#ffffff" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#9161c0;font-size:16px;font-family:Arial,Helvetica,s=
+ans-serif;height:41px;text-align:center;font-weight:bold">
+Voir toutes les offres
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:20px;border-top-right-radius:20px;border=
+-bottom-left-radius:20px;border-bottom-right-radius:20px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,3159390f&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3DZoAtrQt1f95xUGBpM4Nfdjfsw9FYGMqPWMVLqIaxfUI" title=3D"cta_b=
+raderie" target=3D"_blank"><span style=3D"background-color:#ffffff;border-t=
+op:1px solid #ffffff;border-bottom:1px solid #ffffff;border-left:1px solid =
+#ffffff;border-right:1px solid #ffffff;border-top-left-radius:20px;border-t=
+op-right-radius:20px;border-bottom-left-radius:20px;border-bottom-right-rad=
+ius:20px;color:#9161c0;font-family:Arial,Helvetica,sans-serif;font-size:16p=
+x;text-align:center;line-height:40px;font-weight:700;mso-hide:all;display:b=
+lock">
+Voir toutes les offres</span>
+</a>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px" class=3D"m_h10px =
+m_fz10px m_lh10px"> &zwnj; </td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"background-color:#f6f6f6">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto;background-color:#f6F6F6" class=3D"d_cente=
+r t_w100p m_w100p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center t_w100p m_w=
+100p" aria-hidden=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px" class=3D"m_h10px =
+m_fz10px m_lh10px"> &zwnj; </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"23.5%" class=3D"t_w23d5p m_w49p m_flleft">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+910&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DXPDoyTqqh-z=
+FIA33mdLfbVBnAwYncIo5mlm6qRU9-S4" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_PAM" target=
+=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/A515B1A655A3B=
+B550A90EA024AFAAF7B.png" alt=3D"" width=3D"142" style=3D"font-family:Arial,=
+Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:n=
+one" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"77%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:5px;height:35px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/ME0825RESB=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:35px;width:110px"
+arcsize=3D"143%" 
+stroke=3D"f"
+fillcolor=3D"#9161c0" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#ffffff;font-size:15px;font-family:Arial,Helvetica,s=
+ans-serif;height:35px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,31593911&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3D1C_2UCCZOTJ3L7ECG_mHEJSBAkujSW-s0LlFsMTYzoE" title=3D"cta_p=
+am" target=3D"_blank"><span style=3D"background-color:#9161c0;border-top-le=
+ft-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50px;=
+border-bottom-right-radius:50px;color:#ffffff;font-family:Arial,Helvetica,s=
+ans-serif;font-size:15px;text-align:center;line-height:35px;font-weight:700=
+;mso-hide:all;display:block">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"2%" class=3D"t_w2p m_w2p m_flleft" aria-hidden=
+=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"23.5%" class=3D"t_w23d5p m_w49p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+912&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3Dl-AqQCeOE0a=
+hq4HWRCS696QSUMyDMb2oVI7joRfOF2g" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"cta_gam" target=3D"_=
+blank"><img src=3D"https://t.email.boulanger.com/res/img/9943DA6CBB366B6A07=
+647D586C1D5F32.png" alt=3D"" width=3D"142" style=3D"font-family:Arial,Helve=
+tica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" =
+class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"77%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:5px;height:35px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/ME0825RESE=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:35px;width:110px"
+arcsize=3D"143%" 
+stroke=3D"f"
+fillcolor=3D"#9161c0" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#ffffff;font-size:15px;font-family:Arial,Helvetica,s=
+ans-serif;height:35px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,31593913&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3DJolvV9SJAyCEEAMZPqPshMzbe04AZ_CXHlJUmhvYsUA" title=3D"cta_g=
+am" target=3D"_blank"><span style=3D"background-color:#9161c0;border-top-le=
+ft-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50px;=
+border-bottom-right-radius:50px;color:#ffffff;font-family:Arial,Helvetica,s=
+ans-serif;font-size:15px;text-align:center;line-height:35px;font-weight:700=
+;mso-hide:all;display:block">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"2%" class=3D"t_w2p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"23.5%" class=3D"t_w23d5p m_w49p m_flleft">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+914&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3D3thU7_CWFUz=
+iSbdTZTMkErCSb61_hqYJDy3HLqST_lI" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"entr=E9e_son" target=
+=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/E2FF92B74CB02=
+F6F81C4C147C75EF8A5.png" alt=3D"" width=3D"142" style=3D"font-family:Arial,=
+Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:n=
+one" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"77%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:5px;height:35px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/ME0825RESH=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:35px;width:110px"
+arcsize=3D"143%" 
+stroke=3D"f"
+fillcolor=3D"#9161c0" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#ffffff;font-size:15px;font-family:Arial,Helvetica,s=
+ans-serif;height:35px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,31593915&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3DEHVw1MGXEh-HT-eJP9sgKR7t7jJwr0c0B5GtGgT5hIU" title=3D"cta_s=
+on" target=3D"_blank"><span style=3D"background-color:#9161c0;border-top-le=
+ft-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50px;=
+border-bottom-right-radius:50px;color:#ffffff;font-family:Arial,Helvetica,s=
+ans-serif;font-size:15px;text-align:center;line-height:35px;font-weight:700=
+;mso-hide:all;display:block">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"2%" class=3D"t_w2p m_w2p m_flleft" aria-hidden=
+=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"23.5%" class=3D"t_w23d5p m_w49p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+916&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DVMWNtYnzkES=
+A3Fo4sGwTD2GzWBxzSkwT74r6rIBaLdA" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_tv" target=
+=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/6B1E4A5B24E1B=
+3BB96F968F21C0DF99F.png" alt=3D"" width=3D"142" style=3D"font-family:Arial,=
+Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:n=
+one" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"77%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:5px;height:35px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/ME0825RESI=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:35px;width:110px"
+arcsize=3D"143%" 
+stroke=3D"f"
+fillcolor=3D"#9161c0" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#ffffff;font-size:15px;font-family:Arial,Helvetica,s=
+ans-serif;height:35px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,31593917&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3DpGlwN3FM-CKaOryKzWrwuDAdGkNazdVtFAoaBmN0CcA" title=3D"Cta_t=
+v" target=3D"_blank"><span style=3D"background-color:#9161c0;border-top-lef=
+t-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50px;b=
+order-bottom-right-radius:50px;color:#ffffff;font-family:Arial,Helvetica,sa=
+ns-serif;font-size:15px;text-align:center;line-height:35px;font-weight:700;=
+mso-hide:all;display:block">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center t_w100p m_w=
+100p" aria-hidden=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px" class=3D"m_h10px =
+m_fz10px m_lh10px"> &zwnj; </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"49%" class=3D"t_w49p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle;border-top-left-ra=
+dius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;borde=
+r-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" class=
+=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+918&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DR_QlXfN23kl=
+HYBHx7E0Aey1M-Kx-br4Tc_szzq5pi_8" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_recond" tar=
+get=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/9BE3FE9671=
+A06E670707AEAC77A8CC2F.jpg" alt=3D"" width=3D"297" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"2%" class=3D"t_w2p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"49%" class=3D"t_w49p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle;border-top-left-ra=
+dius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;borde=
+r-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" class=
+=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+919&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DuiZGekwCQoq=
+t7dd5KI7UXR4R-b8-GAAzgor-wwlnhvY" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_loc" target=
+=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/C9C7CBE31B3E0=
+E59EEE7431B964BA66A.jpg" alt=3D"" width=3D"297" style=3D"font-family:Arial,=
+Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:n=
+one" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px"> &zwnj; </td></tr=
+></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle;border-top-left-ra=
+dius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;borde=
+r-bottom-right-radius:10px;border-top:1px solid #9161c0;border-right:1px so=
+lid #9161c0;border-bottom:1px solid #9161c0;border-left:1px solid #9161c0;b=
+order-collapse:separate;overflow:hidden" class=3D"t_bdclseparate t_ovhidden=
+ m_bdclseparate m_ovhidden">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+91a&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DltQKPBEZXLK=
+bHOnV2hCkBRNpLChKgFRab55NXIU-UaI" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_mag" target=
+=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/C2D69F98A72A9=
+AD650909134012EF32F.jpg" alt=3D"" width=3D"606" style=3D"font-family:Arial,=
+Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:n=
+one" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px"> &zwnj; </td></tr=
+></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:16px;padding-top:8px;padding-bottom:8px;vertical-ali=
+gn:middle">
+<span style=3D"font-weight:700">C&#x2019;est le dernier jour des ventes fla=
+sh, profitez-en ! &#x26A1;</span>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"32%" class=3D"t_w32p m_w49p m_flleft">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#9161c0" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w79p m_mauto m_w90p" =
+role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:10px;padding-bottom:10px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+91b&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3D6na2cT16A67=
+ZCnZDvcGCJ1mdsvbC6BhRj5Z8wAhwHaE" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_gam_vf" tar=
+get=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/367914BF29=
+11DBAA7C3F7902A39A73E0.png" alt=3D"" width=3D"155" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"54%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w63p m_mauto m_w75p" =
+role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:10px;padding-bottom:0;text-align:center" class=
+=3D"m_pt0px m_pb9px">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+91c&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3D1Fwkb1_ashm=
+vmepJzli82BVTX4CNmFpToUULD1S0dmA" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_gam_vf" tar=
+get=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/E659D100A1=
+1EFEB87C8EA9F349E1B527.png" alt=3D"" width=3D"105" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"61%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w72p" role=3D"=
+none">
+<tr><td style=3D"padding-top:22px;padding-bottom:15px;height:40px" class=3D=
+"m_pt0px m_pb11px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/divs25gamz=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:40px;width:118px"
+arcsize=3D"125%" 
+stroke=3D"f"
+fillcolor=3D"#FFFFFF" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#d14603;font-size:16px;font-family:Arial,Helvetica,s=
+ans-serif;height:40px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,3159391d&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3DU0HBOVjTuVbREoIT2GrnNyEWubZHUyjmBNOJyzaDom0" title=3D"Cta_g=
+am_vf" target=3D"_blank"><span style=3D"background-color:#FFFFFF;border-top=
+-left-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50=
+px;border-bottom-right-radius:50px;color:#d14603;font-family:Arial,Helvetic=
+a,sans-serif;font-size:16px;text-align:center;line-height:40px;font-weight:=
+700;mso-hide:all;display:block" class=3D"t_fz15px m_fz15px">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"2%" class=3D"t_w2p m_w2p m_flleft" aria-hidden=
+=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"32%" class=3D"t_w32p m_w49p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#9161c0" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w79p m_mauto m_w90p" =
+role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:10px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+91e&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DjI2b6uH5Wyy=
+OJiLKFowIACvuOq-4LuvMBbHiiIQa64o" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_tv_vf" targ=
+et=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/5FA1E601B85=
+967BA2BE46039A7E6B970.png" alt=3D"" width=3D"155" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border=
+:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"61%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w79p m_mauto m_w81p" =
+role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:3px;text-align:center" class=3D"t_pt0px m_pt0p=
+x">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+91f&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DcegcZOjTfFK=
+7qlamaJeNuneInut8inXpj5DwcC4xX3k" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_tv_vf" targ=
+et=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/B92A114D98D=
+17BCAAD92D22BA8F585E2.png" alt=3D"" width=3D"118" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border=
+:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"61%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w75p" role=3D"=
+none">
+<tr><td style=3D"padding-top:13px;padding-bottom:15px;height:40px" class=3D=
+"t_pt9px m_pt0px m_pb11px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/ME0825IMA1=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:40px;width:118px"
+arcsize=3D"125%" 
+stroke=3D"f"
+fillcolor=3D"#FFFFFF" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#d14603;font-size:16px;font-family:Arial,Helvetica,s=
+ans-serif;height:40px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,31593920&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3Dz40ZSqf9O3V_NdMXwj2CbvI9O3h7G4ZrU8kiiNxrcoE" title=3D"Cta_t=
+v_vf" target=3D"_blank"><span style=3D"background-color:#FFFFFF;border-top-=
+left-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50p=
+x;border-bottom-right-radius:50px;color:#d14603;font-family:Arial,Helvetica=
+,sans-serif;font-size:16px;text-align:center;line-height:40px;font-weight:7=
+00;mso-hide:all;display:block" class=3D"t_fz15px m_fz15px">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"2%" class=3D"t_w2p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"32%" class=3D"t_w32p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#FFFFFF" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top-left-radius:10px;border-top-right-radius:10px;bord=
+er-bottom-left-radius:10px;border-bottom-right-radius:10px;overflow:hidden"=
+>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;background-color:#9161c0" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w79p m_flleft m_w48p"=
+ role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:10px;text-align:center" class=3D"m_pt25px m_pl=
+10px">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+921&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3Du3rM--Rg_AG=
+D5x4zMLdh05IRxaZMEnn7qKHdXIFVDUk" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_son_vf" tar=
+get=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/568D4150BD=
+791CF41DCB7829C8303583.png" alt=3D"" width=3D"155" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"56%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w69p m_mauto m_w43p" =
+role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:5px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+922&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DF3OzjxKtE1c=
+-V8B6E-OZGz8-ji70UXxxQ9tIIjJFvBU" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_son_vf" tar=
+get=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/E19F1651DF=
+9B4249C3A095679DD8BBC8.png" alt=3D"" width=3D"108" style=3D"font-family:Ari=
+al,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;borde=
+r:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"61%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w90p m_w60p" role=3D"=
+none">
+<tr><td style=3D"padding-top:22px;padding-bottom:15px;height:40px" class=3D=
+"t_pt20px m_pt10px m_pb11px">
+<!--[if mso]>
+<v:roundrect
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://www.boulanger.com/opeco/ME0725IMA6=3Fat_medium=3Demail&at_c=
+ampaign=3Dc_0711_lancement_braderie_actifs&at_emailtype=3Dcommercial&PMID=
+=3D53A28DD551B4D8923068EE57F69B231B"
+style=3D"v-text-anchor:middle;height:40px;width:118px"
+arcsize=3D"125%" 
+stroke=3D"f"
+fillcolor=3D"#FFFFFF" fill=3D"t">
+<w:anchorlock/>
+<center style=3D"color:#d14603;font-size:16px;font-family:Arial,Helvetica,s=
+ans-serif;height:40px;text-align:center;font-weight:bold">
+D&#xE9;couvrir
+</center>
+</v:roundrect>
+<![endif]-->
+<a style=3D"border-top-left-radius:50px;border-top-right-radius:50px;border=
+-bottom-left-radius:50px;border-bottom-right-radius:50px;mso-hide:all;displ=
+ay:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:10=
+0%" class=3D"t_w100p m_w100p" href=3D"https://t.email.boulanger.com/r/=3Fid=
+=3Dh1b24ca24,3f9c66e6,31593923&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9i=
+cmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTd=
+GNjlCMjMxQg&s=3Da9JLnhDXChe1NWNfQ7yY_joIX2sXS5vQMhX4hn4zPgM" title=3D"cta_s=
+on_vf" target=3D"_blank"><span style=3D"background-color:#FFFFFF;border-top=
+-left-radius:50px;border-top-right-radius:50px;border-bottom-left-radius:50=
+px;border-bottom-right-radius:50px;color:#d14603;font-family:Arial,Helvetic=
+a,sans-serif;font-size:16px;text-align:center;line-height:40px;font-weight:=
+700;mso-hide:all;display:block" class=3D"t_fz15px m_fz15px">
+D&#xE9;couvrir</span>
+</a>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px"> &zwnj; </td></tr=
+></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"border-collapse:separate;overflow:hidden" class=3D"d_=
+center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role=3D"none">
+<tr><td style=3D"text-align:center;vertical-align:middle;border-top-left-ra=
+dius:10px;border-top-right-radius:10px;border-bottom-left-radius:10px;borde=
+r-bottom-right-radius:10px;border-collapse:separate;overflow:hidden" class=
+=3D"t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+924&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29=
+tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3DQt894_9THNU=
+BG1BSvyyvxqJxxYTaAHrdDouO--lEzbY" width=3D"100%" style=3D"color:#000000;out=
+line:0;border:none;margin:auto;display:block" title=3D"Entr=E9e_4XSF" targe=
+t=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/EA487D187462=
+ED191C49634F55A59A54.jpg" alt=3D"" width=3D"608" style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:=
+none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px"> &zwnj; </td></tr=
+></table>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" lang=3D"fr"=
+ xml:lang=3D"fr">
+<head>
+<!--[if gte mso 9]>
+<xml xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings></xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"/=
+>
+<title></title>
+<style type=3D"text/css">span.MsoHyperlink{mso-style-priority:1;color:inher=
+it}span.MsoHyperlinkFollowed{mso-style-priority:1;
+color:inherit}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;=
+padding:0;color:#000000;margin:0 auto}td{line-height:100%}
+img{outline:0;text-decoration:none}a img{border:none}u+* img+div{display:no=
+ne}table td{border-collapse:collapse;mso-line-height-rule:exactly}
+table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}a{colo=
+r:inherit;text-decoration:none;mso-line-height-rule:exactly}
+=2EappleLinks,.appleLinksWhite{text-decoration:none !important}a[x-apple-da=
+ta-detectors]{color:inherit !important;text-decoration:none !important;
+font-size:inherit !important;font-family:inherit !important;font-weight:inh=
+erit !important;line-height:inherit !important}
+table[class^=3Dox] sup{font-size:.7em;vertical-align:baseline}sup{font-size=
+:.8em;vertical-align:text-top;line-height:1;height:0;
+mso-text-raise:24%}div>u+* table{zoom:100%}.ms-outlook-linkify{color:inheri=
+t !important}@font-face{font-family:OpenSans;font-weight:400;
+src:url('https://t.email.boulanger.com/res/img/C8F3E378D64E4F951A601D2E5F74=
+FBA2.woff2') format('woff')
+}:not(#outlook).opensans{font-family:OpenSans,Arial,Helvetica,sans-serif !i=
+mportant}@font-face{font-family:OpenSansBold;
+font-weight:700;src:url('https://t.email.boulanger.com/res/img/44EACF4FE48D=
+1399EDCBEFB315C438B5.woff2') format('woff')
+}:not(#outlook).opensansbold{font-family:OpenSansBold,Arial,Helvetica,sans-=
+serif !important}
+@media screen and (min-width:451px) and (max-width:640px),screen and (min-d=
+evice-width:451px) and (max-device-width:640px){.t_flnone{float:none !impor=
+tant}
+=2Et_w100p{width:100% !important}.t_flright{float:right !important}.t_w50p{=
+width:50% !important}.t_flleft{float:left !important}
+=2Et_w50px{width:50px !important}.t_pb5px{padding-bottom:5px !important}.t_=
+h56px{height:56px !important}.t_pt0px{padding-top:0 !important}
+=2Et_pb0px{padding-bottom:0 !important}.t_w85p{width:85% !important}.t_tace=
+nter{text-align:center !important}.t_h50px{height:50px !important}
+=2Et_pl0px{padding-left:0 !important}.t_w80p{width:80% !important}.t_w33d33=
+p{width:33.33% !important}.t_w30px{width:30px !important}
+=2Et_w33d34p{width:33.34% !important}.t_v{display:block !important;font-siz=
+e:inherit !important;max-height:none !important;
+max-width:none !important;overflow:visible !important}.t_dnone{display:none=
+ !important}.t_opensans{font-family:OpenSans,Arial,Helvetica,sans-serif !im=
+portant}
+=2Et_opensansbold{font-family:OpenSansBold,Arial,Helvetica,sans-serif !impo=
+rtant}
+}
+@media screen and (max-width:450px),screen and (max-device-width:450px){.m_=
+flnone{float:none !important}.m_w100p{width:100% !important}
+=2Em_flright{float:right !important}.m_w50p{width:50% !important}.m_flleft{=
+float:left !important}.m_w50px{width:50px !important}
+=2Em_pb5px{padding-bottom:5px !important}.m_w90p{width:90% !important}.m_fz=
+14px{font-size:14px !important}.m_h60px{height:60px !important}
+=2Em_lh16px{line-height:16px !important}.m_bgc313131{background-color:#3131=
+31 !important}.m_w26p{width:26% !important}.m_cffffff{color:#ffffff !import=
+ant}
+=2Em_taleft{text-align:left !important}.m_fz13px{font-size:13px !important}=
+.m_h56px{height:56px !important}.m_pt0px{padding-top:0 !important}
+=2Em_pb0px{padding-bottom:0 !important}.m_lh15px{line-height:15px !importan=
+t}.m_w74p{width:74% !important}.m_w33d33p{width:33.33% !important}
+=2Em_w32px{width:32px !important}.m_w33d34p{width:33.34% !important}.m_v{di=
+splay:block !important;font-size:inherit !important;
+max-height:none !important;max-width:none !important;overflow:visible !impo=
+rtant}.m_dnone{display:none !important}.m_opensans{font-family:OpenSans,Ari=
+al,Helvetica,sans-serif !important}
+=2Em_opensansbold{font-family:OpenSansBold,Arial,Helvetica,sans-serif !impo=
+rtant}
+}
+@media screen and (min-width:640px),(orientation:landscape) and (min-width:=
+640px){.d_center{float:none !important;margin:auto !important}
+=2Ed_left{float:left !important}.d_right{float:right !important}
+}a:focus-visible{transition:box-shadow .3s ease;outline:0;box-shadow:0 0 0 =
+2px hsla(288,100%,50%,.8)}.d_w640px{mso-element-frame-width:640px !importan=
+t;
+mso-element-wrap:no-wrap-beside !important;mso-element-left:center !importa=
+nt}</style></head>
+<body style=3D"background-color:#ffffff">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"width:100%;margin-top:-1px" role=3D"presentation">
+<tr class=3D"t_dnone m_dnone" aria-hidden=3D"true">
+<td height=3D"1" style=3D"height:1px;max-height:1px;font-size:1px;line-heig=
+ht:1px">
+<span style=3D"display:block;width:640px;min-width:640px">&nbsp;</span>
+</td></tr><tr><td style=3D"background-color:#ffffff">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_w640px d_center t_flnone t_mau=
+to t_w100p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto;background-color:#434648" class=3D"d_cente=
+r t_flnone t_mauto t_w100p m_flnone m_mauto m_w100p" 
+role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"320" align=
+=3D"left" class=3D"d_left t_w50p t_flleft m_w100p m_flright" role=3D"presen=
+tation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"320" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"left" class=3D"d_left t_w50p t_flleft m_w50p m_flleft" role=3D"presenta=
+tion">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"48" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w50p=
+x m_flnone m_mauto m_w50px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:5px;text-align:center" class=3D"t_pb5px m_pb5p=
+x">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+925" width=3D"48" style=3D"color:#000000;outline:0;border:none;margin:auto;=
+display:block" class=3D"t_w100p m_w100p" title=3D"15j pour changer avis" ta=
+rget=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/BCBD81D29=
+E870BDC84630EC60878A854.png" alt=3D"sav" width=3D"48" style=3D"font-family:=
+Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;bo=
+rder:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w90p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;text-transform:none;font-size:12px;
+height:53px;vertical-align:middle;line-height:14px;font-weight:700"
+class=3D"t_h56px t_pt0px t_pb0px m_fz14px m_h60px m_lh16px" height=3D"53">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+926" style=3D"color:#ffffff;line-height:14px;display:block;text-decoration:=
+none;outline:0" class=3D"m_lh16px" title=3D"15j pour changer avis" target=
+=3D"_blank"><span style=3D"font-size:inherit">Retour sous</span><br/><span =
+style=3D"font-size:inherit">15 jours</span></a>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"right" class=3D"d_right t_w50p t_flright m_w50p m_flright" role=3D"pres=
+entation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"48" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w50p=
+x m_flnone m_mauto m_w50px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:5px;text-align:center" class=3D"t_pb5px m_pb5p=
+x">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+927" width=3D"48" style=3D"color:#000000;outline:0;border:none;margin:auto;=
+display:block" class=3D"t_w100p m_w100p" title=3D"meilleurs prix" target=3D=
+"_blank"><img src=3D"https://t.email.boulanger.com/res/img/3CAB286FD28D03BD=
+C830D677541EA98C.png" alt=3D"telephone" width=3D"48" style=3D"font-family:A=
+rial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;bor=
+der:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w90p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;text-transform:none;font-size:12px;
+height:53px;vertical-align:middle;line-height:14px;font-weight:700"
+class=3D"t_h56px t_pt0px t_pb0px m_fz14px m_h60px m_lh16px" height=3D"53">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+928" style=3D"color:#ffffff;line-height:14px;display:block;text-decoration:=
+none;outline:0" class=3D"m_lh16px" title=3D"meilleurs prix" target=3D"_blan=
+k"><span style=3D"font-size:inherit">Meilleurs prix</span><br/><span style=
+=3D"font-size:inherit">garantis</span></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"320" align=
+=3D"right" class=3D"d_right t_w50p t_flright m_w100p m_flright" role=3D"pre=
+sentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"320" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"left" class=3D"d_left t_w50p t_flleft m_w50p m_flleft" role=3D"presenta=
+tion">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"48" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w50p=
+x m_flnone m_mauto m_w50px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:5px;text-align:center" class=3D"t_pb5px m_pb5p=
+x"><a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31=
+593929" width=3D"48" style=3D"color:#000000;outline:0;border:none;margin:au=
+to;display:block" class=3D"t_w100p m_w100p" title=3D"service apres vente" t=
+arget=3D"_blank"><img src=3D"https://t.email.boulanger.com/res/img/8A123119=
+A87A3A28F730E94A9301EB5A.png" alt=3D"telephone" width=3D"48" style=3D"font-=
+family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:b=
+lock;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w90p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;text-transform:none;font-size:12px;
+height:53px;vertical-align:middle;line-height:14px;font-weight:700"
+class=3D"t_h56px t_pt0px t_pb0px m_fz14px m_h60px m_lh16px" height=3D"53">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+92a" style=3D"color:#ffffff;line-height:14px;display:block;text-decoration:=
+none;outline:0" class=3D"m_lh16px" title=3D"SAV" target=3D"_blank"> Service=
+ <br/>
+apr&#xE8;s vente </a>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"right" class=3D"d_right t_w50p t_flright m_w50p m_flright" role=3D"pres=
+entation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"48" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w50p=
+x m_flnone m_mauto m_w50px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:5px;text-align:center" class=3D"t_pb5px m_pb5p=
+x">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+92b" width=3D"48" style=3D"color:#000000;outline:0;border:none;margin:auto;=
+display:block" class=3D"t_w100p m_w100p" title=3D"vos garanties" target=3D"=
+_blank"><img src=3D"https://t.email.boulanger.com/res/img/A44C76BF5F5EC514F=
+7DE641678CB4B27.png" alt=3D"telephone" width=3D"48" style=3D"font-family:Ar=
+ial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;bord=
+er:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr><tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w90p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;text-transform:none;font-size:12px;
+height:53px;vertical-align:middle;line-height:14px;font-weight:700"
+class=3D"t_h56px t_pt0px t_pb0px m_fz14px m_h60px m_lh16px" height=3D"53">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+92c" style=3D"color:#ffffff;line-height:14px;display:block;text-decoration:=
+none;outline:0" class=3D"m_lh16px" title=3D"Garanties" target=3D"_blank"> 
+Vos <br/>
+garanties </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto;background-color:#313131" class=3D"d_cente=
+r t_flnone t_mauto t_w100p m_flnone m_mauto m_w100p" 
+role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:12px;background-color:#434648;
+padding-top:5px;padding-bottom:10px;vertical-align:middle">
+<span style=3D"font-size:11px">Services soumis &#xE0; </span><a href=3D"htt=
+ps://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,3159392d" style=3D"=
+color:#ffffff;text-decoration:underline;font-size:11px">conditions</a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td>
+<div style=3D"border-top-left-radius:0;border-top-right-radius:0;border-bot=
+tom-left-radius:0;border-bottom-right-radius:0;
+display:block;overflow:hidden;mso-border-alt:none #ffffff 0;background-colo=
+r:#434648"
+class=3D"m_bgc313131">
+<!--[if gte mso 9]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+width=3D"640" style=3D"background-color:#434648;border-collapse:collapse"><=
+tr><td style=3D"vertical-align:top;border-collapse:collapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"320" align=
+=3D"left" class=3D"d_left t_w50p t_flleft m_w26p m_flleft" role=3D"presenta=
+tion">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"288" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w85p=
+ m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#FFFFFF;text-=
+align:right;text-transform:none;font-size:14px;
+height:52px;padding-left:20px;vertical-align:middle;line-height:16px"
+class=3D"t_tacenter t_h50px t_pl0px m_ffarialhelveticasansminserif m_cfffff=
+f m_taleft m_fz13px m_h56px m_pt0px m_pb0px m_lh15px" height=3D"52"> Restez=
+ connect&#xE9;s </td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"320" align=
+=3D"right" class=3D"d_right t_w50p t_flright m_w74p m_flright" role=3D"pres=
+entation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"160" align=
+=3D"left" class=3D"d_left t_flleft t_w80p m_flleft m_w100p" role=3D"present=
+ation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"53" align=
+=3D"left" class=3D"d_left t_w33d33p t_flleft m_w33d33p m_flleft" role=3D"pr=
+esentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"32" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w30p=
+x m_flright m_w32px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:10px;padding-bottom:10px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+92e" width=3D"32" style=3D"color:#000000;outline:0;border:none;margin:auto;=
+display:block" class=3D"t_w100p m_w100p" title=3D"facebook" target=3D"_blan=
+k"><img src=3D"https://t.email.boulanger.com/res/img/12E168452B6DE6BF37057F=
+1EBAC22D25.png" alt=3D"Facebook" width=3D"32" style=3D"font-family:Arial,He=
+lvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:non=
+e" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"53" align=
+=3D"left" class=3D"d_left t_w33d33p t_flleft m_w33d33p m_flleft" role=3D"pr=
+esentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"32" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w30p=
+x m_flnone m_mauto m_w32px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:10px;padding-bottom:10px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+92f" width=3D"32" style=3D"color:#000000;outline:0;border:none;margin:auto;=
+display:block" class=3D"t_w100p m_w100p" title=3D"twitter" target=3D"_blank=
+"><img src=3D"https://t.email.boulanger.com/res/img/DC50B6A447F3E8E9757927C=
+3290BDE0D.png" alt=3D"Facebook" width=3D"32" style=3D"font-family:Arial,Hel=
+vetica,sans-serif;font-size:13px;line-height:13px;display:block;border:none=
+" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"54" align=
+=3D"right" class=3D"d_right t_w33d34p t_flright m_w33d34p m_flright" role=
+=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"32" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w30p=
+x m_flleft m_w32px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:10px;padding-bottom:10px;text-align:center">
+<a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593=
+930" width=3D"32" style=3D"color:#000000;outline:0;border:none;margin:auto;=
+display:block" class=3D"t_w100p m_w100p" title=3D"instagram" target=3D"_bla=
+nk"><img src=3D"https://t.email.boulanger.com/res/img/B68B3F2147ED1A56CAEDC=
+B2C64DE9596.png" alt=3D"Facebook" width=3D"32" style=3D"font-family:Arial,H=
+elvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:no=
+ne" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]></td></tr></table><![endif]--></div>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_w640px d_center t_flnone t_mau=
+to t_w100p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_flnone t_mauto t_w100=
+p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:11px;padding-top:10px;
+padding-bottom:10px;vertical-align:middle">
+ <span style=3D"font:11px Open Sans,Arial,sans-serif;color:#000000;">Pour v=
+ous d&eacute;sabonner de nos emails, <a style=3D"COLOR:#000000; TEXT-DECORA=
+TION: none" href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c6=
+6e6,31593931&e=3DcDE9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDI9OUM2Rj=
+k3MTk2Qjg3MUM5RTM2NDBERDA3MUM4OTkyRUI4NzVGMjI1NzhEQUQzNDZDNjBEMThDNUY2M0IzO=
+DJBODZERDIyMDJCMTA1N0QwMzAzREUwM0YxNDFDMDA2MDU3NEQ3RDAwRjI4M0MxNjA0NzBFRkU4=
+MzJDRjQyQTg0QTNGNjU5NEM3ODIzOTY4MjM3MDc1RURGRDczMDZFN0FEQQ&s=3DLqF2HzqYQgyC=
+Q341JsdU212HROY7r87BqQsbuh9KoOY" target=3D"_blank" _type=3D"optout" _label=
+=3D"Lien de d=E9sinscription"><U>rendez-vous sur ce lien</U></A></span>  <b=
+r/><br/>Merci de ne pas r&#xE9;pondre &#xE0; cet email. Pour nous contacter=
+ : <a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,31=
+593932&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9=
+Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCMjMxQg&s=3Dw5WdiZnq=
+2lMPNLVk-0ZTHJW0KPPYWw3oWpe7hP2GoJw" style=3D"color:#000000;text-decoration=
+:underline">rendez-vous sur ce lien</a> </td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</body>
+</html>
+                                        
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"96%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=3D=
+"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:left;font-size:10px;background-color:#f6f6f6;padding-top:10px;padding=
+-bottom:10px;vertical-align:middle"> *Offre non applicable sur : casque Son=
+y WH-1000XM6, accessoires, consommables, ameublement de cuisine &#xE9;quip&=
+#xE9;e, produits Apple, produits vendus exclusivement en ligne, articles is=
+sus de la marketplace, produits reconditionn&#xE9;s, ainsi que sur les cont=
+rats d&#x2019;extension de garantie.<br role=3D"none"/><br role=3D"none"/>(=
+1) L'op&#xE9;ration Braderie est valable du 11 juillet au 11 aout 2025 incl=
+us sur une s&#xE9;lection de produits disponibles sur la boutique en ligne =
+de Boulanger Location : https://location.boulanger.com/braderie-2025.html.<=
+br role=3D"none"/><br role=3D"none"/>(2) Les granit&#xE9;s, smoothies et bo=
+issons vitamin&#xE9;es sont propos&#xE9;s dans la limite des stocks disponi=
+bles.<br role=3D"none"/><br role=3D"none"/>**Offre de financement sans assu=
+rance, r&#xE9;serv&#xE9;e aux particuliers. Cr&#xE9;dit affect&#xE9; en 3 m=
+ois, valable de 400&#x20AC; &#xE0; 3 000&#x20AC; d&#x2019;achats hors t&#xE=
+9;l&#xE9;phonie mobile et micro-informatique. Le co&#xFB;t du cr&#xE9;dit e=
+st pris en charge par Boulanger.Vous disposez d&#x2019;un d&#xE9;lai de r&#=
+xE9;tractation de 14 jours pour renoncer &#xE0; votre cr&#xE9;dit. Exemple =
+: pour un achat de 400&#x20AC;, apport de 100&#x20AC; puis 3 x100&#x20AC;. =
+Montant total d&#xFB;: 300&#x20AC;. Cr&#xE9;dit sur 3 mois au TAEG fixe de =
+0%. Co&#xFB;t du financement 0&#x20AC;. Offre de financement par carte banc=
+aire uniquement valable sur boulanger.com. une offre de financement en 4X s=
+ans frais est &#xE9;galement disponible en magasin Boulanger hors BHV et Ga=
+leries Lafayette. Sous r&#xE9;serve d&#x2019;acceptation par Oney Bank. Con=
+ditions au 11/07/2025 susceptibles de r&#xE9;visions. pour plus d&#x2019;in=
+formations rdv sur oney.fr Oney Bank - SA au capital de 71 801 205 &#x20AC;=
+- Si&#xE8;ge social : 34 avenue de Flandre 59170 CROIX- RCS Lille M&#xE9;tr=
+opole 546 380 197 - N&#xB0; ORIAS : 07 023 261 - www.orias.fr- Un cr&#xE9;d=
+it vous engage et doit &#xEA;tre rembours&#xE9;. V&#xE9;rifiez vos capacit&=
+#xE9;s de remboursement avant de vous engager. Boulanger agit en qualit&#xE=
+9; de mandataire exclusif en op&#xE9;rations de banque et en services de pa=
+iement - n&#xB0; ORIAS : 13 009 472 - Si&#xE8;ge social : Avenue de la Mott=
+e, 59810 LESQUIN </td></tr></table>
+
+<table class=3D"m_w100p t_w100p w100" width=3D"640" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+  <tr>
+    <td class=3D"m_w100p t_w100p w100" width=3D"640" align=3D"center" valig=
+n=3D"top" style=3D"vertical-align:top;text-align:left;line-height:13px;">
+      <span style=3D"font:11px Arial,sans-serif;color:#000000;text-align:le=
+ft;line-height:13px;">
+        BOULANGER S.A, Soci&eacute;t&eacute; Anonyme au capital de 40 611 5=
+64 EUR, dont le si&egrave;ge social est - <span style=3D"color:#000000 !imp=
+ortant;text-decoration:none !important;">Avenue de la Motte, 59810 LESQUIN<=
+/span>, immatricul&eacute;e au Registre du Commerce et des Soci&eacute;t&ea=
+cute;s de LILLE sous le n&deg; B 347384570.<br>
+        N&deg; SIRET : 347 384 570 02017. N&deg; T.V.A Intracommunautaire F=
+R 78347384570. Web : <a href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b=
+24ca24,3f9c66e6,31593933&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmNlbWVudF9icmFkZX=
+JpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMzA2OEVFNTdGNjlCM=
+jMxQg&s=3DGKGZBNgf-9CokNYdp5y8kDzJdxlR8r0FpyeyceDrn44" _label=3D"Mentions" =
+target=3D"_blank" style=3D"text-decoration:none;color:#000000 !important;">=
+<u>www.boulanger.com</u></a>
+        <br /><br />
+        Boulanger membre de VALIUZ, <a href=3D"https://t.email.boulanger.co=
+m/r/=3Fid=3Dh1b24ca24,3f9c66e6,31593934&e=3DcDE9ZW1haWwmcDI9Y18wNzExX2xhbmN=
+lbWVudF9icmFkZXJpZV9hY3RpZnMmcDM9Y29tbWVyY2lhbCZwND01M0EyOERENTUxQjREODkyMz=
+A2OEVFNTdGNjlCMjMxQg&s=3D1jvZVQ__JhTI3AAt3wZANJ_GMqH_2zwNdNbg56MHpUM" targe=
+t=3D"_blank" style=3D"color:#000000 !important;text-decoration:underline !i=
+mportant;">en savoir plus.</a> Vous b=E9n=E9ficiez d'un droit d'acc=E8s, de=
+ rectification, de portabilit=E9, d'effacement, de limitation et d'oppositi=
+on aux donn=E9es vous concernant que vous pouvez exercer en =E9crivant =E0 =
+BOULANGER SA - CIL - <span style=3D"color:#000000 !important;text-decoratio=
+n:none !important;">Avenue de la Motte - 59810 Lesquin</span> ou par email =
+: <a style=3D"COLOR: #333333" href=3D"mailto:cil@boulanger.com" _label=3D"C=
+NIL">cil@boulanger.com</a></U>. Pour en savoir plus, rendez-vous sur <a sty=
+le=3D"COLOR: #333333" href=3D"https://t.email.boulanger.com/r/=3Fid=3Dh1b24=
+ca24,3f9c66e6,31593935" _label=3D"CNIL"><U>ce lien</U>.
+      </span>
+    </td>
+  </tr>
+</table>
+
+                                        
+</td></tr></table>
+</td></tr></table>
+</td></tr></table><img height=3D'0' width=3D'0' alt=3D'' src=3D'https://t.e=
+mail.boulanger.com/r/=3Fid=3Dh1b24ca24,3f9c66e6,1'/></body>
+</html>
+

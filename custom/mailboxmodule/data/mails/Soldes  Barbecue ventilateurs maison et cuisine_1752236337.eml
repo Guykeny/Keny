@@ -1,0 +1,2263 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:224b:b0:92:fd56:6792 with SMTP id y11csp4699812gba;
+        Thu, 3 Jul 2025 07:36:05 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEtKPBH+XFbzEp3Jskr96wpqI7o0pFAq7lp4GQsmaKUu1hu+UziF/K7uZFBl7Zowuhw7MR7
+X-Received: by 2002:a05:6000:2582:b0:3a5:52d4:5b39 with SMTP id ffacd0b85a97d-3b1fd74c462mr5924534f8f.8.1751553361449;
+        Thu, 03 Jul 2025 07:36:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751553361; cv=none;
+        d=google.com; s=arc-20240605;
+        b=RAWvqSzYWltzfH42GXUojacYynvycX9/GloINCFGRHuohfT9YytL91NyGLVL0xbi97
+         X4NqrOccjNdytI4tCzUWNTwKY+Ge4efll4qtUBUgMSKl39cHGPWpyvcZ78/MfY9ytRLa
+         YHEaaR7I3t5JHdNd/4ZJAW5ztZ+megWRgIFIOMxBilHlqPfbhZvSrtaKOwwEs3LsM9CN
+         uyIkij3EVzQneJ7VPa5yoaZ5/gl6pV1ztEWyj99bhz3QiJvXZjgWq+0xGLLR3sGM93/k
+         BwKvZOA+z38HTsI2+sKyzH9uPEbfrs7j2Y09MDREe4Rrhx5xbKRfi0bDDBOuX7eZ1QJ/
+         waEg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:list-unsubscribe:list-unsubscribe-post
+         :message-id:mime-version:reply-to:to:date:subject:from
+         :domainkey-signature:dkim-signature;
+        bh=LO7kVpkA7TYDT+wujVAyo6I6A+8Gj457Div6OAf7Q48=;
+        fh=Z3c3D/4xeE50bGI+83vSAXEo7+MNzc/jktQqx4DY0QQ=;
+        b=QG2r+eE0TpxShktvIfIGWRIECBikCmBxnmC2ToLIuYkyu9GOFjPLLeSsH1Fh3jIXNg
+         Olmxz8tsxR6lx55dYIE2XtB+nuxEw7VaRAWKSVLly/RPIO9DfB5JlteNF7h7RNOvSBAu
+         E0Aj9ja49Q50Rimg0Srlo/7IBPlfWSZxe764u0/QyZ6/eLcN8mnTOfETmjLyDh/DjVXS
+         HiEikIVRQdy6KoDxSwJH0Zsy9kXKzACBGYByA9A6glsSy1a/w8Fba1Y0oU95cSKeNP7Q
+         +aJnA+CH9cvFjY9XRGE435pEIDEBJSgieX/jkbtZZerHhlWH2dkXlKPR4znWa8XrKvDp
+         Dugg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fnac.com header.s=default header.b=RHW+F9vS;
+       spf=pass (google.com: domain of e2-fnac@fnac.com designates 193.108.68.118 as permitted sender) smtp.mailfrom=e2-fnac@fnac.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fnac.com
+Return-Path: <e2-fnac@fnac.com>
+Received: from mta8-fnacdarty.fnac.com (mta8-fnacdarty.fnac.com. [193.108.68.118])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3a8a081fb0fsi11282855f8f.821.2025.07.03.07.36.00
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 03 Jul 2025 07:36:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of e2-fnac@fnac.com designates 193.108.68.118 as permitted sender) client-ip=193.108.68.118;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fnac.com header.s=default header.b=RHW+F9vS;
+       spf=pass (google.com: domain of e2-fnac@fnac.com designates 193.108.68.118 as permitted sender) smtp.mailfrom=e2-fnac@fnac.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fnac.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	s=default;
+	d=fnac.com;
+	h=domainkey-signature:from:subject:date:to:reply-to:mime-version:x-mailer:message-id:x-rpcampaign:list-unsubscribe-post:list-unsubscribe:content-type:content-transfer-encoding;
+	bh=LO7kVpkA7TYDT+wujVAyo6I6A+8Gj457Div6OAf7Q48=;
+	b=RHW+F9vSQBc7VWcs+NFi3GjqsY4tqPM1SMXfauxdL4gPAwev345Zab0vJt2nlE5SttxhkE/OpTN0KGV77jXEXEpKEK1asDghtcOYMIWrndJl0viQ3aVdNCZVbxGXpkniYxI4rCsCauXqKAtk+Icn5vTPRoJMlR9oUya2pFtz7fs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns;
+	s=default;
+	d=fnac.com;
+	h=From:Subject:Date:To:Reply-To:MIME-Version:X-mailer:Message-ID:X-rpcampaign:List-Unsubscribe-Post:List-Unsubscribe:Content-Type:Content-Transfer-Encoding;
+	b=m1ry0TK+/abZm8xaQj4JjF9nihhbJ4fvFhp43DtB51QfnKdnyG5+xDGlpXJ+SLMQzndQKICyy3Ji//YjED2Dk4Myn+pvEjPFIBQOD9D9b1gEJbJHvDDKzef/QbgMydeZjsmR6HHHYTmmpBD4tuuWybnIqa0QGVzrdeS/VtoSsXI=
+From: "Fnac" <info@fnac.com>
+Subject: =?windows-1252?Q?Soldes_|_Barbecue=2C_ventilateurs=2C_maison_et_cuis?=
+ =?windows-1252?Q?ine?=
+Date: Thu, 03 Jul 2025 16:35:59 +0200
+To: <guykeny.ndayizeye8@gmail.com>
+Reply-To: =?windows-1252?Q?ne_pas_r=E9pondre?= <no-reply@fnac.com>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 6.7.0
+Message-ID: <NM6788892C30B42518CFD_PRD_NeolaneMid2@fnac.com>
+X-rpcampaign: fnac188895628
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://fr.m5.emails.fnac.com/webApp/fnacOneClickUnsub?id=EE6D4D52-E87F-4998-9557-DF7A5A5C1B90>, <mailto:e2-fnac@fnac.com?subject=unsubscribe%3CNM6788892C30B42518CFD_PRD_NeolaneMid2@fnac.com%3E>
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" lang=3D"fr"=
+ xml:lang=3D"fr">
+<head>
+<!--[if mso]>
+<xml xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings></xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"/>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"/>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"/=
+>
+<link href=3D"https://fonts.googleapis.com/css=3Ffamily=3DRoboto:700%7CRobo=
+to:normal%7CRoboto%7COpen+Sans:700%7COpen+Sans:normal%7CPermanent+Marker:no=
+rmal%7CRoboto+Condensed:300%7CRoboto+Slab:800%7CRoboto+Slab:normal%7CMontse=
+rrat:800" rel=3D"stylesheet"/>
+<title>Soldes | Barbecue, ventilateurs, maison et cuisine</title>
+<style type=3D"text/css">span.MsoHyperlink{mso-style-priority:1;color:inher=
+it}span.MsoHyperlinkFollowed{mso-style-priority:1;
+color:inherit}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;=
+padding:0;color:#000000;margin:0 auto}td{line-height:100%}
+img{outline:0;text-decoration:none}a img{border:none}u+* img+div{display:no=
+ne}table td{border-collapse:collapse;mso-line-height-rule:exactly}
+table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}table =
+*{box-sizing:content-box}table{box-sizing:border-box}
+a{color:inherit;text-decoration:none;mso-line-height-rule:exactly}.appleLin=
+ks,.appleLinksWhite{text-decoration:none !important}
+a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !im=
+portant;font-size:inherit !important;font-family:inherit !important;
+font-weight:inherit !important;line-height:inherit !important}table[class^=
+=3Dox] sup{font-size:.7em;vertical-align:baseline}
+sup{font-size:.8em;vertical-align:text-top;line-height:1;height:0;mso-text-=
+raise:24%}div>u+* table{zoom:100%}.ms-outlook-linkify{color:inherit !import=
+ant}
+:not(#outlook).roboto{font-family:Roboto,Arial,Helvetica,sans-serif !import=
+ant}@font-face{font-family:Roboto_reg;font-weight:400;
+src:url('images/1.woff') format('woff')
+}:not(#outlook).roboto_reg{font-family:Roboto_reg,Arial,Helvetica,sans-seri=
+f !important}@font-face{font-family:Roboto_bold;
+font-weight:700;src:url('images/2.woff') format('woff')
+}:not(#outlook).roboto_bold{font-family:Roboto_bold,Arial,Helvetica,sans-se=
+rif !important}@font-face{font-family:Roboto_light;
+font-weight:300;src:url('images/3.woff') format('woff')
+}:not(#outlook).roboto_light{font-family:Roboto_light,Arial,Helvetica,sans-=
+serif !important}@font-face{font-family:Roboto_thin;
+font-weight:300;src:url('images/4.woff') format('woff')
+}:not(#outlook).roboto_thin{font-family:Roboto_thin,Arial,Helvetica,sans-se=
+rif !important}:not(#outlook).roboto{font-family:Roboto,Arial,Helvetica,san=
+s-serif !important}
+@font-face{font-family:GilroyBold;font-weight:700;src:url('images/5.woff') =
+format('woff')
+}:not(#outlook).gilroybold{font-family:GilroyBold,Arial,Helvetica,sans-seri=
+f !important}@font-face{font-family:GilroyRegular;
+font-weight:400;src:url('images/6.woff') format('woff')
+}:not(#outlook).gilroyregular{font-family:GilroyRegular,Arial,Helvetica,san=
+s-serif !important}@font-face{font-family:GilroyBlack;
+font-weight:700;src:url('https://static.fnac-static.com/multimedia/Mails/20=
+19/TYPO/Gilroy-Black.woff') format('woff')
+}:not(#outlook).gilroyblack{font-family:GilroyBlack,Arial Black,Arial Bold,=
+Gadget,sans-serif !important}@font-face{font-family:Gilroyboldfnac;
+font-weight:700;src:url('https://static.fnac-static.com/multimedia/Mails/20=
+19/TYPO/Gilroy-Bold.woff') format('woff')
+}:not(#outlook).gilroyboldfnac{font-family:Gilroyboldfnac,Arial,Helvetica,s=
+ans-serif !important}:not(#outlook).roboto{font-family:Roboto,Arial,Helveti=
+ca,sans-serif !important}
+@font-face{font-family:CalvertMT;font-weight:400;src:url('images/7.woff') f=
+ormat('woff')
+}:not(#outlook).calvertmt{font-family:CalvertMT,Arial,Helvetica,sans-serif =
+!important}@font-face{font-family:CCSign;
+font-weight:400;src:url('images/8.woff') format('woff')
+}:not(#outlook).ccsign{font-family:CCSign,Arial,Helvetica,sans-serif !impor=
+tant}@font-face{font-family:CalvertmtBold;
+font-weight:700;src:url('images/9.woff') format('woff')
+}:not(#outlook).calvertmtbold{font-family:CalvertmtBold,Arial,Helvetica,san=
+s-serif !important}@font-face{font-family:OpenSansRegular;
+font-weight:400;src:url('images/10.woff') format('woff')
+}:not(#outlook).opensansregular{font-family:OpenSansRegular,Helvetica,Arial=
+,sans-serif !important}:not(#outlook).opensans{font-family:'Open Sans',Aria=
+l,Helvetica,sans-serif !important}
+:not(#outlook).opensans{font-family:'Open Sans',Arial,Helvetica,sans-serif =
+!important}@font-face{font-family:Gildroyregular;
+font-weight:400;src:url('https://static.fnac-static.com/multimedia/Mails/20=
+19/TYPO/Gilroy-Regular.woff') format('woff')
+}:not(#outlook).gildroyregular{font-family:Gildroyregular,Arial,Helvetica,s=
+ans-serif !important}:not(#outlook).permanentmarker{font-family:'Permanent =
+Marker',Arial,Helvetica,sans-serif !important}
+@font-face{font-family:Graphikregular;font-weight:400;src:url('images/11.wo=
+ff') format('woff')
+}:not(#outlook).graphikregular{font-family:Graphikregular,Arial,Helvetica,s=
+ans-serif !important}@font-face{font-family:Graphiksemibold;
+font-weight:700;src:url('images/12.woff') format('woff')
+}:not(#outlook).graphiksemibold{font-family:Graphiksemibold,Arial,Helvetica=
+,sans-serif !important}@font-face{font-family:CaneladekBold;
+font-weight:400;src:url('images/13.woff') format('woff')
+}:not(#outlook).caneladekbold{font-family:CaneladekBold,Georgia,Times,Times=
+ New Roman,serif !important}@font-face{font-family:Graphikmedium;
+font-weight:400;src:url('images/14.woff') format('woff')
+}:not(#outlook).graphikmedium{font-family:Graphikmedium,Arial,Helvetica,san=
+s-serif !important}:not(#outlook).robotocondensed{font-family:'Roboto Conde=
+nsed',Arial,Helvetica,sans-serif !important}
+:not(#outlook).robotoslab{font-family:'Roboto Slab',Arial,Helvetica,sans-se=
+rif !important}:not(#outlook).robotoslab{font-family:'Roboto Slab',Arial,He=
+lvetica,sans-serif !important}
+@font-face{font-family:Graphikbold;font-weight:400;src:url('images/15.woff'=
+) format('woff')
+}:not(#outlook).graphikbold{font-family:Graphikbold,Arial Black,Arial Bold,=
+Gadget,sans-serif !important}:not(#outlook).montserrat{font-family:Montserr=
+at,Arial,Helvetica,sans-serif !important}
+@font-face{font-family:Gibsonheavy;font-weight:700;src:url('https://eu-asse=
+ts.contentstack.com/v3/assets/blta867006d326c1e47/bltb38c1a2bdb9a7093/65684=
+7f79bac33040a5128fd/Gibson-Heavy.woff') format('woff')
+}:not(#outlook).gibsonheavy{font-family:Gibsonheavy,Arial Black,Arial Bold,=
+Gadget,sans-serif !important}#textaf7aa335-4a64-42e6-9bf7-962a1eed4f3e *>td=
+:hover,#textaf7aa335-4a64-42e6-9bf7-962a1eed4f3e>a:hover span,#textaf7aa335=
+-4a64-42e6-9bf7-962a1eed4f3e>div:hover,#textaf7aa335-4a64-42e6-9bf7-962a1ee=
+d4f3e>div:hover td,#textaf7aa335-4a64-42e6-9bf7-962a1eed4f3e>table:hover,#t=
+extaf7aa335-4a64-42e6-9bf7-962a1eed4f3e>td:hover{background-color:#e9aa00 !=
+important;
+opacity:70% !important;transition:all 150ms}#text40fae40c-41e5-46bc-875b-f3=
+3cf1557b5a *>td:hover,#text40fae40c-41e5-46bc-875b-f33cf1557b5a>a:hover spa=
+n,#text40fae40c-41e5-46bc-875b-f33cf1557b5a>div:hover,#text40fae40c-41e5-46=
+bc-875b-f33cf1557b5a>div:hover td,#text40fae40c-41e5-46bc-875b-f33cf1557b5a=
+>table:hover,#text40fae40c-41e5-46bc-875b-f33cf1557b5a>td:hover{opacity:70%=
+ !important;
+transition:all 150ms}#textd8896fcf-725b-4e41-a082-2a52e829873f *>td:hover,#=
+textd8896fcf-725b-4e41-a082-2a52e829873f>a:hover span,#textd8896fcf-725b-4e=
+41-a082-2a52e829873f>div:hover,#textd8896fcf-725b-4e41-a082-2a52e829873f>di=
+v:hover td,#textd8896fcf-725b-4e41-a082-2a52e829873f>table:hover,#textd8896=
+fcf-725b-4e41-a082-2a52e829873f>td:hover{opacity:70% !important;
+transition:all 150ms}#textc21a3bb6-3e0a-443c-ad7a-f2fcd33555b6 *>td:hover,#=
+textc21a3bb6-3e0a-443c-ad7a-f2fcd33555b6>a:hover span,#textc21a3bb6-3e0a-44=
+3c-ad7a-f2fcd33555b6>div:hover,#textc21a3bb6-3e0a-443c-ad7a-f2fcd33555b6>di=
+v:hover td,#textc21a3bb6-3e0a-443c-ad7a-f2fcd33555b6>table:hover,#textc21a3=
+bb6-3e0a-443c-ad7a-f2fcd33555b6>td:hover{opacity:70% !important;
+transition:all 150ms}#textb1e8c059-b28d-43c0-b343-cf13f0810896 *>td:hover,#=
+textb1e8c059-b28d-43c0-b343-cf13f0810896>a:hover span,#textb1e8c059-b28d-43=
+c0-b343-cf13f0810896>div:hover,#textb1e8c059-b28d-43c0-b343-cf13f0810896>di=
+v:hover td,#textb1e8c059-b28d-43c0-b343-cf13f0810896>table:hover,#textb1e8c=
+059-b28d-43c0-b343-cf13f0810896>td:hover{opacity:70% !important;
+transition:all 150ms}#text86c4c3ee-a973-4639-b0d5-4e2ad0c087f5 *>td:hover,#=
+text86c4c3ee-a973-4639-b0d5-4e2ad0c087f5>a:hover span,#text86c4c3ee-a973-46=
+39-b0d5-4e2ad0c087f5>div:hover,#text86c4c3ee-a973-4639-b0d5-4e2ad0c087f5>di=
+v:hover td,#text86c4c3ee-a973-4639-b0d5-4e2ad0c087f5>table:hover,#text86c4c=
+3ee-a973-4639-b0d5-4e2ad0c087f5>td:hover{opacity:70% !important;
+transition:all 150ms}#text34ec83c6-00ae-4219-9bdf-ff3c7a1bbd8a *>td:hover,#=
+text34ec83c6-00ae-4219-9bdf-ff3c7a1bbd8a>a:hover span,#text34ec83c6-00ae-42=
+19-9bdf-ff3c7a1bbd8a>div:hover,#text34ec83c6-00ae-4219-9bdf-ff3c7a1bbd8a>di=
+v:hover td,#text34ec83c6-00ae-4219-9bdf-ff3c7a1bbd8a>table:hover,#text34ec8=
+3c6-00ae-4219-9bdf-ff3c7a1bbd8a>td:hover{opacity:70% !important;
+transition:all 150ms}#text23f5c157-15fa-46c4-9ec2-b1bb8b0179ad *>td:hover,#=
+text23f5c157-15fa-46c4-9ec2-b1bb8b0179ad>a:hover span,#text23f5c157-15fa-46=
+c4-9ec2-b1bb8b0179ad>div:hover,#text23f5c157-15fa-46c4-9ec2-b1bb8b0179ad>di=
+v:hover td,#text23f5c157-15fa-46c4-9ec2-b1bb8b0179ad>table:hover,#text23f5c=
+157-15fa-46c4-9ec2-b1bb8b0179ad>td:hover{opacity:70% !important;
+transition:all 150ms}#textb7a22b30-315c-451c-baab-9c3890d4e855 *>td:hover,#=
+textb7a22b30-315c-451c-baab-9c3890d4e855>a:hover span,#textb7a22b30-315c-45=
+1c-baab-9c3890d4e855>div:hover,#textb7a22b30-315c-451c-baab-9c3890d4e855>di=
+v:hover td,#textb7a22b30-315c-451c-baab-9c3890d4e855>table:hover,#textb7a22=
+b30-315c-451c-baab-9c3890d4e855>td:hover{opacity:70% !important;
+transition:all 150ms}#textcad5e4e2-0da6-4964-9dd4-ab966469d325 *>td:hover,#=
+textcad5e4e2-0da6-4964-9dd4-ab966469d325>a:hover span,#textcad5e4e2-0da6-49=
+64-9dd4-ab966469d325>div:hover,#textcad5e4e2-0da6-4964-9dd4-ab966469d325>di=
+v:hover td,#textcad5e4e2-0da6-4964-9dd4-ab966469d325>table:hover,#textcad5e=
+4e2-0da6-4964-9dd4-ab966469d325>td:hover{opacity:70% !important;
+transition:all 150ms}#text39aaa99c-2e1c-4a68-a379-bc8217e3c835 *>td:hover,#=
+text39aaa99c-2e1c-4a68-a379-bc8217e3c835>a:hover span,#text39aaa99c-2e1c-4a=
+68-a379-bc8217e3c835>div:hover,#text39aaa99c-2e1c-4a68-a379-bc8217e3c835>di=
+v:hover td,#text39aaa99c-2e1c-4a68-a379-bc8217e3c835>table:hover,#text39aaa=
+99c-2e1c-4a68-a379-bc8217e3c835>td:hover{opacity:70% !important;
+transition:all 150ms}#text9e26383e-aa32-408f-ba1c-93270326b3b6 *>td:hover,#=
+text9e26383e-aa32-408f-ba1c-93270326b3b6>a:hover span,#text9e26383e-aa32-40=
+8f-ba1c-93270326b3b6>div:hover,#text9e26383e-aa32-408f-ba1c-93270326b3b6>di=
+v:hover td,#text9e26383e-aa32-408f-ba1c-93270326b3b6>table:hover,#text9e263=
+83e-aa32-408f-ba1c-93270326b3b6>td:hover{opacity:70% !important;
+transition:all 150ms}#text17caf350-c1b7-44fb-b72f-0d3a267ac01c *>td:hover,#=
+text17caf350-c1b7-44fb-b72f-0d3a267ac01c>a:hover span,#text17caf350-c1b7-44=
+fb-b72f-0d3a267ac01c>div:hover,#text17caf350-c1b7-44fb-b72f-0d3a267ac01c>di=
+v:hover td,#text17caf350-c1b7-44fb-b72f-0d3a267ac01c>table:hover,#text17caf=
+350-c1b7-44fb-b72f-0d3a267ac01c>td:hover{opacity:70% !important;
+transition:all 150ms}#image34fa71e5-9373-4fe7-a879-648ea977c9e2 *>td:hover,=
+#image34fa71e5-9373-4fe7-a879-648ea977c9e2>a:hover span,#image34fa71e5-9373=
+-4fe7-a879-648ea977c9e2>div:hover,#image34fa71e5-9373-4fe7-a879-648ea977c9e=
+2>div:hover td,#image34fa71e5-9373-4fe7-a879-648ea977c9e2>table:hover,#imag=
+e34fa71e5-9373-4fe7-a879-648ea977c9e2>td:hover{opacity:80% !important;
+transition:all 150ms}#image75776aaa-324f-483f-9098-a3f9120edec2 *>td:hover,=
+#image75776aaa-324f-483f-9098-a3f9120edec2>a:hover span,#image75776aaa-324f=
+-483f-9098-a3f9120edec2>div:hover,#image75776aaa-324f-483f-9098-a3f9120edec=
+2>div:hover td,#image75776aaa-324f-483f-9098-a3f9120edec2>table:hover,#imag=
+e75776aaa-324f-483f-9098-a3f9120edec2>td:hover{opacity:80% !important;
+transition:all 150ms}#image46575b4c-c864-478d-b576-347513b38591 *>td:hover,=
+#image46575b4c-c864-478d-b576-347513b38591>a:hover span,#image46575b4c-c864=
+-478d-b576-347513b38591>div:hover,#image46575b4c-c864-478d-b576-347513b3859=
+1>div:hover td,#image46575b4c-c864-478d-b576-347513b38591>table:hover,#imag=
+e46575b4c-c864-478d-b576-347513b38591>td:hover{opacity:80% !important;
+transition:all 150ms}#imagef07d508d-3d87-42a4-b5a3-b54bc3f06719 *>td:hover,=
+#imagef07d508d-3d87-42a4-b5a3-b54bc3f06719>a:hover span,#imagef07d508d-3d87=
+-42a4-b5a3-b54bc3f06719>div:hover,#imagef07d508d-3d87-42a4-b5a3-b54bc3f0671=
+9>div:hover td,#imagef07d508d-3d87-42a4-b5a3-b54bc3f06719>table:hover,#imag=
+ef07d508d-3d87-42a4-b5a3-b54bc3f06719>td:hover{opacity:80% !important;
+transition:all 150ms}#imagefb4ae341-7fc4-464d-8f90-9a53551386fa *>td:hover,=
+#imagefb4ae341-7fc4-464d-8f90-9a53551386fa>a:hover span,#imagefb4ae341-7fc4=
+-464d-8f90-9a53551386fa>div:hover,#imagefb4ae341-7fc4-464d-8f90-9a53551386f=
+a>div:hover td,#imagefb4ae341-7fc4-464d-8f90-9a53551386fa>table:hover,#imag=
+efb4ae341-7fc4-464d-8f90-9a53551386fa>td:hover{opacity:80% !important;
+transition:all 150ms}#image32b81422-d82a-4ec9-acbf-b237c1fbc4e1 *>td:hover,=
+#image32b81422-d82a-4ec9-acbf-b237c1fbc4e1>a:hover span,#image32b81422-d82a=
+-4ec9-acbf-b237c1fbc4e1>div:hover,#image32b81422-d82a-4ec9-acbf-b237c1fbc4e=
+1>div:hover td,#image32b81422-d82a-4ec9-acbf-b237c1fbc4e1>table:hover,#imag=
+e32b81422-d82a-4ec9-acbf-b237c1fbc4e1>td:hover{opacity:80% !important;
+transition:all 150ms}#image2a096c30-456b-45fd-858b-a0e131652683 *>td:hover,=
+#image2a096c30-456b-45fd-858b-a0e131652683>a:hover span,#image2a096c30-456b=
+-45fd-858b-a0e131652683>div:hover,#image2a096c30-456b-45fd-858b-a0e13165268=
+3>div:hover td,#image2a096c30-456b-45fd-858b-a0e131652683>table:hover,#imag=
+e2a096c30-456b-45fd-858b-a0e131652683>td:hover{opacity:80% !important;
+transition:all 150ms}#image971eb86c-c339-4f4a-8ed1-4a7c5c98cfbb *>td:hover,=
+#image971eb86c-c339-4f4a-8ed1-4a7c5c98cfbb>a:hover span,#image971eb86c-c339=
+-4f4a-8ed1-4a7c5c98cfbb>div:hover,#image971eb86c-c339-4f4a-8ed1-4a7c5c98cfb=
+b>div:hover td,#image971eb86c-c339-4f4a-8ed1-4a7c5c98cfbb>table:hover,#imag=
+e971eb86c-c339-4f4a-8ed1-4a7c5c98cfbb>td:hover{opacity:80% !important;
+transition:all 150ms}#imageaf99eacc-8b82-4b94-a1ff-6624c4296ab1 *>td:hover,=
+#imageaf99eacc-8b82-4b94-a1ff-6624c4296ab1>a:hover span,#imageaf99eacc-8b82=
+-4b94-a1ff-6624c4296ab1>div:hover,#imageaf99eacc-8b82-4b94-a1ff-6624c4296ab=
+1>div:hover td,#imageaf99eacc-8b82-4b94-a1ff-6624c4296ab1>table:hover,#imag=
+eaf99eacc-8b82-4b94-a1ff-6624c4296ab1>td:hover{opacity:80% !important;
+transition:all 150ms}#imagea4fd1c73-6464-479e-b105-ed91ac9355cc *>td:hover,=
+#imagea4fd1c73-6464-479e-b105-ed91ac9355cc>a:hover span,#imagea4fd1c73-6464=
+-479e-b105-ed91ac9355cc>div:hover,#imagea4fd1c73-6464-479e-b105-ed91ac9355c=
+c>div:hover td,#imagea4fd1c73-6464-479e-b105-ed91ac9355cc>table:hover,#imag=
+ea4fd1c73-6464-479e-b105-ed91ac9355cc>td:hover{opacity:80% !important;
+transition:all 150ms}#image83d83f6c-0f10-4414-a65b-5a1df2ab13b3 *>td:hover,=
+#image83d83f6c-0f10-4414-a65b-5a1df2ab13b3>a:hover span,#image83d83f6c-0f10=
+-4414-a65b-5a1df2ab13b3>div:hover,#image83d83f6c-0f10-4414-a65b-5a1df2ab13b=
+3>div:hover td,#image83d83f6c-0f10-4414-a65b-5a1df2ab13b3>table:hover,#imag=
+e83d83f6c-0f10-4414-a65b-5a1df2ab13b3>td:hover{opacity:80% !important;
+transition:all 150ms}#image1220cec5-ebc7-42e0-8879-72b7fc23abff *>td:hover,=
+#image1220cec5-ebc7-42e0-8879-72b7fc23abff>a:hover span,#image1220cec5-ebc7=
+-42e0-8879-72b7fc23abff>div:hover,#image1220cec5-ebc7-42e0-8879-72b7fc23abf=
+f>div:hover td,#image1220cec5-ebc7-42e0-8879-72b7fc23abff>table:hover,#imag=
+e1220cec5-ebc7-42e0-8879-72b7fc23abff>td:hover{opacity:80% !important;
+transition:all 150ms}
+@media screen and (min-width:451px) and (max-width:640px),screen and (min-d=
+evice-width:451px) and (max-device-width:640px){.t_w26p{width:26% !importan=
+t}
+=2Et_w100px{width:100px !important}.t_w74p{width:74% !important}.t_w14px{wi=
+dth:14px !important}.t_w45p{width:45% !important}
+=2Et_w9d33p{width:9.33% !important}.t_w9d34p{width:9.34% !important}.t_w13p=
+x{width:13px !important}.t_w85p{width:85% !important}
+=2Et_w200px{width:200px !important}.t_w50p{width:50% !important}.t_h158px{h=
+eight:158px !important}.t_fz14px{font-size:14px !important}
+=2Et_w72p{width:72% !important}.t_w28p{width:28% !important}.t_fz20px{font-=
+size:20px !important}.t_pb5px{padding-bottom:5px !important}
+=2Et_w33p{width:33% !important}.t_w2p{width:2% !important}.t_w65p{width:65%=
+ !important}.t_w4p{width:4% !important}.t_w48p{width:48% !important}
+=2Et_h160px{height:160px !important}.t_pt0px{padding-top:0 !important}.t_w6=
+3p{width:63% !important}.t_fz15px{font-size:15px !important}
+=2Et_pt5px{padding-top:5px !important}.t_pb10px{padding-bottom:10px !import=
+ant}.t_h40px{height:40px !important}.t_w37p{width:37% !important}
+=2Et_w55p{width:55% !important}.t_pr17px{padding-right:17px !important}.t_p=
+l17px{padding-left:17px !important}.t_pr13px{padding-right:13px !important}
+=2Et_pl13px{padding-left:13px !important}.t_w20p{width:20% !important}.t_w4=
+0px{width:40px !important}.t_fz12px{font-size:12px !important}
+=2Et_w44p{width:44% !important}.t_w16d66p{width:16.66% !important}.t_w16d67=
+p{width:16.67% !important}.t_w18px{width:18px !important}
+=2Et_pt43px{padding-top:43px !important}.t_pb0px{padding-bottom:0 !importan=
+t}.t_w29p{width:29% !important}.t_w27p{width:27% !important}
+=2Et_w62px{width:62px !important}.t_w95p{width:95% !important}.t_w100p{widt=
+h:100% !important}.t_v{display:block !important;
+font-size:inherit !important;max-height:none !important;max-width:none !imp=
+ortant;overflow:visible !important}.t_dnone{display:none !important}
+=2Et_roboto{font-family:Roboto,Arial,Helvetica,sans-serif !important}.t_rob=
+oto_reg{font-family:Roboto_reg,Arial,Helvetica,sans-serif !important}
+=2Et_roboto_bold{font-family:Roboto_bold,Arial,Helvetica,sans-serif !import=
+ant}.t_roboto_light{font-family:Roboto_light,Arial,Helvetica,sans-serif !im=
+portant}
+=2Et_roboto_thin{font-family:Roboto_thin,Arial,Helvetica,sans-serif !import=
+ant}.t_roboto{font-family:Roboto,Arial,Helvetica,sans-serif !important}
+=2Et_gilroybold{font-family:GilroyBold,Arial,Helvetica,sans-serif !importan=
+t}.t_gilroyregular{font-family:GilroyRegular,Arial,Helvetica,sans-serif !im=
+portant}
+=2Et_gilroyblack{font-family:GilroyBlack,Arial Black,Arial Bold,Gadget,sans=
+-serif !important}.t_gilroyboldfnac{font-family:Gilroyboldfnac,Arial,Helvet=
+ica,sans-serif !important}
+=2Et_roboto{font-family:Roboto,Arial,Helvetica,sans-serif !important}.t_cal=
+vertmt{font-family:CalvertMT,Arial,Helvetica,sans-serif !important}
+=2Et_ccsign{font-family:CCSign,Arial,Helvetica,sans-serif !important}.t_cal=
+vertmtbold{font-family:CalvertmtBold,Arial,Helvetica,sans-serif !important}
+=2Et_opensansregular{font-family:OpenSansRegular,Helvetica,Arial,sans-serif=
+ !important}.t_opensans{font-family:'Open Sans',Arial,Helvetica,sans-serif =
+!important}
+=2Et_opensans{font-family:'Open Sans',Arial,Helvetica,sans-serif !important=
+}.t_gildroyregular{font-family:Gildroyregular,Arial,Helvetica,sans-serif !i=
+mportant}
+=2Et_permanentmarker{font-family:'Permanent Marker',Arial,Helvetica,sans-se=
+rif !important}.t_graphikregular{font-family:Graphikregular,Arial,Helvetica=
+,sans-serif !important}
+=2Et_graphiksemibold{font-family:Graphiksemibold,Arial,Helvetica,sans-serif=
+ !important}.t_caneladekbold{font-family:CaneladekBold,Georgia,Times,Times =
+New Roman,serif !important}
+=2Et_graphikmedium{font-family:Graphikmedium,Arial,Helvetica,sans-serif !im=
+portant}.t_robotocondensed{font-family:'Roboto Condensed',Arial,Helvetica,s=
+ans-serif !important}
+=2Et_robotoslab{font-family:'Roboto Slab',Arial,Helvetica,sans-serif !impor=
+tant}.t_robotoslab{font-family:'Roboto Slab',Arial,Helvetica,sans-serif !im=
+portant}
+=2Et_graphikbold{font-family:Graphikbold,Arial Black,Arial Bold,Gadget,sans=
+-serif !important}.t_montserrat{font-family:Montserrat,Arial,Helvetica,sans=
+-serif !important}
+=2Et_gibsonheavy{font-family:Gibsonheavy,Arial Black,Arial Bold,Gadget,sans=
+-serif !important}
+}
+@media screen and (max-width:450px),screen and (max-device-width:450px){.m_=
+pb5px{padding-bottom:5px !important}.m_tacenter{text-align:center !importan=
+t}
+=2Em_pt5px{padding-top:5px !important}.m_w100px{width:100px !important}.m_w=
+13px{width:13px !important}.m_w49p{width:49% !important}
+=2Em_w7p{width:7% !important}.m_w14px{width:14px !important}.m_pt19px{paddi=
+ng-top:19px !important}.m_w240px{width:240px !important}
+=2Em_bgce9aa00{background-color:#e9aa00 !important}.m_bgc0089b9{background-=
+color:#0089b9 !important}.m_h198px{height:198px !important}
+=2Em_fz18px{font-size:18px !important}.m_pt20px{padding-top:20px !important=
+}.m_pb15px{padding-bottom:15px !important}.m_lh24px{line-height:24px !impor=
+tant}
+=2Em_w95p{width:95% !important}.m_h200px{height:200px !important}.m_w80p{wi=
+dth:80% !important}.m_w70p{width:70% !important}
+=2Em_w30p{width:30% !important}.m_w47px{width:47px !important}.m_h15px{heig=
+ht:15px !important}.m_pt22px{padding-top:22px !important}
+=2Em_pt33px{padding-top:33px !important}.m_pb10px{padding-bottom:10px !impo=
+rtant}.m_pt17px{padding-top:17px !important}.m_pb18px{padding-bottom:18px !=
+important}
+=2Em_pt18px{padding-top:18px !important}.m_w28p{width:28% !important}.m_w40=
+px{width:40px !important}.m_pt0px{padding-top:0 !important}
+=2Em_pb17px{padding-bottom:17px !important}.m_w66p{width:66% !important}.m_=
+taleft{text-align:left !important}.m_pr0px{padding-right:0 !important}
+=2Em_pl0px{padding-left:0 !important}.m_w16d66p{width:16.66% !important}.m_=
+w16d67p{width:16.67% !important}.m_w46px{width:46px !important}
+=2Em_pt11px{padding-top:11px !important}.m_pb16px{padding-bottom:16px !impo=
+rtant}.m_flright{float:right !important}.m_w62px{width:62px !important}
+=2Em_pb20px{padding-bottom:20px !important}.m_w90p{width:90% !important}.m_=
+w100p{width:100% !important}.m_v{display:block !important;
+font-size:inherit !important;max-height:none !important;max-width:none !imp=
+ortant;overflow:visible !important}.m_dnone{display:none !important}
+=2Em_roboto{font-family:Roboto,Arial,Helvetica,sans-serif !important}.m_rob=
+oto_reg{font-family:Roboto_reg,Arial,Helvetica,sans-serif !important}
+=2Em_roboto_bold{font-family:Roboto_bold,Arial,Helvetica,sans-serif !import=
+ant}.m_roboto_light{font-family:Roboto_light,Arial,Helvetica,sans-serif !im=
+portant}
+=2Em_roboto_thin{font-family:Roboto_thin,Arial,Helvetica,sans-serif !import=
+ant}.m_roboto{font-family:Roboto,Arial,Helvetica,sans-serif !important}
+=2Em_gilroybold{font-family:GilroyBold,Arial,Helvetica,sans-serif !importan=
+t}.m_gilroyregular{font-family:GilroyRegular,Arial,Helvetica,sans-serif !im=
+portant}
+=2Em_gilroyblack{font-family:GilroyBlack,Arial Black,Arial Bold,Gadget,sans=
+-serif !important}.m_gilroyboldfnac{font-family:Gilroyboldfnac,Arial,Helvet=
+ica,sans-serif !important}
+=2Em_roboto{font-family:Roboto,Arial,Helvetica,sans-serif !important}.m_cal=
+vertmt{font-family:CalvertMT,Arial,Helvetica,sans-serif !important}
+=2Em_ccsign{font-family:CCSign,Arial,Helvetica,sans-serif !important}.m_cal=
+vertmtbold{font-family:CalvertmtBold,Arial,Helvetica,sans-serif !important}
+=2Em_opensansregular{font-family:OpenSansRegular,Helvetica,Arial,sans-serif=
+ !important}.m_opensans{font-family:'Open Sans',Arial,Helvetica,sans-serif =
+!important}
+=2Em_opensans{font-family:'Open Sans',Arial,Helvetica,sans-serif !important=
+}.m_gildroyregular{font-family:Gildroyregular,Arial,Helvetica,sans-serif !i=
+mportant}
+=2Em_permanentmarker{font-family:'Permanent Marker',Arial,Helvetica,sans-se=
+rif !important}.m_graphikregular{font-family:Graphikregular,Arial,Helvetica=
+,sans-serif !important}
+=2Em_graphiksemibold{font-family:Graphiksemibold,Arial,Helvetica,sans-serif=
+ !important}.m_caneladekbold{font-family:CaneladekBold,Georgia,Times,Times =
+New Roman,serif !important}
+=2Em_graphikmedium{font-family:Graphikmedium,Arial,Helvetica,sans-serif !im=
+portant}.m_robotocondensed{font-family:'Roboto Condensed',Arial,Helvetica,s=
+ans-serif !important}
+=2Em_robotoslab{font-family:'Roboto Slab',Arial,Helvetica,sans-serif !impor=
+tant}.m_robotoslab{font-family:'Roboto Slab',Arial,Helvetica,sans-serif !im=
+portant}
+=2Em_graphikbold{font-family:Graphikbold,Arial Black,Arial Bold,Gadget,sans=
+-serif !important}.m_montserrat{font-family:Montserrat,Arial,Helvetica,sans=
+-serif !important}
+=2Em_gibsonheavy{font-family:Gibsonheavy,Arial Black,Arial Bold,Gadget,sans=
+-serif !important}
+}
+@media screen and (min-width:640px),(orientation:landscape) and (min-width:=
+640px){.d_center{float:none !important;margin:auto !important}
+=2Ed_left{float:left !important}.d_right{float:right !important}
+}#converted-body .d_center{float:none;margin:auto}#converted-body .d_left{f=
+loat:left}#converted-body .d_right{float:right}
+a:focus-visible{transition:box-shadow .3s ease;outline:0;box-shadow:0 0 0 2=
+px hsla(288,100%,50%,.8)}</style></head>
+<body style=3D"background-color:#ffffff">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"width:100%;margin-top:-1px" role=3D"none">
+<tr class=3D"t_dnone m_dnone" aria-hidden=3D"true">
+<td height=3D"1" style=3D"height:1px;max-height:1px;font-size:1px;line-heig=
+ht:1px">
+<span style=3D"display:block;width:640px;min-width:640px">&nbsp;</span>
+</td></tr><tr><td style=3D"background-color:#ffffff" role=3D"main">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td>
+<div style=3D"border-bottom:1px solid #f2f2f2;mso-border-alt:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-bottom-alt:1px solid #f2f2f2" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"80%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_dnone" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#696969;text-=
+align:left;font-size:11px;padding-top:15px;padding-bottom:15px;vertical-ali=
+gn:middle;line-height:15px" class=3D"m_tacenter m_pb5px"> &#x2600;&#xFE0F; =
+<span style=3D"font-weight:700">Jusqu'&#xE0; -30%</span> : pour enjoliver v=
+otre &#xE9;t&#xE9; &#xE0; domicile ! </td></tr></table></td>
+<td valign=3D"top" width=3D"20%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#696969;text-=
+align:right;font-size:11px;padding-top:15px;padding-bottom:15px;vertical-al=
+ign:middle;line-height:15px" class=3D"m_tacenter m_pt5px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+3&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjMyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MCZwMT0lNDBkZGpOUU5ZOVFsczVCUnRUNE1sYmlocmJaZjY0dzZoUGI=
+lMkJKaUpGayUyQmNiUSUzRA&s=3DIKB5zj6Zlyn4NOD1qQ0RidlmwyNgfU5rurcnrT5Boc0" st=
+yle=3D"color:#696969;line-height:15px;display:block;text-decoration:none;ou=
+tline:0" title=3D"Version en ligne" target=3D"_blank"><span style=3D"text-d=
+ecoration:underline">Voir la version en ligne</span></a>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto;width:640px" class=3D"d_center t_flnone t_=
+mauto t_w95p m_flnone m_mauto m_w90p">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"294" align=
+=3D"left" style=3D"width:294px" class=3D"d_left t_w26p t_flleft m_w100p m_f=
+lright" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100" align=
+=3D"left" style=3D"width:100px" class=3D"d_left t_flleft t_w100px m_flleft =
+m_w100px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:30px;padding-bottom:30px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+4&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjNCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DU-62Q8icfW0DwJJgFQwvMNSb8ftu1-m_87Vxuavzbt4" wid=
+th=3D"100" style=3D"color:#000000;outline:0;border:none;margin:auto;display=
+:block" class=3D"t_w100p m_w100p" title=3D"Fnac.com" target=3D"_blank"><img=
+ src=3D"https://static.fnac-static.com/multimedia/Mails/2023/REFONTE/header=
+/logo.png" alt=3D"fnac.com" width=3D"100" style=3D"font-family:Arial,Helvet=
+ica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" c=
+lass=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"346" align=
+=3D"right" style=3D"width:346px" class=3D"d_right t_w74p t_flright m_w100p =
+m_flright" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"346" align=
+=3D"right" style=3D"width:346px" class=3D"d_right t_flright t_w100p m_flrig=
+ht m_w100p">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"32" align=
+=3D"left" style=3D"width:32px" class=3D"d_left t_w9d33p t_flleft m_w7p m_fl=
+left" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"14" align=
+=3D"center" style=3D"margin:auto;width:14px" class=3D"d_center t_flnone t_m=
+auto t_w14px m_flnone m_mauto m_w13px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:80px;padding-bottom:41px;text-align:center" cl=
+ass=3D"m_pt19px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+5&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjNSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DbyuGLcl_G-8T_qiIEs9Ckvnd_UReLfeN770F6mRhaFc" wid=
+th=3D"14" style=3D"color:#000000;outline:0;border:none;margin:auto;display:=
+block" class=3D"t_w100p m_w100p" target=3D"_blank" title=3D"Choisir mon mag=
+asin"><img src=3D"https://static.fnac-static.com/multimedia/Mails/2023/REFO=
+NTE/header/pictomap.png" alt=3D"&#128205;" width=3D"14" style=3D"font-famil=
+y:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;=
+border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"155" align=
+=3D"left" style=3D"width:155px" class=3D"d_left t_w45p t_flleft m_w49p m_fl=
+left" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"155" align=
+=3D"center" style=3D"margin:auto;width:155px" class=3D"d_center t_flnone t_=
+mauto t_w100p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#696969;text-=
+align:left;font-size:12px;padding-top:80px;padding-bottom:41px;vertical-ali=
+gn:middle;line-height:20px" class=3D"m_pt19px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+6&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjNiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dnz83zowXg0Teyp2sHa0sZMow52kZ_3ZqcL0tbg1u28Y" sty=
+le=3D"color:#696969;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank" title=3D"Choisir mon magasin">CHOISIR MON MAGASIN=
+</a>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"32" align=
+=3D"left" style=3D"width:32px" class=3D"d_left t_w9d33p t_flleft m_w7p m_fl=
+left" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"32" align=
+=3D"center" style=3D"margin:auto;width:32px" class=3D"d_center t_flnone t_m=
+auto t_w100p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#13100D;text-=
+align:center;font-size:16px;padding-top:80px;padding-bottom:41px;vertical-a=
+lign:middle" class=3D"m_pt19px"> | </td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"33" align=
+=3D"left" style=3D"width:33px" class=3D"d_left t_w9d34p t_flleft m_w7p m_fl=
+left" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"13" align=
+=3D"center" style=3D"margin:auto;width:13px" class=3D"d_center t_flnone t_m=
+auto t_w13px m_flnone m_mauto m_w14px" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center t_w100p m_w100p" role=3D"presentation">
+<tr><td style=3D"padding-top:80px;padding-bottom:41px;text-align:center" cl=
+ass=3D"m_pt19px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+7&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjNyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D7z07fTHsud9PS7aa8OooJuUB9ZF1OGR-Q2C_qH11hIg" wid=
+th=3D"13" style=3D"color:#000000;outline:0;border:none;margin:auto;display:=
+block" class=3D"t_w100p m_w100p" target=3D"_blank" title=3D"Mon compte"><im=
+g src=3D"https://static.fnac-static.com/multimedia/Mails/2023/REFONTE/heade=
+r/pictocompte.png" alt=3D"&#128100;" width=3D"13" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:13px;line-height:13px;display:block;border=
+:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<!--[if gte mso 9]> </td><td style=3D"vertical-align:top;border-collapse:co=
+llapse"><![endif]-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"94" align=
+=3D"right" style=3D"width:94px" class=3D"d_right t_w27p t_flright m_w30p m_=
+flright" role=3D"presentation">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"94" align=
+=3D"center" style=3D"margin:auto;width:94px" class=3D"d_center t_flnone t_m=
+auto t_w100p m_flnone m_mauto m_w100p" role=3D"presentation">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#13100D;text-=
+align:center;font-size:12px;padding-top:80px;padding-bottom:41px;vertical-a=
+lign:middle;line-height:20px" class=3D"m_pt19px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+8&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjOCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DCC_jn3aGm-wnl1g4xq6hdnOIGNJMzZIFvs2ddL2E0nQ" sty=
+le=3D"color:#13100D;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank" title=3D"Mon compte">MON COMPTE</a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+                            
+
+
+                            
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto;background-color:#ee1e3e" class=3D"d_cente=
+r t_w100p m_w100p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w85p m_w100p" role=3D=
+"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center;vertical-align:middl=
+e">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+e&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjZSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DdI9jSA9JJQi3_HZynaNrGET-Sd-GKeN0ySZEIscZxxA" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Soldes maison et cuisine" target=3D"_blank"><img src=3D"h=
+ttps://static.fnac-static.com/multimedia/Mails/2025/DIVERSIFICATION/PEM/202=
+50703/Soldes-ete-maison-cuisine-0625-email640.jpg" alt=3D"" width=3D"576" s=
+tyle=3D"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1=
+6px;display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"240" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w200px m_mauto m_w240px" role=3D"none">
+<tr><td id=3D"textaf7aa335-4a64-42e6-9bf7-962a1eed4f3e">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:16px;background-color:#e9aa00;padding-top:12px;paddi=
+ng-bottom:12px;vertical-align:middle;line-height:18px;font-weight:700">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44c=
+f&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRjZiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dv1KXcy6ukErYipfwM44rbKAeHo0ZsDzMy9e6V_7FUYA" sty=
+le=3D"color:#ffffff;line-height:18px;display:block;text-decoration:none;out=
+line:0" title=3D"Soldes maison et cuisine" target=3D"_blank"> Je m'&#xE9;qu=
+ipe </a>
+</td></tr></table></div>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center" aria-hidde=
+n=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px"> &zwnj; </td></tr=
+></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center t_w100p m_w=
+100p" aria-hidden=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;background-color:#ffffff;font-si=
+ze:8px" class=3D"m_h15px"> &zwnj; </td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_mauto m_w95p" =
+role=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:center;text-transform:uppercase;font-size:22px;padding-top:25px;paddi=
+ng-bottom:20px;vertical-align:middle;line-height:32px;font-weight:700" clas=
+s=3D"t_fz20px t_pb5px m_fz18px m_pt20px m_pb15px m_lh24px"> soldes ventilat=
+eurs et climatiseurs </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto;background-color:#ec691b" class=3D"d_cente=
+r m_bgce9aa00 m_w95p" role=3D"none">
+<tr><td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+0&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkMCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DuYcKn6Qj3XPvbny8qPCUjx4CX9CR_QVwQcioCf-RSHo" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/ete.jpg" alt=3D"" width=3D"30=
+3" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:13px;line-heig=
+ht:13px;display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"50%" class=3D"t_w50p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p" role=3D"none"=
+>
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center" class=3D"m_bgc0089b9">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+1&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkMSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dj3-AXAyzuXJ1XaS0NDzfykPW6r8rJ6AFSXCHKGidVHA" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/ete 2.jpg" alt=3D"" width=3D"=
+303" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:13px;line-he=
+ight:13px;display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_mauto m_w95p" =
+role=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:center;text-transform:uppercase;font-size:22px;padding-top:25px;paddi=
+ng-bottom:20px;vertical-align:middle;line-height:32px;font-weight:700" clas=
+s=3D"t_fz20px t_pb5px m_fz18px m_pt20px m_pb15px m_lh24px"> Soldes cuisine =
+et food </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w100p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"31%" class=3D"t_w33p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"middle" class=3D"t_h158px m_h198px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_h158px t_w100p m_h198px m_=
+w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=
+=3D"none">
+<tr><td id=3D"image34fa71e5-9373-4fe7-a879-648ea977c9e2">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"t_pt0px m_=
+pt0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+2&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkMiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DS9XGfKAUx0cruCarF6fTCPgsiHyAxPnJhS6Smq56Ytk" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-barbecue-plancha-0625-=
+420.jpg" alt=3D"" width=3D"185" style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:13px;line-height:13px;display:block;border:none" class=3D"t_=
+w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"60%" class=3D"t_w63p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz14px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+3&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkMyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DaEKWDPBlGXfxKphVDunanqBfLfr8eUzf_L33PrPicwY" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> Barbecue et<br role=3D"none"/>plancha </a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"40%" class=3D"t_w37p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text40fae40c-41e5-46bc-875b-f33cf1557b5a">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:18px;background-color:#ee1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:20px;height:4px;font-weigh=
+t:700" class=3D"t_h4px m_h4px" height=3D"4">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+4&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkNCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DtEe5-en5X6Ya5p1CstHSTf3ApZV3-i27IzkER98XClw" sty=
+le=3D"color:#ffffff;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"3%" class=3D"t_w2p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"66%" class=3D"t_w65p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w100p" role=3D"none"=
+>
+<tr><td valign=3D"top" width=3D"47.5%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"middle" class=3D"t_h158px m_h198px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_h158px t_w100p m_h198px m_=
+w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=
+=3D"none">
+<tr><td id=3D"image75776aaa-324f-483f-9098-a3f9120edec2">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"t_pt0px m_=
+pt0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+5&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkNSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D5Scl6M8WOUC3NpfJvS9JQAKxROMzSHxUu4P2YOrdf0U" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-airfryer-0625-420.jpg"=
+ alt=3D"" width=3D"188" style=3D"font-family:Arial,Helvetica,sans-serif;fon=
+t-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_=
+w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"60%" class=3D"t_w63p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz14px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+6&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkNiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D7ekanXhFCA3WOTrIYIarouMZpH0rfDX8JpVBtDyt2V0" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> S&#xE9;lection <br role=3D"none"/>Airfryer </a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"40%" class=3D"t_w37p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"textd8896fcf-725b-4e41-a082-2a52e829873f">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:18px;background-color:#ee1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:20px;height:4px;font-weigh=
+t:700" class=3D"t_h4px m_h4px" height=3D"4">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+7&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkNyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D1pKUXpVNtWI7BPGaWdHJMjd0sAZkiayggYIxNh5pSwg" sty=
+le=3D"color:#ffffff;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"5%" class=3D"t_w4p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"47.5%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w95p" role=
+=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"middle" class=3D"t_h158px m_h198px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_h158px t_w100p m_h198px m_=
+w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=
+=3D"none">
+<tr><td id=3D"image46575b4c-c864-478d-b576-347513b38591">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"t_pt0px m_=
+pt0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+8&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkOCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DytKrfln2L2JC6uEjnZUVM8yAkn7faLP4rqIxmqNC50s" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-cafe-0625-420.jpg" alt=
+=3D"" width=3D"188" style=3D"font-family:Arial,Helvetica,sans-serif;font-si=
+ze:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w100=
+p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"60%" class=3D"t_w63p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz14px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+9&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkOSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dp-ArYVdih86O1FYczDiQN0yGZZRNcptFcSL2ZO69dSo" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> Petit d&#xE9;jeuner et caf&#xE9; </a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"40%" class=3D"t_w37p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"textc21a3bb6-3e0a-443c-ad7a-f2fcd33555b6">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:18px;background-color:#ee1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:20px;height:4px;font-weigh=
+t:700" class=3D"t_h4px m_h4px" height=3D"4">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+a&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkYSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DKM06lOYYYP3EFCN2a51plO3-6lWOjMZ9fb9BeqJ78sI" sty=
+le=3D"color:#ffffff;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center t_w100p m_w=
+100p" aria-hidden=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;background-color:#ffffff;font-si=
+ze:8px" class=3D"m_h15px"> &zwnj; </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"48%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=3D=
+"none">
+<tr><td id=3D"imagef07d508d-3d87-42a4-b5a3-b54bc3f06719">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+b&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkYiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DPN196RdZ982HA5mvGBbwYFZJxH9mwQUIuwZ4UotF4Ac" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/WEBD10165-F_PEMFOOD_RUN25_mou=
+linex_air_fryer_FB_25_EMAILHORIZONTAL_420x250.jpg" alt=3D"" width=3D"260" s=
+tyle=3D"font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1=
+3px;display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"70%" class=3D"t_w72p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ff6745;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px" class=3D"t_f=
+z15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+c&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkYyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D9Pc7pejJ7hqkLla1mt9bpR18PSkyd927G7LnNeYhTJ4" sty=
+le=3D"color:#ff6745;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">Airfryer</span><b=
+r role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Moulinex Ea=
+sy Fry Dual Flex</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w28p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"textb1e8c059-b28d-43c0-b343-cf13f0810896">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:20px;background-color:#ff6745;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:22px;height:24px;font-weig=
+ht:700" class=3D"t_h24px m_h24px" height=3D"24">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+d&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkZCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DJTA_t_ebwyCm_9Hcb7PgyJPusGMhxfYBCxfcZPxchUo" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"4%" class=3D"t_w4p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"48%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=3D=
+"none">
+<tr><td id=3D"imagefb4ae341-7fc4-464d-8f90-9a53551386fa">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+e&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkZSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DH09R8hWSdoMsFc_TPNeq0Hv6cenR2JrXYRkMWU_WIDA" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/V3_MAILHORIZONTAL_420x250.jpg=
+" alt=3D"" width=3D"260" style=3D"font-family:Arial,Helvetica,sans-serif;fo=
+nt-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m=
+_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"70%" class=3D"t_w72p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ff6745;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px" class=3D"t_f=
+z15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44d=
+f&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRkZiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DB_5fcOHlyFo15lMhE4e-bwDKv8C4TIKasQEcljRrUAI" sty=
+le=3D"color:#ff6745;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">Machine expresso<=
+/span><br role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Kru=
+ps Evidence Hot & Cold</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w28p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text86c4c3ee-a973-4639-b0d5-4e2ad0c087f5">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:20px;background-color:#ff6644;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:22px;height:24px;font-weig=
+ht:700" class=3D"t_h24px m_h24px" height=3D"24">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+0&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlMCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DbDqGGdot4Km-3wOZVEGIxs4xl0vSmEGc05tE27I1kCs" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_mauto m_w95p" =
+role=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:center;text-transform:uppercase;font-size:22px;padding-top:25px;paddi=
+ng-bottom:20px;vertical-align:middle;line-height:32px;font-weight:700" clas=
+s=3D"t_fz20px t_pb5px m_fz18px m_pt20px m_pb15px m_lh24px"> Soldes entretie=
+n et confort de la maison </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"48%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=3D=
+"none">
+<tr><td id=3D"image32b81422-d82a-4ec9-acbf-b237c1fbc4e1">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+1&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlMSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DAbtp_rvSZJqVOnjp_D47OEWNmeM1FDixemlYHCnXQMc" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-aspiration-0625-420.jp=
+g" alt=3D"" width=3D"260" style=3D"font-family:Arial,Helvetica,sans-serif;f=
+ont-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p =
+m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"70%" class=3D"t_w72p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+2&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlMiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dkdt4xyuQRjxEXwycCczM92ozPdIt6caZiGxwyTYFk7c" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">S&#xE9;lection</s=
+pan><br role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Aspir=
+ateurs</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w28p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text34ec83c6-00ae-4219-9bdf-ff3c7a1bbd8a">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:20px;background-color:#ef1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:22px;height:24px;font-weig=
+ht:700" class=3D"t_h24px m_h24px" height=3D"24">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+3&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlMyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DAVkL_H5T5eLv5qSStesHeODmqWJ1DtJY3hHENLR0SDE" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"4%" class=3D"t_w4p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"48%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=3D=
+"none">
+<tr><td id=3D"image2a096c30-456b-45fd-858b-a0e131652683">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+4&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlNCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DEpRZl0vPbN8I9xtMEHc7DVM1KZ5hN4wAl-SHk-ZAnDQ" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-soin-linge-0625-420.jp=
+g" alt=3D"" width=3D"260" style=3D"font-family:Arial,Helvetica,sans-serif;f=
+ont-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p =
+m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"70%" class=3D"t_w72p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+5&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlNSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Des4tUCVRuoQzrREtXduEBnxa1VN0de-rS3z7MC1Y0BE" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">S&#xE9;lection</s=
+pan><br role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Soin =
+du linge</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w28p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text23f5c157-15fa-46c4-9ec2-b1bb8b0179ad">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:20px;background-color:#ef1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:22px;height:24px;font-weig=
+ht:700" class=3D"t_h24px m_h24px" height=3D"24">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+6&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlNiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DV0RVLFC8eiuap60ORattHeuBeod7nETr_jyrHKVqHjY" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_mauto m_w95p" =
+role=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:center;text-transform:uppercase;font-size:22px;padding-top:25px;paddi=
+ng-bottom:20px;vertical-align:middle;line-height:32px;font-weight:700" clas=
+s=3D"t_fz20px t_pb5px m_fz18px m_pt20px m_pb15px m_lh24px"> soldes beaut&#x=
+E9;, sant&#xE9; et forme </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w95p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"48%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=3D=
+"none">
+<tr><td id=3D"image971eb86c-c339-4f4a-8ed1-4a7c5c98cfbb">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+7&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlNyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DJBdEXxbBTwJE_NeU7IxUFMqeJe3JY4gjZ08gKlyWB64" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-coiffure-0625-420.jpg"=
+ alt=3D"" width=3D"260" style=3D"font-family:Arial,Helvetica,sans-serif;fon=
+t-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_=
+w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"70%" class=3D"t_w72p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+8&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlOCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DM47LmrFS2_ijvZUpgEfRqVny7ignTIRi7gl2qQCPvac" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">S&#xE9;lection</s=
+pan><br role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Coiff=
+ure</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w28p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"textb7a22b30-315c-451c-baab-9c3890d4e855">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:20px;background-color:#ef1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:22px;height:24px;font-weig=
+ht:700" class=3D"t_h24px m_h24px" height=3D"24">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+9&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlOSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DhNBcQfkxKMrD_RtEBeUksprwqS9SEBk8Rgo7VKA2g58" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"4%" class=3D"t_w4p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"48%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td>
+<div style=3D"border-top:1px solid #e0e0e0;border-right:1px solid #e0e0e0;b=
+order-bottom:1px solid #e0e0e0;border-left:1px solid #e0e0e0;mso-border-alt=
+:none">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"border-collapse:separate;mso-border-top-alt:1px solid #e0e0e0;mso-bord=
+er-right-alt:1px solid #e0e0e0;mso-border-bottom-alt:1px solid #e0e0e0;mso-=
+border-left-alt:1px solid #e0e0e0;background-color:#ffffff" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=3D=
+"none">
+<tr><td id=3D"imageaf99eacc-8b82-4b94-a1ff-6624c4296ab1">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+a&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlYSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DTSBMeQUIxpNojZToZ0-KX2xtJe6xagvEQqHT6wWBTO8" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/soldes-lumea-0625-420.jpg" al=
+t=3D"" width=3D"260" style=3D"font-family:Arial,Helvetica,sans-serif;font-s=
+ize:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w10=
+0p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"70%" class=3D"t_w72p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+b&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlYiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DoKK-yctwhEQA6UtMUcOZXUY6Xn1HDWLVvxJrRAA_gIY" sty=
+le=3D"color:#ee1e3e;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">SOLDES</span><br =
+role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Epilateur Phi=
+lips Lumea</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w28p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"textcad5e4e2-0da6-4964-9dd4-ab966469d325">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:20px;background-color:#ef1e3e;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:22px;height:24px;font-weig=
+ht:700" class=3D"t_h24px m_h24px" height=3D"24">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+c&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlYyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D0kl4rDdIRHLo7Ya3TPNtRLAZQKKi-bkiIXGdrPfuH4Y" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"90%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_mauto m_w95p" =
+role=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ee1e3e;text-=
+align:center;text-transform:uppercase;font-size:22px;padding-top:25px;paddi=
+ng-bottom:20px;vertical-align:middle;line-height:32px;font-weight:700" clas=
+s=3D"t_fz20px t_pb5px m_fz18px m_pt20px m_pb15px m_lh24px"> soldes pet care=
+ </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w100p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"31%" class=3D"t_w33p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;background-color:#ed1d3d" class=3D"d_cent=
+er t_w100p m_w95p" role=3D"none">
+<tr><td valign=3D"middle" class=3D"t_h160px m_h200px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_h160px t_w100p m_h200px m_=
+w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=
+=3D"none">
+<tr><td id=3D"imagea4fd1c73-6464-479e-b105-ed91ac9355cc">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"t_pt0px m_=
+pt0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+d&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlZCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dp4qBBkxLKDh_75j657Z6JZhJkL7n3mb4aq7Z4cSi7cw" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/V2_Purobot-Ultra-Robot_CC.jpg=
+" alt=3D"" width=3D"187" style=3D"font-family:Arial,Helvetica,sans-serif;fo=
+nt-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m=
+_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"64%" class=3D"t_w63p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+e&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlZSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DyBHIQmrEbIN_8EQ8XO8QuFOnNlAgNK3IqfTkooTfjQA" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">Purobot Ultra</sp=
+an><br role=3D"none"/><span style=3D"font-size:12px">Liti&#xE8;re avec cam&=
+#xE9;ra</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"36%" class=3D"t_w37p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text39aaa99c-2e1c-4a68-a379-bc8217e3c835">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:18px;background-color:#e9ab00;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:20px;height:4px;font-weigh=
+t:700" class=3D"t_h4px m_h4px" height=3D"4">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44e=
+f&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRlZiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DVfV2Vpxlzm5kw7IPL6RVvJ_-OKLXuX85qFRyQzVyJGs" sty=
+le=3D"color:#ffffff;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"3%" class=3D"t_w2p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"66%" class=3D"t_w65p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w100p" role=3D"none"=
+>
+<tr><td valign=3D"top" width=3D"47.5%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;background-color:#ed1d3d" class=3D"d_cent=
+er t_w100p m_w95p" role=3D"none">
+<tr><td valign=3D"middle" class=3D"t_h160px m_h200px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_h160px t_w100p m_h200px m_=
+w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=
+=3D"none">
+<tr><td id=3D"image83d83f6c-0f10-4414-a65b-5a1df2ab13b3">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"t_pt0px m_=
+pt0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+0&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmMCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DdFXgWgZlFhZkbDDQf7wpRP3DuEw5j3cYUWSuBtS8Chk" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/WEBD10516-F_PEM_SOLDESETE25_P=
+AWBBY-Bac_CC_2025_EMAILHORIZONTAL_420x250.jpg" alt=3D"" width=3D"190" style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:13px;=
+display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"64%" class=3D"t_w63p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+1&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmMSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D4EL7UlyEFfT9G0tBEBsN8ovSoY9JReUp0lD83iEQOP8" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> PAWBBY<br role=3D"none"/><span style=3D"font-siz=
+e:12px">Bac autonettoyant</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"36%" class=3D"t_w37p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text9e26383e-aa32-408f-ba1c-93270326b3b6">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:18px;background-color:#e9ab00;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:20px;height:4px;font-weigh=
+t:700" class=3D"t_h4px m_h4px" height=3D"4">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+2&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmMiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DKrOErV-NFT1PAHzi5sYFcSeoIJ_UEwU4Srh_fan_MI4" sty=
+le=3D"color:#ffffff;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"5%" class=3D"t_w4p m_w100p m_flright" aria-hidd=
+en=3D"true">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"47.5%" class=3D"t_w48p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;background-color:#ed1d3d" class=3D"d_cent=
+er t_w100p m_w95p" role=3D"none">
+<tr><td valign=3D"middle" class=3D"t_h160px m_h200px">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_h160px t_w100p m_h200px m_=
+w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w80p" role=
+=3D"none">
+<tr><td id=3D"image1220cec5-ebc7-42e0-8879-72b7fc23abff">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-bottom:10px;text-align:center" class=3D"t_pt0px m_=
+pt0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+3&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmMyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DguKU01mBy7T1HB2EngE5ATqCqmX87jFbt_bi-E9f6HQ" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" target=3D"_blank"><img src=3D"https://static.fnac-static.com/multi=
+media/Mails/2025/DIVERSIFICATION/PEM/20250703/V2_Purobot-Max-Pro_EMAILHORIZ=
+ONTAL_420x250.jpg" alt=3D"" width=3D"190" style=3D"font-family:Arial,Helvet=
+ica,sans-serif;font-size:13px;line-height:13px;display:block;border:none" c=
+lass=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w90p" role=3D=
+"none">
+<tr><td valign=3D"top" width=3D"64%" class=3D"t_w63p m_w70p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:right;text-transform:none;font-size:16px;padding-right:0;padding-bott=
+om:15px;padding-left:0;vertical-align:middle;line-height:22px;font-weight:7=
+00" class=3D"t_fz15px t_pt5px t_pb10px t_h40px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+4&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmNCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DvK5Y4jEWCGRJBXSFRIwBol3iRVSM9b3easkNFmNZV38" sty=
+le=3D"color:#ffffff;line-height:22px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"><span style=3D"font-weight:700">Purobot Pro</span=
+><br role=3D"none"/><span style=3D"font-weight:700;font-size:12px">Liti&#xE=
+8;re automatique</span></a>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"36%" class=3D"t_w37p m_w30p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"60%" align=
+=3D"center" style=3D"margin:auto;border-collapse:separate" class=3D"d_cente=
+r t_w55p m_mauto m_w47px" role=3D"none">
+<tr><td id=3D"text17caf350-c1b7-44fb-b72f-0d3a267ac01c">
+<div style=3D"border-top-left-radius:5px;border-top-right-radius:5px;border=
+-bottom-left-radius:5px;border-bottom-right-radius:5px;overflow:hidden">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:18px;background-color:#e9ab00;padding-top:10px;paddi=
+ng-bottom:10px;vertical-align:middle;line-height:20px;height:4px;font-weigh=
+t:700" class=3D"t_h4px m_h4px" height=3D"4">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+5&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmNSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DdeyRqV4Hs59UliHtHv9eV_VH-1OuApZLPNSkiRopNbk" sty=
+le=3D"color:#ffffff;line-height:20px;display:block;text-decoration:none;out=
+line:0" target=3D"_blank"> + </a>
+</td></tr></table></div>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;clear:both" class=3D"d_center t_w100p m_w=
+100p" aria-hidden=3D"true">
+<tr><td height=3D"20" style=3D"height:20px;font-size:8px" class=3D"m_h15px"=
+> &zwnj; </td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td valign=3D"top" width=3D"20%" class=3D"t_w20p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"d_left m_w28p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w40px m_w40px" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:25px;text-align:center" class=3D"m_pt22px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+6&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmNiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DaOkkneEbvtnm48xIxuWCJTy6QBqWTi8IBEnA53Nt3-k" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Reprise Fnac" target=3D"_blank"><img src=3D"https://stati=
+c.fnac-static.com/multimedia/Mails/2025/Picto/pictoreprise2.png" alt=3D"" w=
+idth=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:13px;=
+line-height:13px;display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w66p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:13px;padding-top:13px;padding-bottom:25px;vertical-a=
+lign:middle;line-height:20px" class=3D"t_fz12px m_taleft m_pt33px m_pb10px"=
+>
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+7&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmNyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D6cuSe2-QEt0MZ3wIl_-_1QbpIxLsjHnzPwjrOj5nmu4" sty=
+le=3D"color:#000000;line-height:20px;display:block;text-decoration:none;out=
+line:0" title=3D"Reprise Fnac" target=3D"_blank"> On rach&#xE8;te, vous &#x=
+E9;conomisez </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"20%" class=3D"t_w20p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"d_left m_w28p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w40px m_w40px" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:25px;text-align:center" class=3D"m_pt17px m_pb=
+18px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+8&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmOCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D6knW7vw4zAvh5DxqA3tXAi2BBwVQi9ws8uwREEBMvE4" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"L'Eclaireur Fnac" target=3D"_blank"><img src=3D"https://s=
+tatic.fnac-static.com/multimedia/Mails/2023/REFONTE/footer/picto=E9claireur=
+.png" alt=3D"" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif=
+;font-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100=
+p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w66p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:13px;padding-top:13px;padding-bottom:25px;vertical-a=
+lign:middle;line-height:20px" class=3D"t_fz12px m_taleft m_pt18px m_pb17px"=
+>
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+9&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmOSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D_OS5zwUdZUfBgdlte1DqrMixfPuDx4L7482wP-Gy7Kg" sty=
+le=3D"color:#000000;line-height:20px;display:block;text-decoration:none;out=
+line:0" title=3D"L'Eclaireur Fnac" target=3D"_blank"> L&#x2019;&#xC9;claire=
+ur Fnac<br role=3D"none"/>Tous nos conseils </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"20%" class=3D"t_w20p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"d_left m_w28p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w40px m_w40px" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:25px;text-align:center" class=3D"m_pt0px m_pb1=
+7px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+a&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmYSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Di_h6j7vznDdqVSXBUhRVQx-6fq0lYsohuuMOmEx_5gw" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Livraison" target=3D"_blank"><img src=3D"https://static.f=
+nac-static.com/multimedia/Mails/2023/REFONTE/footer/pictoretrait.png" alt=
+=3D"" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-siz=
+e:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w100p=
+"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w66p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"80%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:13px;padding-top:13px;padding-bottom:25px;vertical-a=
+lign:middle;line-height:20px" class=3D"t_fz12px t_pr17px t_pl17px m_taleft =
+m_pb17px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+b&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmYiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D47-Tyx9mh5ibvhpbodk_2m8eycLWMA7KBrxQIVBhqHQ" sty=
+le=3D"color:#000000;line-height:20px;display:block;text-decoration:none;out=
+line:0" title=3D"Livraison" target=3D"_blank"> Retrait 1h en magasin </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"20%" class=3D"t_w20p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"d_left m_w28p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w40px m_w40px" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:25px;text-align:center" class=3D"m_pt0px m_pb1=
+7px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+c&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmYyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DA9d2SsKmdu1_GMwT6BFPKYdBV2EvJRTEpB3aT7pA_7w" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Retour gratuit" target=3D"_blank"><img src=3D"https://sta=
+tic.fnac-static.com/multimedia/Mails/2023/REFONTE/footer/pictoretour.png" a=
+lt=3D"" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-s=
+ize:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w10=
+0p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w66p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:13px;padding-top:13px;padding-bottom:25px;vertical-a=
+lign:middle;line-height:20px" class=3D"t_fz12px t_pr13px t_pl13px m_taleft =
+m_pb17px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+d&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmZCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3Dm28mrZclbOGqAlMA4iKmOg2RN8Iqx0FJ4NrQEcnhJ9c" sty=
+le=3D"color:#000000;line-height:20px;display:block;text-decoration:none;out=
+line:0" title=3D"Retour gratuit" target=3D"_blank"> Retour gratuit en magas=
+in </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"20%" class=3D"t_w20p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"d_left m_w28p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w40px m_w40px" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:25px;text-align:center" class=3D"m_pt0px m_pb1=
+7px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+e&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmZSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D4m5rBEDscFxkOtiktxlm_6o80XB7Z21YsG4duIhnqSQ" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Nous contacter" target=3D"_blank"><img src=3D"https://sta=
+tic.fnac-static.com/multimedia/Mails/2023/REFONTE/footer/pictocontact.png" =
+alt=3D"" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-=
+size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w1=
+00p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center m_w66p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#000000;text-=
+align:center;font-size:13px;padding-top:13px;padding-right:24px;padding-bot=
+tom:25px;padding-left:24px;vertical-align:middle;line-height:20px" class=3D=
+"t_fz12px m_taleft m_pr0px m_pb20px m_pl0px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b44f=
+f&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDRmZiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DaeJESZ5IOVGM60zcGoF9HNTk65HA53q0c_uapEzNskE" sty=
+le=3D"color:#000000;line-height:20px;display:block;text-decoration:none;out=
+line:0" title=3D"Nous contacter" target=3D"_blank"> Nous contacter </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto;background-color:#13100d" class=3D"d_cent=
+er" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w90p" role=3D"=
+none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:left;text-transform:uppercase;font-size:12px;padding-top:25px;vertica=
+l-align:middle;line-height:18px"> Suivez-nous </td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"95%" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w90p" role=3D"=
+none">
+<tr><td valign=3D"top" width=3D"57%" class=3D"t_w44p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p" role=3D"none"=
+>
+<tr><td valign=3D"top" width=3D"16.66%" class=3D"t_w16d66p m_w16d66p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"left" class=3D"d_left t_w100p m_w46px" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:38px;padding-bottom:21px;text-align:center" cl=
+ass=3D"m_pt11px m_pb16px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+0&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwMCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D1P77AYJN2YPI6j3jMxdgNJ-UTG6zG3JTxdUct55dBuM" wid=
+th=3D"100%" style=3D"color:#ffffff;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Instagram" target=3D"_blank"><img src=3D"https://static.f=
+nac-static.com/multimedia/Mails/2023/REFONTE/footer/instagram.png" alt=3D"I=
+nstagram" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font=
+-size:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w=
+100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"16.66%" class=3D"t_w16d66p m_w16d66p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"left" class=3D"d_left t_w100p m_w46px" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:38px;padding-bottom:21px;text-align:center" cl=
+ass=3D"m_pt11px m_pb16px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+1&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwMSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DvAlj0zrtgSPSG7FMQ6tP6Dwbdt3vnUj1QOXkEQIWcCE" wid=
+th=3D"100%" style=3D"color:#ffffff;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Facebook" target=3D"_blank"><img src=3D"https://static.fn=
+ac-static.com/multimedia/Mails/2023/REFONTE/footer/facebook.png" alt=3D"Fac=
+ebook" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-si=
+ze:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w100=
+p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"16.67%" class=3D"t_w16d67p m_w16d67p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"left" class=3D"d_left t_w100p m_w46px" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:38px;padding-bottom:21px;text-align:center" cl=
+ass=3D"m_pt11px m_pb16px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+2&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwMiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DN_OkN5QRK_12uM2hY_Ohxc_ZDTOGEXrarbyI9JzodzE" wid=
+th=3D"100%" style=3D"color:#ffffff;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"X" target=3D"_blank"><img src=3D"https://static.fnac-stat=
+ic.com/multimedia/Mails/2023/REFONTE/footer/twitter.png" alt=3D"X" width=3D=
+"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:13px;line-he=
+ight:13px;display:block;border:none" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"16.67%" class=3D"t_w16d67p m_w16d67p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"left" class=3D"d_left t_w100p m_w46px" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:38px;padding-bottom:21px;text-align:center" cl=
+ass=3D"m_pt11px m_pb16px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+3&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwMyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DLmpHtNtmw_JwMbnyD4ZZeuRxmhCMwdRBSmBunWoKLGU" wid=
+th=3D"100%" style=3D"color:#ffffff;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Youtube" target=3D"_blank"><img src=3D"https://static.fna=
+c-static.com/multimedia/Mails/2023/REFONTE/footer/youtube.png" alt=3D"Youtu=
+be" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:=
+13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w100p"/=
+></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"16.67%" class=3D"t_w16d67p m_w16d67p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"left" class=3D"d_left t_w100p m_w46px" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:38px;padding-bottom:21px;text-align:center" cl=
+ass=3D"m_pt11px m_pb16px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+4&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwNCZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3D916kGxIczZjMWvxWaGtwC0cKID6s9qgDuPloukmFt0c" wid=
+th=3D"100%" style=3D"color:#ffffff;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"LinkedIn" target=3D"_blank"><img src=3D"https://static.fn=
+ac-static.com/multimedia/Mails/2023/REFONTE/footer/linkedin.png" alt=3D"Lin=
+kedIn" width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-si=
+ze:13px;line-height:13px;display:block;border:none" class=3D"t_w100p m_w100=
+p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"16.67%" class=3D"t_w16d67p m_w16d67p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"40" align=
+=3D"left" class=3D"d_left t_w18px m_w46px" role=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"padding-top:38px;padding-bottom:21px;text-align:center" cl=
+ass=3D"t_pt43px t_pb0px m_pt11px m_pb16px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+5&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwNSZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DqRIDsGjqM4p04worj5uPQAUNaOGwgLPPUiVt39T9Nf4" wid=
+th=3D"100%" style=3D"color:#ffffff;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"TikTok" target=3D"_blank"><img src=3D"https://static.fnac=
+-static.com/multimedia/Mails/2023/REFONTE/footer/tiktok.png" alt=3D"TikTok"=
+ width=3D"40" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:13p=
+x;line-height:13px;display:block;border:none" class=3D"t_w100p m_w100p"/></=
+a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></td>
+<td valign=3D"top" width=3D"13%" class=3D"t_w29p m_dnone" aria-hidden=3D"tr=
+ue">
+<span>&zwnj;</span></td>
+<td valign=3D"top" width=3D"30%" class=3D"t_w27p m_w100p m_flright">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"right" class=3D"d_right" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"62" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_w62px m_w62px" role=
+=3D"none">
+<tr><td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" class=3D"d_center" role=3D"none">
+<tr><td style=3D"text-align:center">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+6&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwNiZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DWTSv8gq7E_xx-2jfgEmjZ0ShcqstffGkgCR_rGf4oFo" wid=
+th=3D"100%" style=3D"color:#000000;outline:0;border:none;margin:auto;displa=
+y:block" title=3D"Fnac 70 ans" target=3D"_blank"><img src=3D"https://static=
+.fnac-static.com/multimedia/Mails/2024/70ans_Fnac/LOGO_FESTIF/FNAC_70ans_Lo=
+goFestif_Blanc.png" alt=3D"Fnac" width=3D"62" style=3D"font-family:Arial,He=
+lvetica,sans-serif;font-size:13px;line-height:13px;display:block;border:non=
+e" class=3D"t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#ffffff;text-=
+align:center;font-size:14px;padding-top:10px;padding-bottom:10px;vertical-a=
+lign:middle;line-height:16px;font-weight:700" class=3D"m_pb20px">
+<a href=3D"https://fr.r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,66b450=
+7&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGlja=
+z1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwNyZjbGllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05=
+NTU3LWRmN2E1YTVjMWI5MA&s=3DvVzBiHX5zvahb7GELMeEMYSHud7_ZCLwz1HLNmVFOTg" sty=
+le=3D"color:#ffffff;line-height:16px;display:block;text-decoration:none;out=
+line:0" title=3D"Fnac 70 ans" target=3D"_blank"> Lib&#xE9;rons la culture <=
+/a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w95p m_w90p" role=3D=
+"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;color:#9D9A8D;text-=
+align:center;font-size:12px;padding-top:23px;padding-bottom:17px;vertical-a=
+lign:middle;line-height:20px"> Si&#xE8;ge social : Le Flavia - 9 rue des Ba=
+teaux-lavoirs - 94768 Ivry-sur-Seine Cedex<br role=3D"none"/><br role=3D"no=
+ne"/>Vous disposez d&#x2019;un droit d&#x2019;acc&#xE8;s, de rectification =
+et d&#x2019;opposition le cas &#xE9;ch&#xE9;ant au traitement de vos donn&#=
+xE9;es depuis le bouton nous contacter <a href=3D"https://fr.r.emails.fnac.=
+com/r/=3Fid=3Dh4874f948,ad565eb5,66b4508&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJm=
+VtbC1uYW1lPTE4ODg5NTYyOCZPcmlnaW5DbGljaz1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwOCZjb=
+GllbnRVaWQ9MWVlNmQ0ZDUyLWU4N2YtNDk5OC05NTU3LWRmN2E1YTVjMWI5MA&s=3DXVoXhcBW6=
+t9XGyILm_GXGP8Baf46ISS3LFO6px_2VLI" style=3D"color:#9D9A8D;text-decoration:=
+underline">accessible ici</a><br role=3D"none"/><br role=3D"none"/>Fnac uti=
+lise dans ses emails des technologies de type &#xAB; pixel &#xBB; pour cont=
+extualiser et am&#xE9;liorer le contenu des emails que vous recevez, et rec=
+ueillir des statistiques sur l&#x2019;ouverture des emails et les clics r&#=
+xE9;alis&#xE9;s sur leur contenu.<br role=3D"none"/><br role=3D"none"/><spa=
+n style=3D"font-weight:700;text-decoration:underline">Soldes : jusqu&#x2019=
+;&#xE0; -70%</span><br role=3D"none"/>Valables du Mercredi 25 Juin 08h00 au=
+ Mardi 22 Juillet inclus, dans la limite des stocks disponibles, uniquement=
+ pour les produits vendus et exp&#xE9;di&#xE9;s par Fnac.com (hors MarketPl=
+ace et produits 2nde vie), non cumulables avec toute remise ou promotion r&=
+#xE9;serv&#xE9;e ou non aux adh&#xE9;rents. </td></tr></table>
+</td></tr></table>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"640" align=
+=3D"center" style=3D"margin:auto" class=3D"d_center t_mauto t_w100p m_mauto=
+ m_w100p" role=3D"none">
+<tr><td valign=3D"top" width=3D"100%" class=3D"t_w100p m_w100p">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"center" style=3D"margin:auto" class=3D"d_center t_w100p m_w100p" role=
+=3D"none">
+<tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-weight:700;col=
+or:#666666;text-align:center;font-size:9px;padding-top:10px;padding-bottom:=
+10px;vertical-align:middle" class=3D"roboto"> 
+
+Si vous souhaitez vous d=E9sabonner des newsletters de la Fnac, 
+<a title=3D"Se d=E9sabonner des newsletters" style=3D"color: rgb(102, 102, =
+102); text-decoration: none;" href=3D"https://fr.r.emails.fnac.com/r/=3Fid=
+=3Dh4874f948,ad565eb5,66b4509&e=3DZW1sLXB1Ymxpc2hlcj1OZW9sYW5lJmVtbC1uYW1lP=
+TE4ODg5NTYyOCZPcmlnaW5DbGljaz1ZRVMmT3JpZ2luPW1haWxfNjZiNDUwOSZjbGllbnRVaWQ9=
+MWVlNmQ0ZDUyLWU4N2YtNDk5OC05NTU3LWRmN2E1YTVjMWI5MCZwMT1FRTZENEQ1Mi1FODdGLTQ=
+5OTgtOTU1Ny1ERjdBNUE1QzFCOTA&s=3Ddj9hPLI52hf9cCq3rZO2SDOrdhFCx6i1U8xkANHCTm=
+Y" target=3D"_blank" _type=3D"optout"><u>cliquez&nbsp;ici</u></a>
+ </td></tr></table>
+</td></tr></table>
+</td></tr></table><img height=3D'0' width=3D'0' alt=3D'' src=3D'https://fr.=
+r.emails.fnac.com/r/=3Fid=3Dh4874f948,ad565eb5,1'/></body>
+</html>
+

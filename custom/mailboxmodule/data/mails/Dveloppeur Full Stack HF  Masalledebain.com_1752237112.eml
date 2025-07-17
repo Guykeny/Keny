@@ -1,0 +1,886 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:680e:b0:92:fd56:6792 with SMTP id em14csp236683gbb;
+        Fri, 11 Jul 2025 01:53:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IE7ECRmWisfx7UcdNPcvbAMfKJjwVK2aKBAAJAjRijiENI9nSDHs5kIK9PO8d+M26pk5NRy
+X-Received: by 2002:a05:6902:508e:b0:e85:e22e:ed78 with SMTP id 3f1490d57ef6-e8b85b9deb2mr1943091276.29.1752224000976;
+        Fri, 11 Jul 2025 01:53:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1752224000; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kYW/wfQWRJG0Oqo9GvAf0bmKWDmhCcS4mFPH0A4z+AgZnC1FGu3qIy6ehXxhI1HBy/
+         6GvkmrTCljRdMF4haYwnaL0rr/yDcjaO3uAkONljDgZjP1z9qtj0Jejo6f5qWeZx7i1U
+         +o+99zdCUGWKqpoUELACKxV3xz86FyHgJrf6Y5rm30LG2tf9rtjEAQAa/D1OhNh0dBCx
+         regYCCz5lI0RQW+5Ka+2b0Wfy6gz9gSjtxdxQESgOVompzdgfBIzoBrdo56NF3xl7uBO
+         74IeLe+bU3ENRLL+wAc3KBJKED5uOirOQ3+wPjb2M8gG++jTwo/zYz1Jr32Vpw/fAlTi
+         yO+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:from:message-id
+         :subject:reply-to:mime-version:date:to:dkim-signature;
+        bh=PIZSMfT/hBIuPEDxPgksoAsD5tFtpvsxUp98rnYHMG8=;
+        fh=Z3c3D/4xeE50bGI+83vSAXEo7+MNzc/jktQqx4DY0QQ=;
+        b=ZcgHQ0TzW/5QSvo5sNza63sqCTrxOSA3SJ+TPF/HlnJ5jlTO4nIVb76KlkrVhuHAce
+         kqvzXUhV23Lxws2QXgZbRdyp2CS203Daw8hyGMtaNw2Mq81q2M6bavVWIIND72w6xXjR
+         6M9lVP6edoUEwiPS7GUGdGIk8mBsBUOyVaHlSu8qR8Gi0bbnWrxaiEe5PdQw3ytlC1YV
+         BO48MSJUoOmqWAaD7ehJkpbehcEsIno4Tes4wO/jRcBe6kfoHf1/Zki+ouyB86xAIrl2
+         M1GGEek1vWVLMStNE5dlAtCxPtkZYnpbH+pMscke8bLeTTR5PHon6Fx3W4wX0CrIn7Lp
+         o6Vg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@match.indeed.com header.s=scph1024 header.b=kubmt+ah;
+       spf=pass (google.com: domain of msprvs1=20287aiouc_qo=bounces-294276@bounces.indeed.com designates 156.70.22.250 as permitted sender) smtp.mailfrom="msprvs1=20287AiOUC_Qo=bounces-294276@bounces.indeed.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=match.indeed.com
+Return-Path: <msprvs1=20287AiOUC_Qo=bounces-294276@bounces.indeed.com>
+Received: from mta-70-22-250.indeed.com.sparkpostmail.com (mta-70-22-250.indeed.com.sparkpostmail.com. [156.70.22.250])
+        by mx.google.com with ESMTPS id 3f1490d57ef6-e8b7b031c0csi2773912276.307.2025.07.11.01.53.20
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 11 Jul 2025 01:53:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20287aiouc_qo=bounces-294276@bounces.indeed.com designates 156.70.22.250 as permitted sender) client-ip=156.70.22.250;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@match.indeed.com header.s=scph1024 header.b=kubmt+ah;
+       spf=pass (google.com: domain of msprvs1=20287aiouc_qo=bounces-294276@bounces.indeed.com designates 156.70.22.250 as permitted sender) smtp.mailfrom="msprvs1=20287AiOUC_Qo=bounces-294276@bounces.indeed.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=match.indeed.com
+Return-Path: <msprvs1=20287AiOUC_Qo=bounces-294276@bounces.indeed.com>
+X-MSFBL: arylwC5loXuTfJSqinkWF9ZmO04ztubuFeL3JTuJiAc=|eyJjdXN0b21lcl9pZCI
+	6IjI5NDI3NiIsInN1YmFjY291bnRfaWQiOiIwIiwidGVuYW50X2lkIjoic3BjIiw
+	ibWVzc2FnZV9pZCI6IjY4NzAwMGQxNzA2ODNiMDAxNjI3IiwiciI6Imd1eWtlbnk
+	ubmRheWl6ZXllOEBnbWFpbC5jb20ifQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=match.indeed.com;
+	s=scph1024; t=1752224000; i=@match.indeed.com;
+	bh=PIZSMfT/hBIuPEDxPgksoAsD5tFtpvsxUp98rnYHMG8=;
+	h=To:Date:Content-Type:Subject:Message-ID:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject;
+	b=kubmt+ahfbZfyKtY11g6xjgGkVRvFHoIoHFC3V83XXQ719SMHtFfIsmWO2JvcMuzH
+	 mUPFBwXTcEmLrJsr+FLG94zj8XL/UpwZlI6wmg117ze0TeoH3dc8V3KpYF9V5iCjcO
+	 chj7KhBEIC2G9a5makPj9lz9mufw/6wNkXxc+bHI=
+Received: from [10.90.17.135] ([10.90.17.135])
+	by i-005781a3eaec7956a.mta1vrest.sd.prd.sparkpost (ecelerity 5.0.0.74550 r(msys-ecelerity:tags/5.0.0.13)) with REST
+	id 72/61-59953-001D0786; Fri, 11 Jul 2025 08:53:20 +0000
+To: <guykeny.ndayizeye8@gmail.com>
+Date: Fri, 11 Jul 2025 08:53:20 +0000
+Content-Type: multipart/alternative; boundary="_----4BzU9I627r5lpujM8MWX7Q===_E1/61-59953-001D0786"
+MIME-Version: 1.0
+Reply-To: Indeed <donotreply@match.indeed.com>
+Subject: =?utf-8?B?RMOpdmVsb3BwZXVyIEZ1bGwgU3RhY2sgSC9GIOKAkyBNYXNhbGxl?=
+	=?utf-8?B?ZGViYWluLmNvbQ==?=
+Message-ID: <1ivsb0bsrpgmm81c.1752224000279.Railgunner@railgun--railgunner-elephanti2arailclipservice-54d6b9fc4f-tn8rp>
+From: "Indeed" <donotreply@match.indeed.com>
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:xjWXug4N4-KCFJLdOAS4IwYM0AnCcpag1MpXEmoqGS8~|eyAicmNwdF90byI6ICJndXlrZW55Lm5kYXlpemV5ZThAZ21haWwuY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMjk0Mjc2IiwgInN1YmFjY291bnRfaWQiOiAiMCIsICJtZXNzYWdlX2lkIjogIjY4NzAwMGQxNzA2ODNiMDAxNjI3IiB9>,<https://unsubscribe.spmta.com/u/trl4sWduq__zLiobntJvPw~~/AAR9hBA~/C6xDJliy6rlg-nFR-rvbEvHiEfIIWsGsYf-4Sx8T8cD3xHNYrlA6CSnfUSV45LSXOBQ7o6L40UVMcHcZqEeYfg~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.294276.0.sparkpostmail.com>
+
+--_----4BzU9I627r5lpujM8MWX7Q===_E1/61-59953-001D0786
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+We thought this job for a D=C3=A9veloppeur Full Stack H/F at Masalledebain.=
+com in 20620 Biguglia paying De 1=E2=80=AF700 =E2=82=AC =C3=A0 2=E2=80=AF10=
+0 =E2=82=AC par mois would be a good fit. Check out the job at https://cts.=
+indeed.com/v3/H4sIAAAAAAAA_02TWY-iWhSF_4vJ9anpAgHBSswNg0wKKIglvhBGD8NhOBxQ6=
+PR_bzr10tk72dnfWm8r69dqWH2uAMZt__nxkaGfeZ2kafIzbuBHGz7TMPmIq_L_DDVwXzRRvgmD=
+5cAQx4DIEKE4QQrDvFoXCJd7loghoIhl8rGPyPA5tjWKeZIiUobfJbsty21Jmk9Tdg2bPVqHyZ7=
+YWn4VZaVFSqXyTsBVMBJiI_qXPBzldMwikIW81ne3uh6PjriLG07td7NYH3Gn-YwrzICVXXUD1e=
+Di2mo7PBLO7QXtoXF1PvJvU06eD7s_1TQmSBXe1JPEOa5ZSlQ0PfIiF7o-GTj4kAm9fDkipiQ-0=
+ArowtE9OK3dtGV13W5Z34Nua93B85SN51d9nBAnKHaaFeQBHpQZvKBWDFB-tTNoTR2RljS6FcKF=
+5FiirM03-4Gn-6WuIMsJp5yy7JRkBNBeGKRTo1MJeonpTr7qsDmTWdveZNEYhp67uMDXWHrwGdM=
+9QD6rDNkuKGMjiLbItrRkH038ug00P6bWJORd5BT-43p4bk7h-9kW2hdLmd1YoW4QKWvL8yJTWv=
+fT28PxDM6AQ9TFoGkf6GEcKc47LCoC5ZHwTO4n0ojPBCV5cjA7SAvvyYU1vq4K2-jT-2INb_LA9=
+3zdIonu0MXMCmnHiYoxA3_UNMUuO-cI1eNIGHejUJ0QTA4qMJMf_RxwX37qRYGz8_Sd_5yNly40=
+g4gIAakkZrDHp9zj5b2n8uyV84XcEMzNYkWkjdozLe4K7Rxq8RWwX1N-bNKGw4pnKju5FYFosnP=
+QDoM6VFk-juxtt9mmrAXNkxtUhqsLFM2Y9DDEh8IHd99k32UU32eV2Ua8DInARcUSun4LAC_i6R=
+0_am6bi5qVKjouxu18vEexMnYnlXj9R8vLrhHcb9ZFH-53_DoOYbmvPWh09ubAI5BwhuB606Bh4=
+du9-rGCq89fq7jK4_IKUDM8wVI9jIZ0kb7p1KYLGvP0tZRsoW2I0hpfywX-_ZoeS__4POto2V_W=
+ouC_ju_StRi2Cah4crP6_fsPvu0Rt94DAAA/GN7HYjUNnKMStItZBpS9507chCB_As6uj6DkEYR=
+VN14=0ASe d=C3=A9sabonner: https://cts.indeed.com/v3/H4sIAAAAAAAA_12RS4-iQB=
+SF_wvJuBpbBJXGhEx4CUoARdTWDeFRPCygSqgC6U7_98HMLCaT3M0531nc5PtiKLNmckJwu57NW=
+hq1cVNgUqC6fSvqBIDkLUbVDGGCKPkVI2njTfJSSpsJgdK86NqIxaTCSV6-s9wkJkRSC3Xq8Evt=
+2nzAw7xUUxHrVER-nV25XocG11fspfJv06NiCPk2484RTTGo1KwUPtP9dU4CS07v3Xm7Ex42u1x=
+04kdyj4TtDoa6M08G6mzEhePxhm0L1i6Dz_cfvDYhCIJaUqHqK2HXldR9smXHPoSYyA9q44N-cm=
+Hn9_Ci6MhbdQ3HyS5JtQH7nCgD_kbTYu8ILYt31uYIdvYtC6emvOn3LBuuFnqh-HVjBXAwgyPqy=
+yVfteZqaIfa4wOlOzuuYZgW1flGu7seOtTa6Rl4Jmg6-ZzbhC0160YO45_jMT-Zill_MXFZxNDP=
+G0SzfHRAGgpG9KcdMBgrWv8VEr0IDhtQEx-O4JVQS9R_tifHctyLMxLyWvyvhvn-_g0o6NRb6wE=
+AAA/Y25f2GxUk7Didw91dy3CpDaqlQO8Yif5a_dgoXT3ScU
+--_----4BzU9I627r5lpujM8MWX7Q===_E1/61-59953-001D0786
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html lang=3D"fr" xmlns=3D=
+"http://www.w3.org/1999/xhtml" xml:lang=3D"fr" xmlns:v=3D"urn:schemas-micro=
+soft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><me=
+ta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"/><!--=
+[if !mso]><!-->=0A    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D=
+edge"/>=0A     <!--<![endif]-->=0A<meta name=3D"viewport" content=3D"width=
+=3Ddevice-width, initial-scale=3D1.0"/><!--[if !mso]><!-->=0A    <style typ=
+e=3D"text/css">@import url('https://prod.statics.indeed.com/ds/assets/typog=
+raphy/indeedsans/v1/indeedsans.css');</style>=0A     <!--<![endif]-->=0A<!-=
+-[if !mso]><!-->=0A    <style type=3D"text/css">@import url('https://fonts.=
+googleapis.com/css2=3Ffamily=3DNoto+Sans:wght@400;700&display=3Dswap');</st=
+yle>=0A     <!--<![endif]-->=0A<title></title><style type=3D"text/css">=0A =
+   =0A/* iOS BLUE LINKS */=0Aa[x-apple-data-detectors] {=0A  color: inherit=
+ !important;=0A  font-size: inherit !important;=0A  font-family: inherit !i=
+mportant;=0A  font-weight: inherit !important;=0A  line-height: inherit !im=
+portant;=0A}=0A/* Samsung blue Links */=0A#MessageViewBody a {=0A  color: i=
+nherit;=0A  text-decoration: none;=0A  font-size: inherit;=0A  font-family:=
+ inherit;=0A  font-weight: inherit;=0A  line-height: inherit;=0A}=0A/* Sams=
+ung center email */=0A#MessageViewBody {=0A  margin: 0 auto !important;=0A}=
+=0A=0Aa,=0Abody,=0Atable,=0Atd,=0Ath {=0A  -webkit-text-size-adjust: 100%;=
+=0A  -ms-text-size-adjust: 100%;=0A  box-sizing: border-box !important;=0A}=
+=0Atable,=0Atd {=0A  mso-table-lspace: 0;=0A  mso-table-rspace: 0;=0A}=0Aim=
+g {=0A  -ms-interpolation-mode: bicubic;=0A  border: 0;=0A  height: auto;=
+=0A  line-height: 100%;=0A  outline: 0;=0A  text-decoration: none;=0A}=0Abo=
+dy {=0A  height: 100% !important;=0A  margin: 0 !important;=0A  padding: 0 =
+!important;=0A  width: 100% !important;=0A}=0Asup {=0A  *vertical-align: ba=
+seline;=0A  *position: relative;=0A  *bottom: .75em;=0A  font-size: 0.65em;=
+=0A  line-height: 0;=0A}=0Ap {=0A  margin-top: 8px;=0A  margin-bottom: 16px=
+;=0A  /* This helps with paragraph spacing in Yahoo! */=0A}=0A@media only p=
+rint and (max-width: 600px) {=0A  body {=0A    max-width: 320px;=0A  }=0A}=
+=0A@media all and (max-width: 600px) {=0A  .outerContainer {=0A    width: 1=
+00% !important=0A  }=0A  .shrinkMobile a {=0A   min-width: 100% !important=
+=0A  }=0A  .innerContainer {=0A    padding-left: 0 !important;=0A    paddin=
+g-right: 0 !important=0A  }=0A  .fullWidth {=0A    width: 100% !important;=
+=0A    display: block=0A  }=0A  u~div #full-wrap {=0A    min-width: 100vw=
+=0A  }=0A  h1.hero-h1 {=0A    font-size:=0A      36px !important;=0A    lin=
+e-height: 45px !important;=0A    -webkit-text-size-adjust: none !important=
+=0A  }=0A  h1.hero-h1_variable {=0A    font-size: 130% !important;=0A    li=
+ne-height: 135% !important;=0A    -webkit-text-size-adjust: none !important=
+=0A  }=0A  h2.body-h2 {=0A    font-size:=0A      24px !important;=0A    lin=
+e-height: 30px !important;=0A    -webkit-text-size-adjust: none !important=
+=0A  }=0A  h3.body-h3 {=0A    font-size: 20px !important;=0A    line-height=
+: 24px !important;=0A    -webkit-text-size-adjust: none !important=0A  }=0A=
+  h3.body-h3-link {=0A    font-size: 20px !important;=0A    line-height: 24=
+px !important;=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h4=
+.body-h4-link {=0A    font-size: 14px !important;=0A    line-height: 18px =
+!important;=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h1.h1=
+-xl {=0A    font-size: 44px !important;=0A    line-height: 55px !important;=
+=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h1.h1-lg {=0A   =
+ font-size: 36px !important;=0A    line-height: 45px !important;=0A    -web=
+kit-text-size-adjust: none !important=0A  }=0A  h1.h1-md {=0A    font-size:=
+ 28px !important;=0A    line-height: 35px !important;=0A    -webkit-text-si=
+ze-adjust: none !important=0A  }=0A  h1.h1-sm {=0A    font-size: 24px !impo=
+rtant;=0A    line-height: 30px !important;=0A    -webkit-text-size-adjust: =
+none !important=0A  }=0A  h1.h1-xs {=0A    font-size: 20px !important;=0A  =
+  line-height: 28px !important;=0A    -webkit-text-size-adjust: none !impor=
+tant=0A  }=0A  h2.h2-xl {=0A    font-size: 28px !important;=0A    line-heig=
+ht: 35px !important;=0A    -webkit-text-size-adjust: none !important=0A  }=
+=0A  h2.h2-lg {=0A    font-size: 24px !important;=0A    line-height: 30px !=
+important;=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h2.h2-=
+md {=0A    font-size: 20px !important;=0A    line-height: 28px !important;=
+=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h2.h2-sm,=0A  h2=
+.h2-xs {=0A    font-size: 16px !important;=0A    line-height: 24px !import=
+ant;=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h3.h3-xl,=0A=
+  h3.h3-link-xl {=0A    font-size: 24px !important;=0A    line-height: 30px=
+ !important;=0A    -webkit-text-size-adjust: none !important=0A  }=0A  h3.h=
+3-lg,=0A  h3.h3-link-lg {=0A    font-size: 20px !important;=0A    line-heig=
+ht: 28px !important;=0A    -webkit-text-size-adjust: none !important=0A  }=
+=0A  h3.h3-md,=0A  h3.h3-link-md {=0A    font-size: 16px !important;=0A    =
+line-height: 24px !important;=0A    -webkit-text-size-adjust: none !importa=
+nt=0A  }=0A  h3.h3-sm,=0A  h3.h3-xs,=0A  h3.h3-link-sm,=0A  h3.h3-link-xs {=
+=0A    font-weight: normal !important;=0A    font-size: 16px !important;=0A=
+    line-height: 24px !important;=0A    -webkit-text-size-adjust: none !imp=
+ortant=0A  }=0A  p.body-p-lg {=0A    font-size: 36px !important;=0A    line=
+-height: 43px !important;=0A    -webkit-text-size-adjust: none !important=
+=0A  }=0A  p.body-p-sm {=0A    font-size:=0A      14px !important;=0A    li=
+ne-height: 22px !important;=0A    -webkit-text-size-adjust: none !important=
+=0A  }=0A  p.body-p-xs {=0A    font-size: 12px !important;=0A    line-heigh=
+t: 20px !important;=0A    -webkit-text-size-adjust: none !important=0A  }=
+=0A  .ph-0 {=0A    padding-left:=0A      0px !important;=0A    padding-righ=
+t: 0px !important=0A  }=0A  .p-0 {=0A    padding: 0px !important=0A  }=0A  =
+.pt-0 {=0A    padding-top: 0px !important=0A  }=0A  .pr-0 {=0A    padding-=
+right: 0px !important=0A  }=0A  .pb-0 {=0A    padding-bottom: 0px !importan=
+t=0A  }=0A  .pl-0 {=0A    padding-left: 0px !important=0A  }=0A  .pb-4 {=0A=
+    padding-bottom: 4px !important=0A  }=0A  .pt-4 {=0A    padding-top: 4px=
+ !important=0A  }=0A  .ph-8 {=0A    padding-left: 8px !important;=0A    pad=
+ding-right: 8px !important=0A  }=0A  .pb-8 {=0A    padding-bottom: 8px !imp=
+ortant=0A  }=0A  .ptb-8 {=0A    padding-top: 8px !important;=0A    padding-=
+bottom: 8px !important=0A  }=0A  .pt-8 {=0A    padding-top: 8px !important=
+=0A  }=0A  .pl-8 {=0A    padding-left: 8px !important=0A  }=0A  .pl-10 {=0A=
+    padding-left: 10px !important=0A  }=0A  .pr-8 {=0A    padding-right: 8p=
+x !important=0A  }=0A  .ph-15 {=0A    padding-left: 15px !important;=0A    =
+padding-right: 15px !important=0A  }=0A  .pr-15 {=0A    padding-right: 15px=
+ !important=0A  }=0A  .pl-15 {=0A    padding-left: 15px !important=0A  }=0A=
+  .pb-15 {=0A    padding-bottom: 15px !important=0A  }=0A  .ph-16 {=0A    p=
+adding-left: 16px !important;=0A    padding-right: 16px !important=0A  }=0A=
+  .pt-16 {=0A    padding-top: 16px !important=0A  }=0A  .pr-16 {=0A    padd=
+ing-right:=0A      16px !important=0A  }=0A  .pb-16 {=0A    padding-bottom:=
+ 16px !important=0A  }=0A  .pl-16 {=0A    padding-left: 16px !important=0A =
+ }=0A  .p-16 {=0A    padding-top: 16px !important;=0A    padding-right: 16p=
+x !important;=0A    padding-bottom: 16px !important;=0A    padding-left:=0A=
+      16px !important=0A  }=0A  .pt-20 {=0A    padding-top: 20px !important=
+=0A  }=0A  .ph-20 {=0A    padding-left:=0A      20px !important;=0A    padd=
+ing-right: 20px !important=0A  }=0A  .p-20 {=0A    padding-top: 20px !impor=
+tant;=0A    padding-right: 20px !important;=0A    padding-bottom: 20px !imp=
+ortant;=0A    padding-left: 20px !important=0A  }=0A  .pt-24 {=0A    paddin=
+g-top: 24px !important=0A  }=0A  .pr-24 {=0A    padding-right: 24px !import=
+ant=0A  }=0A  .pb-24 {=0A    padding-bottom: 24px !important=0A  }=0A  .pl-=
+24 {=0A    padding-left: 24px !important=0A  }=0A  .p-24 {=0A    padding-to=
+p: 24px !important;=0A    padding-right: 24px !important;=0A    padding-bot=
+tom: 24px !important;=0A    padding-left:=0A      24px !important=0A  }=0A =
+ .ph-24 {=0A    padding-right: 24px !important;=0A    padding-left: 24px !i=
+mportant=0A  }=0A  .pb-27 {=0A    padding-bottom: 27px !important=0A  }=0A =
+ .ph-30 {=0A    padding-left:=0A      30px !important;=0A    padding-right:=
+ 30px !important=0A  }=0A  .pt-30 {=0A    padding-top: 30px !important=0A  =
+}=0A  .pb-30 {=0A    padding-bottom: 30px !important=0A  }=0A  .pt-32 {=0A =
+   padding-top: 32px !important=0A  }=0A  .pb-32 {=0A    padding-bottom: 32=
+px !important=0A  }=0A  .ph-32 {=0A    padding-left: 32px !important;=0A   =
+ padding-right: 32px !important;=0A  }=0A  .pt-36 {=0A    padding-top: 36px=
+ !important=0A  }=0A  .pr-36 {=0A    padding-right:=0A      36px !important=
+=0A  }=0A  .pb-36 {=0A    padding-bottom: 36px !important=0A  }=0A  .pl-36 =
+{=0A    padding-left: 36px !important=0A  }=0A  .pt-37 {=0A    padding-top:=
+ 37px !important=0A  }=0A  .pt-38 {=0A    padding-top: 38px !important;=0A =
+ }=0A  .pt-40 {=0A    padding-top: 40px !important=0A  }=0A  .pb-40 {=0A   =
+ padding-bottom: 40px !important=0A  }=0A  .show {=0A    display: block !im=
+portant;=0A    max-height:=0A      none !important;=0A    overflow: visible=
+ !important=0A  }=0A  .hide {=0A    display: none !important=0A  }=0A  .hid=
+e-bg {=0A    background-image: none !important=0A  }=0A  .bt-1 {=0A    bord=
+er-top: 1px solid #f6f6f6 !important=0A  }=0A  .bt-0 {=0A    border-top: 0p=
+x solid #fff !important=0A  }=0A  .bt-15 {=0A    border-top: 15px solid #ff=
+f !important=0A  }=0A  .bb-5 {=0A    border-bottom: 5px solid #f6f6f6 !impo=
+rtant=0A  }=0A  .br-0 {=0A    border-right: none !important=0A  }=0A  .bgco=
+lor-m {=0A    background-color: #f6f6f6 !important=0A  }=0A  .bgcolor-white=
+-m {=0A    background-color:=0A      #ffffff !important=0A  }=0A  .width-10=
+0 {=0A    width: 100% !important=0A  }=0A  .width-70 {=0A    width:=0A     =
+ 70% !important=0A  }=0A  .center {=0A    margin: 0 auto !important=0A  }=
+=0A  .center-align-text {=0A    text-align: center !important=0A  }=0A  .le=
+ft-align-text {=0A    text-align: left !important=0A  }=0A  .stack {=0A    =
+display: block !important=0A  }=0A  .table {=0A    display: table !importan=
+t=0A  }=0A  .cta.stack a {=0A    width: 100% !important=0A  }=0A  .height-5=
+80 {=0A    height: 300px !important;=0A    background-position: bottom !imp=
+ortant=0A  }=0A  .no-border {=0A    border: none !important;=0A    border-r=
+adius: 0 !important;=0A  }=0A  .h24 {=0A    height: 24px !important;=0A  }=
+=0A  .h16 {=0A    height: 16px !important;=0A  }=0A  .jobCardLabels {=0A   =
+ margin: 0 0 4px !important;=0A    width: 100% !important;=0A    display: b=
+lock !important;=0A  }=0A  .radius8 {=0A    border-radius: 8px !important;=
+=0A  }=0A  .ph-24 { =0A    padding-right: 24px !important; =0A    padding-l=
+eft: 24px !important =0A  }=0A  .p-0 { =0A    padding: 0px !important=0A  }=
+=0A  .pb-8 { =0A    padding-bottom: 8px !important =0A  }=0A}=0A=0A    =0A =
+   .primary-cta-button-group a {=0A      width: 100% !important=0A    }=0A=
+=0A    .primary-cta-button-group .signal-collect-not-interested a {=0A     =
+ width: auto !important=0A    }=0A    =0A    /* Hacky selector for Feedback=
+ buttons table. TODO change if better selector becomes available */=0A    .=
+eml-feedback table.width-100 {=0A      max-width: 400px;=0A      white-spac=
+e: nowrap;=0A      width: 100% !important;=0A    }=0A=0A    .eml-feedback-b=
+utton-td {=0A      width: 33.3%=0A    }=0A=0A    .no-font-size {=0A      fo=
+nt-size: 0=0A    }=0A=0A    /* classes with media queries */=0A    @media s=
+creen and (min-width: 380px) and (max-width: 479px) {=0A      .job-card-hea=
+der {=0A        max-width: 144px !important;=0A        width: 144px !import=
+ant;=0A        word-wrap: break-word;=0A      }=0A    }=0A=0A    @media scr=
+een and (max-width: 379px) {=0A      .job-card-header {=0A        max-width=
+: 100px !important;=0A        width: 100px !important;=0A        word-wrap:=
+ break-word;=0A      }=0A    }=0A=0A</style><!--[if (gt mso 9)|(IE)]>=0A   =
+     <style>=0A                table {=0A                    border-collaps=
+e: collapse;=0A                    border-spacing: 0;=0A                }=
+=0A                </style>=0A        <![endif]-->=0A<!--[if (gt mso 9)|(IE=
+)]>=0A        <xml>=0A            <o:OfficeDocumentSettings>=0A            =
+<o:AllowPNG/>=0A            <o:PixelsPerInch>96</o:PixelsPerInch>=0A       =
+     </o:OfficeDocumentSettings>=0A        </xml>=0A        <![endif]-->=0A=
+<!--[if gte mso 9]>=0A        <style>=0A            li {=0A                =
+text-indent: -1em; /* Normalise space between bullets and text */=0A       =
+     }=0A        </style>=0A        <![endif]-->=0A</head><body style=3D"ma=
+rgin:0;padding:0" bgcolor=3D"#f3f2f1"><div style=3D"display:none;max-height=
+:0px;overflow:hidden">De 1=E2=80=AF700 =E2=82=AC =C3=A0 2=E2=80=AF100 =E2=
+=82=AC par mois. Bonjour Guy Keny,  Votre parcours pourrait correspondre po=
+ur l&#x27;offre d&#x27;emploi =C2=AB=C2=A0D=C3=A9veloppeur Full Stack H/F=
+=C2=A0=C2=BB. Envoyez votre candidature rapidement si vous =C3=AAtes int=C3=
+=A9ress=C3=A9(e).</div><div style=3D"display:none;max-height:0px;overflow:h=
+idden">&#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy=
+; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#8=
+47; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &=
+zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj;=
+ &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbs=
+p; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#=
+8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;=
+ &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy=
+; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#8=
+47; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &=
+zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj;=
+ &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbs=
+p; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#=
+8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;=
+ &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy=
+; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#8=
+47; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &=
+zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj;=
+ &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbs=
+p; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#=
+8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;=
+ &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy=
+; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#8=
+47; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &=
+zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj;=
+ &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbs=
+p; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#=
+8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;=
+ &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy=
+; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#8=
+47; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &=
+zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj;=
+ &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbs=
+p; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#=
+8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199;=
+ &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy=
+; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#8=
+47; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &=
+zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj;=
+ &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy; </div><!--[if (gt =
+mso 9)|(IE)]>=0A        <style type=3D"text/css">=0A                       =
+     table {=0A                                border-collapse: collapse;=
+=0A                                border-spacing: 0;=0A                   =
+         }=0A                        </style>=0A        <![endif]-->=0A<tab=
+le cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" style=3D=
+"width:100%" width=3D"100%" role=3D"presentation"><tr><td aria-hidden=3D"tr=
+ue" height=3D"12" style=3D"height:12px;font-size:12px;line-height:12px" ali=
+gn=3D"center" valign=3D"top">&nbsp;</td></tr></table><table cellPadding=3D"=
+0" cellSpacing=3D"0" border=3D"0" align=3D"center" style=3D"max-width:600px=
+;background-color:#ffffff" width=3D"100%" role=3D"presentation"><h1 style=
+=3D"font-size:0;line-height:0;margin:0;padding:0;overflow:hidden;height:0;w=
+idth:0;text-indent:-9999px">D=C3=A9veloppeur Full Stack H/F =E2=80=93 Masal=
+ledebain.com</h1><h2 style=3D"font-size:0;line-height:0;margin:0;padding:0;=
+overflow:hidden;height:0;width:0;text-indent:-9999px">Pr=C3=A9sentation</h2=
+><tr><td align=3D"left" valign=3D"top" class=3D"ph-24" style=3D"padding:24p=
+x 56px 0"><!--[if (gt mso 9)|(IE)]>=0A        <table width=3D"600" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;" role=3D"pre=
+sentation"><tr><td align=3D"left" valign=3D"top">=0A        <![endif]-->=0A=
+<table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" widt=
+h=3D"100%" role=3D"presentation"><tr><td align=3D"left" valign=3D"top" styl=
+e=3D"padding-top:16px"><p style=3D"font-family:'Indeed Sans', 'Noto Sans', =
+Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;line-height:=
+1.5rem;margin:0;padding:0">Bonjour Guy Keny,<br aria-hidden=3D"true"/><br a=
+ria-hidden=3D"true"/>Votre parcours pourrait correspondre pour l'offre d'em=
+ploi =C2=AB=C2=A0D=C3=A9veloppeur Full Stack H/F=C2=A0=C2=BB. Envoyez votre=
+ candidature rapidement si vous =C3=AAtes int=C3=A9ress=C3=A9(e).</p></td><=
+/tr><tr><td align=3D"center" valign=3D"top" style=3D"padding-top:16px"><tab=
+le class=3D"primary-cta-button-group" cellPadding=3D"0" cellSpacing=3D"0" b=
+order=3D"0" align=3D"center" style=3D"max-width:300px;min-width:70%;margin:=
+0 auto;width:auto" width=3D"70%" role=3D"presentation"><tr><td align=3D"cen=
+ter" valign=3D"top" class=3D"stack cta center-align-text" style=3D"display:=
+block;padding-top:8px"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D=
+"0" align=3D"center" width=3D"100%" role=3D"presentation"><tr><td align=3D"=
+center" style=3D"padding:0"><table class=3D"width-100" cellPadding=3D"0" ce=
+llSpacing=3D"0" border=3D"0" align=3D"center" role=3D"presentation"><tr><td=
+ align=3D"center" class=3D"shrinkMobile" style=3D"border-radius:12px;border=
+:2px solid #ffffff"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_02TWY=
+-iWhSF_4vJ9anpAgHBSswNg0wKKIglvhBGD8NhOBxQ6PR_bzr10tk72dnfWm8r69dqWH2uAMZt_=
+_nxkaGfeZ2kafIzbuBHGz7TMPmIq_L_DDVwXzRRvgmD5cAQx4DIEKE4QQrDvFoXCJd7loghoIhl=
+8rGPyPA5tjWKeZIiUobfJbsty21Jmk9Tdg2bPVqHyZ7YWn4VZaVFSqXyTsBVMBJiI_qXPBzldMw=
+ikIW81ne3uh6PjriLG07td7NYH3Gn-YwrzICVXXUD1eDi2mo7PBLO7QXtoXF1PvJvU06eD7s_1T=
+QmSBXe1JPEOa5ZSlQ0PfIiF7o-GTj4kAm9fDkipiQ-0ArowtE9OK3dtGV13W5Z34Nua93B85SN5=
+1d9nBAnKHaaFeQBHpQZvKBWDFB-tTNoTR2RljS6FcKF5FiirM03-4Gn-6WuIMsJp5yy7JRkBNBe=
+GKRTo1MJeonpTr7qsDmTWdveZNEYhp67uMDXWHrwGdM9QD6rDNkuKGMjiLbItrRkH038ug00P6b=
+WJORd5BT-43p4bk7h-9kW2hdLmd1YoW4QKWvL8yJTWvfT28PxDM6AQ9TFoGkf6GEcKc47LCoC5Z=
+HwTO4n0ojPBCV5cjA7SAvvyYU1vq4K2-jT-2INb_LA93zdIonu0MXMCmnHiYoxA3_UNMUuO-cI1=
+eNIGHejUJ0QTA4qMJMf_RxwX37qRYGz8_Sd_5yNly40g4gIAakkZrDHp9zj5b2n8uyV84XcEMzN=
+YkWkjdozLe4K7Rxq8RWwX1N-bNKGw4pnKju5FYFosnPQDoM6VFk-juxtt9mmrAXNkxtUhqsLFM2=
+Y9DDEh8IHd99k32UU32eV2Ua8DInARcUSun4LAC_i6R0_am6bi5qVKjouxu18vEexMnYnlXj9R8=
+vLrhHcb9ZFH-53_DoOYbmvPWh09ubAI5BwhuB606Bh4du9-rGCq89fq7jK4_IKUDM8wVI9jIZ0k=
+b7p1KYLGvP0tZRsoW2I0hpfywX-_ZoeS__4POto2V_WouC_ju_StRi2Cah4crP6_fsPvu0Rt94D=
+AAA/GN7HYjUNnKMStItZBpS9507chCB_As6uj6DkEYRVN14" class=3D"primary-button" s=
+tyle=3D"background-color:#004fcb;font-size:16px;font-family:'Indeed Sans', =
+'Noto Sans', Helvetica, Arial, sans-serif;font-weight:bold;text-decoration:=
+none;padding:12px 16px;color:#ffffff;display:block;border-radius:12px;min-w=
+idth:375px;width:auto;mso-padding-alt:0;text-underline-color:#2557a7"><!--[=
+if mso]>=0A        <i style=3D"mso-font-width:100%;mso-text-raise:150%" hid=
+den=3D"">&emsp;&#8203;</i>=0A        <![endif]-->=0A<span style=3D"mso-text=
+-raise:75%">Voir l'emploi<!--[if mso]>=0A        <i style=3D"mso-font-width=
+:100%" hidden=3D"">&emsp;&#8203;</i>=0A        <![endif]-->=0A</span></a></=
+td></tr></table></td></tr></table></td></tr><tr><td align=3D"center" valign=
+=3D"top" class=3D"stack cta center-align-text" style=3D"display:block;paddi=
+ng-top:8px"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=
+=3D"center" width=3D"100%" role=3D"presentation"><tr><td align=3D"center" s=
+tyle=3D"padding:0"><table class=3D"width-100" cellPadding=3D"0" cellSpacing=
+=3D"0" border=3D"0" align=3D"center" role=3D"presentation"><tr><td align=3D=
+"center" class=3D"shrinkMobile" style=3D"border-radius:12px;border:1px soli=
+d #e4e2e0"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_12QzW6CQBhF34W=
+kXRUBFaMmpvEvqCgaBNHZGGRGZwLMUOYTROO7F9tN07u7597VeShXpa9QgEz2NS0NIaINxjEhuB=
+GJVGO8YBACE1xqXIDKOJCcSCD4E-KBwQp50jNIM0yTrt58Z_wsBsNXtqMZiqm4mdQvwrk_3-y5n=
+JTLedI2XbRTLaGj2-kwIp3qfAuS6YFEcWu0E6s1drCPo7105ddcnbrDqkLI6NBspRuGU9LQRk1_=
+s90OU10czbJyi8rrde8TfmyPjY55MVFvGuPFjN1XljjmqMS2pUvQLTsx8NnSk8kIdmHq5bhXBLm=
+FyllwOEV04WzH0LF2bTUft92l08qy8-owfWtNlA8lVfoPJUpYFHs0F9cLrY1BfiX19EurjNToFG=
+L1R2DNszAnHLy4xq8mJIz_PH3HdtaBUy_wevzXqDyf31jEcDyXAQAA/KAtYiawJiZYwVh3ELrGi=
+bNO_gcs8O1Y5NkgCosvmZx0" class=3D"secondary-button" style=3D"background-col=
+or:#ffffff;font-size:16px;font-family:'Indeed Sans', 'Noto Sans', Helvetica=
+, Arial, sans-serif;font-weight:bold;text-decoration:none;padding:12px 16px=
+;color:#004fcb;display:block;border-radius:12px;min-width:375px;width:auto;=
+mso-padding-alt:0;text-underline-color:#2557a7"><!--[if mso]>=0A        <i =
+style=3D"mso-font-width:100%;mso-text-raise:150%" hidden=3D"">&emsp;&#8203;=
+</i>=0A        <![endif]-->=0A<span style=3D"mso-text-raise:75%">Ne corresp=
+ond pas<!--[if mso]>=0A        <i style=3D"mso-font-width:100%" hidden=3D""=
+>&emsp;&#8203;</i>=0A        <![endif]-->=0A</span></a></td></tr></table></=
+td></tr></table></td></tr></table></td></tr></table><!--[if (gt mso 9)|(IE)=
+]>=0A        </td></tr></table>=0A        <![endif]-->=0A</td></tr><tr><td =
+align=3D"left" valign=3D"top" style=3D"padding-top:16px"><!--[if (gt mso 9)=
+|(IE)]>=0A        <table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"width:600px;" role=3D"presentation"><tr><td align=3D"=
+left" valign=3D"top">=0A        <![endif]-->=0A<table cellPadding=3D"0" cel=
+lSpacing=3D"0" border=3D"0" align=3D"left" style=3D"max-width:600px" width=
+=3D"100%" role=3D"presentation"><tr><td align=3D"left" valign=3D"top" class=
+=3D"ph-24" style=3D"padding:0 56px 24px"><table class=3D"width-100" cellPad=
+ding=3D"0" cellSpacing=3D"0" border=3D"0" style=3D"border:1px solid #e4e2e0=
+;border-radius:20px" bgcolor=3D"#ffffff" width=3D"100%" role=3D"presentatio=
+n"><tr><td align=3D"center" valign=3D"top" style=3D"padding:16px"><table ce=
+llPadding=3D"0" cellSpacing=3D"0" border=3D"0" width=3D"100%" role=3D"prese=
+ntation"><tr><td align=3D"left" valign=3D"top" style=3D"padding-bottom:0"><=
+table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" width=3D"100%" role=
+=3D"presentation"><tr><td align=3D"left" valign=3D"top"><h2 style=3D"color:=
+#2d2d2d;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-seri=
+f;font-size:16px;font-weight:bold;line-height:24px;margin:0;padding:0"><a h=
+ref=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_02TWY-iWhSF_4vJ9anpAgHBSswNg0=
+wKKIglvhBGD8NhOBxQ6PR_bzr10tk72dnfWm8r69dqWH2uAMZt__nxkaGfeZ2kafIzbuBHGz7TM=
+PmIq_L_DDVwXzRRvgmD5cAQx4DIEKE4QQrDvFoXCJd7loghoIhl8rGPyPA5tjWKeZIiUobfJbst=
+y21Jmk9Tdg2bPVqHyZ7YWn4VZaVFSqXyTsBVMBJiI_qXPBzldMwikIW81ne3uh6PjriLG07td7N=
+YH3Gn-YwrzICVXXUD1eDi2mo7PBLO7QXtoXF1PvJvU06eD7s_1TQmSBXe1JPEOa5ZSlQ0PfIiF7=
+o-GTj4kAm9fDkipiQ-0ArowtE9OK3dtGV13W5Z34Nua93B85SN51d9nBAnKHaaFeQBHpQZvKBWD=
+FB-tTNoTR2RljS6FcKF5FiirM03-4Gn-6WuIMsJp5yy7JRkBNBeGKRTo1MJeonpTr7qsDmTWdve=
+ZNEYhp67uMDXWHrwGdM9QD6rDNkuKGMjiLbItrRkH038ug00P6bWJORd5BT-43p4bk7h-9kW2hd=
+Lmd1YoW4QKWvL8yJTWvfT28PxDM6AQ9TFoGkf6GEcKc47LCoC5ZHwTO4n0ojPBCV5cjA7SAvvyY=
+U1vq4K2-jT-2INb_LA93zdIonu0MXMCmnHiYoxA3_UNMUuO-cI1eNIGHejUJ0QTA4qMJMf_RxwX=
+37qRYGz8_Sd_5yNly40g4gIAakkZrDHp9zj5b2n8uyV84XcEMzNYkWkjdozLe4K7Rxq8RWwX1N-=
+bNKGw4pnKju5FYFosnPQDoM6VFk-juxtt9mmrAXNkxtUhqsLFM2Y9DDEh8IHd99k32UU32eV2Ua=
+8DInARcUSun4LAC_i6R0_am6bi5qVKjouxu18vEexMnYnlXj9R8vLrhHcb9ZFH-53_DoOYbmvPW=
+h09ubAI5BwhuB606Bh4du9-rGCq89fq7jK4_IKUDM8wVI9jIZ0kb7p1KYLGvP0tZRsoW2I0hpfy=
+wX-_ZoeS__4POto2V_WouC_ju_StRi2Cah4crP6_fsPvu0Rt94DAAA/GN7HYjUNnKMStItZBpS9=
+507chCB_As6uj6DkEYRVN14" style=3D"color:#2d2d2d;font-weight:bold;text-decor=
+ation:underline" class=3D"strong-text-link">D=C3=A9veloppeur Full Stack H/F=
+</a></h2></td></tr><tr><td align=3D"center" valign=3D"top"><table cellPaddi=
+ng=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" width=3D"100%" role=
+=3D"presentation"><tr><td><table cellPadding=3D"0" cellSpacing=3D"0" border=
+=3D"0" align=3D"left" width=3D"100%" role=3D"presentation"><tr><td align=3D=
+"left" valign=3D"top"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"=
+0" role=3D"presentation"><tr><td style=3D"padding:0 12px 0 0"><p style=3D"c=
+olor:#2d2d2d;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans=
+-serif;font-size:14px;font-weight:normal;line-height:21px;margin:0;padding:=
+0">Masalledebain.com</p></td></tr></table></td></tr><tr><td align=3D"left" =
+valign=3D"top"><p style=3D"color:#2d2d2d;font-family:'Indeed Sans', 'Noto S=
+ans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:normal;line-h=
+eight:21px;margin:0;padding:0">20620 Biguglia</p></td></tr></table></td></t=
+r></table></td></tr></table></td></tr><tr><td align=3D"left" valign=3D"top"=
+ style=3D"padding:8px 0 16px"><table cellPadding=3D"0" cellSpacing=3D"0" bo=
+rder=3D"0" align=3D"left" style=3D"margin:4px 4px 0 0;float:left" role=3D"p=
+resentation"><tr><td width=3D"24" valign=3D"middle" align=3D"left"><img src=
+=3D"https://prod.statics.indeed.com/eml/assets/images/icons/AddPerson_succe=
+ss.png" alt=3D" " width=3D"20" style=3D"vertical-align:middle"/></td><td><p=
+ style=3D"color:#2d2d2d;font-family:'Indeed Sans', 'Noto Sans', Helvetica, =
+Arial, sans-serif;font-size:14px;font-weight:normal;line-height:21px;margin=
+:0;padding:0">Plusieurs postes =C3=A0 pourvoir</p></td></tr></table></td></=
+tr><tr><td style=3D"padding:0;border-top:1px solid #e4e2e0;line-height:0;wi=
+dth:100%" align=3D"center" valign=3D"top" aria-hidden=3D"true">&nbsp;</td><=
+/tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:0 0 16px"><table=
+ cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" width=3D"100%" role=3D"pr=
+esentation"><tr><td align=3D"left" valign=3D"top" style=3D"padding:16px 0 0=
+"><h3 class=3D"h3-md" style=3D"color:#2d2d2d;font-family:'Indeed Sans', 'No=
+to Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line=
+-height:21px;margin:0;padding:0">Salaire</h3></td></tr><tr><td align=3D"lef=
+t" valign=3D"top"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" a=
+lign=3D"left" style=3D"border-radius:8px;margin:4px 4px 0 0;display:inline-=
+block" bgcolor=3D"#e4f7e6" role=3D"presentation"><tr><td align=3D"center" v=
+align=3D"top" style=3D"padding:3px 8px 3px 8px"><table cellPadding=3D"0" ce=
+llSpacing=3D"0" border=3D"0" align=3D"left" dir=3D"ltr" role=3D"presentatio=
+n"><tr><td width=3D"21" valign=3D"middle" align=3D"left"><img width=3D"15" =
+alt=3D"Correspond =C3=A0 votre profil" src=3D"https://prod.statics.indeed.c=
+om/eml/assets/images/icons/tagcheckmark_light_success.png" style=3D"display=
+:block"/></td><td><p style=3D"color:#1f662c;font-family:'Indeed Sans', 'Not=
+o Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-=
+height:21px;margin:0;padding:0">De 1=E2=80=AF700 =E2=82=AC =C3=A0 2=E2=80=
+=AF100 =E2=82=AC par mois</p></td></tr></table></td></tr></table></td></tr>=
+<tr><td align=3D"left" valign=3D"top" style=3D"padding:16px 0 0"><h3 class=
+=3D"h3-md" style=3D"color:#2d2d2d;font-family:'Indeed Sans', 'Noto Sans', H=
+elvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:21p=
+x;margin:0;padding:0">Types de postes</h3></td></tr><tr><td align=3D"left" =
+valign=3D"top"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" alig=
+n=3D"left" style=3D"border-radius:8px;margin:4px 4px 0 0;display:inline-blo=
+ck" bgcolor=3D"#e4f7e6" role=3D"presentation"><tr><td align=3D"center" vali=
+gn=3D"top" style=3D"padding:3px 8px 3px 8px"><table cellPadding=3D"0" cellS=
+pacing=3D"0" border=3D"0" align=3D"left" dir=3D"ltr" role=3D"presentation">=
+<tr><td width=3D"21" valign=3D"middle" align=3D"left"><img width=3D"15" alt=
+=3D"Correspond =C3=A0 votre profil" src=3D"https://prod.statics.indeed.com/=
+eml/assets/images/icons/tagcheckmark_light_success.png" style=3D"display:bl=
+ock"/></td><td><p style=3D"color:#1f662c;font-family:'Indeed Sans', 'Noto S=
+ans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-hei=
+ght:21px;margin:0;padding:0">CDI</p></td></tr></table></td></tr></table><ta=
+ble cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" style=
+=3D"border-radius:8px;margin:4px 4px 0 0;display:inline-block" bgcolor=3D"#=
+f3f2f1" role=3D"presentation"><tr><td align=3D"center" valign=3D"top" style=
+=3D"padding:3px 8px 3px 8px"><p style=3D"color:#595959;font-family:'Indeed =
+Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight=
+:bold;line-height:21px;margin:0;padding:0">Temps partiel</p></td></tr></tab=
+le><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" s=
+tyle=3D"border-radius:8px;margin:4px 4px 0 0;display:inline-block" bgcolor=
+=3D"#f3f2f1" role=3D"presentation"><tr><td align=3D"center" valign=3D"top" =
+style=3D"padding:3px 8px 3px 8px"><p style=3D"color:#595959;font-family:'In=
+deed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;font-w=
+eight:bold;line-height:21px;margin:0;padding:0">Temps plein</p></td></tr></=
+table><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left=
+" style=3D"border-radius:8px;margin:4px 4px 0 0;display:inline-block" bgcol=
+or=3D"#f3f2f1" role=3D"presentation"><tr><td align=3D"center" valign=3D"top=
+" style=3D"padding:3px 8px 3px 8px"><p style=3D"color:#595959;font-family:'=
+Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;font=
+-weight:bold;line-height:21px;margin:0;padding:0">Alternance</p></td></tr><=
+/table><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"lef=
+t" style=3D"border-radius:8px;margin:4px 4px 0 0;display:inline-block" bgco=
+lor=3D"#f3f2f1" role=3D"presentation"><tr><td align=3D"center" valign=3D"to=
+p" style=3D"padding:3px 8px 3px 8px"><p style=3D"color:#595959;font-family:=
+'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;fon=
+t-weight:bold;line-height:21px;margin:0;padding:0">Stage</p></td></tr></tab=
+le></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:16px 0 =
+0"><h3 class=3D"h3-md" style=3D"color:#2d2d2d;font-family:'Indeed Sans', 'N=
+oto Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;lin=
+e-height:21px;margin:0;padding:0">Horaires</h3></td></tr><tr><td align=3D"l=
+eft" valign=3D"top"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0"=
+ align=3D"left" style=3D"border-radius:8px;margin:4px 4px 0 0;display:inlin=
+e-block" bgcolor=3D"#f3f2f1" role=3D"presentation"><tr><td align=3D"center"=
+ valign=3D"top" style=3D"padding:3px 8px 3px 8px"><p style=3D"color:#595959=
+;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-=
+size:14px;font-weight:bold;line-height:21px;margin:0;padding:0">P=C3=A9riod=
+e de travail de 8 Heures</p></td></tr></table><table cellPadding=3D"0" cell=
+Spacing=3D"0" border=3D"0" align=3D"left" style=3D"border-radius:8px;margin=
+:4px 4px 0 0;display:inline-block" bgcolor=3D"#f3f2f1" role=3D"presentation=
+"><tr><td align=3D"center" valign=3D"top" style=3D"padding:3px 8px 3px 8px"=
+><p style=3D"color:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetic=
+a, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:21px;margi=
+n:0;padding:0">Repos le week-end</p></td></tr></table><table cellPadding=3D=
+"0" cellSpacing=3D"0" border=3D"0" align=3D"left" style=3D"border-radius:8p=
+x;margin:4px 4px 0 0;display:inline-block" bgcolor=3D"#f3f2f1" role=3D"pres=
+entation"><tr><td align=3D"center" valign=3D"top" style=3D"padding:3px 8px =
+3px 8px"><p style=3D"color:#595959;font-family:'Indeed Sans', 'Noto Sans', =
+Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;line-height:21=
+px;margin:0;padding:0">Travail en journ=C3=A9e</p></td></tr></table><table =
+cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" style=3D"bo=
+rder-radius:8px;margin:4px 4px 0 0;display:inline-block" bgcolor=3D"#f3f2f1=
+" role=3D"presentation"><tr><td align=3D"center" valign=3D"top" style=3D"pa=
+dding:3px 8px 3px 8px"><p style=3D"color:#595959;font-family:'Indeed Sans',=
+ 'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;=
+line-height:21px;margin:0;padding:0">Du lundi au vendredi</p></td></tr></ta=
+ble></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:16px 0=
+ 0"><h3 class=3D"h3-md" style=3D"color:#2d2d2d;font-family:'Indeed Sans', '=
+Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;font-weight:bold;li=
+ne-height:21px;margin:0;padding:0">Environnement de travail</h3></td></tr><=
+tr><td align=3D"left" valign=3D"top"><table cellPadding=3D"0" cellSpacing=
+=3D"0" border=3D"0" align=3D"left" style=3D"border-radius:8px;margin:4px 4p=
+x 0 0;display:inline-block" bgcolor=3D"#f3f2f1" role=3D"presentation"><tr><=
+td align=3D"center" valign=3D"top" style=3D"padding:3px 8px 3px 8px"><p sty=
+le=3D"color:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Aria=
+l, sans-serif;font-size:14px;font-weight:bold;line-height:21px;margin:0;pad=
+ding:0">En pr=C3=A9sentiel</p></td></tr></table></td></tr></table></td></tr=
+></table></td></tr></table></td></tr></table><!--[if (gt mso 9)|(IE)]>=0A  =
+      </td></tr></table>=0A        <![endif]-->=0A</td></tr><tr><td align=
+=3D"left" valign=3D"top"><!--[if (gt mso 9)|(IE)]>=0A        <table width=
+=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:60=
+0px;" role=3D"presentation"><tr><td align=3D"left" valign=3D"top">=0A      =
+  <![endif]-->=0A<table class=3D"full-wrap" cellPadding=3D"0" cellSpacing=
+=3D"0" border=3D"0" align=3D"center" style=3D"min-width:100%" bgcolor=3D"#f=
+fffff" width=3D"100%" role=3D"presentation"><tr><td align=3D"center" valign=
+=3D"top"><!--[if (gt mso 9)|(IE)]>=0A        <table width=3D"600" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0"=0A                bgcolor=3D"undefi=
+ned" style=3D"width:600px;" role=3D"presentation">=0A                    <t=
+r>=0A                        <td align=3D"center" valign=3D"top">=0A       =
+ <![endif]-->=0A<table class=3D"outerContainer" cellPadding=3D"0" cellSpaci=
+ng=3D"0" border=3D"0" align=3D"center" style=3D"max-width:600px;width:600px=
+" width=3D"100%" role=3D"presentation"><tr><td align=3D"center" valign=3D"t=
+op" style=3D"padding:24px 56px 0;padding-top:24px;border-top:0" class=3D"em=
+l-feedback ph-24"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" a=
+lign=3D"left" width=3D"100%" role=3D"presentation"><tr><td align=3D"left" v=
+align=3D"top" class=3D"stack fullWidth"><h2 class=3D"h2-md" style=3D"color:=
+#2d2d2d;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-seri=
+f;font-size:16px;font-weight:bold;line-height:1rem;margin:0;padding:0">Souh=
+aitez-vous recevoir plus d'emplois de ce type=C2=A0=3F</h2></td></tr><tr><t=
+d align=3D"left" valign=3D"top" class=3D"fullWidth center-align-text" style=
+=3D"padding:24px 0 0;width:100%"><table class=3D"width-100" cellPadding=3D"=
+0" cellSpacing=3D"0" border=3D"0" align=3D"left" width=3D"60%" role=3D"pres=
+entation"><tr><td align=3D"center" valign=3D"top" class=3D"eml-feedback-but=
+ton-td" style=3D"padding:0"><table cellPadding=3D"0" cellSpacing=3D"0" bord=
+er=3D"0" align=3D"center" width=3D"100%" role=3D"presentation"><tr><td alig=
+n=3D"left" style=3D"padding:0"><table class=3D"width-100" cellPadding=3D"0"=
+ cellSpacing=3D"0" border=3D"0" align=3D"left" role=3D"presentation"><tr><t=
+d align=3D"center" class=3D"stack cta center-align-text" style=3D"border-ra=
+dius:8px 0 0 8px;border:1px solid #e4e2e0"><a href=3D"https://cts.indeed.co=
+m/v3/H4sIAAAAAAAA_12QTY-CMBRF_wvJuBoEVIiamIkKQUXQgKB2YyoF2_BRplQQjf99MG7MvN=
+09577NfQhXYSxgzotyLEkZ5CHukhxFEeqGNJNIXhEOOaF5-ZYia1N-kZQfnkwUUpVnueBZgXA6l=
+Hsdksd0Mn2dN1uABNObiv0KLv3l9pCXer1epgPVBYFoUhnczsdZpDXxbZ8axyhM-rOA2hvkIB-F=
+h9Itf5ei4U6bBgBFw4UtK4pTY2iBnr_1vGkm05NaN27V7EbDu56fBnNFUy8qGBkJWi3I3TbpiYE=
+aWaZcctm0UgXFppzqMx7AbMfQqNozE9SL_fEc4pXjzblmBgORzQfu2ukXRWwfja--3okZzSakB8=
+UogyQV43aaMwwT4VvIhPFDCFMSJjvM6PWC2yU5u0atetOmiFr08VFAFuV8l7T0lWjJ5x9F37Gcz=
+d5pDX81_q8rPJ9_OHZNE64BAAA/FuiJ_jTCEYdEkuF99a_CmRDHU3ir7bttVhglSLDzv5k" ari=
+a-label=3D"Non, je ne souhaite pas obtenir plus d'offres d'emploi similaire=
+s." class=3D"secondary-button" style=3D"background-color:#ffffff;font-size:=
+16px;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;f=
+ont-weight:bold;text-decoration:none;padding:12px 16px;color:#004fcb;displa=
+y:block;border-radius:0px;min-width:120px;width:100%;mso-padding-alt:0;text=
+-underline-color:#2557a7;border-top-left-radius:12px;border-bottom-left-rad=
+ius:12px"><!--[if mso]>=0A        <i style=3D"mso-font-width:100%;mso-text-=
+raise:150%" hidden=3D"">&emsp;&#8203;</i>=0A        <![endif]-->=0A<span st=
+yle=3D"mso-text-raise:75%"><!--[if !mso]><!-->=0A    <img src=3D"https://pr=
+od.statics.indeed.com/eml/assets/images/icons/thumbsdown_primary.png" alt=
+=3D"" width=3D"24" style=3D"vertical-align:text-bottom;line-height:0px;padd=
+ing:0 8px 0 0;width:24px"/>=0A     <!--<![endif]-->=0ANon<!--[if mso]>=0A  =
+      <i style=3D"mso-font-width:100%" hidden=3D"">&emsp;&#8203;</i>=0A    =
+    <![endif]-->=0A</span></a></td></tr></table></td></tr></table></td><td =
+align=3D"center" valign=3D"top" class=3D"eml-feedback-button-td"><table cel=
+lPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"center" width=3D"100=
+%" role=3D"presentation"><tr><td align=3D"left" style=3D"padding:0"><table =
+class=3D"width-100" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=
+=3D"left" role=3D"presentation"><tr><td align=3D"center" class=3D"stack cta=
+ center-align-text" style=3D"border-radius:0px 8px 8px 0;border:1px solid #=
+e4e2e0"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_12QTY-CMBRF_wvJuB=
+oUFIiamIkKQUTRoIh0YyoF2_BRplQQjf99MG7MvN09577NfQhXYSxgzoty3OtlkIe4S3IURagb0=
+qxH8opwyAnNy7cUWZvyS0_94clEJlV5lgqeFQinQ6nfIXlMJ9PX7WYLkGB6U7FXQcuztse81OuV=
+lSqqCw6iSSVwOwezSGvim58aQRQmg9mBrjfIQR4Kj6Vb_lqi4U6bBgBZw8VakmWnxtAGfW-7200=
+ziZ7UunGrZj8a3vX8pMxlTb2oYGQkaLkg97VJTwzUyDalkkumncooNqVUn_EDzPYMjSqfmaBe-M=
+E5xEtnN-eaeVBENlfclTMoingdGF8DvRMzmk1IH4pRBkkqxu00ZxgmwreQCeOHEKYkTPaY0esFt=
+0tydo1a9aZNEbXo46OALMr5PmnpK9GSzz-KnmM7G99pDX81_q8rPJ9_2BDmJ64BAAA/GwnHdRBv=
+Ynv78Szes75ZUKCUE6KRyXrnX5Lyt7aObjo" aria-label=3D"Oui, je souhaite obtenir=
+ plus d'offres d'emploi similaires." class=3D"secondary-button" style=3D"ba=
+ckground-color:#ffffff;font-size:16px;font-family:'Indeed Sans', 'Noto Sans=
+', Helvetica, Arial, sans-serif;font-weight:bold;text-decoration:none;paddi=
+ng:12px 16px;color:#004fcb;display:block;border-radius:0px;min-width:120px;=
+width:100%;mso-padding-alt:0;text-underline-color:#2557a7;border-top-right-=
+radius:12px;border-bottom-right-radius:12px"><!--[if mso]>=0A        <i sty=
+le=3D"mso-font-width:100%;mso-text-raise:150%" hidden=3D"">&emsp;&#8203;</i=
+>=0A        <![endif]-->=0A<span style=3D"mso-text-raise:75%"><!--[if !mso]=
+><!-->=0A    <img src=3D"https://prod.statics.indeed.com/eml/assets/images/=
+icons/thumbsup_primary.png" alt=3D"" width=3D"24" style=3D"vertical-align:t=
+ext-bottom;line-height:0px;padding:0 8px 0 0;width:24px"/>=0A     <!--<![en=
+dif]-->=0AOui<!--[if mso]>=0A        <i style=3D"mso-font-width:100%" hidde=
+n=3D"">&emsp;&#8203;</i>=0A        <![endif]-->=0A</span></a></td></tr></ta=
+ble></td></tr></table></td></tr></table></td></tr></table></td></tr></table=
+><!--[if (gt mso 9)|(IE)]>=0A        </td></tr></table>=0A        <![endif]=
+-->=0A</td></tr></table><!--[if (gt mso 9)|(IE)]>=0A        </td></tr></tab=
+le>=0A        <![endif]-->=0A<table class=3D"ph-24" cellPadding=3D"0" cellS=
+pacing=3D"0" border=3D"0" align=3D"left" style=3D"margin-top:32px;padding:0=
+ 56px" width=3D"100%" role=3D"presentation"><tr><td style=3D"padding:0px;bo=
+rder-top:1px solid #e4e2e0;line-height:0;width:100%" align=3D"center" valig=
+n=3D"top" aria-hidden=3D"true">&nbsp;</td></tr></table></td></tr><tr><td al=
+ign=3D"left" valign=3D"top" style=3D"padding:24px 56px 0;padding-top:16px" =
+class=3D"ph-24"><!--[if (gt mso 9)|(IE)]>=0A        <table width=3D"600" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;" role=
+=3D"presentation"><tr><td align=3D"left" valign=3D"top">=0A        <![endif=
+]-->=0A<table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"lef=
+t" style=3D"max-width:600px" width=3D"100%" role=3D"presentation"><tr><td a=
+lign=3D"left" valign=3D"top"><h2 class=3D"h2-md" style=3D"color:#2d2d2d;fon=
+t-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size=
+:16px;font-weight:bold;line-height:30px;margin:0;padding:0">Gardez votre pr=
+ofil Indeed =C3=A0 jour</h2></td></tr><tr><td align=3D"center" valign=3D"to=
+p"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" w=
+idth=3D"100%" role=3D"presentation"><tr translate=3D"no"><td style=3D"width=
+:50%;text-align:left"><h2 class=3D"h2-md" style=3D"color:#2d2d2d;font-famil=
+y:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:24px;f=
+ont-weight:bold;line-height:30px;margin:0;padding:0;margin-top:12px">Guy Ke=
+ny NDAYIZEYE</h2></td><td rowspan=3D"2" style=3D"width:50%;text-align:right=
+;vertical-align:top;padding:0"><table cellPadding=3D"0" cellSpacing=3D"0" b=
+order=3D"0" style=3D"margin-left:auto;margin-right:0"><tr><td style=3D"widt=
+h:75px;height:75px;background-color:#424242;border-radius:75px;line-height:=
+75px;text-align:center;font-size:24px;font-family:'Indeed Sans', 'Noto Sans=
+', Helvetica, Arial, sans-serif;font-weight:bold;color:#ffffff">GKN</td></t=
+r></table></td></tr><tr><tr><td align=3D"left" valign=3D"top" style=3D"padd=
+ing-top:4px"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_02NMQuDMBSE_=
+0sGp0ZbpyJIh4JLwYJYOkqML01qYkLyLBTxvzfSDp2Od_e9u4XMpCAS0YUiy5y3QmlI1TQADCm3=
+5iS8NeXT9ipnXRTDkEsqPK2aDgxTOuG2rJpE6lJ4siOGFAvhWvGxld7ODxnb0c8Qo6_7dhCtYJh=
+HKuJIz_hIYVBIf-ORdMzDhO0Ywe2yAc9_v7f6Ul_vdUxwIw7qFfq9Q-MGqY_7nKzrB6r_ITnVAA=
+AA/1o2gsm7YDpIfhtYgU0YvGyift9rH-52SyuOppJXBYks" style=3D"color:#2557a7;disp=
+lay:inline-block;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, =
+sans-serif;font-size:16px;font-weight:bold;line-height:44px;text-align:left=
+;text-decoration:none">Modifier le profil<!--[if !mso]><!-->=0A    <img alt=
+=3D"" aria-hidden=3D"true" src=3D"https://prod.statics.indeed.com/eml/asset=
+s/images/icons/ArrowRight_primary_whitebg.png" style=3D"vertical-align:midd=
+le;padding-bottom:3px;padding-left:4px" width=3D"18" height=3D"18"/>=0A    =
+ <!--<![endif]-->=0A</a></td></tr></tr></table></td></tr><tr><td align=3D"l=
+eft" valign=3D"top" style=3D"padding:12px 0 16px"><table cellPadding=3D"0" =
+cellSpacing=3D"0" border=3D"0" align=3D"left" width=3D"100%" role=3D"presen=
+tation"><tr><td align=3D"center" valign=3D"top" style=3D"padding:0;text-ali=
+gn:center;vertical-align:top;width:24px"><img height=3D"24" width=3D"24" al=
+t=3D"" src=3D"https://prod.statics.indeed.com/eml/assets/images/icons/money=
+stack_neutral.png"/></td><td style=3D"padding-left:12px"><table cellPadding=
+=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" width=3D"100%" role=3D=
+"presentation"><tr><td valign=3D"top" align=3D"left"><h3 class=3D"" style=
+=3D"color:#2d2d2d;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial,=
+ sans-serif;font-size:14px;font-weight:bold;line-height:24px;margin:0;paddi=
+ng:0">Salaire de base minimum</h3></td></tr><tr><td valign=3D"top" align=3D=
+"left" style=3D"padding-top:4px"><p style=3D"color:#595959;font-family:'Ind=
+eed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;font-we=
+ight:normal;line-height:24px;margin:0;padding:0">550 =E2=82=AC par mois</p>=
+</td></tr><tr><td><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" a=
+lign=3D"left" style=3D"margin-top:4px" width=3D"auto" role=3D"presentation"=
+><tr><td style=3D"background-color:#fdefe9;border-radius:8px;padding:3px 8p=
+x;width:auto"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=
+=3D"left" width=3D"100%" role=3D"presentation"><tr><td style=3D"padding-rig=
+ht:4px" valign=3D"middle"><p style=3D"color:#844b17;font-family:'Indeed San=
+s', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:12px;font-weight:bo=
+ld;line-height:18px;margin:0;padding:0">Aucune mise =C3=A0 jour depuis 90=
+=C2=A0jours</p></td><td valign=3D"middle"><img height=3D"18" width=3D"18" a=
+lt=3D"" src=3D"https://prod.statics.indeed.com/eml/assets/images/icons/Warn=
+ing_warning_status.png" style=3D"display:block"/></td></tr></table></td></t=
+r></table></td></tr></table></td><td align=3D"center" style=3D"padding-top:=
+2px;text-align:center;vertical-align:top;width:44px"><a href=3D"https://cts=
+.indeed.com/v3/H4sIAAAAAAAA_02NMQvCMBCF_0uGTsbWTlIIDkIXoYIojpKmFxObNCG5CkX=
+87564OB33vvf4XmxmDTOIMTdlGVPQ1sHaTgPAsFbBUwQaEkwK8k6n4MUj9LaWNzpeojJcJ96ebu=
+CldYUKoj0VxgmdihBhElEubMU8a15MOavGs0lhvhtSYpqB0C9dIlCUvUzINZl7qUb-20ZJcjyPx=
+L9fyLj_m1y6Q3e8dkTw29jYZ-6riD4Oxm2rmr3fH042w3bhAAAA/9sYbK7yLLdo9NX3ZKiGwq8r=
+zMgxCAB6U7UeYC8hFKC8" style=3D"display:inline-block;height:44px;width:44px;=
+text-decoration:none"><img height=3D"24" width=3D"24" alt=3D"Modifier le sa=
+laire de base minimum" style=3D"display:block" src=3D"https://prod.statics.=
+indeed.com/eml/assets/images/icons/edit_neutral.png"/></a></td></tr></table=
+></td></tr><tr><td style=3D"padding:0px;border-top:1px solid #e4e2e0;line-h=
+eight:0;width:100%" align=3D"center" valign=3D"top" aria-hidden=3D"true">&n=
+bsp;</td></tr></table><!--[if (gt mso 9)|(IE)]>=0A        </td></tr></table=
+>=0A        <![endif]-->=0A</td></tr><tr><td align=3D"left" valign=3D"top" =
+style=3D"padding:24px 56px 0;padding-top:24px" class=3D"ph-24"><!--[if (gt =
+mso 9)|(IE)]>=0A        <table width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"width:600px;" role=3D"presentation"><tr><td al=
+ign=3D"left" valign=3D"top">=0A        <![endif]-->=0A<table cellPadding=3D=
+"0" cellSpacing=3D"0" border=3D"0" align=3D"left" style=3D"max-width:600px"=
+ width=3D"100%" role=3D"presentation"><tr><td align=3D"left" valign=3D"top"=
+ style=3D"padding-top:32px"><h2 class=3D"h2-md" style=3D"font-family:'Indee=
+d Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:16px;font-weig=
+ht:bold;line-height:1.5rem;margin:0;padding:0">Vous n'=C3=AAtes plus =C3=A0=
+ la recherche d'un emploi=C2=A0=3F</h2></td></tr><tr><td align=3D"left" val=
+ign=3D"top" style=3D"padding-top:4px"><a href=3D"https://cts.indeed.com/v3/=
+H4sIAAAAAAAA_12Qy26CQABF_4WkXVUFBaImplEgiCganjobgww4hMdMmQFE478X203Tu7vn3tV=
+5cDU35xBjhM5HoyJkERqmJYxjOIxwMUrLJmUhS3FJRySsafzJsoWQNvTCE1YQiPIpP35PywQvlq=
+84qzXIEL5JyGtCwzMOx5Kq7dbIRckG_kDHPLhdTqtY7pJbkGunOMomKx_v9tCCHoyO1KZfxkCzl=
+10HgCAjsuMFwWpRaIKxd3CcZcHjs9R2dtO5s-ldLc-iIsjSVQIzLYObdXrf6fhcgRaaOk8Zr5u5=
+ABOdz9UV88PCreCsCSodtOvgdInQxnIUJuu-OKgU0d5aE0KS3Ul7m6jcB1dw8wcX5WmUuajC9RX=
+1olhVx_30SzsS9-hHS89IWMUlc7MevRqmTPnz8izT2gdWv7DX479C7vn8Bo9347-KAQAA/l95t4=
+c90iLx2AATEnabEwUlaiPrrmyqeqOA5srX_nKk" style=3D"text-align:left;text-decor=
+ation:none;font-family:'Noto Sans', Helvetica, Arial, sans-serif;font-size:=
+16px;color:#2557A7;font-weight:700;line-height:44px">Suspendre ces emails<!=
+--[if !mso]><!-->=0A    <img aria-hidden=3D"true" src=3D"https://d3hbwax96m=
+bv6t.cloudfront.net/eml/assets/images/icons/ArrowRight_primary_whitebg.png"=
+ alt=3D"" width=3D"18" height=3D"18" style=3D"vertical-align:middle;padding=
+-bottom:3px;padding-left:4px"/>=0A     <!--<![endif]-->=0A</a></td></tr></t=
+able><!--[if (gt mso 9)|(IE)]>=0A        </td></tr></table>=0A        <![en=
+dif]-->=0A<table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"=
+left" style=3D"margin-top:32px" width=3D"100%" role=3D"presentation"><tr><t=
+d style=3D"padding:0px;border-top:1px solid #e4e2e0;line-height:0;width:100=
+%" align=3D"center" valign=3D"top" aria-hidden=3D"true">&nbsp;</td></tr></t=
+able></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"padding:24px =
+56px 0;padding-top:16px;padding-bottom:32px" class=3D"ph-24"><!--[if (gt ms=
+o 9)|(IE)]>=0A        <table width=3D"600" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"width:600px;" role=3D"presentation"><tr><td align=
+=3D"left" valign=3D"top">=0A        <![endif]-->=0A<table cellPadding=3D"0"=
+ cellSpacing=3D"0" border=3D"0" align=3D"left" width=3D"100%" role=3D"prese=
+ntation"><tr><td align=3D"left" valign=3D"top" style=3D"padding-top:16px"><=
+p style=3D"color:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetica,=
+ Arial, sans-serif;font-size:12px;font-weight:normal;line-height:1rem;margi=
+n:0;padding:0">Cet email d'alerte de correspondance est sponsoris=C3=A9 par=
+ l'employeur qui publie cet emploi sur Indeed. <strong>Vous =C3=AAtes l'uni=
+que destinataire de ce message. Ne le transf=C3=A9rez pas.</strong> Vous po=
+uvez <a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_12OSwuCQBSF_8ssXGWWq=
+xCkReQmMOhBSxnHq3PTeTBzDUL6743UIlpd7nfOgW9iI8uYJLI-SxIPYnSwRN0ANEthVCBEqDuf=
+aEPYouCERvst9fkaH75eWVK2kcNmlUbC5MUpkkPeuqh1RuV3U2PKq3AUJyHj1sXFqQLFcWALplg=
+2MTGg6C_SmbGTwYPcCCH60KeFgBTXvIP9PDp_XULDcgeaLn0ozJ_xtPvZXMtDebyVIaG58W_KXq=
+83tQcKtPcAAAA/GzaVaNeAC8L5oIwecqiBpDcX2vIrh8YrmrTrFVEHdKw" style=3D"text-de=
+coration:underline;color:#2557a7">configurer les param=C3=A8tres des emails=
+</a> =C3=A0 tout moment sur Indeed.</p></td></tr><tr><td align=3D"left" val=
+ign=3D"top" style=3D"padding-top:16px"><p style=3D"color:#595959;font-famil=
+y:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:12px;f=
+ont-weight:normal;line-height:1rem;margin:0;padding:0">Les r=C3=A9ponses =
+=C3=A0 cet email ne sont pas trait=C3=A9es. Pour contacter notre =C3=A9quip=
+e de service =C3=A0 la client=C3=A8le, acc=C3=A9dez au <a href=3D"https://c=
+ts.indeed.com/v3/H4sIAAAAAAAA_02MwQrCMBBE_2XP0lRPEhAPHoV6qXjWJDWhSbNsNoKU_r=
+tb9OBx3ryZGSpo8MxYtFKlImbiJkzWOduYnJQ3aqCjj4eBYAMJ9AwmBjP2nnJ9ehkzVSfVl77RC=
+fr9CMU7uYn7UeCacuHTn3ftzt3l1knDq7ENr_JokRNaH_ftDpblA7HumKCgAAAA/M18z7oMXAh2=
+0z046KTHjCEfkv2lKRLs9T2iS0hOfnMk" style=3D"text-decoration:underline;color:=
+#2557a7">centre d'aide</a> et envoyez une demande.</p></td></tr></table><!-=
+-[if (gt mso 9)|(IE)]>=0A        </td></tr></table>=0A        <![endif]-->=
+=0A</td></tr><tr><td align=3D"left" valign=3D"top" style=3D"background-colo=
+r:#f3f2f1"><!--[if (gt mso 9)|(IE)]>=0A        <table width=3D"600" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;" role=3D"pr=
+esentation"><tr><td align=3D"left" valign=3D"top">=0A        <![endif]-->=
+=0A<table class=3D"full-wrap" cellPadding=3D"0" cellSpacing=3D"0" border=3D=
+"0" align=3D"left" style=3D"min-width:100%" bgcolor=3D"#ffffff" width=3D"10=
+0%" role=3D"presentation"><tr><td align=3D"left" valign=3D"top"><!--[if (gt=
+ mso 9)|(IE)]>=0A        <table width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"=0A                bgcolor=3D"#f3f2f1" style=3D"width:60=
+0px;" role=3D"presentation">=0A                    <tr>=0A                 =
+       <td align=3D"left" valign=3D"top">=0A        <![endif]-->=0A<table c=
+lass=3D"outerContainer" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" al=
+ign=3D"left" style=3D"max-width:600px;width:600px" bgcolor=3D"#f3f2f1" widt=
+h=3D"100%" role=3D"presentation"><tr><td align=3D"center" valign=3D"top" st=
+yle=3D"padding:32px 56px" class=3D"p-24"><table cellPadding=3D"0" cellSpaci=
+ng=3D"0" border=3D"0" align=3D"left" width=3D"100%" role=3D"presentation"><=
+tr><td align=3D"left" valign=3D"top" style=3D"padding:0px"><table cellPaddi=
+ng=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" width=3D"100%" role=
+=3D"presentation"><tr><td align=3D"left" style=3D"padding:0px" class=3D"ful=
+lWidth pb-24"><table cellPadding=3D"0" cellSpacing=3D"0" border=3D"0" align=
+=3D"left" width=3D"100%" role=3D"presentation"><tr><td align=3D"left" valig=
+n=3D"top" style=3D"padding:0px 0px 12px"><a href=3D"https://cts.indeed.com/=
+v3/H4sIAAAAAAAA_02LsQ6DIBRF_-XNRmynhrWjCV1sOlt4FaLICzxMjPHfC-nS8Z5z7gEZJFhm=
+SlKIT2zdahBNq4MX0IAHeYBenJ4HG0OebIk5ZizqR3fC-g8eaZwqpjHiysNcaF0h8f0vfKpePV6=
+qGK7FxW3p3RF7Mna5dVc4zy8TgAs9kQAAAA/FM0PgghdS3YfTUiOUhkPlt-1zc630trk7wVDGsU=
+SgLs"><img src=3D"https://prod.statics.indeed.com/eml/assets/images/logo/in=
+deed_en_color.png" alt=3D"Indeed home" width=3D"80" style=3D"font-family:'I=
+ndeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;color:#004fcb;font-s=
+ize:20px"/></a></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"pad=
+ding:0px" class=3D"fullWidth pb-16"><p style=3D"color:#595959;font-family:'=
+Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:12px;font=
+-weight:normal;line-height:18px;margin:0;padding:0">&copy; 2025 Indeed, Inc=
+. <br/>Indeed Ireland Operations Limited, Block B, Capital Dock, 80 Sir Jo=
+hn Rogerson's Quay, Grand Canal Dock, Dublin, 2, D02 HE36</p><p style=3D"co=
+lor:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sans-=
+serif;font-size:12px;font-weight:normal;line-height:18px;margin:12px 0 0;pa=
+dding:0">Indeed traite et analyse votre activit=C3=A9 dans cet email.</p></=
+td></tr></table></td></tr></table></td></tr><tr><td align=3D"left" valign=
+=3D"top" class=3D"pt-0" style=3D"padding:24px 0px 0px"><table cellPadding=
+=3D"0" cellSpacing=3D"0" border=3D"0" align=3D"left" role=3D"presentation">=
+<tr role=3D"list"><th align=3D"left" style=3D"padding:0 8px 0 0;border-righ=
+t:1px solid #595959" class=3D"fullWidth br-0" role=3D"listitem"><p style=3D=
+"color:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sa=
+ns-serif;font-size:16px;font-weight:normal;line-height:18px;margin:0;paddin=
+g:0"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_02LsQ6DIBRF_-XNRmynh=
+rWjCV1sOlt4FaLICzxMjPHfC-nS8Z5z7gEZJFhmSlKIT2zdahBNq4MX0IAHeYBenJ4HG0OebIk5=
+ZizqR3fC-g8eaZwqpjHiysNcaF0h8f0vfKpePV6qGK7FxW3p3RF7Mna5dVc4zy8TgAs9kQAAAA/=
+FM0PgghdS3YfTUiOUhkPlt-1zc630trk7wVDGsUSgLs" style=3D"color:#004fcb;text-de=
+coration:underline;font-size:12px">Indeed</a></p></th><th align=3D"left" st=
+yle=3D"padding:0 8px;border-right:1px solid #595959" class=3D"fullWidth pt-=
+24 br-0 pl-0" role=3D"listitem"><p style=3D"color:#595959;font-family:'Inde=
+ed Sans', 'Noto Sans', Helvetica, Arial, sans-serif;font-size:16px;font-wei=
+ght:normal;line-height:18px;margin:0;padding:0"><a href=3D"https://cts.inde=
+ed.com/v3/H4sIAAAAAAAA_02MwQ6CMBBE_2W9qkVPhsR48GiCF4zn0hbbQGmz3ZIQwr-7RA4e5=
+82bmSFDCZYoplIIi2SUjehGqaajCl60KBqUg05CNiHTwQ3aGH2z_bXF3SbG0Ds1wR48lDMoDl1t=
+MeSP5WvCbLj60SkaRtuMaZRoBqo7hmsKie5_3qt6VM93xQ2txsmNqSki-ahtfynOsCxfRnNpwL4=
+AAAA/aVUE3hi36Xss4E9o-V0OPHsNsxDU4LaX0DcGBES82YY" style=3D"color:#004fcb;te=
+xt-decoration:underline;font-size:12px">Politique de confidentialit=C3=A9</=
+a></p></th><th align=3D"left" style=3D"padding:0 8px;border-right:1px solid=
+ #595959" class=3D"fullWidth pt-24 br-0 pl-0" role=3D"listitem"><p style=3D=
+"color:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, sa=
+ns-serif;font-size:16px;font-weight:normal;line-height:18px;margin:0;paddin=
+g:0"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_02LsQrCMBRF_-W5SlOdJ=
+CAOjkJdKs41eW1Ckya8vAhS-u8muDjec85dIYMEwxyTFGKkxi4aUTcqeOFwGtzFuPNIOw4J9uBB=
+rqCcVXNvKOTJlC9TxqJ-9BOxIiRf8zgQLtzPBdUVEl__qkd36-7PrhiuxcG-06uN7KM27tQeYdu=
+--atyip0AAAA/qNAJWc_OoB2XMVpYa3Na5lD6ZabzxONNFwWne6xnUX0" style=3D"color:#0=
+04fcb;text-decoration:underline;font-size:12px">Conditions d'utilisation</a=
+></p></th><th align=3D"left" style=3D"padding:0 8px;border-right:1px solid =
+#595959" class=3D"fullWidth pt-24 br-0 pl-0" role=3D"listitem"><p style=3D"=
+color:#595959;font-family:'Indeed Sans', 'Noto Sans', Helvetica, Arial, san=
+s-serif;font-size:16px;font-weight:normal;line-height:18px;margin:0;padding=
+:0"><a href=3D"https://cts.indeed.com/v3/H4sIAAAAAAAA_02MwQrCMBBE_2XP0lRPEh=
+APHoV6qXjWJDWhSbNsNoKU_rtb9OBx3ryZGSpo8MxYtFKlImbiJkzWOduYnJQ3aqCjj4eBYAMJ9=
+AwmBjP2nnJ9ehkzVSfVl77RCfr9CMU7uYn7UeCacuHTn3ftzt3l1knDq7ENr_JokRNaH_ftDpbl=
+A7HumKCgAAAA/M18z7oMXAh20z046KTHjCEfkv2lKRLs9T2iS0hOfnMk" style=3D"color:#0=
+04fcb;text-decoration:underline;font-size:12px">Centre d'aide</a></p></th><=
+th align=3D"left" style=3D"padding:0 8px" class=3D"fullWidth pt-24 pl-0" ro=
+le=3D"listitem"><p style=3D"color:#595959;font-family:'Indeed Sans', 'Noto =
+Sans', Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;line-=
+height:18px;margin:0;padding:0"><a href=3D"https://cts.indeed.com/v3/H4sIAA=
+AAAAAA_12RS4-iQBSF_wvJuBpbBJXGhEx4CUoARdTWDeFRPCygSqgC6U7_98HMLCaT3M0531nc5=
+PtiKLNmckJwu57NWhq1cVNgUqC6fSvqBIDkLUbVDGGCKPkVI2njTfJSSpsJgdK86NqIxaTCSV6-=
+s9wkJkRSC3Xq8Evt2nzAw7xUUxHrVER-nV25XocG11fspfJv06NiCPk2484RTTGo1KwUPtP9dU4=
+CS07v3Xm7Ex42u1x04kdyj4TtDoa6M08G6mzEhePxhm0L1i6Dz_cfvDYhCIJaUqHqK2HXldR9sm=
+XHPoSYyA9q44N-cmHn9_Ci6MhbdQ3HyS5JtQH7nCgD_kbTYu8ILYt31uYIdvYtC6emvOn3LBuuF=
+nqh-HVjBXAwgyPqyyVfteZqaIfa4wOlOzuuYZgW1flGu7seOtTa6Rl4Jmg6-ZzbhC0160YO45_j=
+MT-Zill_MXFZxNDPG0SzfHRAGgpG9KcdMBgrWv8VEr0IDhtQEx-O4JVQS9R_tifHctyLMxLyWvy=
+vhvn-_g0o6NRb6wEAAA/Y25f2GxUk7Didw91dy3CpDaqlQO8Yif5a_dgoXT3ScU" style=3D"c=
+olor:#004fcb;text-decoration:underline;font-size:12px">Se d=C3=A9sabonner</=
+a></p></th></tr></table></td></tr></table></td></tr></table><!--[if (gt mso=
+ 9)|(IE)]>=0A        </td></tr></table>=0A        <![endif]-->=0A</td></tr>=
+</table><!--[if (gt mso 9)|(IE)]>=0A        </td></tr></table>=0A        <!=
+[endif]-->=0A</td></tr></table><table cellPadding=3D"0" cellSpacing=3D"0" b=
+order=3D"0" align=3D"left" style=3D"width:100%" width=3D"100%" role=3D"pres=
+entation"><tr><td aria-hidden=3D"true" height=3D"12" style=3D"height:12px;f=
+ont-size:12px;line-height:12px" align=3D"center" valign=3D"top">&nbsp;</td>=
+</tr></table><img src=3D"https://subscriptions.indeed.com/imgping=3Ftype=3D=
+elpemail&tk=3D1ivsb0ptmpdhl802" height=3D"1" width=3D"1" alt=3D""/>=0D=0A<i=
+mg border=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"https://engage.ind=
+eed.com/q/MaE4oyZawEbeI4M2D4m8Dw~~/AAR9hBA~/bvqhtMJgElguZM8CfYvFuv8klcKd2Nr=
+VGp1Wwwmjnro7ZK8Y9AxuTiCJ_wvtF1xsMbR_lwcKdjdwXO-TrC4_NQ~~">=0D=0A</body></h=
+tml>
+--_----4BzU9I627r5lpujM8MWX7Q===_E1/61-59953-001D0786--
+

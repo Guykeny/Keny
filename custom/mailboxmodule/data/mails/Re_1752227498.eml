@@ -1,0 +1,377 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:224b:b0:92:fd56:6792 with SMTP id y11csp8810228gba;
+        Thu, 10 Jul 2025 00:24:54 -0700 (PDT)
+X-Received: by 2002:a05:600c:46c5:b0:450:d019:263 with SMTP id 5b1f17b1804b1-454dbeee3aamr22699855e9.18.1752132294410;
+        Thu, 10 Jul 2025 00:24:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1752132294; cv=none;
+        d=google.com; s=arc-20240605;
+        b=AswV6TEPGL/+Q9CnTEx5vZtbvAlL9AOx6zp/fO7u1K+aUWX4Kkm1+eUiwa6tqNQwZ2
+         O+rdvTitxutN9lF6GN3XeG1D5xCPMIKv049n48LdbMy18wPQoRzXoY9FoFQxaiH5rADn
+         8YFZm7REETmyaViX1euvx23AJjKUoJTWsndakEb1oakEJFU3TyMPAkSP4zMHQq8JLSju
+         TXHnJIGdL6MRoa9mnHlsggqgglYUZYGgJ0zic2X11/a0ctjzECtiiWNYZuKO4q6Ywk3/
+         QlhYHjX4UTuMy9SUFpa6tyGE/BsVPguYVCtfqxn/0p82Smt1BzoGvXy4C64vLyV3MPUp
+         xYZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:dkim-signature;
+        bh=6oe11sjROhdUhuWYmks7FDBKCJrISj2LEWcBNFAVpy4=;
+        fh=itzSYdk8MEFhw6xQJKZL3TF3LxobkaUL5knfby+c6pA=;
+        b=iYgucl+bonViVQXUdCLL+ARmNUzStpi3a80TSAW6Mt8NrCb42OCBrSl3jlQvAnRhqX
+         DDyxc8PwmOlYxIp9bmTiUUbLZboqOOYTnyQbtJQhgkFkSM4rfjNMSiVLQxTrdU0x4lJh
+         O3/H4Edx+VY5QeHgmAn1M0T8bLvfgV5Int0ZM03qRL3C4yGetG04zaAyHZVf4lkN0i3F
+         hEZV3cCgM5xTKt/oTbTKpvxPNorB9tDHmN2FBBdjrrrZcVffSKRxuh8udAbcpjj+tAUb
+         hRUZCABJyLIKwct4fpYfhDD/0vOKkC0QWw8ffUVN9alXauelkr481L0G0duVpQQk7Dn1
+         ZdBQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BoCbASky;
+       spf=pass (google.com: domain of guydany8@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=guydany8@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <guydany8@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-454dd59523dsor2602475e9.8.2025.07.10.00.24.54
+        for <guykeny.ndayizeye8@gmail.com>
+        (Google Transport Security);
+        Thu, 10 Jul 2025 00:24:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of guydany8@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=BoCbASky;
+       spf=pass (google.com: domain of guydany8@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=guydany8@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1752132293; x=1752737093; dara=google.com;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=6oe11sjROhdUhuWYmks7FDBKCJrISj2LEWcBNFAVpy4=;
+        b=BoCbASkyd5CuwBMUI8dpqBMCJtsKZkDHTV93FMo4PAx4+fRr2UuraCO5OD1JL3Sx4a
+         dopC0MduL5hFK3ZX4FQ2bJjVbfXt2MSUOuRDWQfw9Gg8GPtyfAX810RaAYPXxVWbnE4m
+         5RbjsVKrTV8Aj1Yy/Cl3xoIBNveAiciOMoXoZEvSuZwEOU3cfh8HDilnkxKMHTCJHFZC
+         YfHpTwmHtrlOUjWmq9tPW8e8IjaNUfajZmB7fwOIWhvcSsr3Ow3ZSCZylLcBMbHJ2TYj
+         swAA1GJsYIWByM2wk7GjlSMXZsKgUP11qZYMfwgUIL6rg3u8ELpeF+iscvahi6SQkl1Q
+         r6VQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1752132293; x=1752737093;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=6oe11sjROhdUhuWYmks7FDBKCJrISj2LEWcBNFAVpy4=;
+        b=bhyd/US/me7GGVaAS6JjboKqiZTmfUhXcqq1AAW//H33BWNFzIXosLRQAx/y4RE4pd
+         J0zf9jOXsjdsQhHdz3ZX39y0PbBe0zDD3UWzHMUtq8TEImsYiYoe6YMFRNRsszkjw7Z8
+         /MVLoawllzdgfSTF6H+f4Cs5KwfDWaWXhHT3tjR/HBUOjUg1+LqReU+P5cuKAu06urpC
+         wW2AE2xwkqxlYorMpk11Wr1rx5bXlK6kck9FNwNKimqF3YgVtKlKbfC12wUc6JmSWRy7
+         /Uodo3WhQNfqMzJxMp3iFzLJifqUzNediz6Av618wp8UZ13l+FATDpShWT8giW8ciya4
+         9Ddg==
+X-Gm-Message-State: AOJu0Yzy7oPDIWZwVoDFyXaEeKnvKS3S01dF/q3ukh2cgoXAmltp1XUK
+	G1GKT+2KCdIgwYFQgurppVKCju6G42nes54vb1ulHDPB1SEtRbh9gUakO58cbg==
+X-Gm-Gg: ASbGnctsjc1TQum9K0SN1foL32vdwUaRbzLGKBbcSbNySUyGGK80oqTGWa3ZlIFEAgW
+	9eDUoucXlqeKhpYdhZz8PsFBh4zFWtNelk6o/0q6FesawchT5tpj3QCk96ZCAcnMAak5bacOq1z
+	BVsrIlXJBXbyVLSBlXk2jcQiZz/z0M8hcW6IJ7aINyltyFeA7+i6L+XiM6pA9qR1zHOp2XU77dK
+	ub7HRngjMceksbrO1a6H1tduRmE5jqrSKHWqEKJU7XJ7+H3nSXANCoX+JaAJPFeZncS4W1Fu+bo
+	thVYXUYqJDeiNSvd8nUcNCIYAigQ/2V0XIitfSQEwkYFRGG4RjBR5nXb839+ekEyMqyyVkEIRyt
+	dVUAcCNUVuYg=
+X-Google-Smtp-Source: AGHT+IEvi+FB9H3sMh9JPZjGTcmgYO/p1rvUu8QGHZ0+iLet7NRtiguQ4oK3K5BpeWgBSUB3tu9I9g==
+X-Received: by 2002:a05:600c:a406:b0:43c:eeee:b70a with SMTP id 5b1f17b1804b1-454dbcc1bdbmr17958005e9.22.1752132293192;
+        Thu, 10 Jul 2025 00:24:53 -0700 (PDT)
+Return-Path: <guydany8@gmail.com>
+Received: from smtpclient.apple ([2a0d:e487:143e:f1c6:40e6:94d9:a2e2:ae0])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-454d50511dfsm50322265e9.12.2025.07.10.00.24.52
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 10 Jul 2025 00:24:52 -0700 (PDT)
+Content-Type: multipart/alternative; boundary=Apple-Mail-593D60BE-D184-446A-8EA5-395782722252
+Content-Transfer-Encoding: 7bit
+From: dany guy <guydany8@gmail.com>
+Mime-Version: 1.0 (1.0)
+Subject: Re: 
+Date: Thu, 10 Jul 2025 09:24:41 +0200
+Message-Id: <B60ADA2F-843D-4992-AB7F-D2FA5C44EC99@gmail.com>
+References: <663BB315-5874-46AA-B9D5-F0BDEDC56506@gmail.com>
+In-Reply-To: <663BB315-5874-46AA-B9D5-F0BDEDC56506@gmail.com>
+To: Guy Keny Ndayizeye <guykeny.ndayizeye8@gmail.com>
+X-Mailer: iPhone Mail (20H360)
+
+
+--Apple-Mail-593D60BE-D184-446A-8EA5-395782722252
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Recu
+
+Envoy=C3=A9 de mon iPhone
+
+> Le 10 juil. 2025 =C3=A0 09:23, Guy Keny Ndayizeye <guykeny.ndayizeye8@gmai=
+l.com> a =C3=A9crit :
+>=20
+> =EF=BB=BF
+> <save2dolibarr.php>
+> <save_mails.php>
+> $(document).ready(function () {
+>     rcmail.register_command('plugin.save2dolibarr', function () {
+>         if (rcmail.message_list && typeof rcmail.message_list.get_selectio=
+n =3D=3D=3D 'function') {
+>             var uid =3D rcmail.message_list.get_selection();
+>             var mbox =3D rcmail.env.mailbox;
+>=20
+>             if (!uid || !mbox) {
+>                 rcmail.display_message("Param=C3=A8tres manquants (UID ou d=
+ossier).", 'error');
+>                 return;
+>             }
+>=20
+>             rcmail.confirm_dialog(
+>                 "Enregistrer ce mail dans Dolibarr ?",
+>                 'plugin.save2dolibarr.confirm',
+>                 function (confirmed) {
+>                     if (confirmed) {
+>                         rcmail.http_post('plugin.save2dolibarr', {
+>                             _uid: uid,
+>                             _mbox: mbox
+>                         }, {
+>                             timeout: 60000,
+>                            =20
+>                         });
+>                     }
+>                 }
+>             );
+>         } else {
+>             rcmail.display_message("Aucun message s=C3=A9lectionn=C3=A9 ou=
+ interface non pr=C3=AAte.", "error");
+>         }
+>     }, true);
+> });
+>=20
+>> Le 8 juil. 2025 =C3=A0 17:53, dany guy <guydany8@gmail.com> a =C3=A9crit :=
+
+>>=20
+>> Ouii
+>>=20
+>> Envoy=C3=A9 de mon iPhone
+>>=20
+>>>> Le 8 juil. 2025 =C3=A0 17:32, Guy Keny Ndayizeye <guykeny.ndayizeye8@gm=
+ail.com> a =C3=A9crit :
+>>>>=20
+>>> =EF=BB=BF
+>>> $(document).ready(function () {
+>>>     rcmail.register_command('plugin.save2dolibarr', function () {
+>>>         if (rcmail.message_list && typeof rcmail.message_list.get_select=
+ion =3D=3D=3D 'function') {
+>>>             var uid =3D rcmail.message_list.get_selection();
+>>>             var mbox =3D rcmail.env.mailbox;
+>>>=20
+>>>             if (!uid || !mbox) {
+>>>                 rcmail.display_message("Param=C3=A8tres manquants (UID o=
+u dossier).", 'error');
+>>>                 return;
+>>>             }
+>>>=20
+>>>             rcmail.confirm_dialog(
+>>>                 "Enregistrer ce mail dans Dolibarr ?",
+>>>                 'plugin.save2dolibarr.confirm',
+>>>                 function (confirmed) {
+>>>                     if (confirmed) {
+>>>                         rcmail.http_post('plugin.save2dolibarr', {
+>>>                             _uid: uid,
+>>>                             _mbox: mbox
+>>>                         }, {
+>>>                             timeout: 60000,
+>>>                            =20
+>>>                         });
+>>>                     }
+>>>                 }
+>>>             );
+>>>         } else {
+>>>             rcmail.display_message("Aucun message s=C3=A9lectionn=C3=A9 o=
+u interface non pr=C3=AAte.", "error");
+>>>         }
+>>>     }, true);
+>>> });
+>>>=20
+>>> <roundcubemodule (2).zip>
+>>> <save_mails.php>
+>>> <save2dolibarr.php>
+>=20
+
+--Apple-Mail-593D60BE-D184-446A-8EA5-395782722252
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto">Recu<br><br><div dir=3D"ltr">Envoy=C3=A9 de=
+ mon iPhone</div><div dir=3D"ltr"><br><blockquote type=3D"cite">Le 10 juil. 2=
+025 =C3=A0 09:23, Guy Keny Ndayizeye &lt;guykeny.ndayizeye8@gmail.com&gt; a =C3=
+=A9crit&nbsp;:<br><br></blockquote></div><blockquote type=3D"cite"><div dir=3D=
+"ltr">=EF=BB=BF<meta http-equiv=3D"content-type" content=3D"text/html; chars=
+et=3Dus-ascii"><div>&lt;save2dolibarr.php&gt;</div><meta http-equiv=3D"conte=
+nt-type" content=3D"text/html; charset=3Dus-ascii"><div>&lt;save_mails.php&g=
+t;</div><meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dut=
+f-8"><span style=3D"font-family: Menlo, Monaco, &quot;Courier New&quot;, mon=
+ospace; white-space: pre; color: rgb(99, 99, 36);">$</span><span style=3D"co=
+lor: rgb(64, 64, 64); font-family: Menlo, Monaco, &quot;Courier New&quot;, m=
+onospace; white-space: pre; background-color: rgb(255, 255, 255);">(</span><=
+span style=3D"font-family: Menlo, Monaco, &quot;Courier New&quot;, monospace=
+; white-space: pre; color: rgb(9, 89, 132);">document</span><span style=3D"c=
+olor: rgb(64, 64, 64); font-family: Menlo, Monaco, &quot;Courier New&quot;, m=
+onospace; white-space: pre; background-color: rgb(255, 255, 255);">).</span>=
+<span style=3D"font-family: Menlo, Monaco, &quot;Courier New&quot;, monospac=
+e; white-space: pre; color: rgb(99, 99, 36);">ready</span><span style=3D"col=
+or: rgb(64, 64, 64); font-family: Menlo, Monaco, &quot;Courier New&quot;, mo=
+nospace; white-space: pre; background-color: rgb(255, 255, 255);">(</span><s=
+pan style=3D"font-family: Menlo, Monaco, &quot;Courier New&quot;, monospace;=
+ white-space: pre; color: rgb(63, 151, 223);">function</span><span style=3D"=
+color: rgb(64, 64, 64); font-family: Menlo, Monaco, &quot;Courier New&quot;,=
+ monospace; white-space: pre; background-color: rgb(255, 255, 255);"> () {</=
+span><div style=3D"color: rgb(64, 64, 64); background-color: rgb(255, 255, 2=
+55); font-family: Menlo, Monaco, &quot;Courier New&quot;, monospace; line-he=
+ight: 18px; white-space: pre;"><div>    <span style=3D"color: rgb(9, 89, 132=
+);">rcmail</span>.<span style=3D"color: rgb(99, 99, 36);">register_command</=
+span>(<span style=3D"color: rgb(162, 86, 55);">'plugin.save2dolibarr'</span>=
+, <span style=3D"color: rgb(63, 151, 223);">function</span> () {</div><div> =
+       <span style=3D"color: rgb(157, 78, 150);">if</span> (<span style=3D"c=
+olor: rgb(9, 89, 132);">rcmail</span>.<span style=3D"color: rgb(9, 89, 132);=
+">message_list</span> <span style=3D"color: rgb(54, 54, 54);">&amp;&amp;</sp=
+an> <span style=3D"color: rgb(63, 151, 223);">typeof</span> <span style=3D"c=
+olor: rgb(9, 89, 132);">rcmail</span>.<span style=3D"color: rgb(9, 89, 132);=
+">message_list</span>.<span style=3D"color: rgb(9, 89, 132);">get_selection<=
+/span> <span style=3D"color: rgb(54, 54, 54);">=3D=3D=3D</span> <span style=3D=
+"color: rgb(162, 86, 55);">'function'</span>) {</div><div>            <span s=
+tyle=3D"color: rgb(63, 151, 223);">var</span> <span style=3D"color: rgb(9, 8=
+9, 132);">uid</span> <span style=3D"color: rgb(54, 54, 54);">=3D</span> <spa=
+n style=3D"color: rgb(9, 89, 132);">rcmail</span>.<span style=3D"color: rgb(=
+9, 89, 132);">message_list</span>.<span style=3D"color: rgb(99, 99, 36);">ge=
+t_selection</span>();</div><div>            <span style=3D"color: rgb(63, 15=
+1, 223);">var</span> <span style=3D"color: rgb(9, 89, 132);">mbox</span> <sp=
+an style=3D"color: rgb(54, 54, 54);">=3D</span> <span style=3D"color: rgb(9,=
+ 89, 132);">rcmail</span>.<span style=3D"color: rgb(9, 89, 132);">env</span>=
+.<span style=3D"color: rgb(9, 89, 132);">mailbox</span>;</div><br><div>     =
+       <span style=3D"color: rgb(157, 78, 150);">if</span> (<span style=3D"c=
+olor: rgb(54, 54, 54);">!</span><span style=3D"color: rgb(9, 89, 132);">uid<=
+/span> <span style=3D"color: rgb(54, 54, 54);">||</span> <span style=3D"colo=
+r: rgb(54, 54, 54);">!</span><span style=3D"color: rgb(9, 89, 132);">mbox</s=
+pan>) {</div><div>                <span style=3D"color: rgb(9, 89, 132);">rc=
+mail</span>.<span style=3D"color: rgb(99, 99, 36);">display_message</span>(<=
+span style=3D"color: rgb(162, 86, 55);">"Param=C3=A8tres manquants (UID ou d=
+ossier)."</span>, <span style=3D"color: rgb(162, 86, 55);">'error'</span>);<=
+/div><div>                <span style=3D"color: rgb(157, 78, 150);">return</=
+span>;</div><div>            }</div><br><div>            <span style=3D"colo=
+r: rgb(9, 89, 132);">rcmail</span>.<span style=3D"color: rgb(99, 99, 36);">c=
+onfirm_dialog</span>(</div><div>                <span style=3D"color: rgb(16=
+2, 86, 55);">"Enregistrer ce mail dans Dolibarr ?"</span>,</div><div>       =
+         <span style=3D"color: rgb(162, 86, 55);">'plugin.save2dolibarr.conf=
+irm'</span>,</div><div>                <span style=3D"color: rgb(63, 151, 22=
+3);">function</span> (<span style=3D"color: rgb(9, 89, 132);">confirmed</spa=
+n>) {</div><div>                    <span style=3D"color: rgb(157, 78, 150);=
+">if</span> (<span style=3D"color: rgb(9, 89, 132);">confirmed</span>) {</di=
+v><div>                        <span style=3D"color: rgb(9, 89, 132);">rcmai=
+l</span>.<span style=3D"color: rgb(99, 99, 36);">http_post</span>(<span styl=
+e=3D"color: rgb(162, 86, 55);">'plugin.save2dolibarr'</span>, {</div><div>  =
+                          <span style=3D"color: rgb(9, 89, 132);">_uid</span=
+><span style=3D"color: rgb(9, 89, 132);">:</span> <span style=3D"color: rgb(=
+9, 89, 132);">uid</span>,</div><div>                            <span style=3D=
+"color: rgb(9, 89, 132);">_mbox</span><span style=3D"color: rgb(9, 89, 132);=
+">:</span> <span style=3D"color: rgb(9, 89, 132);">mbox</span></div><div>   =
+                     }, {</div><div>                            <span style=3D=
+"color: rgb(9, 89, 132);">timeout</span><span style=3D"color: rgb(9, 89, 132=
+);">:</span> <span style=3D"color: rgb(73, 104, 57);">60000</span>,</div><di=
+v>                            </div><div>                        });</div><d=
+iv>                    }</div><div>                }</div><div>            )=
+;</div><div>        } <span style=3D"color: rgb(157, 78, 150);">else</span> {=
+</div><div>            <span style=3D"color: rgb(9, 89, 132);">rcmail</span>=
+.<span style=3D"color: rgb(99, 99, 36);">display_message</span>(<span style=3D=
+"color: rgb(162, 86, 55);">"Aucun message s=C3=A9lectionn=C3=A9 ou interface=
+ non pr=C3=AAte."</span>, <span style=3D"color: rgb(162, 86, 55);">"error"</=
+span>);</div><div>        }</div><div>    }, <span style=3D"color: rgb(63, 1=
+51, 223);">true</span>);</div><div>});</div></div><div><br><blockquote type=3D=
+"cite"><div>Le 8 juil. 2025 =C3=A0 17:53, dany guy &lt;guydany8@gmail.com&gt=
+; a =C3=A9crit :</div><br class=3D"Apple-interchange-newline"><div><meta htt=
+p-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8"><div dir=3D"=
+auto">Ouii<br><br><div dir=3D"ltr">Envoy=C3=A9 de mon iPhone</div><div dir=3D=
+"ltr"><br><blockquote type=3D"cite">Le 8 juil. 2025 =C3=A0 17:32, Guy Keny N=
+dayizeye &lt;guykeny.ndayizeye8@gmail.com&gt; a =C3=A9crit&nbsp;:<br><br></b=
+lockquote></div><blockquote type=3D"cite"><div dir=3D"ltr">=EF=BB=BF<div dir=
+=3D"ltr"><div style=3D"color:rgb(204,204,204);background-color:rgb(31,31,31)=
+;font-family:Consolas,&quot;Courier New&quot;,monospace;font-size:14px;line-=
+height:19px;white-space:pre"><div><span style=3D"color:rgb(220,220,170)">$</=
+span>(<span style=3D"color:rgb(156,220,254)">document</span>).<span style=3D=
+"color:rgb(220,220,170)">ready</span>(<span style=3D"color:rgb(86,156,214)">=
+function</span> () {</div><div>&nbsp; &nbsp; <span style=3D"color:rgb(156,22=
+0,254)">rcmail</span>.<span style=3D"color:rgb(220,220,170)">register_comman=
+d</span>(<span style=3D"color:rgb(206,145,120)">'plugin.save2dolibarr'</span=
+>, <span style=3D"color:rgb(86,156,214)">function</span> () {</div><div>&nbs=
+p; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(197,134,192)">if</span> (<s=
+pan style=3D"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb(=
+156,220,254)">message_list</span> <span style=3D"color:rgb(212,212,212)">&am=
+p;&amp;</span> <span style=3D"color:rgb(86,156,214)">typeof</span> <span sty=
+le=3D"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb(156,220=
+,254)">message_list</span>.<span style=3D"color:rgb(156,220,254)">get_select=
+ion</span> <span style=3D"color:rgb(212,212,212)">=3D=3D=3D</span> <span sty=
+le=3D"color:rgb(206,145,120)">'function'</span>) {</div><div>&nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(86,156,214)">var</span> <=
+span style=3D"color:rgb(156,220,254)">uid</span> <span style=3D"color:rgb(21=
+2,212,212)">=3D</span> <span style=3D"color:rgb(156,220,254)">rcmail</span>.=
+<span style=3D"color:rgb(156,220,254)">message_list</span>.<span style=3D"co=
+lor:rgb(220,220,170)">get_selection</span>();</div><div>&nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(86,156,214)">var</span> <span=
+ style=3D"color:rgb(156,220,254)">mbox</span> <span style=3D"color:rgb(212,2=
+12,212)">=3D</span> <span style=3D"color:rgb(156,220,254)">rcmail</span>.<sp=
+an style=3D"color:rgb(156,220,254)">env</span>.<span style=3D"color:rgb(156,=
+220,254)">mailbox</span>;</div><br><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; <span style=3D"color:rgb(197,134,192)">if</span> (<span style=3D"color=
+:rgb(212,212,212)">!</span><span style=3D"color:rgb(156,220,254)">uid</span>=
+ <span style=3D"color:rgb(212,212,212)">||</span> <span style=3D"color:rgb(2=
+12,212,212)">!</span><span style=3D"color:rgb(156,220,254)">mbox</span>) {</=
+div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=
+=3D"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb(220,220,1=
+70)">display_message</span>(<span style=3D"color:rgb(206,145,120)">"Param=C3=
+=A8tres manquants (UID ou dossier)."</span>, <span style=3D"color:rgb(206,14=
+5,120)">'error'</span>);</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; <span style=3D"color:rgb(197,134,192)">return</span>;</div><d=
+iv>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><br><div>&nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(156,220,254)">rcmail</sp=
+an>.<span style=3D"color:rgb(220,220,170)">confirm_dialog</span>(</div><div>=
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color=
+:rgb(206,145,120)">"Enregistrer ce mail dans Dolibarr ?"</span>,</div><div>&=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:=
+rgb(206,145,120)">'plugin.save2dolibarr.confirm'</span>,</div><div>&nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(86,1=
+56,214)">function</span> (<span style=3D"color:rgb(156,220,254)">confirmed</=
+span>) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; <span style=3D"color:rgb(197,134,192)">if</span> (<span style=3D=
+"color:rgb(156,220,254)">confirmed</span>) {</div><div>&nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D=
+"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:rgb(220,220,170)=
+">http_post</span>(<span style=3D"color:rgb(206,145,120)">'plugin.save2dolib=
+arr'</span>, {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb(156,=
+220,254)">_uid</span><span style=3D"color:rgb(156,220,254)">:</span> <span s=
+tyle=3D"color:rgb(156,220,254)">uid</span>,</div><div>&nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <=
+span style=3D"color:rgb(156,220,254)">_mbox</span><span style=3D"color:rgb(1=
+56,220,254)">:</span> <span style=3D"color:rgb(156,220,254)">mbox</span></di=
+v><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; }, {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=3D"color:rgb=
+(156,220,254)">timeout</span><span style=3D"color:rgb(156,220,254)">:</span>=
+ <span style=3D"color:rgb(181,206,168)">60000</span>,</div><div>&nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; </div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; });</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; );</div><div>&nbsp; &nbsp; &nbsp; &nbsp; } <span style=3D"color:rgb(19=
+7,134,192)">else</span> {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; <span style=3D"color:rgb(156,220,254)">rcmail</span>.<span style=3D"color:=
+rgb(220,220,170)">display_message</span>(<span style=3D"color:rgb(206,145,12=
+0)">"Aucun message s=C3=A9lectionn=C3=A9 ou interface non pr=C3=AAte."</span=
+>, <span style=3D"color:rgb(206,145,120)">"error"</span>);</div><div>&nbsp; &=
+nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; }, <span style=3D"color:rgb(86=
+,156,214)">true</span>);</div><div>});</div><br></div></div>
+<div>&lt;roundcubemodule (2).zip&gt;</div><div>&lt;save_mails.php&gt;</div><=
+div>&lt;save2dolibarr.php&gt;</div></div></blockquote></div></div></blockquo=
+te></div><br></div></blockquote></body></html>=
+
+--Apple-Mail-593D60BE-D184-446A-8EA5-395782722252--

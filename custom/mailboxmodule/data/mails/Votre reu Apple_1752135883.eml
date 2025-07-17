@@ -1,0 +1,246 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:224b:b0:92:fd56:6792 with SMTP id y11csp8408455gba;
+        Wed, 9 Jul 2025 09:01:29 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGjvPJg60710G9WUYBZBPUXMmKR/K0mJFNz1MssKoZfnccZkFh58neFKUEUvv/0xRB7armE
+X-Received: by 2002:a05:6a21:6e91:b0:1f5:769a:a4c2 with SMTP id adf61e73a8af0-22cd72927fcmr5285657637.22.1752076888583;
+        Wed, 09 Jul 2025 09:01:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1752076888; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GMGfJfiMOoNqKLL6Qy247B8Vgn3NAiBeUGNeOMLHOXjFujDttQN+1BZhl19RmOKhpL
+         oSmRr8QlWq62uo6K51l+jp9NLkXX4RvS5smWnVMW62j86CwqtzWqN3IoeSeJIcW4eQeB
+         xVhiAqlVzwW94+jNb+nidZBajmyHK6SXJEt4su3ja3dwaeDIkX50ICaWK/KohsHztbOy
+         Qhax8aBLgByFG6cutUYad3TyoIwBLFUBFVlVAmLF924n4maOQpobXi1iSm809YHu0Uxm
+         jxsKTflkfhnblJ0MXSMffVdh3VA7uzLnhvLua/VK/QVPyy/NXbV1soqWxyxI2y4zFkNp
+         jAhg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=w8SOmWrh/YS9QOcFy6JFGNgWQi7JeE4RkuK7YADLeZ8=;
+        fh=/Ol0OegD1aF9J6vnCKCk5vxGx7iP6OzlnFyv868g/yo=;
+        b=dsywwwBgkQVl5cYHAFBx/ip5SQX7cRvLuDi/FNn+U6cQSTkpzKoW9JjYKy4V6RWCM3
+         WfK0WOJku0aPruS3YKzZJ8s+RPJdRR7AVKe4ZxVkfhIT0bh9QmS+kURd4de4ZAKGLwH0
+         fvF4uhP2yASe03vHhzY/QaEYT+N/MT+dG1Jtw7FrmfE5VUXbEJIPbuaHMpZ/I9AR1++H
+         oO6b1npkZr9rR2+0zZmet9Qz9F0ozjuDIh7QjkcXnz+rI+lkb0jw4KrJmRPAQhIbT7tN
+         svuMIcGdVJlvJa1EyfIjM70dSdm1STBiyxhdFTuzQkyinszI0ujjA3qzYIYhJhvXllBI
+         DOXQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.apple.com header.s=email0517 header.b=BCC6tT3p;
+       spf=pass (google.com: domain of no_reply@email.apple.com designates 17.111.110.100 as permitted sender) smtp.mailfrom=no_reply@email.apple.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=email.apple.com
+Return-Path: <no_reply@email.apple.com>
+Received: from rn2-txn-msbadger06105.apple.com (rn2-txn-msbadger06105.apple.com. [17.111.110.100])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-74ce32ec241si17354900b3a.40.2025.07.09.09.01.28
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 09 Jul 2025 09:01:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no_reply@email.apple.com designates 17.111.110.100 as permitted sender) client-ip=17.111.110.100;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.apple.com header.s=email0517 header.b=BCC6tT3p;
+       spf=pass (google.com: domain of no_reply@email.apple.com designates 17.111.110.100 as permitted sender) smtp.mailfrom=no_reply@email.apple.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=email.apple.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=email.apple.com;
+	s=email0517; t=1752076885;
+	bh=w8SOmWrh/YS9QOcFy6JFGNgWQi7JeE4RkuK7YADLeZ8=;
+	h=Date:From:To:Message-ID:Subject:Content-Type;
+	b=BCC6tT3pOho2jHenyN8QwmE8lqR3bgl3X/4M4nwkdQrKR/0OLq3kf8IwVsTAF5H/1
+	 nuiU5K6v5iEHSuoZF6EAsFcKCNyos0oDj2l2tH+3Hmm1RyPAIY6V7PhSvxjnd9NybP
+	 hEmiPmzIuTYPaH9YowbpMDVml20iVkMTR6GFK2Qwt+IKCPh0Bd0qm8Ua4tXvIZgP/o
+	 OxBj6aSOGYnHxA+tRAhIc2kWJ1hsLAdGeRy1r8D4vCLGUraM3saGFd2X7iBcB30SLK
+	 ySvC5BtMoxdi4743v9S+ORadcPbnwbcUvxi2fFw4Jsn/BKY3TcCmaMHb//BiITwZv7
+	 GmlqhU9Zi3hTg==
+Date: Wed, 9 Jul 2025 16:01:25 +0000 (GMT)
+From: Apple <no_reply@email.apple.com>
+To: guykeny.ndayizeye8@gmail.com
+Message-ID: <692332896.207883185.1752076885913@email.apple.com>
+Subject: =?ISO-8859-1?Q?Votre_re=E7u_Apple?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_207883183_1318175039.1752076885913"
+X-Broadcast-Id: 10631
+X-Attach-Flag: N
+X-COMMS-C: false
+X-Sent-To: guykeny.ndayizeye8@gmail.com,2,hzRTDSh1mUzLVdjDUas6ClZ%2FaoYcxLuyWEIOMZOF0wlkyXJUnAIbeIpFUZKopOOYnLpsWUqbQ4%2BK9IixjwUR8lkLvtfQ5jzLY%2B2SaoEU%2F2tTB5rYS%2BfLqKZuH2bA4KWZGHECBgK1%2Fw6mWnfyOQ11YT9SJNSyLFeftCVTmFV19YnYTtyAJc82C4ABbMOfulK8yF7WihIjFD2JdNvmIdC1Z3muKolA4Al4pWTcHgc17SHjDbbuy25NXdhfDzg77mKdsLXjingxFpaHFcLHFmCJd95hgPUnZL5SBcjzmBLqPM5WtC5GEXFtjWzwy9G46cW%2B9J8sPWFjSgd7fWfBhAvW2Ncpd4DMsLr3OO64gkvs4h3vEmUtyrrO4lUbtbo%2BJuNrNdp8x%2BtvyJjkHjmBvBJgv%2F63EI%2BpnlnkIpBz%2BDy3Izj9j0C9hgqztcpQLdecRe%2FUhbf%2FQeq9da%2BmanlRd2iUqw%3D%3D
+X-TXN_ID: eb14f6b3-3910-4de5-9381-c2fc60da217f
+X-DKIM_SIGN_REQUIRED: YES
+X-EmailType-Id: 10631
+X-Business-Group: iTunes
+X-Country: US
+X-Antivirus: Avast (VPS 250710-0, 10/7/2025), Inbound message
+X-Antivirus-Status: Clean
+
+------=_Part_207883183_1318175039.1752076885913
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Content-Disposition: inline
+
+<html><head><style data-emotion=3D"custom hzv07h qrj5ky 1ago99h 1p2cbqg m31=
+y3a 108v2mv 6ffxnu 18w16cf f41j3e zresjj rgm23z omvd4k 1skwja4 vc9uxc gzadz=
+y wogfc8 i8xbl3 137u684 1eduvzf vr1cqx 1y6quhx 1wwfjxf 9urhlu 1d5xd7o 1deqy=
+u 4tra68 68yyeh 1s7arqf pko50u 15zbox7 jhluqm 161t2u8 1cfbe7l 1nn7g7i 4anrg=
+1 1sstyyn 1okufpp 4cxybv 1d15tds 1q2yoq2 9smyh7 ytumd6 9ro87k 1p74tef bc7j6=
+f">.custom-hzv07h{margin:20px;font-family:system-ui,-apple-system,BlinkMacS=
+ystemFont,SF Pro,Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif;color:r=
+gb(51, 51, 51);line-height:23px;padding:20px;}.custom-hzv07h .action{backgr=
+ound-color:#027eff;color:#fff;}.custom-hzv07h .body-link{text-decoration:no=
+ne;color:#027eff;}.custom-qrj5ky{max-width:750px;margin:0 auto;}.custom-1ag=
+o99h{width:100%;}.custom-1p2cbqg{margin-bottom:50px;}.custom-m31y3a{padding=
+-bottom:40px;}.custom-108v2mv{display:inline-block;font-weight:600;line-hei=
+ght:32px;margin:0;font-size:32px;color:#333333;letter-spacing:0.13px;}.cust=
+om-6ffxnu{margin-bottom:25px;margin-top:25px;width:100%;}.custom-18w16cf{fo=
+nt-size:14px;color:#333333;margin:0;display:inline-block;margin-bottom:10px=
+;}.rtl .custom-18w16cf{margin-right:0;margin-left:5px;}.ltr .custom-18w16cf=
+{margin-right:5px;margin-left:0;}.custom-f41j3e{font-size:14px;color:#33333=
+3;margin:0;display:inline-block;font-weight:600;margin-right:5px;}.rtl .cus=
+tom-f41j3e{margin-right:0;margin-left:5px;}.ltr .custom-f41j3e{margin-right=
+:5px;margin-left:0;}.custom-zresjj{font-weight:300;font-size:17px;line-heig=
+ht:23px;font-size:14px;color:#333333;margin:0;display:inline-block;}.rtl .c=
+ustom-zresjj{margin-right:0;margin-left:5px;}.ltr .custom-zresjj{margin-rig=
+ht:5px;margin-left:0;}.custom-rgm23z{margin-top:40px;width:100%;}.custom-rg=
+m23z+.custom-rgm23z{margin-top:25px;}.custom-omvd4k{width:60px;padding-inli=
+ne:0 20px;}.custom-1skwja4{border-radius:14px;border:1px solid rgba(128,128=
+,128,0.2);}@media(max-width: 480px){.custom-vc9uxc{display:block;}}.custom-=
+gzadzy{font-size:17px;color:#333333;font-weight:600;margin:0;}.custom-wogfc=
+8{font-weight:300;font-size:17px;line-height:23px;font-size:14px;color:#666=
+666;line-height:1.6;margin:0;}.rtl .custom-wogfc8{margin-right:5px;margin-l=
+eft:0;}.ltr .custom-wogfc8{margin-right:0;margin-left:5px;}.rtl .custom-wog=
+fc8{margin-right:0;margin-left:0;}.ltr .custom-wogfc8{margin-right:0;margin=
+-left:0;}.custom-i8xbl3{padding-inline-start:32px;}.rtl .custom-i8xbl3{text=
+-align:left;}.ltr .custom-i8xbl3{text-align:right;}@media(max-width: 480px)=
+{.custom-i8xbl3{display:block;margin-top:10px;padding-inline-start:0;width:=
+100%;}.ltr .custom-i8xbl3{text-align:left;}.rtl .custom-i8xbl3{text-align:r=
+ight;}}.custom-137u684{font-weight:300;font-size:17px;line-height:23px;font=
+-size:17px;color:#333333;font-weight:600;margin:0;}.custom-1eduvzf{font-siz=
+e:14px;color:#666666;line-height:1.6;margin:0;}.rtl .custom-1eduvzf{margin-=
+right:5px;margin-left:0;}.ltr .custom-1eduvzf{margin-right:0;margin-left:5p=
+x;}.rtl .custom-vr1cqx{margin-right:10px;margin-left:0;}.ltr .custom-vr1cqx=
+{margin-right:0;margin-left:10px;}.custom-1y6quhx{margin-top:50px;width:100=
+%;font-size:17px;}.custom-1y6quhx+*{border-top:1px solid #ddd;padding-top:1=
+5px;}.payment-information+.custom-1y6quhx{margin-top:25px;}@media(max-width=
+: 480px){.custom-1y6quhx .payment-information__left{padding-bottom:25px;}.c=
+ustom-1y6quhx .payment-information__col{width:100%!important;}}.custom-1wwf=
+jxf{font-weight:300;font-size:17px;line-height:23px;font-size:21px;color:#3=
+33333;font-weight:600;margin:0;line-height:29px;letter-spacing:0.23px;paddi=
+ng-bottom:8px;}.custom-9urhlu{display:inline-block;width:50%;vertical-align=
+:top;}.custom-1d5xd7o{font-weight:300;color:#333333;letter-spacing:-0.37px;=
+line-height:25px;vertical-align:top;margin:0;}.payment-information__subtota=
+l-group+.custom-1deqyu{margin-top:14px;}.custom-4tra68{font-weight:300;colo=
+r:#333333;letter-spacing:-0.37px;line-height:25px;vertical-align:top;margin=
+:0;font-size:17px;display:inline-block;width:66%;text-align:start;}.custom-=
+68yyeh{font-weight:300;color:#333333;letter-spacing:-0.37px;line-height:25p=
+x;vertical-align:top;margin:0;display:inline-block;width:34%;text-align:end=
+;}.custom-1s7arqf{margin:0;line-height:25px;}.custom-pko50u{margin-top:12.5=
+px;margin-bottom:12.5px;border-top:1px solid #cccccc;}.custom-15zbox7{font-=
+weight:300;font-size:17px;line-height:23px;font-weight:600;color:#333333;le=
+tter-spacing:-0.37px;line-height:25px;vertical-align:top;margin:0;font-size=
+:17px;display:inline-block;width:66%;text-align:start;}.custom-jhluqm{font-=
+weight:300;font-size:17px;line-height:23px;margin:0;line-height:25px;}.cust=
+om-161t2u8{border-top:1px #ddd solid;padding-top:15px;width:100%;}.custom-1=
+cfbe7l{font-weight:300;font-size:17px;line-height:23px;}.custom-1nn7g7i{wid=
+th:100%;}@media(max-width: 480px){.custom-1nn7g7i{text-align:center;}}.cust=
+om-4anrg1{font-size:14px;line-height:1.47059;font-weight:200;letter-spacing=
+:-0.022em;border-color:transparent;border-width:0px;border-radius:8px;curso=
+r:pointer;display:inline-block;min-width:260px;max-width:340px;padding:8px =
+15px;margin:5px 0;text-align:center;white-space:nowrap;}@media(max-width: 4=
+80px){.custom-4anrg1{min-width:100%;}}.custom-1sstyyn{margin:40px 0px;}.cus=
+tom-1okufpp{font-size:17px;padding-bottom:8px;font-weight:550;}.custom-4cxy=
+bv{padding-bottom:8px;}.custom-1d15tds{font-size:17px;font-weight:300;color=
+:#0070C9;text-decoration:none;}.custom-1q2yoq2{margin-top:30px;margin-botto=
+m:30px;}.custom-9smyh7{font-weight:300;font-size:17px;line-height:23px;font=
+-size:13px;color:#888888;margin-top:0;margin-bottom:0;line-height:1.5;}.cus=
+tom-ytumd6{text-decoration:none;}.custom-9ro87k a:link{color:#666;}.footer-=
+copy+.custom-9ro87k{margin-top:-20px;}.custom-1p74tef{color:#666;text-decor=
+ation:none;font-size:13px;}.custom-bc7j6f{color:#666;margin:0px 10px;text-a=
+lign:center;font-size:13px;}</style></head><body class=3D"custom-hzv07h"><d=
+iv lang=3D"fr-fr" dir=3D"ltr" class=3D"ltr custom-qrj5ky" id=3D"email_conta=
+iner"><div id=3D"header_section" class=3D"custom-1ago99h"><div class=3D"hea=
+der custom-1p2cbqg"><div class=3D"header__container custom-m31y3a"><img hei=
+ght=3D"24" src=3D"https://s.mzstatic.com/email/modern/logo/apple-134-70x84.=
+png" alt=3D"Apple"/></div><div class=3D"header__container"><h1 class=3D"cus=
+tom-108v2mv">Facture</h1></div></div></div><div id=3D"body_section" class=
+=3D"custom-6ffxnu"><div><p class=3D"custom-18w16cf">8 juillet 2025</p><div>=
+<p class=3D"custom-f41j3e">S=C3=A9quence=C2=A0:</p><p class=3D"custom-zresj=
+j">1-11573299779<br/></p></div><div><p class=3D"custom-f41j3e">N=C2=B0 de c=
+ommande :</p><p class=3D"custom-zresjj">MX9Q2FZ8QY<br/></p></div><div><p cl=
+ass=3D"custom-f41j3e">Document=C2=A0:</p><p class=3D"custom-zresjj">1759781=
+93994<br/></p></div><div><p class=3D"custom-f41j3e">Compte=C2=A0Apple=C2=A0=
+:</p><p class=3D"custom-zresjj">guykeny.ndayizeye8@gmail.com<br/></p></div>=
+</div><table width=3D"100%" class=3D"subscription-lockup__container custom-=
+rgm23z"><tr class=3D"subscription-lockup"><td valign=3D"top" class=3D"custo=
+m-omvd4k"><img height=3D"60" alt=3D"iCloud" src=3D"https://is1-ssl.mzstatic=
+.com/image/thumb/Purple126/v4/74/89/8c/74898c5f-5649-2d24-c3cd-dd33a89dccd0=
+/AppIcon-1x_U007emarketing-0-7-0-85-220.png/120x0w.jpg" class=3D"custom-1sk=
+wja4"/></td><td valign=3D"top" class=3D"subscription-lockup__content custom=
+-vc9uxc"><p class=3D"custom-gzadzy">iCloud</p><p class=3D"custom-wogfc8">iC=
+loud+ avec 200=E2=80=AFGo (Mensuel)<br/></p><p class=3D"custom-wogfc8">Reno=
+uv. le 9 ao=C3=BBt 2025<br/></p></td><td valign=3D"top" class=3D"subscripti=
+on-lockup__bottom-text__col custom-i8xbl3"><p class=3D"custom-137u684">2,99=
+=C2=A0=E2=82=AC<br/></p><p class=3D"custom-1eduvzf"><span>Dont TVA =C3=A0 2=
+0=C2=A0%</span><span class=3D"custom-vr1cqx">0,50=C2=A0=E2=82=AC</span></p>=
+</td></tr></table><div class=3D"payment-information custom-1y6quhx"><p clas=
+s=3D"custom-1wwfjxf">Facturation et paiement<br/></p><div><div class=3D"pay=
+ment-information__col payment-information__left custom-9urhlu"><p class=3D"=
+custom-1d5xd7o">Guy Keny Ndayizeye</p><p class=3D"custom-1d5xd7o">19</p><p =
+class=3D"custom-1d5xd7o">Laine Laroche</p><p class=3D"custom-1d5xd7o">49000=
+ Angers</p><p class=3D"custom-1d5xd7o">France</p></div><div class=3D"paymen=
+t-information__col custom-9urhlu"><div class=3D"payment-information__subtot=
+al-group custom-1deqyu"><p class=3D"custom-4tra68">Sous-total<!-- --> </p><=
+div class=3D"custom-68yyeh"><p class=3D"custom-1s7arqf">2,49=C2=A0=E2=82=AC=
+<!-- --> </p></div><p class=3D"custom-4tra68">TVA factur=C3=A9e au taux de =
+20=C2=A0%<!-- --> </p><div class=3D"custom-68yyeh"><p class=3D"custom-1s7ar=
+qf">0,50=C2=A0=E2=82=AC<!-- --> </p></div></div><hr class=3D"custom-pko50u"=
+/><p class=3D"custom-15zbox7">Visa =E2=80=A2=E2=80=A2=E2=80=A2=E2=80=A2 002=
+5 (Apple=C2=A0Pay)<br/></p><div class=3D"custom-68yyeh"><p class=3D"custom-=
+jhluqm">2,99=C2=A0=E2=82=AC<br/></p></div></div></div></div><p class=3D"cus=
+tom-1cfbe7l">Si vous avez des questions concernant votre facture, <a class=
+=3D"body-link custom-ytumd6" target=3D"_blank" rel=3D"noopener nofollow" hr=
+ef=3D"https://support.apple.com/fr-fr/billing?cid=3Demail_receipt">contacte=
+z l=E2=80=99assistance</a>. Cet e=E2=80=91mail confirme le paiement du forf=
+ait iCloud+ indiqu=C3=A9 ci=E2=80=91dessus. Votre forfait sera factur=C3=A9=
+ =C3=A0 chaque cycle d=E2=80=99abonnement =C3=A0 moins de le r=C3=A9silier =
+<a class=3D"body-link custom-ytumd6" target=3D"_blank" rel=3D"noopener nofo=
+llow" href=3D"https://support.apple.com/kb/HT207594">en revenant</a> au for=
+fait de stockage gratuit sur votre appareil=C2=A0iOS, Mac ou=C2=A0PC.<br/><=
+/p><p class=3D"custom-1cfbe7l">Vous pouvez contacter Apple pour b=C3=A9n=C3=
+=A9ficier d=E2=80=99un remboursement dans un d=C3=A9lai de 15 jours apr=C3=
+=A8s la mise =C3=A0 jour d=E2=80=99un abonnement mensuel, ou dans un d=C3=
+=A9lai de 45 jours apr=C3=A8s un paiement annuel. Des remboursements partie=
+ls sont disponibles en cas d=E2=80=99obligation l=C3=A9gale.<br/></p></div>=
+<div id=3D"footer_section" class=3D"custom-161t2u8"><p class=3D"custom-1cfb=
+e7l">Vous pouvez d=C3=A9sactiver les re=C3=A7us de renouvellement pour ne p=
+lus recevoir d=E2=80=99e=E2=80=91mails =C3=A0 chaque renouvellement de vos =
+abonnements. Vous pouvez toujours consulter vos re=C3=A7us dans les r=C3=A9=
+glages de l=E2=80=99App=C2=A0Store=C2=A0=E2=80=BA Historique=C2=A0d=E2=80=
+=99achats.<br/></p><div class=3D"action-button-cell custom-1nn7g7i"><a href=
+=3D"https://link.apple.com/account/toggle-renewal-receipts/ddc8e1a3-267a-45=
+a1-9e58-0ca9a9d27957?storefront=3DFRA&locale=3Dfr-fr" target=3D"_=3Dblank" =
+rel=3D"nofollow"><button class=3D"action custom-4anrg1">D=C3=A9sactiver les=
+ e-mails de re=C3=A7u de renouvellement</button></a></div><div class=3D"cus=
+tom-1sstyyn"><div class=3D"custom-1okufpp"> <!-- -->Obtenir de l=E2=80=99ai=
+de pour les abonnements et les achats</div><div class=3D"custom-4cxybv"><a =
+href=3D"https://apps.apple.com/account/subscriptions" target=3D"_=3Dblank" =
+rel=3D"nofollow" class=3D"body-link custom-1d15tds">G=C3=A9rer les abonneme=
+nts<!-- --> <!-- -->=E2=80=BA</a></div><div class=3D"custom-4cxybv"><a href=
+=3D"https://apps.apple.com/account/purchases" target=3D"_=3Dblank" rel=3D"n=
+ofollow" class=3D"body-link custom-1d15tds">Historique des achats<!-- --> <=
+!-- -->=E2=80=BA</a></div><div class=3D"custom-4cxybv"><a href=3D"https://r=
+eportaproblem.apple.com" target=3D"_=3Dblank" rel=3D"nofollow" class=3D"bod=
+y-link custom-1d15tds">Signaler un probl=C3=A8me<!-- --> <!-- -->=E2=80=BA<=
+/a></div><div class=3D"custom-4cxybv"><a href=3D"https://buy.itunes.apple.c=
+om/WebObjects/MZFinance.woa/wa/accountSummary?mt=3D8" target=3D"_=3Dblank" =
+rel=3D"nofollow" class=3D"body-link custom-1d15tds">Afficher les d=C3=A9tai=
+ls du compte<!-- --> <!-- -->=E2=80=BA</a></div><div class=3D"custom-4cxybv=
+"><a href=3D"https://support.apple.com/billing" target=3D"_=3Dblank" rel=3D=
+"nofollow" class=3D"body-link custom-1d15tds">Consulter l=E2=80=99assistanc=
+e=C2=A0Apple<!-- --> <!-- -->=E2=80=BA</a></div></div><div class=3D"footer-=
+copy custom-1q2yoq2"><p class=3D"body custom-9smyh7">TM et =C2=A9=C2=A02025=
+ Apple Distribution International=C2=A0Ltd. Hollyhill Industrial Estate, Ho=
+llyhill, Cork, Irlande<br/></p><p class=3D"body custom-9smyh7">Ireland VAT =
+Reg No. IE9700053D<br/></p></div><div class=3D"inline-link-group custom-9ro=
+87k"><span><a href=3D"https://www.apple.com/fr/legal/" class=3D"custom-1p74=
+tef">Tous droits r=C3=A9serv=C3=A9s</a><span class=3D"custom-bc7j6f"> | </s=
+pan></span><span><a href=3D"https://www.apple.com/fr/privacy/" class=3D"cus=
+tom-1p74tef">Engagement de confidentialit=C3=A9</a><span class=3D"custom-bc=
+7j6f"> | </span></span><span><a href=3D"https://www.apple.com/legal/interne=
+t-services/itunes/fr/terms.html#SALE" class=3D"custom-1p74tef">Conditions g=
+=C3=A9n=C3=A9rales de vente</a></span></div></div></div></body></html>
+------=_Part_207883183_1318175039.1752076885913--

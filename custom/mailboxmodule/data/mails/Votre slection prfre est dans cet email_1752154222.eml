@@ -1,0 +1,695 @@
+Delivered-To: guykeny.ndayizeye8@gmail.com
+Received: by 2002:a05:7508:224b:b0:92:fd56:6792 with SMTP id y11csp7408418gba;
+        Mon, 7 Jul 2025 23:30:01 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF8JAkqvP2EFZxS75RSAKkFTZ6q2eSGc9yWZ+mH8GcMpKXXITGz6A0maVZXPbujBDD1WmkD
+X-Received: by 2002:a05:620a:1b9a:b0:7d3:8ca0:65c6 with SMTP id af79cd13be357-7d5dcc73d5fmr2039807185a.20.1751956201683;
+        Mon, 07 Jul 2025 23:30:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751956201; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Ng0b62nKgiTe37DmzWGcgAOmZz+/o5NVVvZx2yCK2+BaVhlQlIfNdcAvrBgB4/ZvgK
+         mpjYLsVmUUqwcgs6WRFOedqKyBVyHRYpmSk4OCVNxAiIQ6xC6JljkbKInfxUcp2+JsEj
+         1IgIuQjzE44rHFT3IkKXTYEsS6yWXg7Qe9TMXf+As/7gonahfYiLRS0IQ9XHft0GlVuo
+         n3dj2A7pJ3nQhD3+Vepp6+qB6HcGFx9gM4BKeBFXHLO0PKEx2btfP57f2P1Ip7AmyLUe
+         AanIdBQOAmcY6Z4z9t7D6ekSdeYgzoAViYkc2Lb47y/8vzlquUEYmjlwsncfDa1If8wW
+         6Xlw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=B04k0TDTEO7vQwk9kzHHjBBYiTCJPpf0ya7R11DnXYA=;
+        fh=Z3c3D/4xeE50bGI+83vSAXEo7+MNzc/jktQqx4DY0QQ=;
+        b=GqJcMKQfrdMn/aHwVfpftsZTFlt43iPAjojcaooCubcdsyvXv02ljzVP8xTUCWcUY+
+         HY9R2wAPhbOv5A2IM6gJ4rHbGuI65qdFRgtrWLSBDREHfBIP8jmrgtKDvBnkEa/ddvXA
+         VViAWFgfCNij5/3cQueRfHiFlFiEF1YXU4YCdXQS3rUlHxeWbC98/mzctvPbJXdXW1Er
+         AB8zGfAW5Yfy1mMFPck/w88kMpjeYvxvCutzVDqww5jVsNaxZZ7WKwUgeeHMJuPdwfJ4
+         MAze1ez0mOl0FI/eSeuEG5h6mPyJmN/9piofCoW8UpUUea2Fk3S3Emd3aJ+Rnzx0Rryq
+         VETA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.celio.com header.s=200608 header.b=FVrTeaAL;
+       dkim=pass header.i=@s6.y.mc.salesforce.com header.s=fbldkim6 header.b=MFwJAua5;
+       spf=pass (google.com: domain of bounce-65_html-326962834-17131784-6287157-51056@bounce.email.celio.com designates 198.245.94.138 as permitted sender) smtp.mailfrom=bounce-65_HTML-326962834-17131784-6287157-51056@bounce.email.celio.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=email.celio.com
+Return-Path: <bounce-65_HTML-326962834-17131784-6287157-51056@bounce.email.celio.com>
+Received: from mta2.email.celio.com (mta2.email.celio.com. [198.245.94.138])
+        by mx.google.com with ESMTPS id af79cd13be357-7d5dbec9d38si939518985a.399.2025.07.07.23.30.01
+        for <guykeny.ndayizeye8@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Jul 2025 23:30:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-65_html-326962834-17131784-6287157-51056@bounce.email.celio.com designates 198.245.94.138 as permitted sender) client-ip=198.245.94.138;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.celio.com header.s=200608 header.b=FVrTeaAL;
+       dkim=pass header.i=@s6.y.mc.salesforce.com header.s=fbldkim6 header.b=MFwJAua5;
+       spf=pass (google.com: domain of bounce-65_html-326962834-17131784-6287157-51056@bounce.email.celio.com designates 198.245.94.138 as permitted sender) smtp.mailfrom=bounce-65_HTML-326962834-17131784-6287157-51056@bounce.email.celio.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=email.celio.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=email.celio.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=celio@email.celio.com;
+ bh=B04k0TDTEO7vQwk9kzHHjBBYiTCJPpf0ya7R11DnXYA=;
+ b=FVrTeaALpkAkF63XmdFmRX8DbivZOIwv9KQ8Epzp6s0bWheoSNzewX2J35EKullvSKDdllzdd5AD
+   bX848ygNcNMRJKDH3hCThiYQOFiTri3prJ++lI8fuqZjK0ntR2DpfWwJ3Wz+LNeY0UI4txHtdENr
+   s96NO0eJTV8S0tg6ou8=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim6; d=s6.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=B04k0TDTEO7vQwk9kzHHjBBYiTCJPpf0ya7R11DnXYA=;
+ b=MFwJAua5CyfiRmSDhAVHKg6f2YkPBLwWYDiiz7hC3bUiV1jnO2GFUEzK2FG3oB6zXLeDHg5L87q5
+   qaIWJaj9IQKCliqCGv+NUAE1HUhcIe6lyEqhRaiEKQ3sgZ0CaCIX6LRibZQHiSGbCx7RzPufhEbN
+   VoWciQfAPLrcBOhTpEfrU5w9Huwk31a2ziN25uB+HBnLWAGOZfq43WxUHEAWuXI2E64FE0Y0HVSx
+   UHqEZwpfQQIYU4cwCwyygTUreuWsYAYSKab8MYvOdS1CimZuMe8/CnbNNflCG6ZmA5sq3yUkn/eX
+   89uBmdjp/3goDkcPoYF9oiiqc9UoiqO5uzAyzw==
+Received: by mta2.email.celio.com id hditei2fmd4t for <guykeny.ndayizeye8@gmail.com>; Tue, 8 Jul 2025 06:05:39 +0000 (envelope-from <bounce-65_HTML-326962834-17131784-6287157-51056@bounce.email.celio.com>)
+From: "celio" <celio@email.celio.com>
+To: <guykeny.ndayizeye8@gmail.com>
+Subject: =?UTF-8?Q?Votre_s=C3=A9lection_pr=C3=A9f=C3=A9r=C3=A9e_est_dans_c?=
+ =?UTF-8?Q?et_email?=
+Date: Tue, 08 Jul 2025 00:05:39 -0600
+List-Unsubscribe: <https://click.email.celio.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI2Mjg3MTU3IiwicyI6IjMyNjk2MjgzNCIsImxpZCI6IjY1IiwiaiI6IjE3MTMxNzg0IiwiamIiOiI1MTA1NiIsImQiOiI2MDI0OCJ9.ILJn_9EG-nYdD4gGcfMMmV_STBJI3IZHw8eA3fTK-tk>, <mailto:leave-fd8012751a3c402029-fe241772736d027f7d1774-fe5f15777467057a7d10-fe8b12727d63057872-fefe1171756102@leave.email.celio.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Service client" <reply-fe5f15777467057a7d10-65_HTML-326962834-6287157-51056@email.celio.com>
+X-SFMC-Stack: 6
+x-job: 6287157_17131784
+Message-ID: <c631a9e4-222e-4985-9df8-218711a6763f@ind1s06mta1237.xt.local>
+Feedback-ID: 6287157:17131784:198.245.94.138:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="htdVTIvOzmov=_?:"
+X-Antivirus: Avast (VPS 250710-0, 10/7/2025), Inbound message
+X-Antivirus-Status: Clean
+
+This is a multi-part message in MIME format.
+
+--htdVTIvOzmov=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Notre selection de chemises 100% lin | et au meilleur prix  
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a1daa9863903e831d7ad96d419b18f19946960d8e7b650f47caf84241ecc5e118773add604fbd7a9bca6939a71457636b18d70aaa9ba59895 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a286832176c0afb8707ad9080cec31e5a5e147b653b1b0cf86102852a927c171341009e32e96c36e228f388883433753d381665d31325bb3e 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2 
+ Les meilleurs produits du moment rien que pour vous !  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2 
+
+voir les best-sellers
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a775e76544a23c3f59759a6cf77eda82507664a2562a5601aa583732d046df1b7ad0a34782f155895fbc11ff99d5e908d0f980e0cd4e3d61e 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a4c8086398212e96a26a30b74a1adffa709d60479342d6c608e0680ac408076a13789778f9311787b304c930805a18d2241c6dbf2156ca6d2 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a5fd8498722c9b62585283444a5b761729151a5cec451c5bb4fd781f339c4a62b5cc217bffc4b36d6450b7f1003fcc2b6c56a07009c315ca3 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a5e8e7bff520df7b07c1a39bbf118eac233875f77ff66b3cdc75c7a0435d7f6931bf20ead496a1245dfe627a9d5c3a5418ac39ca0b47faf23 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a16e2a009daf029dd408cd68999099c2556775037f4e481297f963cd612f51986b7cc9790222f9b22c8ad294508c7654d7b893ce45a19117e 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a28997c8bd19892dad28eb5f13c29800b18469d68bfd563071e950d21fe9e0e244f4b0067d55be5845029b60cd80ea7fc6fbc6c81fdaca314 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2 
+
+voir les best-sellers
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3af06bc49291e01372b756d4530ec213aefb41ba1542673ccf304294b240982ab80a5e656d38eb23eefe2576eb42a48581eb12420d33d34147 
+ Jamais 2 sans 3&#x2026;  
+3 boxers ou cale&#xE7;ons pour 19,99&#x20AC; 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3af06bc49291e01372b756d4530ec213aefb41ba1542673ccf304294b240982ab80a5e656d38eb23eefe2576eb42a48581eb12420d33d34147 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3af06bc49291e01372b756d4530ec213aefb41ba1542673ccf304294b240982ab80a5e656d38eb23eefe2576eb42a48581eb12420d33d34147 
+
+voir la s&#xE9;lection
+
+ &zwnj; 
+
+
+
+
+ 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+ Guy-keny Ndayizeye  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+ ID client : 117327178  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+ Points : 22  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+ Bon(s) d'achat de 5&#x20AC; : 0  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939 
+
+
+
+
+ 
+
+
+ 
+ &zwnj; 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+ click & collect : retrait gratuit en 2h  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+ retours gratuits en magasin  
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+ livraison offerte 
+d&#xE8;s 49&#x20AC; d'achat 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ac8c181f760c6671b41bcb7d0cc30e5eaab573e237a879bbf93e2fe5be33a01e6263948fa1ce271fefeffeb7a214a1d7a3c52ef5d0a11f1e1 NEW FOOTER CELIO PAC - AUGUST 2024 
+ paiement s&#xE9;curis&#xE9; en 3x avec Alma  
+
+ &zwnj; 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a9cf02a9033d091d8400f635789fe58ff19e477d49ac324a4e76de3cbe9183ad14b8e89896ce41a5f263db70c72563f99 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a6aae0da84ba9a7bac150a304ccb4c8dccd72e7317d79f1eac8e160e1ef97c74029d57d241bd4525d72bca0a17d633a6e 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae4431cfeff6d1881a61788a8ed743fb96a75b0d00f820d4b86e57c91427a5cf352c93055a1747051a26523acfcdc0f7d 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a54177cd43648ef84c47cd0816891f47b2278ac0b004e1d5354352a72322751047a2791a71ab56aae7101d778c008bc99 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a78432579d9175d316fcbcd33b300b51709f1f57962752b2f41dc65a44ea91db6377b15ea128837d75a5bacde3505155b 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3ae3d5d37273c394180d90a21b5c7f535cd1c194a2f354a21db44c6341b0d8966f0cc46ef3ff3738bc7e3397ca60acf17d 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a171886f73101bee77ace8497c863bf2c8d8eef85bdfd16dd5ed03f21476748bbc1b4bfd4c949cac83b03ae7ff78bbc15 
+
+ &zwnj; 
+
+
+
+ 
+
+https://view.email.celio.com/?qs=214d3f67c29ee41aad0aa9bb8f2216b8c5076ce6c23a6b0492b36195e3504427d43d859159c8825f6d104633ae746648d1bb7f146b6c726c89e7fef65147e64f881b06457b3bdc3e09d708292676e171 
+
+ce message ne s&#x2019;affiche pas correctement ? consultez notre version en ligne
+
+Vous recevez cet email car vous avez accept&#xE9;, en magasin ou en ligne, de recevoir des informations personnalis&#xE9;es par email de la part de celio. CELIO FRANCE est le responsable de ce traitement au sens du r&#xE8;glement (UE) 2016/679 du 27 Avril 2016. 
+
+https://view.email.celio.com/?qs=214d3f67c29ee41aad0aa9bb8f2216b8c5076ce6c23a6b0492b36195e3504427d43d859159c8825f6d104633ae746648d1bb7f146b6c726c89e7fef65147e64f881b06457b3bdc3e09d708292676e171 
+
+ Voir les conditions g&#xE9;n&#xE9;rales du programme de fid&#xE9;lit&#xE9; 
+https://click.email.celio.com/?qs=5513dcaebcae4a3a4c55299614eefa2fcab6066d2f44416314704818eaf4b38d9b724efed7703fcb8d16c1a0f3ff2b33eaf7f3e91d36db31 
+ici . 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a6a78bab72be4d32527a1affcf2a3a1288a97b801369abf566d0083dd59d79c2240aef9cc4e784027fa1dc5c7f615503d8a3120e4fed3c4f1 
+ Vous pouvez &#xE0; tout moment, choisir  d&#x2019;&#xEA;tre retir&#xE9; d&#xE9;finitivement de nos listes de diffusion. 
+
+https://click.email.celio.com/?qs=5513dcaebcae4a3a7e5cbff03543d01f28ef31c0963570bbd38e6ea4b4595705ae95101079c5fead2c96dfb101e834f42bcfd057e514f4dcd03c68c2f02586c9 NEW FOOTER CELIO PAC - AUGUST 2024 
+Contactez-nous  sur 
+https://click.email.celio.com/?qs=5513dcaebcae4a3a7e5cbff03543d01f28ef31c0963570bbd38e6ea4b4595705ae95101079c5fead2c96dfb101e834f42bcfd057e514f4dcd03c68c2f02586c9 NEW FOOTER CELIO PAC - AUGUST 2024 
+celio.com/fr-fr/contactus  ou par courrier au Service client 21 rue Blanqui 93400 Saint-Ouen, France, pour exercer votre droit d&#x2019;acc&#xE8;s, de rectification, de portabilit&#xE9;, d&#x2019;effacement, de limitation du traitement et d&#x2019;opposition au traitement conform&#xE9;ment au r&#xE9;glement (UE) 2016/679. Pour plus d&#x2019;informations, consultez notre Politique relative aux donn&#xE9;es personnelles 
+https://click.email.celio.com/?qs=5513dcaebcae4a3a932fdf1ef50eec0f512efbe39782fc7927cd6fe75cc9abad7bad551e63e1ec4b5079ac77d9face735bada742de1d57e2f98150f432dcfbbb NEW FOOTER CELIO PAC - AUGUST 2024 
+ici . Si vous rencontrez des probl&#xE8;mes avec le lien de d&#xE9;sabonnement, merci de vous rapprocher du service client.
+
+
+
+
+--htdVTIvOzmov=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="fr" xml:lang="fr">
+<head>
+<!--[if mso]> <xml xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings></xml> <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Notre s&eacute;lection de chemises 100% lin | et au meilleur prix </title>
+<style type="text/css">span.MsoHyperlink{mso-style-priority:1;color:inherit}span.MsoHyperlinkFollowed{mso-style-priority:1;
+color:inherit}body{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;color:#000000;margin:0 auto}td{line-height:100%}
+img{outline:0;text-decoration:none}a img{border:none}u+* img+div{display:none}table td{border-collapse:collapse;mso-line-height-rule:exactly}
+table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}table *{box-sizing:content-box}table{box-sizing:border-box}
+a{color:inherit;text-decoration:none;mso-line-height-rule:exactly}.appleLinks,.appleLinksWhite{text-decoration:none !important}
+a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !important;font-size:inherit !important;font-family:inherit !important;
+font-weight:inherit !important;line-height:inherit !important}table[class^=ox] sup{font-size:.7em;vertical-align:baseline}
+sup{font-size:.8em;vertical-align:text-top;line-height:1;height:0;mso-text-raise:24%}div>u+* table{zoom:100%}.ms-outlook-linkify{color:inherit !important}
+#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c *>td:hover,#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>a:hover span,#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>div:hover,#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>div:hover td,#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>table:hover,#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>td:hover{background-color:#FFFFFF !important;
+color:#000000 !important;border-color:#000000 !important;transition:all 150ms}#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>div:hover a,#cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c>td:hover a{color:#000000 !important}
+#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d *>td:hover,#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>a:hover span,#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>div:hover,#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>div:hover td,#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>table:hover,#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>td:hover{background-color:#FFFFFF !important;
+color:#000000 !important;border-color:#000000 !important;transition:all 150ms}#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>div:hover a,#ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d>td:hover a{color:#000000 !important}
+#cta14104753-144f-4035-b3fa-fa8e26dde894 *>td:hover,#cta14104753-144f-4035-b3fa-fa8e26dde894>a:hover span,#cta14104753-144f-4035-b3fa-fa8e26dde894>div:hover,#cta14104753-144f-4035-b3fa-fa8e26dde894>div:hover td,#cta14104753-144f-4035-b3fa-fa8e26dde894>table:hover,#cta14104753-144f-4035-b3fa-fa8e26dde894>td:hover{background-color:#FFFFFF !important;
+color:#000000 !important;border-color:#000000 !important;transition:all 150ms}#cta14104753-144f-4035-b3fa-fa8e26dde894>div:hover a,#cta14104753-144f-4035-b3fa-fa8e26dde894>td:hover a{color:#000000 !important}
+@media screen and (min-width:451px) and (max-width:640px),screen and (min-device-width:451px) and (max-device-width:640px){.t_lts-n0px{letter-spacing:0 !important}
+.t_pb30px{padding-bottom:30px !important}.t_w98p{width:98% !important}.t_w40p{width:40% !important}.t_w60p{width:60% !important}
+.t_pt10px{padding-top:10px !important}.t_w90p{width:90% !important}.t_pt0px{padding-top:0 !important}.t_pr20px{padding-right:20px !important}
+.t_pl20px{padding-left:20px !important}.t_w48px{width:48px !important}.t_fz13px{font-size:13px !important}.t_pr10px{padding-right:10px !important}
+.t_pl10px{padding-left:10px !important}.t_lh16px{line-height:16px !important}.t_w70p{width:70% !important}.t_w14d28p{width:14.28% !important}
+.t_w14d29p{width:14.29% !important}.t_w50p{width:50% !important}.t_w100p{width:100% !important}.t_v{display:block !important;
+font-size:inherit !important;max-height:none !important;max-width:none !important;overflow:visible !important}.t_dnone{display:none !important}
+}
+@media screen and (max-width:450px),screen and (max-device-width:450px){.m_fz41px{font-size:41px !important}.m_lh41px{line-height:41px !important}
+.m_fz15px{font-size:15px !important}.m_pb30px{padding-bottom:30px !important}.m_fz20px{font-size:20px !important}.m_lts-n0px{letter-spacing:0 !important}
+.m_lh25px{line-height:25px !important}.m_w80p{width:80% !important}.m_h36px{height:36px !important}.m_lh36px{line-height:36px !important}
+.m_w96p{width:96% !important}.m_pb10px{padding-bottom:10px !important}.m_w102p{width:102% !important}.m_w40p{width:40% !important}
+.m_w110p{width:110% !important}.m_pt35px{padding-top:35px !important}.m_fz14px{font-size:14px !important}.m_pt40px{padding-top:40px !important}
+.m_pb0px{padding-bottom:0 !important}.m_pt5px{padding-top:5px !important}.m_pr30px{padding-right:30px !important}.m_pr15px{padding-right:15px !important}
+.m_pl30px{padding-left:30px !important}.m_lh14px{line-height:14px !important}.m_flnone{float:none !important}.m_mauto{margin:auto !important}
+.m_w83p{width:83% !important}.m_h30px{height:30px !important}.m_flright{float:right !important}.m_w50p{width:50% !important}
+.m_w20p{width:20% !important}.m_fz12px{font-size:12px !important}.m_pt20px{padding-top:20px !important}.m_pr10px{padding-right:10px !important}
+.m_pb20px{padding-bottom:20px !important}.m_pl10px{padding-left:10px !important}.m_lh21px{line-height:21px !important}.m_w90p{width:90% !important}
+.m_w14d28p{width:14.28% !important}.m_w14d29p{width:14.29% !important}.m_w60p{width:60% !important}.m_h20px{height:20px !important}
+.m_w100p{width:100% !important}.m_pr20px{padding-right:20px !important}.m_pl20px{padding-left:20px !important}.m_v{display:block !important;
+font-size:inherit !important;max-height:none !important;max-width:none !important;overflow:visible !important}.m_dnone{display:none !important}
+}
+@media screen and (min-width:640px),(orientation:landscape) and (min-width:640px){.d_center{float:none !important;margin:auto !important}
+.d_left{float:left !important}.d_right{float:right !important}
+}#converted-body .d_center{float:none;margin:auto}#converted-body .d_left{float:left}#converted-body .d_right{float:right}
+a:focus-visible{transition:box-shadow .3s ease;outline:0;box-shadow:0 0 0 2px hsla(288,100%,50%,.8)}</style></head>
+<body style="background-color:#ffffff"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;"> rien que pour vous</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;margin-top:-1px" role="none">
+<tr class="t_dnone m_dnone" aria-hidden="true">
+<td height="1" style="height:1px;max-height:1px;font-size:1px;line-height:1px">
+<span style="display:block;width:640px;min-width:640px">&nbsp;</span>
+</td></tr><tr><td style="background-color:#ffffff" role="main">
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+
+<img src="https://celio.commander1.com/v3/?tcs=4893&rand=$cachebuster$&chn=emailing_crm&src=celio&cty=fr&cmp=&med=newsletter&e=[adresse_email]&crtive=[segment_client]&url=https://celio.com?utm_source=celio&utm_medium=email&utm_campaign= " border="0" width="1" height="1">
+                            
+
+
+                            
+
+
+                            
+
+
+                            
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center m_w100p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a1daa9863903e831d7ad96d419b18f19946960d8e7b650f47caf84241ecc5e118773add604fbd7a9bca6939a71457636b18d70aaa9ba59895" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2025/CELIO%20ES/202504/23_NEWLOGO/1.jpg" alt="celio*" width="640" style="font-family:Arial,Helvetica,sans-serif;font-size:34px;line-height:34px;display:block;border:none" class="t_w100p m_fz41px m_lh41px m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a286832176c0afb8707ad9080cec31e5a5e147b653b1b0cf86102852a927c171341009e32e96c36e228f388883433753d381665d31325bb3e" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67eea5907685f568c480c057/kZMq5chNn9F6?rlvt-u=117327178&Loyalty_Next_Voucher_Expiration_Date=&loyalty_points=22&Loyalty_Enrollment_Date=6/8/2024 12:00:00 AM&LOYALTY_VOUCHER_NUMBER=0&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="640" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td>
+<div style="border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0;overflow:hidden">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:separate" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-collapse:separate;overflow:hidden" class="d_center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role="none">
+<tr><td style="text-align:center;vertical-align:middle;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0;border-collapse:separate;overflow:hidden" class="t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2025/CELIO%20FR/202505/18_BEST_SELLERS/1.gif" alt="" width="640" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td>
+<div style="border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0;overflow:hidden">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:separate" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;text-transform:none;font-size:21px;letter-spacing:1px;padding-top:30px;padding-right:50px;padding-bottom:20px;padding-left:50px;vertical-align:middle;line-height:25px" class="m_fz15px m_pr20px m_pb30px m_pl20px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2" style="color:#000000;line-height:25px;display:block;text-decoration:none;outline:0" class="m_lh21px"> Les meilleurs produits du moment rien que pour vous ! </a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="60%" align="center" style="margin:auto" class="d_center t_w70p m_w80p" role="none">
+<tr><td id="cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c" style="padding-top:0;padding-bottom:30px;height:40px" class="m_pt20px m_pb20px m_h36px">
+<!--[if mso]> <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.celio.com/fr-fr/c/collection-best-sellers?&utm_source=celio&utm_medium=emailing_fid&utm_campaign=CE_FR_20250707_ADN_BESTSELLERS_JUILLET&rlvt-u=117327178" style="v-text-anchor:middle;height:42px;width:380px" arcsize="250%"  strokecolor="#000000" strokeweight="2px" fillcolor="#000000" fill="t"> <w:anchorlock/> <center style="color:#ffffff;font-size:16px;font-family:Arial,Helvetica,sans-serif;height:42px;text-align:center;font-weight:bold"> voir les best-sellers </center> </v:roundrect> <![endif]-->
+<a id="cta5b41cd6a-8d69-4853-9fc2-ddf92ee0492c_link" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;mso-hide:all;display:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:100%" class="t_w100p m_w100p" href="https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2">
+<span style="background-color:#000000;border-top:2px solid #000000;border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:center;line-height:40px;font-weight:700;mso-hide:all;display:block" class="m_lh36px">
+voir les best-sellers</span>
+</a>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a775e76544a23c3f59759a6cf77eda82507664a2562a5601aa583732d046df1b7ad0a34782f155895fbc11ff99d5e908d0f980e0cd4e3d61e" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67f676fe0eea57e201411c82/1f101ff5?rlvt-u=117327178&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="320" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a4c8086398212e96a26a30b74a1adffa709d60479342d6c608e0680ac408076a13789778f9311787b304c930805a18d2241c6dbf2156ca6d2" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67f676fe0eea57e201411c82/a28fa18e?rlvt-u=117327178&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="320" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a5fd8498722c9b62585283444a5b761729151a5cec451c5bb4fd781f339c4a62b5cc217bffc4b36d6450b7f1003fcc2b6c56a07009c315ca3" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67f676fe0eea57e201411c82/UeCCMhjg8QPM?rlvt-u=117327178&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="320" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a5e8e7bff520df7b07c1a39bbf118eac233875f77ff66b3cdc75c7a0435d7f6931bf20ead496a1245dfe627a9d5c3a5418ac39ca0b47faf23" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67f676fe0eea57e201411c82/17d5943d?rlvt-u=117327178&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="320" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a16e2a009daf029dd408cd68999099c2556775037f4e481297f963cd612f51986b7cc9790222f9b22c8ad294508c7654d7b893ce45a19117e" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67f676fe0eea57e201411c82/GXcI6Sndd6l1?rlvt-u=117327178&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="320" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a28997c8bd19892dad28eb5f13c29800b18469d68bfd563071e950d21fe9e0e244f4b0067d55be5845029b60cd80ea7fc6fbc6c81fdaca314" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://reelevant.run/67f676fe0eea57e201411c82/1kth4scz5EE4?rlvt-u=117327178&rlvt-m=CE_FR_20250707_ADN_BESTSELLERS_JUILLET" alt="" width="320" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td>
+<div style="border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0;overflow:hidden">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:separate" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="60%" align="center" style="margin:auto" class="d_center t_w70p m_w80p" role="none">
+<tr><td id="ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d" style="padding-top:30px;padding-bottom:30px;height:40px" class="m_pt20px m_pb20px m_h36px">
+<!--[if mso]> <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.celio.com/fr-fr/c/collection-best-sellers?&utm_source=celio&utm_medium=emailing_fid&utm_campaign=CE_FR_20250707_ADN_BESTSELLERS_JUILLET&rlvt-u=117327178" style="v-text-anchor:middle;height:42px;width:380px" arcsize="250%"  strokecolor="#000000" strokeweight="2px" fillcolor="#000000" fill="t"> <w:anchorlock/> <center style="color:#ffffff;font-size:16px;font-family:Arial,Helvetica,sans-serif;height:42px;text-align:center;font-weight:bold"> voir les best-sellers </center> </v:roundrect> <![endif]-->
+<a id="ctac1f1cc74-66e7-4da0-be2d-ba8d3459892d_link" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;mso-hide:all;display:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:100%" class="t_w100p m_w100p" href="https://click.email.celio.com/?qs=5513dcaebcae4a3a1661553db11653858925e4c5346a334420fa1787aa89649753a4a1c0dbec76e3a6a85019ccf6a23fd15b44dc7bff8c224f9b4017d3236bf2">
+<span style="background-color:#000000;border-top:2px solid #000000;border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:center;line-height:40px;font-weight:700;mso-hide:all;display:block" class="m_lh36px">
+voir les best-sellers</span>
+</a>
+</td></tr></table>
+</td></tr></table></div>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;font-size:25px;letter-spacing:1px;padding-top:40px;padding-right:30px;padding-bottom:20px;padding-left:30px;vertical-align:middle;line-height:30px;font-weight:700" class="t_lts-n0px m_fz20px m_lts-n0px m_pt20px m_pr20px m_pl20px m_lh25px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3af06bc49291e01372b756d4530ec213aefb41ba1542673ccf304294b240982ab80a5e656d38eb23eefe2576eb42a48581eb12420d33d34147" style="color:#000000;line-height:30px;display:block;text-decoration:none;outline:0" class="m_lh25px"> Jamais 2 sans 3&#x2026; <br role="none"/>3 boxers ou cale&#xE7;ons pour 19,99&#x20AC; </a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="border-collapse:separate;overflow:hidden" class="d_center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden" role="none">
+<tr><td style="text-align:center;vertical-align:middle;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:0;border-collapse:separate;overflow:hidden" class="t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3af06bc49291e01372b756d4530ec213aefb41ba1542673ccf304294b240982ab80a5e656d38eb23eefe2576eb42a48581eb12420d33d34147" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2025/CELIO%20FR/202505/11_BEST_SWEATSHIRTS_TSHIRTS_UNDERWEAR/16.jpg" alt="" width="640" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="60%" align="center" style="margin:auto" class="d_center t_w70p m_w80p" role="none">
+<tr><td id="cta14104753-144f-4035-b3fa-fa8e26dde894" style="padding-top:20px;padding-bottom:30px;height:40px" class="m_pb20px m_h36px">
+<!--[if mso]> <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.celio.com/fr-fr/c/sous-vetements?utm_source=celio&utm_medium=emailing_fid&utm_campaign=CE_FR_20250707_ADN_BESTSELLERS_JUILLET&rlvt-u=117327178" style="v-text-anchor:middle;height:42px;width:380px" arcsize="250%"  strokecolor="#000000" strokeweight="2px" fillcolor="#000000" fill="t"> <w:anchorlock/> <center style="color:#ffffff;font-size:16px;font-family:Arial,Helvetica,sans-serif;height:42px;text-align:center;font-weight:bold"> voir la s&#xE9;lection </center> </v:roundrect> <![endif]-->
+<a id="cta14104753-144f-4035-b3fa-fa8e26dde894_link" style="border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;mso-hide:all;display:inline-block;-webkit-text-size-adjust:none;text-decoration:none;width:100%" class="t_w100p m_w100p" href="https://click.email.celio.com/?qs=5513dcaebcae4a3af06bc49291e01372b756d4530ec213aefb41ba1542673ccf304294b240982ab80a5e656d38eb23eefe2576eb42a48581eb12420d33d34147">
+<span style="background-color:#000000;border-top:2px solid #000000;border-bottom:2px solid #000000;border-left:2px solid #000000;border-right:2px solid #000000;border-top-left-radius:100px;border-top-right-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:16px;text-align:center;line-height:40px;font-weight:700;mso-hide:all;display:block" class="m_lh36px">
+voir la s&#xE9;lection</span>
+</a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto;clear:both" class="d_center" aria-hidden="true">
+<tr><td height="20" style="height:20px;font-size:8px"> &zwnj; </td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="640" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="100%" class="t_w100p m_w100p">
+
+
+                            
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w98p m_w100p" role="none">
+<tr><td valign="top" width="40%" class="t_w40p m_w40p">
+<table cellpadding="0" cellspacing="0" border="0" width="73%" align="center" style="margin:auto" class="d_center t_w100p m_w96p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="padding-top:50px;text-align:center;vertical-align:middle" class="m_pt35px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/Footer/carte_be_+.png" alt="" width="186" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="60%" class="t_w60p m_w60p">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:left;font-size:20px;padding-top:55px;padding-bottom:10px;padding-left:20px;vertical-align:middle;line-height:22px;font-weight:700" class="m_fz14px m_pt40px m_pb0px" role="heading" aria-level="1">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" style="color:#000000;line-height:22px;display:block;text-decoration:none;outline:0"> Guy-keny Ndayizeye </a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:left;text-transform:none;font-size:16px;letter-spacing:1px;padding-top:10px;padding-right:60px;padding-bottom:5px;padding-left:20px;vertical-align:middle;line-height:20px" class="t_pr20px m_fz12px m_pt5px m_pr30px m_pl30px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" style="color:#000000;line-height:20px;display:block;text-decoration:none;outline:0" class="m_lh21px"> ID client : 117327178 </a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:left;text-transform:lowercase;font-size:16px;letter-spacing:1px;padding-top:5px;padding-right:60px;padding-bottom:5px;padding-left:20px;vertical-align:middle;line-height:20px" class="t_pt10px t_pr20px m_fz12px m_pr30px m_pl30px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" style="color:#000000;line-height:20px;display:block;text-decoration:none;outline:0" class="m_lh21px"> Points : 22 </a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:left;text-transform:none;font-size:16px;letter-spacing:1px;padding-top:5px;padding-right:60px;padding-bottom:15px;padding-left:20px;vertical-align:middle;line-height:20px" class="t_pt10px t_pr20px t_pb30px m_fz12px m_pr30px m_pb10px m_pl30px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" style="color:#000000;line-height:20px;display:block;text-decoration:none;outline:0" class="m_lh21px"> Bon(s) d'achat de 5&#x20AC; : 0 </a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="90%" align="center" style="margin:auto" class="d_center t_w90p m_w90p" role="none">
+<tr><td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="95%" align="left" class="d_left t_w100p m_w102p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/8.png" alt="" width="164" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="95%" align="left" class="d_left t_w100p m_w102p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae76bb0bf6c8adf882d7ab250322a2c4c01888d113a241d84987746029172673f48134a9acb6cfce5309c9f088fb25286d7aa5c4f8b9f3939" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/9.png" alt="" width="164" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+
+                            
+
+
+                            
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto;clear:both" class="d_center t_w100p m_w100p" aria-hidden="true">
+<tr><td height="20" style="height:20px;font-size:8px" class="m_h30px"> &zwnj; </td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto;background-color:#FFFFFF" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="50%" class="t_w50p m_w100p m_flright">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="30%" align="center" style="margin:auto" class="d_center t_w48px m_w20p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/Footer/footer_1.jpg" alt="" width="48" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;text-transform:none;font-size:14px;letter-spacing:1px;padding-top:10px;padding-right:20px;padding-bottom:5px;padding-left:20px;vertical-align:middle;line-height:18px" class="t_fz13px t_pr10px t_pl10px t_lh16px m_fz12px m_pt20px m_pr10px m_pb20px m_pl10px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" style="color:#000000;line-height:18px;display:block;text-decoration:none;outline:0" class="t_lh16px m_lh21px"> click & collect : retrait gratuit en 2h </a>
+</td></tr></table></td>
+<td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="30%" align="center" style="margin:auto" class="d_center t_w48px m_w20p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/Footer/footer_2.jpg" alt="" width="48" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;text-transform:none;font-size:14px;letter-spacing:1px;padding-top:10px;padding-right:20px;padding-bottom:5px;padding-left:20px;vertical-align:middle;line-height:18px" class="t_fz13px t_pr10px t_pl10px t_lh16px m_fz12px m_pt20px m_pr10px m_pb20px m_pl10px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" style="color:#000000;line-height:18px;display:block;text-decoration:none;outline:0" class="t_lh16px m_lh21px"> retours gratuits en magasin </a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="50%" class="t_w50p m_w100p m_flright">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="30%" align="center" style="margin:auto" class="d_center t_w48px m_w20p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/Footer/footer_3.jpg" alt="" width="48" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;text-transform:none;font-size:14px;letter-spacing:1px;padding-top:10px;padding-right:20px;padding-bottom:5px;padding-left:20px;vertical-align:middle;line-height:18px" class="t_fz13px t_pr10px t_pl10px t_lh16px m_fz12px m_pt20px m_pr10px m_pb20px m_pl10px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" style="color:#000000;line-height:18px;display:block;text-decoration:none;outline:0" class="t_lh16px m_lh21px"> livraison offerte<br role="none"/>d&#xE8;s 49&#x20AC; d'achat </a>
+</td></tr></table></td>
+<td valign="top" width="50%" class="t_w50p m_w50p">
+<table cellpadding="0" cellspacing="0" border="0" width="30%" align="center" style="margin:auto" class="d_center t_w48px m_w20p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/Footer/footer_4.jpg" alt="" width="48" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;text-transform:none;font-size:14px;letter-spacing:1px;padding-top:10px;padding-right:20px;padding-bottom:5px;padding-left:20px;vertical-align:middle;line-height:18px" class="t_fz13px t_pr10px t_pl10px t_lh16px m_fz12px m_pt20px m_pr10px m_pb20px m_pl10px m_lh21px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a0c642a9a6215455ebf8bb5338f4ce6b486aa0c4503a2833f0f1eaa10cead2e425590d24ac4dc900d988b51618b464900958bec4399591fb6" style="color:#000000;line-height:18px;display:block;text-decoration:none;outline:0" class="t_lh16px m_lh21px"> paiement s&#xE9;curis&#xE9; en 3x avec Alma </a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto;clear:both" class="d_center t_w100p m_w100p" aria-hidden="true">
+<tr><td height="30" style="height:30px;font-size:8px" class="m_h20px"> &zwnj; </td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="53%" align="center" style="margin:auto" class="d_center t_w70p m_w90p" role="none">
+<tr><td valign="top" width="14.28%" class="t_w14d28p m_w14d28p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a9cf02a9033d091d8400f635789fe58ff19e477d49ac324a4e76de3cbe9183ad14b8e89896ce41a5f263db70c72563f99" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/10.jpg" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="14.28%" class="t_w14d28p m_w14d28p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a6aae0da84ba9a7bac150a304ccb4c8dccd72e7317d79f1eac8e160e1ef97c74029d57d241bd4525d72bca0a17d633a6e" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/11.jpg" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="14.28%" class="t_w14d28p m_w14d28p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae4431cfeff6d1881a61788a8ed743fb96a75b0d00f820d4b86e57c91427a5cf352c93055a1747051a26523acfcdc0f7d" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/12.jpg" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="14.29%" class="t_w14d29p m_w14d29p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a54177cd43648ef84c47cd0816891f47b2278ac0b004e1d5354352a72322751047a2791a71ab56aae7101d778c008bc99" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/13.jpg" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="14.29%" class="t_w14d29p m_w14d29p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a78432579d9175d316fcbcd33b300b51709f1f57962752b2f41dc65a44ea91db6377b15ea128837d75a5bacde3505155b" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/14.png" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="14.29%" class="t_w14d29p m_w14d29p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3ae3d5d37273c394180d90a21b5c7f535cd1c194a2f354a21db44c6341b0d8966f0cc46ef3ff3738bc7e3397ca60acf17d" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/15.jpg" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table></td>
+<td valign="top" width="14.29%" class="t_w14d29p m_w14d29p">
+<table cellpadding="0" cellspacing="0" border="0" width="50%" align="center" style="margin:auto" class="d_center t_w50p m_w60p" role="none">
+<tr><td>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="d_center" role="none">
+<tr><td style="text-align:center;vertical-align:middle">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a171886f73101bee77ace8497c863bf2c8d8eef85bdfd16dd5ed03f21476748bbc1b4bfd4c949cac83b03ae7ff78bbc15" width="100%" style="color:#000000;outline:0;border:none;margin:auto;display:block" target="_blank">
+<img src="https://prodmediascelio.blob.core.windows.net/crm/2024/FR/202408/23_BACK_TO_SCHOOL/16.jpg" alt="" width="24" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none" class="t_w100p m_w100p"/></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto;clear:both" class="d_center t_w100p m_w100p" aria-hidden="true">
+<tr><td height="30" style="height:30px;font-size:8px" class="m_h20px"> &zwnj; </td></tr></table>
+
+
+                            
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#646468;text-align:center;font-size:10px;letter-spacing:1px;padding-top:8px;padding-right:30px;padding-left:30px;vertical-align:middle;line-height:15px" class="m_pr20px m_pl20px">
+<a href="https://view.email.celio.com/?qs=214d3f67c29ee41aad0aa9bb8f2216b8c5076ce6c23a6b0492b36195e3504427d43d859159c8825f6d104633ae746648d1bb7f146b6c726c89e7fef65147e64f881b06457b3bdc3e09d708292676e171" style="color:#646468;line-height:15px;display:block;text-decoration:none;outline:0">
+<br role="none"/>ce message ne s&#x2019;affiche pas correctement ? consultez notre version<span style="text-decoration:underline"> en ligne</span><br role="none"/><br role="none"/>Vous recevez cet email car vous avez accept&#xE9;, en magasin ou en ligne, de recevoir des informations personnalis&#xE9;es par email de la part de celio. CELIO FRANCE est le responsable de ce traitement au sens du r&#xE8;glement (UE) 2016/679 du 27 Avril 2016. </a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#646468;text-align:center;font-size:10px;letter-spacing:1px;padding-top:8px;padding-right:30px;padding-left:30px;vertical-align:middle;line-height:15px" class="m_pr20px m_pl20px">
+<a href="https://view.email.celio.com/?qs=214d3f67c29ee41aad0aa9bb8f2216b8c5076ce6c23a6b0492b36195e3504427d43d859159c8825f6d104633ae746648d1bb7f146b6c726c89e7fef65147e64f881b06457b3bdc3e09d708292676e171" style="color:#646468;line-height:15px;display:block;text-decoration:none;outline:0"></a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#646468;text-align:center;font-size:10px;letter-spacing:1px;padding-top:8px;padding-right:20px;padding-left:20px;vertical-align:middle;line-height:15px"> Voir les conditions g&#xE9;n&#xE9;rales du programme de fid&#xE9;lit&#xE9; <a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a4c55299614eefa2fcab6066d2f44416314704818eaf4b38d9b724efed7703fcb8d16c1a0f3ff2b33eaf7f3e91d36db31" style="color:#646468;text-decoration:underline">ici</a>. </td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#646468;text-align:center;font-size:10px;letter-spacing:1px;padding-top:12px;padding-bottom:12px;vertical-align:middle;line-height:12px" class="m_pr20px m_pl20px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a6a78bab72be4d32527a1affcf2a3a1288a97b801369abf566d0083dd59d79c2240aef9cc4e784027fa1dc5c7f615503d8a3120e4fed3c4f1" style="color:#646468;line-height:12px;display:block;text-decoration:none;outline:0"> Vous pouvez &#xE0; tout moment, choisir <span style="text-decoration:underline">d&#x2019;&#xEA;tre retir&#xE9; d&#xE9;finitivement de nos listes de diffusion. </span></a>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="margin:auto" class="d_center t_w100p m_w100p" role="none">
+<tr><td style="font-family:Arial,Helvetica,sans-serif;color:#646468;text-align:center;font-size:10px;letter-spacing:1px;padding-right:40px;padding-bottom:60px;padding-left:40px;vertical-align:middle;line-height:15px" class="m_pr20px m_pl20px">
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a9a746345a7f07129bea5c89f7e689ca7502377b40a6cec410b615341aff0b3fc7990df30a4afd38517ab5d7432d4bb09b3f782ee0c37a22c" style="color:#646468;text-decoration:underline">Contactez-nous</a> sur <a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a9a746345a7f07129bea5c89f7e689ca7502377b40a6cec410b615341aff0b3fc7990df30a4afd38517ab5d7432d4bb09b3f782ee0c37a22c" style="color:#646468;text-decoration:underline">celio.com/fr-fr/contactus</a> ou par courrier au Service client 21 rue Blanqui 93400 Saint-Ouen, France, pour exercer votre droit d&#x2019;acc&#xE8;s, de rectification, de portabilit&#xE9;, d&#x2019;effacement, de limitation du traitement et d&#x2019;opposition au traitement conform&#xE9;ment au r&#xE9;glement (UE) 2016/679. Pour plus d&#x2019;informations, consultez notre Politique relative aux donn&#xE9;es personnelles 
+<a href="https://click.email.celio.com/?qs=5513dcaebcae4a3a9065186d0a5c103e7b60599991f0d47d4b982b87e74278679820f281d5db01933c41d0d7c1d70d384adde2a05537fbb85426cd60a4aff2f7" style="color:#646468;text-decoration:underline">ici
+</a>. Si vous rencontrez des probl&#xE8;mes avec le lien de d&#xE9;sabonnement, merci de vous rapprocher du service client.
+</td></tr></table>
+
+<img src="https://click.email.celio.com/open.aspx?ffcb10-fe5f15777467057a7d10-fe2711787063067b701571-fe8b12727d63057872-ff941275-fe241772736d027f7d1774-fefe1171756102&d=60248&bmt=0" width="1" height="1" alt="">
+</custom>
+                            
+</td></tr></table>
+</td></tr></table></body>
+</html>
+
+--htdVTIvOzmov=_?:--
+
