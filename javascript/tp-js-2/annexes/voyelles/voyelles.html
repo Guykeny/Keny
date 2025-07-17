@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Voyelles</title>
+	<script>
+		const s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. ";
+		const voyelles = "aeiouy";
+	</script>
+	<script src="voyelles.js"></script>
+	<style>
+		li {
+			height:fit-content;
+			margin-top: 10px;
+		}
+		li:nth-child(1)>span {
+			background-color: lavender;
+		}
+		li:nth-child(2)>span {
+			background-color: lemonchiffon;
+		}
+		li:nth-child(3)>span {
+			background-color: lightblue;
+		}
+		li:nth-child(4)>span {
+			background-color: lavenderblush;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Voyelles</h1>
+
+	<ol>
+		<li>
+			<script>
+				document.writeln("tab = <span>" + tab.toString() + "</span>");
+			</script>
+		</li>
+		<li>
+			<script>
+				document.writeln("tabv = <span>" + tabv.toString() + "</span>");
+			</script>
+		</li>
+		<li>
+			<script>
+				document.writeln("map = <span>" + Array.from(map.entries()).toString() + "</span>");
+			</script>
+		</li>
+		<li>
+			<script>
+				document.writeln("maxv = <span>" + maxv.toString() + "=" + map.get(maxv) + "</span>");
+			</script>
+		</li>
+	</ol>
+</body>
+
+</html>

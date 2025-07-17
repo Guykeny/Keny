@@ -1,0 +1,77 @@
+/* Source :  w3docs.com */
+html,
+body {
+    min-height: 100%;
+}
+
+body,
+div,
+form,
+input,
+select,
+textarea,
+p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 20px 0 #095484;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input {
+    width: 90%;
+    padding: 5px;
+}
+
+select {
+    width: 90%;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #095484;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0666a3;
+}
+
+tbody tr {
+    text-align: center;
+}

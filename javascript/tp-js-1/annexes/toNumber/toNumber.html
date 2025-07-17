@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>toNumber</title>
+	<script src="toNumber.js"></script>
+</head>
+
+<body>
+	<h1>toNumber</h1>
+	<script>
+		var n = toNumber('234');
+		document.writeln("<p>toNumber('234') " + n + " (" + typeof n + ")</p>");
+		document.writeln("</p>");
+
+		var n = toNumber('-11');
+		document.writeln("<p>toNumber('-11') " + n + " (" + typeof n + ")</p>");
+
+		var n = toNumber('-3.1415');
+		document.writeln("<p>toNumber('-3.1415') " + n + " (" + typeof n + ")</p>");
+
+		var n = toNumber('ab');
+		document.writeln("<p>toNumber('ab') " + n + " (" + typeof n + ")</p>");
+
+		var n = parseInt('123ab');
+		document.writeln("<p>parseInt('123ab') " + n + " (" + typeof n + ")</p>");
+
+		var n = parseInt('[0]');
+		document.writeln("<p>parseInt('[0]') " + n + " (" + typeof n + ")</p>");
+
+		var n = parseInt(/^123/);
+		document.writeln("<p>parseInt(/^123/) " + n + " (" + typeof n + ")</p>");
+	</script>
+</body>
+
+</html>
