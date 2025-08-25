@@ -180,7 +180,7 @@ tinymce.addI18n('fr_FR',{
 "Paste as text": "Coller comme texte",
 "Preview": "Pr\u00e9visualiser",
 "Print...": "Imprimer...",
-"Save": "Enregistrer",
+"Save": "Enregistrer 1255",
 "Find": "Chercher",
 "Replace with": "Remplacer par",
 "Replace": "Remplacer",
