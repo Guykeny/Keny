@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: mon-app
-          file: Dockerfile
+          file: mon-app/Dockerfile
           push: true
           tags: gykey/mon-app:latest
 
