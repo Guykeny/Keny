@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
           <p>✅ Multi-stage build</p>
           <p>✅ Docker Hub</p>
           <p>✅ Azure App Service</p>
-          <p>✅ Déployé automatiquement via CI/CD</p>
+          <p>✅ Déployé automatiquement via CI/CD et</p>
         </div>
       </body>
     </html>
