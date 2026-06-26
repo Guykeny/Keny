@@ -1,0 +1,31 @@
+services:
+  app:
+    build: .
+    container_name: mon-app
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=ma-bdd
+      - DB_PASSWORD=secret
+    depends_on:
+      - bdd
+    networks:
+      - mon-reseau
+
+  bdd:
+    image: postgres:alpine
+    container_name: ma-bdd
+    environment:
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=mabase
+    volumes:
+      - mon-volume:/var/lib/postgresql
+    networks:
+      - mon-reseau
+
+networks:
+  mon-reseau:
+    driver: bridge
+
+volumes:
+  mon-volume:
